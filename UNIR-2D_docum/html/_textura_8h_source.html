@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNIR-2D: Fichero Fuente Textura.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UNIR-2D<span id="projectnumber">&#160;1.2</span>
+   </div>
+   <div id="projectbrief">Motor de juego mínimo para la programación de microjuegos en 2 dimensiones.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Textura.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// UNIR-2D :: Motor de juego mínimo para la programación de microjuegos en 2 dimensiones.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// </span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Copyright (C) 2022 UNIR-Universidad Internacional de La Rioja. </span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Todos los derechos reservados. </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// El sofware se entrega solo para uso educativo, sin ninguna garantía de adecuación para ningún </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// proposito particular.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Bibliotecas de código usadas: </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//   1) SFML - Simple and Fast Multimedia Library. Licencia: https://www.sfml-dev.org/license.php  </span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// </span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Archivo: Textura.h</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Autor:   Miguel Angel Zurita Cortés</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// Versión: 1.2 (10-Oct-2022)</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Estado:  Terminado. Revisado. Documentado.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span>unir2d {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">using</span> std::filesystem::path;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">class </span>Imagen;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">class </span>Texto;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classunir2d_1_1_textura.html">   37</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classunir2d_1_1_textura.html">Textura</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">public</span>: </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classunir2d_1_1_textura.html#a947d19eccd3cfc04e134079556f25421">Textura</a> ();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_function" href="classunir2d_1_1_textura.html#a06722804a1f49ffcfd6622b6100265d0">~Textura</a> ();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_textura.html#aeddb9bc4ba4e5e070ce5f57ceae4f44f">carga</a> (path archivo);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_textura.html#a53abc1345a19c92787ee8dd2cefce283">suaviza</a> (); </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_textura.html#a75a7b61ceb8a9d4caad6fff5362f082c">crea</a> (<a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> tamano);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_textura.html#a0b8b811c4acf48b32837ad07a6c243ff">dibuja</a> (<a class="code hl_class" href="classunir2d_1_1_imagen.html">Imagen</a> * imagen);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_textura.html#a0b8b811c4acf48b32837ad07a6c243ff">dibuja</a> (<a class="code hl_class" href="classunir2d_1_1_texto.html">Texto</a> * texto);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_textura.html#a79a7ace17b25aa603587a9569645e517">cuentaUsos</a> () <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">private</span>: </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">bool</span> iniciada {<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordtype">bool</span> para_rendir {<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        sf::Vector2u rectg_textura {};</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        sf::Texture texture {};</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordtype">bool</span> rendida {<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        sf::RenderTexture rendible {};</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordtype">int</span> cuenta_usos {0};</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keyword">const</span> sf::Texture &amp; entidad ();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keywordtype">int</span> cuenta_instancias {};</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="comment">// las texturas no se pueden copiar ni mover       </span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_function" href="classunir2d_1_1_textura.html#a947d19eccd3cfc04e134079556f25421">Textura</a> (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_textura.html">Textura</a> &amp; )              = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_function" href="classunir2d_1_1_textura.html#a947d19eccd3cfc04e134079556f25421">Textura</a> (<a class="code hl_class" href="classunir2d_1_1_textura.html">Textura</a> &amp;&amp; )                   = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_class" href="classunir2d_1_1_textura.html">Textura</a> &amp; operator = (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_textura.html">Textura</a> &amp; ) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <a class="code hl_class" href="classunir2d_1_1_textura.html">Textura</a> &amp; operator = (<a class="code hl_class" href="classunir2d_1_1_textura.html">Textura</a> &amp;&amp; )      = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classunir2d_1_1_imagen.html">Imagen</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classunir2d_1_1_baldosas.html">Baldosas</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classunir2d_1_1_malla.html">Malla</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classunir2d_1_1_texto.html">Texto</a>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classunir2d_1_1_juego_base.html">JuegoBase</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    };</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classunir2d_1_1_textura.html#a947d19eccd3cfc04e134079556f25421">  115</a></span>    <span class="keyword">inline</span> <a class="code hl_function" href="classunir2d_1_1_textura.html#a947d19eccd3cfc04e134079556f25421">Textura::Textura</a> () {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        cuenta_instancias ++;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classunir2d_1_1_textura.html#a06722804a1f49ffcfd6622b6100265d0">  119</a></span>    <span class="keyword">inline</span> <a class="code hl_function" href="classunir2d_1_1_textura.html#a06722804a1f49ffcfd6622b6100265d0">Textura::~Textura</a> () {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        cuenta_instancias --;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classunir2d_1_1_textura.html#a79a7ace17b25aa603587a9569645e517">  123</a></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_textura.html#a79a7ace17b25aa603587a9569645e517">Textura::cuentaUsos</a> ()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">return</span> cuenta_usos;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
+<div class="ttc" id="aclassunir2d_1_1_baldosas_html"><div class="ttname"><a href="classunir2d_1_1_baldosas.html">unir2d::Baldosas</a></div><div class="ttdoc">Presenta en pantalla un conjunto de imágenes usadas para cubrir una superficie.</div><div class="ttdef"><b>Definition:</b> Baldosas.h:29</div></div>
+<div class="ttc" id="aclassunir2d_1_1_imagen_html"><div class="ttname"><a href="classunir2d_1_1_imagen.html">unir2d::Imagen</a></div><div class="ttdoc">Presenta en pantalla una imagen.</div><div class="ttdef"><b>Definition:</b> Imagen.h:31</div></div>
+<div class="ttc" id="aclassunir2d_1_1_juego_base_html"><div class="ttname"><a href="classunir2d_1_1_juego_base.html">unir2d::JuegoBase</a></div><div class="ttdoc">Clase base de los microjuegos que funcionana mediante el motor de juego 'UNIR-2D'.</div><div class="ttdef"><b>Definition:</b> JuegoBase.h:46</div></div>
+<div class="ttc" id="aclassunir2d_1_1_malla_html"><div class="ttname"><a href="classunir2d_1_1_malla.html">unir2d::Malla</a></div><div class="ttdoc">Conjunto de triángulos que se presentan en pantalla.</div><div class="ttdef"><b>Definition:</b> Malla.h:29</div></div>
+<div class="ttc" id="aclassunir2d_1_1_texto_html"><div class="ttname"><a href="classunir2d_1_1_texto.html">unir2d::Texto</a></div><div class="ttdoc">Presenta un texto en pantalla.</div><div class="ttdef"><b>Definition:</b> Texto.h:32</div></div>
+<div class="ttc" id="aclassunir2d_1_1_textura_html"><div class="ttname"><a href="classunir2d_1_1_textura.html">unir2d::Textura</a></div><div class="ttdoc">Almacena una imagen en la memoria.</div><div class="ttdef"><b>Definition:</b> Textura.h:37</div></div>
+<div class="ttc" id="aclassunir2d_1_1_textura_html_a06722804a1f49ffcfd6622b6100265d0"><div class="ttname"><a href="classunir2d_1_1_textura.html#a06722804a1f49ffcfd6622b6100265d0">unir2d::Textura::~Textura</a></div><div class="ttdeci">~Textura()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> Textura.h:119</div></div>
+<div class="ttc" id="aclassunir2d_1_1_textura_html_a0b8b811c4acf48b32837ad07a6c243ff"><div class="ttname"><a href="classunir2d_1_1_textura.html#a0b8b811c4acf48b32837ad07a6c243ff">unir2d::Textura::dibuja</a></div><div class="ttdeci">void dibuja(Imagen *imagen)</div><div class="ttdoc">Dibuja sobre la imagen de esta instancia la imagen indicada.</div><div class="ttdef"><b>Definition:</b> Textura.cpp:61</div></div>
+<div class="ttc" id="aclassunir2d_1_1_textura_html_a53abc1345a19c92787ee8dd2cefce283"><div class="ttname"><a href="classunir2d_1_1_textura.html#a53abc1345a19c92787ee8dd2cefce283">unir2d::Textura::suaviza</a></div><div class="ttdeci">void suaviza()</div><div class="ttdoc">Suaviza la presentación de la imagen.</div><div class="ttdef"><b>Definition:</b> Textura.cpp:40</div></div>
+<div class="ttc" id="aclassunir2d_1_1_textura_html_a75a7b61ceb8a9d4caad6fff5362f082c"><div class="ttname"><a href="classunir2d_1_1_textura.html#a75a7b61ceb8a9d4caad6fff5362f082c">unir2d::Textura::crea</a></div><div class="ttdeci">void crea(Vector tamano)</div><div class="ttdoc">Crea una imagen nueva en la memoria.</div><div class="ttdef"><b>Definition:</b> Textura.cpp:47</div></div>
+<div class="ttc" id="aclassunir2d_1_1_textura_html_a79a7ace17b25aa603587a9569645e517"><div class="ttname"><a href="classunir2d_1_1_textura.html#a79a7ace17b25aa603587a9569645e517">unir2d::Textura::cuentaUsos</a></div><div class="ttdeci">int cuentaUsos() const</div><div class="ttdoc">Indica cuantas instancias de Dibujable tienen una asignación activa a esta instancia.</div><div class="ttdef"><b>Definition:</b> Textura.h:123</div></div>
+<div class="ttc" id="aclassunir2d_1_1_textura_html_a947d19eccd3cfc04e134079556f25421"><div class="ttname"><a href="classunir2d_1_1_textura.html#a947d19eccd3cfc04e134079556f25421">unir2d::Textura::Textura</a></div><div class="ttdeci">Textura()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> Textura.h:115</div></div>
+<div class="ttc" id="aclassunir2d_1_1_textura_html_aeddb9bc4ba4e5e070ce5f57ceae4f44f"><div class="ttname"><a href="classunir2d_1_1_textura.html#aeddb9bc4ba4e5e070ce5f57ceae4f44f">unir2d::Textura::carga</a></div><div class="ttdeci">void carga(path archivo)</div><div class="ttdoc">Lee la imagen del archivo y la almacena en la memoria.</div><div class="ttdef"><b>Definition:</b> Textura.cpp:24</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html"><div class="ttname"><a href="classunir2d_1_1_vector.html">unir2d::Vector</a></div><div class="ttdoc">Implementación de los vectores de dos dimensiones.</div><div class="ttdef"><b>Definition:</b> Vector.h:30</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

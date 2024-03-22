@@ -1,0 +1,359 @@
+Para ser incorporado como documentación al archivo ProcesoJuegoEquipo.cpp 
+
+
+                                                                                                                
+Estado::inicial  
+    |    # sin elegidos, sin atacante, sin equipo actuante   
+    |
+    |    iniciado :: entraPartida                               
+    +------------------------------------------------------------------------------>  Estado::inicioRonda
+
+
+Estado::terminal  
+         # sin elegidos, sin atacante, con equipo actuante  
+
+
+Cualquier estado excepto:  Estado::inicial  y  Estado::terminal 
+    |
+    |    terminado :: saltaFinalJuego
+    +------------------------------------------------------------------------------>  Estado::terminal
+    |
+    |    entrandoActuante :: anunciaActuante
+    +------------------------------------------------------------------------------>  mismo estado
+    |
+    |    saliendoActuante :: desanunciaActuante
+    +------------------------------------------------------------------------------>  mismo estado
+    |
+    |    entrandoHabilidad :: anunciaHabilidad
+    +------------------------------------------------------------------------------>  mismo estado
+    |
+    |    saliendoHabilidad :: desanunciaHabilidad
+    +------------------------------------------------------------------------------>  mismo estado
+    |
+    |    entrandoFicha :: anunciaFicha
+    +------------------------------------------------------------------------------>  mismo estado
+    |
+    |    saliendoFicha :: desanunciaFicha
+    +------------------------------------------------------------------------------>  mismo estado
+
+
+Cualquier estado excepto:  Estado::inicial  ,  Estado::terminal  y  Estado::mostrandoAyuda
+    |
+    |    ayudaSeleccionada :: muestraAyuda 
+    +------------------------------------------------------------------------------>  Estado::mostrandoAyuda 
+
+
+============================================================================================================================================
+
+
+Estado::inicioRonda 
+    |    # sin elegidos, sin atacante  
+    |
+    |    pulsadoEspacio :: entraInicioJugada
+    +------------------------------------------------------------------------------>  Estado::inicioJugada
+
+
+Estado::inicioTurno 
+    |    # sin elegidos, sin atacante  
+    |
+    |    pulsadoEspacio :: entraInicioJugada
+    +------------------------------------------------------------------------------>  Estado::inicioJugada
+
+
+============================================================================================================================================
+
+
+Estado::inicioJugada  
+    |    # elegidos ambos, con atacante (no agotado), modo acción nulo 
+    |    # sin etapas camino, sin habilidad, sin oponente, sin celda área 
+    |
+    |    actuanteSeleccionado :: entraAccionDesplazam
+    +------------------------------------------------------------------------------>  Estado::preparacionDesplazamiento
+    |
+    |    habilidadSeleccionada :: entraAccionHabilidad
+    +---------------------------------------------------------------------------+-->  Estado::habilidadSimpleInvalida
+                                                                                |
+                                                                                +-->  Estado::habilidadSimpleConfirmacion
+                                                                                |
+                                                                                +-->  Estado::preparacionHabilidadOponente
+                                                                                |
+                                                                                +-->  Estado::preparacionHabilidadArea
+
+
+============================================================================================================================================
+
+
+Estado::preparacionDesplazamiento  
+    |    # elegidos ambos, con atacante (no agotado), modo acción desplaza  
+    |    # sin etapas camino, sin habilidad, sin oponente, sin celda área 
+    |
+    |    entrandoFicha :: marcaFichaCamino
+    +------------------------------------------------------------------------------>  Estado::preparacionDesplazamiento
+    |
+    |    saliendoFicha :: desmarcaFichaCamino
+    +------------------------------------------------------------------------------>  Estado::preparacionDesplazamiento
+    |
+    |    habilidadSeleccionada :: entraAccionHabilidad
+    +---------------------------------------------------------------------------+-->  Estado::habilidadSimpleInvalida
+    |                                                                           |
+    |                                                                           +-->  Estado::habilidadSimpleConfirmacion
+    |                                                                           |
+    |                                                                           +-->  Estado::preparacionHabilidadOponente
+    |                                                                           |
+    |                                                                           +-->  Estado::preparacionHabilidadArea  
+    |
+    |    fichaPulsada :: personaje = atacante :: entraMarcacionCamino
+    +------------------------------------------------------------------------------>  Estado::marcacionCaminoFicha
+
+
+Estado::marcacionCaminoFicha  
+    |    # elegidos ambos, con atacante (no agotado), modo acción desplaza  
+    |    # una o más etapas camino, sin habilidad, sin oponente, sin celda área 
+    |
+    |    entrandoCelda :: marcaCeldaCamino
+    +------------------------------------------------------------------------------>  Estado::marcacionCaminoFicha
+    |
+    |    saliendoCelda :: desmarcaCeldaCamino
+    +------------------------------------------------------------------------------>  Estado::marcacionCaminoFicha
+    |
+    |    celdaPulsada :: fijaCeldaCamino
+    +------------------------------------------------------------------------------>  Estado::marcacionCaminoFicha 
+    |
+    |    pulsadoEspacio :: mueveFicha
+    +---------------------------------------------------------------------------+-->  Estado::inicioJugada
+    |                                                                           |
+    |                                                                           +-->  Estado::inicioTurno
+    |                                                                           |
+    |                                                                           +-->  Estado::inicioRonda
+    |                                                                           |
+    |                                                                           +-->  Estado::finalPartida
+    |
+    |    pulsadoEscape :: revierteAccionDesplazam
+    +------------------------------------------------------------------------------>  Estado::preparacionDesplazamiento
+
+
+============================================================================================================================================
+
+
+Estado::habilidadSimpleInvalida  
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad simple, sin oponente, sin celda área 
+    |
+    |    habilidadSeleccionada :: tipoAccion=simple :: evaluaHabilidadSimple(habilidad)
+    +---------------------------------------------------------------------------+-->  Estado::habilidadSimpleInvalida
+    |                                                                           |
+    |                                                                           +-->  Estado::habilidadSimpleConfirmacion
+    |
+    |    pulsadoEscape :: revierteHabilidadSimple
+    +------------------------------------------------------------------------------>  Estado::inicioJugada 
+
+
+Estado::habilidadSimpleConfirmacion  
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad simple, sin oponente, sin celda área 
+    |
+    |    pulsadoEspacio :: efectuaHabilidadSimple
+    +------------------------------------------------------------------------------>  Estado::habilidadSimpleResultado
+    |
+    |    pulsadoEscape :: revierteHabilidadSimple
+    +------------------------------------------------------------------------------>  Estado::inicioJugada 
+
+
+Estado::habilidadSimpleResultado 
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad simple, sin oponente, sin celda área 
+    |
+    |    pulsadoEspacio :: asumeHabilidad
+    +---------------------------------------------------------------------------+-->  Estado::inicioJugada
+                                                                                |
+                                                                                +-->  Estado::inicioTurno
+                                                                                |
+                                                                                +-->  Estado::inicioRonda
+                                                                                |
+                                                                                +-->  Estado::finalPartida
+
+
+============================================================================================================================================
+
+
+Estado::preparacionHabilidadOponente  
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad oponente, sin oponente, sin celda área
+    |
+    |    actuanteSeleccionado :: entraAccionDesplazam
+    +------------------------------------------------------------------------------>  Estado::preparacionDesplazamiento 
+    |
+    |    habilidadSeleccionada :: entraAccionHabilidad
+    +---------------------------------------------------------------------------+-->  Estado::habilidadSimpleInvalida
+    |                                                                           |
+    |                                                                           +-->  Estado::habilidadSimpleConfirmacion
+    |                                                                           |
+    |                                                                           +-->  Estado::preparacionHabilidadOponente
+    |                                                                           |
+    |                                                                           +-->  Estado::preparacionHabilidadArea  
+    |
+    |    (fichaSeleccionada/personajeSeleccionado) :: evaluaHabilidadOponente(personaje)
+    +---------------------------------------------------------------------------+-->  Estado::oponenteHabilidadInvalido
+                                                                                |
+                                                                                +-->  Estado::oponenteHabilidadConfirmacion
+
+
+Estado::oponenteHabilidadInvalido  
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad oponente, con oponente, sin celda área 
+    |
+    |    habilidadSeleccionada :: tipoAccion=oponente :: evaluaHabilidadOponente(habilidad)
+    +---------------------------------------------------------------------------+-->  Estado::oponenteHabilidadInvalido
+    |                                                                           |
+    |                                                                           +-->  Estado::oponenteHabilidadConfirmacion
+    |
+    |    (fichaSeleccionada/personajeSeleccionado) :: evaluaHabilidadOponente(personaje)
+    +---------------------------------------------------------------------------+-->  Estado::oponenteHabilidadInvalido
+    |                                                                           |
+    |                                                                           +-->  Estado::oponenteHabilidadConfirmacion
+    |
+    |    pulsadoEscape :: revierteHabilidadOponente
+    +------------------------------------------------------------------------------>  Estado::preparacionHabilidadOponente
+
+
+Estado::oponenteHabilidadConfirmacion  
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad oponente, con oponente, sin celda área 
+    |
+    |    pulsadoEspacio :: efectuaHabilidadOponente
+    +---------------------------------------------------------------------------+-->  Estado::oponenteHabilidadCalculando
+    |                                                                           |
+    |                                                                           +-->  Estado::oponenteHabilidadResultado
+    |
+    |    pulsadoEscape :: revierteHabilidadOponente
+    +------------------------------------------------------------------------------>  Estado::preparacionHabilidadOponente
+
+
+Estado::oponenteHabilidadCalculando
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad oponente, con oponente, sin celda área 
+    |
+    |    alarmaCalculo :: calculaHabilidadOponente
+    +---------------------------------------------------------------------------+-->  Estado::oponenteHabilidadCalculando
+                                                                                |
+                                                                                +-->  Estado::oponenteHabilidadResultado 
+
+
+Estado::oponenteHabilidadResultado 
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad oponente, con oponente, sin celda área 
+    |
+    |    pulsadoEspacio :: asumeHabilidad
+    +---------------------------------------------------------------------------+-->  Estado::inicioJugada
+                                                                                |
+                                                                                +-->  Estado::inicioTurno
+                                                                                |
+                                                                                +-->  Estado::inicioRonda
+                                                                                |
+                                                                                +-->  Estado::finalPartida
+
+
+============================================================================================================================================
+
+
+Estado::preparacionHabilidadArea  
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad área, sin oponente, sin celda área 
+    |
+    |    actuanteSeleccionado :: entraAccionDesplazam
+    +------------------------------------------------------------------------------>  Estado::preparacionDesplazamiento
+    |
+    |    habilidadSeleccionada :: entraAccionHabilidad
+    +---------------------------------------------------------------------------+-->  Estado::habilidadSimpleInvalida
+    |                                                                           |
+    |                                                                           +-->  Estado::habilidadSimpleConfirmacion
+    |                                                                           |
+    |                                                                           +-->  Estado::preparacionHabilidadOponente
+    |                                                                           |
+    |                                                                           +-->  Estado::preparacionHabilidadArea
+    |
+    |    celdaSeleccionada :: evaluaHabilidadArea(celda)
+    +---------------------------------------------------------------------------+-->  Estado::areaHabilidadInvalida
+                                                                                | 
+                                                                                +-->  Estado::areaHabilidadConfirmacion
+
+
+Estado::areaHabilidadInvalida  
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad área, sin oponente, con celda área  
+    |
+    |    habilidadSeleccionada :: tipoAccion=area :: evaluaHabilidadArea(habilidad)
+    +---------------------------------------------------------------------------+-->  Estado::areaHabilidadInvalida
+    |                                                                           |
+    |                                                                           +-->  Estado::areaHabilidadConfirmacion 
+    |
+    |    celdaSeleccionada :: evaluaHabilidadArea(celda)
+    +---------------------------------------------------------------------------+-->  Estado::areaHabilidadInvalida
+    |                                                                           | 
+    |                                                                           +-->  Estado::areaHabilidadConfirmacion
+    |
+    |    pulsadoEscape :: revierteHabilidadArea
+    +------------------------------------------------------------------------------>  Estado::preparacionHabilidadArea
+
+
+Estado::areaHabilidadConfirmacion  
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad área, sin oponente, con celda área    
+    |
+    |    pulsadoEspacio :: efectuaHabilidadArea
+    +---------------------------------------------------------------------------+-->  Estado::areaHabilidadCalculando
+    |                                                                           |
+    |                                                                           +-->  Estado::areaHabilidadResultado
+    |
+    |    pulsadoEscape :: revierteHabilidadArea
+    +------------------------------------------------------------------------------>  Estado::preparacionHabilidadArea
+
+
+Estado::areaHabilidadCalculando
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad área, sin oponente, con celda área    
+    |
+    |    alarmaCalculo :: calculaHabilidadArea 
+    +---------------------------------------------------------------------------+-->  Estado::areaHabilidadCalculando
+                                                                                |
+                                                                                +-->  Estado::areaHabilidadResultado 
+
+
+Estado::areaHabilidadResultado 
+    |    # elegidos ambos, con atacante (no agotado), modo acción habilidad  
+    |    # sin etapas camino, con habilidad área, sin oponente, con celda área    
+    |
+    |    pulsadoEspacio :: asumeHabilidad
+    +---------------------------------------------------------------------------+-->  Estado::inicioJugada
+                                                                                |
+                                                                                +-->  Estado::inicioTurno
+                                                                                |
+                                                                                +-->  Estado::inicioRonda
+                                                                                |
+                                                                                +-->  Estado::finalPartida
+
+
+============================================================================================================================================
+
+
+Estado::mostrandoAyuda 
+    |
+    |    (fichaSeleccionada/personajeSeleccionado) :: muestraAyuda(personaje)    
+    +------------------------------------------------------------------------------>  Estado::mostrandoAyuda
+    |
+    |    actuanteSeleccionado :: muestraAyudaActuante
+    +------------------------------------------------------------------------------>  Estado::mostrandoAyuda
+    |
+    |    pulsadoArriba :: subeAyuda
+    +------------------------------------------------------------------------------>  Estado::mostrandoAyuda
+    |
+    |    pulsadoAbajo :: bajaAyuda
+    +------------------------------------------------------------------------------>  Estado::mostrandoAyuda
+    |
+    |    (ayudaSeleccionada/pulsadoEscape) :: ocultaAyuda 
+    +------------------------------------------------------------------------------>  estado prévio
+
+
+============================================================================================================================================
+
+

@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNIR-2D: Fichero Fuente Vector.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UNIR-2D<span id="projectnumber">&#160;1.2</span>
+   </div>
+   <div id="projectbrief">Motor de juego mínimo para la programación de microjuegos en 2 dimensiones.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Vector.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// UNIR-2D :: Motor de juego mínimo para la programación de microjuegos en 2 dimensiones.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// </span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Copyright (C) 2022 UNIR-Universidad Internacional de La Rioja. </span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Todos los derechos reservados. </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// El sofware se entrega solo para uso educativo, sin ninguna garantía de adecuación para ningún </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// proposito particular.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Bibliotecas de código usadas: </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//   1) SFML - Simple and Fast Multimedia Library. Licencia: https://www.sfml-dev.org/license.php  </span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// </span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Archivo: Vector.h</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Autor:   Miguel Angel Zurita Cortés</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// Versión: 1.2 (10-Oct-2022)</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Estado:  Terminado. Revisado. Documentado.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span>unir2d {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html">   30</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">public</span>: </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">constexpr</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#a1f17e26e0b4e464520ce3eba8a8b7f00">Vector</a> ();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">constexpr</span> <span class="keyword">explicit</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#a1f17e26e0b4e464520ce3eba8a8b7f00">Vector</a> (<span class="keywordtype">float</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#a942db46c68f79b79a9597f63dadf8a78">x</a>, <span class="keywordtype">float</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#a599cd86318fca52b16b61ecff815c62a">y</a>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#a1f17e26e0b4e464520ce3eba8a8b7f00">Vector</a> (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_coord.html">Coord</a> &amp; coord);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>       </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#a942db46c68f79b79a9597f63dadf8a78">x</a> () <span class="keyword">const</span>;        </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#a599cd86318fca52b16b61ecff815c62a">y</a> () <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; <a class="code hl_function" href="classunir2d_1_1_vector.html#a1b12268940783960cf90a8dfb6b3ec5b">operator += </a>(<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; <a class="code hl_function" href="classunir2d_1_1_vector.html#af93e587ac212cb508844e309a4321f49">operator -= </a>(<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; <a class="code hl_function" href="classunir2d_1_1_vector.html#a1b864b7d5ec45dc365157e92e039b1ac">operator *= </a>(<span class="keywordtype">float</span> escalar);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#acbd5d3bb641493434f03c858612c923d">esCero</a> () <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordtype">float</span> comp_x;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordtype">float</span> comp_y;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keyword">friend</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span>   <a class="code hl_friend" href="classunir2d_1_1_vector.html#a7fb6a626d76abb20c2061c0038eeba8b">operator == </a>(<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_1, <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_2);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keyword">friend</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span>   <a class="code hl_friend" href="classunir2d_1_1_vector.html#ad50b3d23633eb50564e89ff3b3f98540">operator != </a>(<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_1, <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_2);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">friend</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> <a class="code hl_friend" href="classunir2d_1_1_vector.html#a488fc4e038f4c71d18a82aa6d395f75b">operator +  </a>(<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_1, <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_2);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keyword">friend</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> <a class="code hl_friend" href="classunir2d_1_1_vector.html#a488fc4e038f4c71d18a82aa6d395f75b">operator +  </a>(<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keyword">friend</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> <a class="code hl_friend" href="classunir2d_1_1_vector.html#a21f6a5798ef05b27000516402a253c1a">operator -  </a>(<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_1, <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_2);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keyword">friend</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> <a class="code hl_friend" href="classunir2d_1_1_vector.html#a21f6a5798ef05b27000516402a253c1a">operator -  </a>(<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keyword">friend</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> <a class="code hl_friend" href="classunir2d_1_1_vector.html#a946735743796e9a2f31ce04946786967">operator *  </a>(<span class="keywordtype">float</span> escalar, <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keyword">friend</span>           <span class="keywordtype">float</span>  <a class="code hl_friend" href="classunir2d_1_1_vector.html#aad28e3139bd2631f0604e2b3e63f454f">norma</a>       (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keyword">friend</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> <a class="code hl_friend" href="classunir2d_1_1_vector.html#abd64303e0c5abcb1c22f4b2406a33783">transp</a>      (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    };</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#a1f17e26e0b4e464520ce3eba8a8b7f00">   98</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#a1f17e26e0b4e464520ce3eba8a8b7f00">Vector::Vector</a> () {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        comp_x = 0;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        comp_y = 0;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    };</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#aab4e0b8aa064690eec5590cf72073273">  104</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#a1f17e26e0b4e464520ce3eba8a8b7f00">Vector::Vector</a> (<span class="keywordtype">float</span> x , <span class="keywordtype">float</span> y) { </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        this-&gt;comp_x = <a class="code hl_function" href="classunir2d_1_1_vector.html#a942db46c68f79b79a9597f63dadf8a78">x</a> ; </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        this-&gt;comp_y = <a class="code hl_function" href="classunir2d_1_1_vector.html#a599cd86318fca52b16b61ecff815c62a">y</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#ab0718cc43f5e09b7343ebbe05e384ebb">  110</a></span>    <span class="keyword">inline</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#a1f17e26e0b4e464520ce3eba8a8b7f00">Vector::Vector</a> (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_coord.html">Coord</a> &amp; coord) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        comp_x = (float) coord.<a class="code hl_function" href="classunir2d_1_1_coord.html#a6cf3f75c1a3cdda25417d88cd79462d0">coln</a> ();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        comp_y = (float) coord.<a class="code hl_function" href="classunir2d_1_1_coord.html#a247655dd3ff740c0cc13d1ef5a15432d">fila</a> ();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>       </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#a942db46c68f79b79a9597f63dadf8a78">  116</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#a942db46c68f79b79a9597f63dadf8a78">Vector::x</a> ()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">return</span> comp_x;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#a599cd86318fca52b16b61ecff815c62a">  121</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#a599cd86318fca52b16b61ecff815c62a">Vector::y</a> ()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">return</span> comp_y;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#a1b12268940783960cf90a8dfb6b3ec5b">  126</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; <a class="code hl_function" href="classunir2d_1_1_vector.html#a1b12268940783960cf90a8dfb6b3ec5b">Vector::operator += </a>(<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        comp_x += vector.comp_x;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        comp_y += vector.comp_y;      </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">return</span> * <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#af93e587ac212cb508844e309a4321f49">  133</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; <a class="code hl_function" href="classunir2d_1_1_vector.html#af93e587ac212cb508844e309a4321f49">Vector::operator -= </a>(<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        comp_x -= vector.comp_x;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        comp_y -= vector.comp_y;      </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> * <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#a1b864b7d5ec45dc365157e92e039b1ac">  140</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; <a class="code hl_function" href="classunir2d_1_1_vector.html#a1b864b7d5ec45dc365157e92e039b1ac">Vector::operator *= </a>(<span class="keywordtype">float</span> escalar) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        comp_x *= escalar;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        comp_y *= escalar;      </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">return</span> * <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#acbd5d3bb641493434f03c858612c923d">  147</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classunir2d_1_1_vector.html#acbd5d3bb641493434f03c858612c923d">Vector::esCero</a> ()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">return</span> comp_x == 0 &amp;&amp; comp_y == 0;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    } </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#a7fb6a626d76abb20c2061c0038eeba8b">  156</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_1, <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_2) {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">return</span> vector_1.comp_x == vector_2.comp_x &amp;&amp; </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>               vector_1.comp_y == vector_2.comp_y;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#ad50b3d23633eb50564e89ff3b3f98540">  166</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> operator != (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_1, <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_2) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">return</span> vector_1.comp_x != vector_2.comp_x || </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>               vector_1.comp_y != vector_2.comp_y;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#a488fc4e038f4c71d18a82aa6d395f75b">  176</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> operator + (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_1, <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_2) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> {vector_1.comp_x + vector_2.comp_x, </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                       vector_1.comp_y + vector_2.comp_y };</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#ab32499f38cec5526e84be453ba637edf">  185</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> operator + (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector) {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> {vector.comp_x, </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                       vector.comp_y };</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#a21f6a5798ef05b27000516402a253c1a">  195</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> operator - (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_1, <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector_2) {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> {vector_1.comp_x - vector_2.comp_x, </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                       vector_1.comp_y - vector_2.comp_y };</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    }</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#a39bad7f0046b83413015fa1068f00b4f">  204</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> operator - (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector) {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> {- vector.comp_x, </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                       - vector.comp_y };</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#a946735743796e9a2f31ce04946786967">  214</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> operator * (<span class="keywordtype">float</span> escalar, <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector) {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> {escalar * vector.comp_x, </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                       escalar * vector.comp_y };</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    }</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#aad28e3139bd2631f0604e2b3e63f454f">  223</a></span>    <span class="keyword">inline</span> <span class="keywordtype">float</span> norma (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector) {        </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">return</span> std::hypot (vector.comp_x, vector.comp_y);        </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="classunir2d_1_1_vector.html#abd64303e0c5abcb1c22f4b2406a33783">  231</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> transp (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> &amp; vector) {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classunir2d_1_1_vector.html">Vector</a> {vector.comp_y, vector.comp_x};</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    }</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>}</div>
+<div class="ttc" id="aclassunir2d_1_1_coord_html"><div class="ttname"><a href="classunir2d_1_1_coord.html">unir2d::Coord</a></div><div class="ttdoc">Implementación del un par de coordenadas enteras.</div><div class="ttdef"><b>Definition:</b> Coord.h:32</div></div>
+<div class="ttc" id="aclassunir2d_1_1_coord_html_a247655dd3ff740c0cc13d1ef5a15432d"><div class="ttname"><a href="classunir2d_1_1_coord.html#a247655dd3ff740c0cc13d1ef5a15432d">unir2d::Coord::fila</a></div><div class="ttdeci">constexpr int fila() const</div><div class="ttdoc">Obtiene el componente 'fila' de las coordenadas.</div><div class="ttdef"><b>Definition:</b> Coord.h:108</div></div>
+<div class="ttc" id="aclassunir2d_1_1_coord_html_a6cf3f75c1a3cdda25417d88cd79462d0"><div class="ttname"><a href="classunir2d_1_1_coord.html#a6cf3f75c1a3cdda25417d88cd79462d0">unir2d::Coord::coln</a></div><div class="ttdeci">constexpr int coln() const</div><div class="ttdoc">Obtiene el componente 'coln' de las coordenadas.</div><div class="ttdef"><b>Definition:</b> Coord.h:112</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html"><div class="ttname"><a href="classunir2d_1_1_vector.html">unir2d::Vector</a></div><div class="ttdoc">Implementación de los vectores de dos dimensiones.</div><div class="ttdef"><b>Definition:</b> Vector.h:30</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_a1b12268940783960cf90a8dfb6b3ec5b"><div class="ttname"><a href="classunir2d_1_1_vector.html#a1b12268940783960cf90a8dfb6b3ec5b">unir2d::Vector::operator+=</a></div><div class="ttdeci">constexpr Vector &amp; operator+=(const Vector &amp;vector)</div><div class="ttdoc">Operador de asignación y suma.</div><div class="ttdef"><b>Definition:</b> Vector.h:126</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_a1b864b7d5ec45dc365157e92e039b1ac"><div class="ttname"><a href="classunir2d_1_1_vector.html#a1b864b7d5ec45dc365157e92e039b1ac">unir2d::Vector::operator*=</a></div><div class="ttdeci">constexpr Vector &amp; operator*=(float escalar)</div><div class="ttdoc">Operador de asignación y producto por un escalar.</div><div class="ttdef"><b>Definition:</b> Vector.h:140</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_a1f17e26e0b4e464520ce3eba8a8b7f00"><div class="ttname"><a href="classunir2d_1_1_vector.html#a1f17e26e0b4e464520ce3eba8a8b7f00">unir2d::Vector::Vector</a></div><div class="ttdeci">constexpr Vector()</div><div class="ttdoc">Constructor del vector cero.</div><div class="ttdef"><b>Definition:</b> Vector.h:98</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_a21f6a5798ef05b27000516402a253c1a"><div class="ttname"><a href="classunir2d_1_1_vector.html#a21f6a5798ef05b27000516402a253c1a">unir2d::Vector::operator-</a></div><div class="ttdeci">friend constexpr Vector operator-(const Vector &amp;vector_1, const Vector &amp;vector_2)</div><div class="ttdoc">Operador de resta de vectores.</div><div class="ttdef"><b>Definition:</b> Vector.h:195</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_a488fc4e038f4c71d18a82aa6d395f75b"><div class="ttname"><a href="classunir2d_1_1_vector.html#a488fc4e038f4c71d18a82aa6d395f75b">unir2d::Vector::operator+</a></div><div class="ttdeci">friend constexpr Vector operator+(const Vector &amp;vector_1, const Vector &amp;vector_2)</div><div class="ttdoc">Operador de suma de vectores.</div><div class="ttdef"><b>Definition:</b> Vector.h:176</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_a599cd86318fca52b16b61ecff815c62a"><div class="ttname"><a href="classunir2d_1_1_vector.html#a599cd86318fca52b16b61ecff815c62a">unir2d::Vector::y</a></div><div class="ttdeci">constexpr float y() const</div><div class="ttdoc">Obtiene el componente 'y' del vector.</div><div class="ttdef"><b>Definition:</b> Vector.h:121</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_a7fb6a626d76abb20c2061c0038eeba8b"><div class="ttname"><a href="classunir2d_1_1_vector.html#a7fb6a626d76abb20c2061c0038eeba8b">unir2d::Vector::operator==</a></div><div class="ttdeci">friend constexpr bool operator==(const Vector &amp;vector_1, const Vector &amp;vector_2)</div><div class="ttdoc">Operador de igualdad de vectores.</div><div class="ttdef"><b>Definition:</b> Vector.h:156</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_a942db46c68f79b79a9597f63dadf8a78"><div class="ttname"><a href="classunir2d_1_1_vector.html#a942db46c68f79b79a9597f63dadf8a78">unir2d::Vector::x</a></div><div class="ttdeci">constexpr float x() const</div><div class="ttdoc">Obtiene el componente 'x' del vector.</div><div class="ttdef"><b>Definition:</b> Vector.h:116</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_a946735743796e9a2f31ce04946786967"><div class="ttname"><a href="classunir2d_1_1_vector.html#a946735743796e9a2f31ce04946786967">unir2d::Vector::operator*</a></div><div class="ttdeci">friend constexpr Vector operator*(float escalar, const Vector &amp;vector)</div><div class="ttdoc">Operador de producto por un escalar.</div><div class="ttdef"><b>Definition:</b> Vector.h:214</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_aad28e3139bd2631f0604e2b3e63f454f"><div class="ttname"><a href="classunir2d_1_1_vector.html#aad28e3139bd2631f0604e2b3e63f454f">unir2d::Vector::norma</a></div><div class="ttdeci">friend float norma(const Vector &amp;vector)</div><div class="ttdoc">Calcula la norma (o longitud) del vector.</div><div class="ttdef"><b>Definition:</b> Vector.h:223</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_abd64303e0c5abcb1c22f4b2406a33783"><div class="ttname"><a href="classunir2d_1_1_vector.html#abd64303e0c5abcb1c22f4b2406a33783">unir2d::Vector::transp</a></div><div class="ttdeci">friend constexpr Vector transp(const Vector &amp;vector)</div><div class="ttdoc">Devuelve el vector transpuesto, intercambiando x por y.</div><div class="ttdef"><b>Definition:</b> Vector.h:231</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_acbd5d3bb641493434f03c858612c923d"><div class="ttname"><a href="classunir2d_1_1_vector.html#acbd5d3bb641493434f03c858612c923d">unir2d::Vector::esCero</a></div><div class="ttdeci">constexpr bool esCero() const</div><div class="ttdoc">Indica si la instancia es el vector cero.</div><div class="ttdef"><b>Definition:</b> Vector.h:147</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_ad50b3d23633eb50564e89ff3b3f98540"><div class="ttname"><a href="classunir2d_1_1_vector.html#ad50b3d23633eb50564e89ff3b3f98540">unir2d::Vector::operator!=</a></div><div class="ttdeci">friend constexpr bool operator!=(const Vector &amp;vector_1, const Vector &amp;vector_2)</div><div class="ttdoc">Operador de desigualdad de vectores.</div><div class="ttdef"><b>Definition:</b> Vector.h:166</div></div>
+<div class="ttc" id="aclassunir2d_1_1_vector_html_af93e587ac212cb508844e309a4321f49"><div class="ttname"><a href="classunir2d_1_1_vector.html#af93e587ac212cb508844e309a4321f49">unir2d::Vector::operator-=</a></div><div class="ttdeci">constexpr Vector &amp; operator-=(const Vector &amp;vector)</div><div class="ttdoc">Operador de asignación y resta.</div><div class="ttdef"><b>Definition:</b> Vector.h:133</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNIR-2D: Fichero Fuente Texto.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UNIR-2D<span id="projectnumber">&#160;1.2</span>
+   </div>
+   <div id="projectbrief">Motor de juego mínimo para la programación de microjuegos en 2 dimensiones.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Texto.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// UNIR-2D :: Motor de juego mínimo para la programación de microjuegos en 2 dimensiones.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// </span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Copyright (C) 2022 UNIR-Universidad Internacional de La Rioja. </span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Todos los derechos reservados. </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// El sofware se entrega solo para uso educativo, sin ninguna garantía de adecuación para ningún </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// proposito particular.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Bibliotecas de código usadas: </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//   1) SFML - Simple and Fast Multimedia Library. Licencia: https://www.sfml-dev.org/license.php  </span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// </span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Archivo: Texto.h</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Autor:   Miguel Angel Zurita Cortés</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// Versión: 1.2 (10-Oct-2022)</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Estado:  Terminado. Revisado. Documentado.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span>unir2d {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">class </span>Rendidor;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classunir2d_1_1_texto.html">   32</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classunir2d_1_1_texto.html">Texto</a> : <span class="keyword">public</span> <a class="code hl_class" href="classunir2d_1_1_dibujable.html">Dibujable</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classunir2d_1_1_texto.html#ade3089227033a6f01fa7705759f49828">Texto</a> (<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; fuente);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_function" href="classunir2d_1_1_texto.html#a9e00ad1ee43a4eb82bb3700ab8829dad">~Texto</a> ();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_texto.html#a101934b6e9437bc730ee9bd8ac843a77">ponCadena</a> (<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; valor);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_texto.html#a101934b6e9437bc730ee9bd8ac843a77">ponCadena</a> (<span class="keyword">const</span> wstring &amp; valor);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_texto.html#a691c3da32b3acf6cf50269fa5f3fe0c9">ponTamano</a> (<span class="keywordtype">int</span> valor);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_texto.html#a9db605624acb3ff6ba0feca97e700085">ponColor</a> (<a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> valor);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordtype">float</span> <a class="code hl_function" href="classunir2d_1_1_texto.html#ab3f1490de3c2f4e79f3b5abd7fcfe144">anchura</a> ();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">static</span> Fuentes fuentes;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        sf::Text m_texto {};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="comment">// los textos no se pueden copiar ni mover       </span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_function" href="classunir2d_1_1_texto.html#ade3089227033a6f01fa7705759f49828">Texto</a> (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_texto.html">Texto</a> &amp; )              = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_function" href="classunir2d_1_1_texto.html#ade3089227033a6f01fa7705759f49828">Texto</a> (<a class="code hl_class" href="classunir2d_1_1_texto.html">Texto</a> &amp;&amp; )                   = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_class" href="classunir2d_1_1_texto.html">Texto</a> &amp; operator = (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_texto.html">Texto</a> &amp; ) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_class" href="classunir2d_1_1_texto.html">Texto</a> &amp; operator = (<a class="code hl_class" href="classunir2d_1_1_texto.html">Texto</a> &amp;&amp; )      = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordtype">void</span> dibuja (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_transforma.html">Transforma</a> &amp; contenedor, Rendidor * rendidor) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordtype">void</span> dibuja (<a class="code hl_class" href="classunir2d_1_1_textura.html">Textura</a> * textura);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classunir2d_1_1_textura.html">Textura</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    };</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">inline</span> Fuentes Texto::fuentes {};</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classunir2d_1_1_texto.html#a101934b6e9437bc730ee9bd8ac843a77">   87</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_texto.html#a101934b6e9437bc730ee9bd8ac843a77">Texto::ponCadena</a> (<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; valor) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        m_texto.setString (valor);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classunir2d_1_1_texto.html#acda561cc7e2c8ac10dc40235deb5897c">   91</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_texto.html#a101934b6e9437bc730ee9bd8ac843a77">Texto::ponCadena</a> (<span class="keyword">const</span> std::wstring &amp; valor) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        m_texto.setString (valor);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="comment">//inline void Texto::ponCaracterX (unsigned int valor) {</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">//  m_texto.setString (sf::String (valor));</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="comment">//}</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classunir2d_1_1_texto.html#a691c3da32b3acf6cf50269fa5f3fe0c9">   99</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_texto.html#a691c3da32b3acf6cf50269fa5f3fe0c9">Texto::ponTamano</a> (<span class="keywordtype">int</span> valor) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        m_texto.setCharacterSize (valor);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classunir2d_1_1_texto.html#a9db605624acb3ff6ba0feca97e700085">  103</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_texto.html#a9db605624acb3ff6ba0feca97e700085">Texto::ponColor</a> (<a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> valor) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        m_texto.setFillColor (sf::Color {valor.<a class="code hl_function" href="classunir2d_1_1_color.html#afd56a3c024e697a0e6468b410e314c66">entero</a> ()});</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>}</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="ttc" id="aclassunir2d_1_1_color_html"><div class="ttname"><a href="classunir2d_1_1_color.html">unir2d::Color</a></div><div class="ttdoc">Establece un color en formato RGBA.</div><div class="ttdef"><b>Definition:</b> Color.h:29</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_afd56a3c024e697a0e6468b410e314c66"><div class="ttname"><a href="classunir2d_1_1_color.html#afd56a3c024e697a0e6468b410e314c66">unir2d::Color::entero</a></div><div class="ttdeci">uint32_t entero() const</div><div class="ttdoc">Obtiene el entero de 32 bits equivalente al color.</div><div class="ttdef"><b>Definition:</b> Color.h:199</div></div>
+<div class="ttc" id="aclassunir2d_1_1_dibujable_html"><div class="ttname"><a href="classunir2d_1_1_dibujable.html">unir2d::Dibujable</a></div><div class="ttdoc">Clase base de los objetos que se presentan en la pantalla del juego.</div><div class="ttdef"><b>Definition:</b> Dibujable.h:40</div></div>
+<div class="ttc" id="aclassunir2d_1_1_texto_html"><div class="ttname"><a href="classunir2d_1_1_texto.html">unir2d::Texto</a></div><div class="ttdoc">Presenta un texto en pantalla.</div><div class="ttdef"><b>Definition:</b> Texto.h:32</div></div>
+<div class="ttc" id="aclassunir2d_1_1_texto_html_a101934b6e9437bc730ee9bd8ac843a77"><div class="ttname"><a href="classunir2d_1_1_texto.html#a101934b6e9437bc730ee9bd8ac843a77">unir2d::Texto::ponCadena</a></div><div class="ttdeci">void ponCadena(const string &amp;valor)</div><div class="ttdoc">Establece la cadena de caracteres que aparecerá en la pantalla.</div><div class="ttdef"><b>Definition:</b> Texto.h:87</div></div>
+<div class="ttc" id="aclassunir2d_1_1_texto_html_a691c3da32b3acf6cf50269fa5f3fe0c9"><div class="ttname"><a href="classunir2d_1_1_texto.html#a691c3da32b3acf6cf50269fa5f3fe0c9">unir2d::Texto::ponTamano</a></div><div class="ttdeci">void ponTamano(int valor)</div><div class="ttdoc">Establece el tamano de la fuente usada para presentar el texto.</div><div class="ttdef"><b>Definition:</b> Texto.h:99</div></div>
+<div class="ttc" id="aclassunir2d_1_1_texto_html_a9db605624acb3ff6ba0feca97e700085"><div class="ttname"><a href="classunir2d_1_1_texto.html#a9db605624acb3ff6ba0feca97e700085">unir2d::Texto::ponColor</a></div><div class="ttdeci">void ponColor(Color valor)</div><div class="ttdoc">Color de la fuente usada para presentar el texto.</div><div class="ttdef"><b>Definition:</b> Texto.h:103</div></div>
+<div class="ttc" id="aclassunir2d_1_1_texto_html_a9e00ad1ee43a4eb82bb3700ab8829dad"><div class="ttname"><a href="classunir2d_1_1_texto.html#a9e00ad1ee43a4eb82bb3700ab8829dad">unir2d::Texto::~Texto</a></div><div class="ttdeci">~Texto()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> Texto.cpp:33</div></div>
+<div class="ttc" id="aclassunir2d_1_1_texto_html_ab3f1490de3c2f4e79f3b5abd7fcfe144"><div class="ttname"><a href="classunir2d_1_1_texto.html#ab3f1490de3c2f4e79f3b5abd7fcfe144">unir2d::Texto::anchura</a></div><div class="ttdeci">float anchura()</div><div class="ttdoc">Obtiene la anchura en píxeles del texto que se presenta en pantalla.</div><div class="ttdef"><b>Definition:</b> Texto.cpp:41</div></div>
+<div class="ttc" id="aclassunir2d_1_1_texto_html_ade3089227033a6f01fa7705759f49828"><div class="ttname"><a href="classunir2d_1_1_texto.html#ade3089227033a6f01fa7705759f49828">unir2d::Texto::Texto</a></div><div class="ttdeci">Texto(const string &amp;fuente)</div><div class="ttdoc">Constructor que establece la fuente usada por el texto.</div><div class="ttdef"><b>Definition:</b> Texto.cpp:23</div></div>
+<div class="ttc" id="aclassunir2d_1_1_textura_html"><div class="ttname"><a href="classunir2d_1_1_textura.html">unir2d::Textura</a></div><div class="ttdoc">Almacena una imagen en la memoria.</div><div class="ttdef"><b>Definition:</b> Textura.h:37</div></div>
+<div class="ttc" id="aclassunir2d_1_1_transforma_html"><div class="ttname"><a href="classunir2d_1_1_transforma.html">unir2d::Transforma</a></div><div class="ttdoc">Almacena las geometría de las entidades del juego.</div><div class="ttdef"><b>Definition:</b> Transforma.h:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

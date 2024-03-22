@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNIR-2D: Fichero Fuente Color.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UNIR-2D<span id="projectnumber">&#160;1.2</span>
+   </div>
+   <div id="projectbrief">Motor de juego mínimo para la programación de microjuegos en 2 dimensiones.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Color.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// UNIR-2D :: Motor de juego mínimo para la programación de microjuegos en 2 dimensiones.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// </span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Copyright (C) 2022 UNIR-Universidad Internacional de La Rioja. </span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Todos los derechos reservados. </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// El sofware se entrega solo para uso educativo, sin ninguna garantía de adecuación para ningún </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// proposito particular.</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Bibliotecas de código usadas: </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//   1) SFML - Simple and Fast Multimedia Library. Licencia: https://www.sfml-dev.org/license.php  </span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// </span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Archivo: Color.h</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Autor:   Miguel Angel Zurita Cortés</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// Versión: 1.2 (10-Oct-2022)</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Estado:  Terminado. Revisado. Documentado.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span>unir2d {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html">   29</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">constexpr</span> <a class="code hl_function" href="classunir2d_1_1_color.html#af263e537281e019ba47b84e739af2779">Color</a> ();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">constexpr</span> <span class="keyword">explicit</span> <a class="code hl_function" href="classunir2d_1_1_color.html#af263e537281e019ba47b84e739af2779">Color</a> (<span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a4cb0dcab28bf12db77476685937290da">rojo</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a6bce4e34e9e9436bbc94aa159c9027bc">verde</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a0f2cc6a25810c4f832fd378220fab88c">azul</a>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">constexpr</span> <span class="keyword">explicit</span> <a class="code hl_function" href="classunir2d_1_1_color.html#af263e537281e019ba47b84e739af2779">Color</a> (<span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a4cb0dcab28bf12db77476685937290da">rojo</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a6bce4e34e9e9436bbc94aa159c9027bc">verde</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a0f2cc6a25810c4f832fd378220fab88c">azul</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a6abae444c5445cd06af57d095c322a7a">alfa</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a4cb0dcab28bf12db77476685937290da">rojo</a> () <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a6bce4e34e9e9436bbc94aa159c9027bc">verde</a> () <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a0f2cc6a25810c4f832fd378220fab88c">azul</a> () <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a6abae444c5445cd06af57d095c322a7a">alfa</a> () <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        uint32_t <a class="code hl_function" href="classunir2d_1_1_color.html#afd56a3c024e697a0e6468b410e314c66">entero</a> () <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a6994fe16bcd120bf63264ec022ed3969">   69</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a6994fe16bcd120bf63264ec022ed3969">Negro</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a2fe49b2cb4af3581e7d6686ef3019b3a">   71</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a2fe49b2cb4af3581e7d6686ef3019b3a">Blanco</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a72445a1401cb1a33562af33d440c9fc6">   73</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a72445a1401cb1a33562af33d440c9fc6">Rojo</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a85c975b024dd18633de2b3946ab73e2c">   75</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a85c975b024dd18633de2b3946ab73e2c">Verde</a>;    </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a6d3b1ca0b6d40febce562e6a124b5bd3">   77</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a6d3b1ca0b6d40febce562e6a124b5bd3">Azul</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a5878a9d8258ad10f2a2833852a6727ea">   79</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a5878a9d8258ad10f2a2833852a6727ea">Amarillo</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#aa8b1dfaf3efd5352996b66b101931efa">   81</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#aa8b1dfaf3efd5352996b66b101931efa">GrisOscuro</a>;    </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a71f639ac108aaafb95dc1abcd4c21d96">   83</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a71f639ac108aaafb95dc1abcd4c21d96">Gris</a>;    </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a5741f6806c28683f29a41cd1310fa460">   85</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a5741f6806c28683f29a41cd1310fa460">Plata</a>;    </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a69ac6c27cfc20010973a6837e9965954">   87</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a69ac6c27cfc20010973a6837e9965954">Marron</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a3a895160f2ce7eae104edb74dca2c032">   89</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a3a895160f2ce7eae104edb74dca2c032">Marino</a>;    </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a8557d17595eb5280b1378b468c9e88d7">   91</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a8557d17595eb5280b1378b468c9e88d7">Naranja</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#ab09ea1b42d2f8ea926c8882473cf56bc">   93</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#ab09ea1b42d2f8ea926c8882473cf56bc">Lima</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a662355ec7de699fcb7d93d142a2d9f2e">   95</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a662355ec7de699fcb7d93d142a2d9f2e">Cian</a>;    </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#afbe25d2a2a4a1a2b195bf4f0f900b22a">   97</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#afbe25d2a2a4a1a2b195bf4f0f900b22a">Fucsia</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#afeb49dbedf2dada486e19a9a4aaa7212">   99</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#afeb49dbedf2dada486e19a9a4aaa7212">Oliva</a>;    </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#affd004d952c8b64b32e5d89f1c57d29d">  101</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#affd004d952c8b64b32e5d89f1c57d29d">Purpura</a>;    </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a8122dd3b9251150b4654d4c8ec2bd45d">  103</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a8122dd3b9251150b4654d4c8ec2bd45d">VerdeAzulado</a>;    </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a66ce38180ca58aa8b8cbb9a5a2d37946">  111</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_function" href="classunir2d_1_1_color.html#a66ce38180ca58aa8b8cbb9a5a2d37946">rgbaDeHsl</a> (<span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#af4bc8f6df348ce012013e1f1cab852c0">matiz</a>, <span class="keywordtype">int</span> saturacion, <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#af6a8c8d958ff3ffbef02d0d58d34ff44">luminosidad</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a6abae444c5445cd06af57d095c322a7a">alfa</a>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#aebfd9bed2ed996528a878682dea15a5d">  119</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_function" href="classunir2d_1_1_color.html#aebfd9bed2ed996528a878682dea15a5d">rgbaDeHsv</a> (<span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#af4bc8f6df348ce012013e1f1cab852c0">matiz</a>, <span class="keywordtype">int</span> saturacion, <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#ab2bfba7dece946a348db8a83866e2d1f">brillo</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a6abae444c5445cd06af57d095c322a7a">alfa</a>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#af4bc8f6df348ce012013e1f1cab852c0">  123</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#af4bc8f6df348ce012013e1f1cab852c0">matiz</a> ();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#af6a8c8d958ff3ffbef02d0d58d34ff44">  127</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#af6a8c8d958ff3ffbef02d0d58d34ff44">luminosidad</a> ();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#ae54d6ce2f28a4f7dcec33769b2949d74">  131</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#ae54d6ce2f28a4f7dcec33769b2949d74">intensidad</a> ();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#ab2bfba7dece946a348db8a83866e2d1f">  135</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#ab2bfba7dece946a348db8a83866e2d1f">brillo</a> ();</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#aed7a31c397983095ac411311d38703ad">  139</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#aed7a31c397983095ac411311d38703ad">saturacionL</a> ();</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a853991689c5ae8df317d4d7b8e608bd7">  143</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a853991689c5ae8df317d4d7b8e608bd7">saturacionV</a> ();</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a86b40ad6256b6f5587472e68461ca223">  147</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a86b40ad6256b6f5587472e68461ca223">saturacionI</a> ();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        uint8_t m_rojo;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        uint8_t m_verde;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        uint8_t m_azul;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        uint8_t m_alfa;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keyword">friend</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> &amp; color_1, <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> &amp; color_2);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keyword">friend</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> operator != (<span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> &amp; color_1, <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> &amp; color_2);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    };   </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#af263e537281e019ba47b84e739af2779">  162</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_function" href="classunir2d_1_1_color.html#af263e537281e019ba47b84e739af2779">Color::Color</a> () {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        this-&gt;m_rojo  = 0;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        this-&gt;m_verde = 0;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        this-&gt;m_azul  = 0;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        this-&gt;m_alfa  = 255;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a61367763a759f8c72f77c0efba644316">  169</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_function" href="classunir2d_1_1_color.html#af263e537281e019ba47b84e739af2779">Color::Color</a> (<span class="keywordtype">int</span> rojo, <span class="keywordtype">int</span> verde, <span class="keywordtype">int</span> azul) {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        this-&gt;m_rojo  = <a class="code hl_function" href="classunir2d_1_1_color.html#a4cb0dcab28bf12db77476685937290da">rojo</a>;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        this-&gt;m_verde = <a class="code hl_function" href="classunir2d_1_1_color.html#a6bce4e34e9e9436bbc94aa159c9027bc">verde</a>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        this-&gt;m_azul  = <a class="code hl_function" href="classunir2d_1_1_color.html#a0f2cc6a25810c4f832fd378220fab88c">azul</a>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        this-&gt;m_alfa  = 255;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a18a499e1bd2834b2c7e121c275a9de95">  176</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_function" href="classunir2d_1_1_color.html#af263e537281e019ba47b84e739af2779">Color::Color</a> (<span class="keywordtype">int</span> rojo, <span class="keywordtype">int</span> verde, <span class="keywordtype">int</span> azul, <span class="keywordtype">int</span> alfa) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        this-&gt;m_rojo  = <a class="code hl_function" href="classunir2d_1_1_color.html#a4cb0dcab28bf12db77476685937290da">rojo</a>;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        this-&gt;m_verde = <a class="code hl_function" href="classunir2d_1_1_color.html#a6bce4e34e9e9436bbc94aa159c9027bc">verde</a>;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        this-&gt;m_azul  = <a class="code hl_function" href="classunir2d_1_1_color.html#a0f2cc6a25810c4f832fd378220fab88c">azul</a>;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        this-&gt;m_alfa  = <a class="code hl_function" href="classunir2d_1_1_color.html#a6abae444c5445cd06af57d095c322a7a">alfa</a>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a4cb0dcab28bf12db77476685937290da">  183</a></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a4cb0dcab28bf12db77476685937290da">Color::rojo</a> ()<span class="keyword"> const </span>{    </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="keywordflow">return</span> m_rojo;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a6bce4e34e9e9436bbc94aa159c9027bc">  187</a></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a6bce4e34e9e9436bbc94aa159c9027bc">Color::verde</a> ()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keywordflow">return</span> m_verde;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    }</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a0f2cc6a25810c4f832fd378220fab88c">  191</a></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a0f2cc6a25810c4f832fd378220fab88c">Color::azul</a> ()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="keywordflow">return</span> m_azul;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#a6abae444c5445cd06af57d095c322a7a">  195</a></span>    <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classunir2d_1_1_color.html#a6abae444c5445cd06af57d095c322a7a">Color::alfa</a> ()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordflow">return</span> m_alfa;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classunir2d_1_1_color.html#afd56a3c024e697a0e6468b410e314c66">  199</a></span>    <span class="keyword">inline</span> uint32_t <a class="code hl_function" href="classunir2d_1_1_color.html#afd56a3c024e697a0e6468b410e314c66">Color::entero</a> ()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordflow">return</span> (m_rojo &lt;&lt; 24) | (m_verde &lt;&lt; 16) | (m_azul &lt;&lt; 8) | m_alfa;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_class" href="classunir2d_1_1_color.html">Color</a> <a class="code hl_variable" href="classunir2d_1_1_color.html#a6994fe16bcd120bf63264ec022ed3969">Color::Negro</a>        {0x00, 0x00, 0x00};</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#a2fe49b2cb4af3581e7d6686ef3019b3a">Color::Blanco</a>       {0xFF, 0xFF, 0xFF};</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#a72445a1401cb1a33562af33d440c9fc6">Color::Rojo</a>         {0xFF, 0x00, 0x00};</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#a85c975b024dd18633de2b3946ab73e2c">Color::Verde</a>        {0x00, 0x80, 0x00};    </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#a6d3b1ca0b6d40febce562e6a124b5bd3">Color::Azul</a>         {0x00, 0x00, 0xFF};</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#a5878a9d8258ad10f2a2833852a6727ea">Color::Amarillo</a>     {0xFF, 0xFF, 0x00};</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#aa8b1dfaf3efd5352996b66b101931efa">Color::GrisOscuro</a>   {0x40, 0x40, 0x40};    </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#a71f639ac108aaafb95dc1abcd4c21d96">Color::Gris</a>         {0x80, 0x80, 0x80};    </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#a5741f6806c28683f29a41cd1310fa460">Color::Plata</a>        {0xC0, 0xC0, 0xC0};    </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#a69ac6c27cfc20010973a6837e9965954">Color::Marron</a>       {0x80, 0x00, 0x00};</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#a3a895160f2ce7eae104edb74dca2c032">Color::Marino</a>       {0x00, 0x00, 0x80};    </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#a8557d17595eb5280b1378b468c9e88d7">Color::Naranja</a>      {0xFF, 0x80, 0x00};</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#ab09ea1b42d2f8ea926c8882473cf56bc">Color::Lima</a>         {0x00, 0xFF, 0x00};</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#a662355ec7de699fcb7d93d142a2d9f2e">Color::Cian</a>         {0x00, 0xFF, 0xFF};    </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#afbe25d2a2a4a1a2b195bf4f0f900b22a">Color::Fucsia</a>       {0xFF, 0x00, 0xFF};</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#afeb49dbedf2dada486e19a9a4aaa7212">Color::Oliva</a>        {0x80, 0x80, 0x00};    </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#affd004d952c8b64b32e5d89f1c57d29d">Color::Purpura</a>      {0x80, 0x00, 0x80};    </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keyword">inline</span> <span class="keyword">const</span> Color <a class="code hl_variable" href="classunir2d_1_1_color.html#a8122dd3b9251150b4654d4c8ec2bd45d">Color::VerdeAzulado</a> {0x00, 0x80, 0x80};    </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> Color &amp; color_1, <span class="keyword">const</span> Color &amp; color_2) {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordflow">return</span>  color_1.m_rojo  == color_2.m_rojo  &amp;&amp;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                color_1.m_verde == color_2.m_verde &amp;&amp;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                color_1.m_azul  == color_2.m_azul    ;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> operator != (<span class="keyword">const</span> Color &amp; color_1, <span class="keyword">const</span> Color &amp; color_2) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">return</span>  color_1.m_rojo  != color_2.m_rojo  ||</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                color_1.m_verde != color_2.m_verde ||</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                color_1.m_azul  != color_2.m_azul    ;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    }</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>}</div>
+<div class="ttc" id="aclassunir2d_1_1_color_html"><div class="ttname"><a href="classunir2d_1_1_color.html">unir2d::Color</a></div><div class="ttdoc">Establece un color en formato RGBA.</div><div class="ttdef"><b>Definition:</b> Color.h:29</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a0f2cc6a25810c4f832fd378220fab88c"><div class="ttname"><a href="classunir2d_1_1_color.html#a0f2cc6a25810c4f832fd378220fab88c">unir2d::Color::azul</a></div><div class="ttdeci">int azul() const</div><div class="ttdoc">Obtiene el componente 'azul' del color.</div><div class="ttdef"><b>Definition:</b> Color.h:191</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a2fe49b2cb4af3581e7d6686ef3019b3a"><div class="ttname"><a href="classunir2d_1_1_color.html#a2fe49b2cb4af3581e7d6686ef3019b3a">unir2d::Color::Blanco</a></div><div class="ttdeci">static const Color Blanco</div><div class="ttdoc">Instancia de color blanco.</div><div class="ttdef"><b>Definition:</b> Color.h:71</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a3a895160f2ce7eae104edb74dca2c032"><div class="ttname"><a href="classunir2d_1_1_color.html#a3a895160f2ce7eae104edb74dca2c032">unir2d::Color::Marino</a></div><div class="ttdeci">static const Color Marino</div><div class="ttdoc">Instancia de color azul marino.</div><div class="ttdef"><b>Definition:</b> Color.h:89</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a4cb0dcab28bf12db77476685937290da"><div class="ttname"><a href="classunir2d_1_1_color.html#a4cb0dcab28bf12db77476685937290da">unir2d::Color::rojo</a></div><div class="ttdeci">int rojo() const</div><div class="ttdoc">Obtiene el componente 'rojo' del color.</div><div class="ttdef"><b>Definition:</b> Color.h:183</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a5741f6806c28683f29a41cd1310fa460"><div class="ttname"><a href="classunir2d_1_1_color.html#a5741f6806c28683f29a41cd1310fa460">unir2d::Color::Plata</a></div><div class="ttdeci">static const Color Plata</div><div class="ttdoc">Instancia de color gris claro.</div><div class="ttdef"><b>Definition:</b> Color.h:85</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a5878a9d8258ad10f2a2833852a6727ea"><div class="ttname"><a href="classunir2d_1_1_color.html#a5878a9d8258ad10f2a2833852a6727ea">unir2d::Color::Amarillo</a></div><div class="ttdeci">static const Color Amarillo</div><div class="ttdoc">Instancia de color amarillo.</div><div class="ttdef"><b>Definition:</b> Color.h:79</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a662355ec7de699fcb7d93d142a2d9f2e"><div class="ttname"><a href="classunir2d_1_1_color.html#a662355ec7de699fcb7d93d142a2d9f2e">unir2d::Color::Cian</a></div><div class="ttdeci">static const Color Cian</div><div class="ttdoc">Instancia de color azul celeste.</div><div class="ttdef"><b>Definition:</b> Color.h:95</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a66ce38180ca58aa8b8cbb9a5a2d37946"><div class="ttname"><a href="classunir2d_1_1_color.html#a66ce38180ca58aa8b8cbb9a5a2d37946">unir2d::Color::rgbaDeHsl</a></div><div class="ttdeci">static Color rgbaDeHsl(int matiz, int saturacion, int luminosidad, int alfa)</div><div class="ttdoc">Obtiene un Color (RGBA) a partir de los componentes del modelo de color HSL.</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a6994fe16bcd120bf63264ec022ed3969"><div class="ttname"><a href="classunir2d_1_1_color.html#a6994fe16bcd120bf63264ec022ed3969">unir2d::Color::Negro</a></div><div class="ttdeci">static const Color Negro</div><div class="ttdoc">Instancia de color negro.</div><div class="ttdef"><b>Definition:</b> Color.h:69</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a69ac6c27cfc20010973a6837e9965954"><div class="ttname"><a href="classunir2d_1_1_color.html#a69ac6c27cfc20010973a6837e9965954">unir2d::Color::Marron</a></div><div class="ttdeci">static const Color Marron</div><div class="ttdoc">Instancia de color marrón (casi).</div><div class="ttdef"><b>Definition:</b> Color.h:87</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a6abae444c5445cd06af57d095c322a7a"><div class="ttname"><a href="classunir2d_1_1_color.html#a6abae444c5445cd06af57d095c322a7a">unir2d::Color::alfa</a></div><div class="ttdeci">int alfa() const</div><div class="ttdoc">Obtiene el componente 'alfa' del color (transparencia).</div><div class="ttdef"><b>Definition:</b> Color.h:195</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a6bce4e34e9e9436bbc94aa159c9027bc"><div class="ttname"><a href="classunir2d_1_1_color.html#a6bce4e34e9e9436bbc94aa159c9027bc">unir2d::Color::verde</a></div><div class="ttdeci">int verde() const</div><div class="ttdoc">Obtiene el componente 'verde' del color.</div><div class="ttdef"><b>Definition:</b> Color.h:187</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a6d3b1ca0b6d40febce562e6a124b5bd3"><div class="ttname"><a href="classunir2d_1_1_color.html#a6d3b1ca0b6d40febce562e6a124b5bd3">unir2d::Color::Azul</a></div><div class="ttdeci">static const Color Azul</div><div class="ttdoc">Instancia de color azul.</div><div class="ttdef"><b>Definition:</b> Color.h:77</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a71f639ac108aaafb95dc1abcd4c21d96"><div class="ttname"><a href="classunir2d_1_1_color.html#a71f639ac108aaafb95dc1abcd4c21d96">unir2d::Color::Gris</a></div><div class="ttdeci">static const Color Gris</div><div class="ttdoc">Instancia de color gris medio.</div><div class="ttdef"><b>Definition:</b> Color.h:83</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a72445a1401cb1a33562af33d440c9fc6"><div class="ttname"><a href="classunir2d_1_1_color.html#a72445a1401cb1a33562af33d440c9fc6">unir2d::Color::Rojo</a></div><div class="ttdeci">static const Color Rojo</div><div class="ttdoc">Instancia de color rojo.</div><div class="ttdef"><b>Definition:</b> Color.h:73</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a8122dd3b9251150b4654d4c8ec2bd45d"><div class="ttname"><a href="classunir2d_1_1_color.html#a8122dd3b9251150b4654d4c8ec2bd45d">unir2d::Color::VerdeAzulado</a></div><div class="ttdeci">static const Color VerdeAzulado</div><div class="ttdoc">Instancia de color verde azulado.</div><div class="ttdef"><b>Definition:</b> Color.h:103</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a853991689c5ae8df317d4d7b8e608bd7"><div class="ttname"><a href="classunir2d_1_1_color.html#a853991689c5ae8df317d4d7b8e608bd7">unir2d::Color::saturacionV</a></div><div class="ttdeci">int saturacionV()</div><div class="ttdoc">Obtiene el componente S, la saturación, del modelo de color HSV.</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a8557d17595eb5280b1378b468c9e88d7"><div class="ttname"><a href="classunir2d_1_1_color.html#a8557d17595eb5280b1378b468c9e88d7">unir2d::Color::Naranja</a></div><div class="ttdeci">static const Color Naranja</div><div class="ttdoc">Instancia de color naranja.</div><div class="ttdef"><b>Definition:</b> Color.h:91</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a85c975b024dd18633de2b3946ab73e2c"><div class="ttname"><a href="classunir2d_1_1_color.html#a85c975b024dd18633de2b3946ab73e2c">unir2d::Color::Verde</a></div><div class="ttdeci">static const Color Verde</div><div class="ttdoc">Instancia de color verde.</div><div class="ttdef"><b>Definition:</b> Color.h:75</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_a86b40ad6256b6f5587472e68461ca223"><div class="ttname"><a href="classunir2d_1_1_color.html#a86b40ad6256b6f5587472e68461ca223">unir2d::Color::saturacionI</a></div><div class="ttdeci">int saturacionI()</div><div class="ttdoc">Obtiene el componente S, la saturación, del modelo de color HSI.</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_aa8b1dfaf3efd5352996b66b101931efa"><div class="ttname"><a href="classunir2d_1_1_color.html#aa8b1dfaf3efd5352996b66b101931efa">unir2d::Color::GrisOscuro</a></div><div class="ttdeci">static const Color GrisOscuro</div><div class="ttdoc">Instancia de color gris oscuro.</div><div class="ttdef"><b>Definition:</b> Color.h:81</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_ab09ea1b42d2f8ea926c8882473cf56bc"><div class="ttname"><a href="classunir2d_1_1_color.html#ab09ea1b42d2f8ea926c8882473cf56bc">unir2d::Color::Lima</a></div><div class="ttdeci">static const Color Lima</div><div class="ttdoc">Instancia de color verde claro.</div><div class="ttdef"><b>Definition:</b> Color.h:93</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_ab2bfba7dece946a348db8a83866e2d1f"><div class="ttname"><a href="classunir2d_1_1_color.html#ab2bfba7dece946a348db8a83866e2d1f">unir2d::Color::brillo</a></div><div class="ttdeci">int brillo()</div><div class="ttdoc">Obtiene el componente V, el brillo, del modelo de color HSV.</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_ae54d6ce2f28a4f7dcec33769b2949d74"><div class="ttname"><a href="classunir2d_1_1_color.html#ae54d6ce2f28a4f7dcec33769b2949d74">unir2d::Color::intensidad</a></div><div class="ttdeci">int intensidad()</div><div class="ttdoc">Obtiene el componente I, la intensidad, del modelo de color HSI.</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_aebfd9bed2ed996528a878682dea15a5d"><div class="ttname"><a href="classunir2d_1_1_color.html#aebfd9bed2ed996528a878682dea15a5d">unir2d::Color::rgbaDeHsv</a></div><div class="ttdeci">static Color rgbaDeHsv(int matiz, int saturacion, int brillo, int alfa)</div><div class="ttdoc">Obtiene un Color (RGBA) a partir de los componentes del modelo de color HSV.</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_aed7a31c397983095ac411311d38703ad"><div class="ttname"><a href="classunir2d_1_1_color.html#aed7a31c397983095ac411311d38703ad">unir2d::Color::saturacionL</a></div><div class="ttdeci">int saturacionL()</div><div class="ttdoc">Obtiene el componente S, la saturación, del modelo de color HSL.</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_af263e537281e019ba47b84e739af2779"><div class="ttname"><a href="classunir2d_1_1_color.html#af263e537281e019ba47b84e739af2779">unir2d::Color::Color</a></div><div class="ttdeci">constexpr Color()</div><div class="ttdoc">Construye el color negro.</div><div class="ttdef"><b>Definition:</b> Color.h:162</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_af4bc8f6df348ce012013e1f1cab852c0"><div class="ttname"><a href="classunir2d_1_1_color.html#af4bc8f6df348ce012013e1f1cab852c0">unir2d::Color::matiz</a></div><div class="ttdeci">int matiz()</div><div class="ttdoc">Obtiene el componente H, el matiz, del modelo de color HSL, HSV y HSI.</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_af6a8c8d958ff3ffbef02d0d58d34ff44"><div class="ttname"><a href="classunir2d_1_1_color.html#af6a8c8d958ff3ffbef02d0d58d34ff44">unir2d::Color::luminosidad</a></div><div class="ttdeci">int luminosidad()</div><div class="ttdoc">Obtiene el componente L, la luminosidad, del modelo de color HSL.</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_afbe25d2a2a4a1a2b195bf4f0f900b22a"><div class="ttname"><a href="classunir2d_1_1_color.html#afbe25d2a2a4a1a2b195bf4f0f900b22a">unir2d::Color::Fucsia</a></div><div class="ttdeci">static const Color Fucsia</div><div class="ttdoc">Instancia de color fucsia.</div><div class="ttdef"><b>Definition:</b> Color.h:97</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_afd56a3c024e697a0e6468b410e314c66"><div class="ttname"><a href="classunir2d_1_1_color.html#afd56a3c024e697a0e6468b410e314c66">unir2d::Color::entero</a></div><div class="ttdeci">uint32_t entero() const</div><div class="ttdoc">Obtiene el entero de 32 bits equivalente al color.</div><div class="ttdef"><b>Definition:</b> Color.h:199</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_afeb49dbedf2dada486e19a9a4aaa7212"><div class="ttname"><a href="classunir2d_1_1_color.html#afeb49dbedf2dada486e19a9a4aaa7212">unir2d::Color::Oliva</a></div><div class="ttdeci">static const Color Oliva</div><div class="ttdoc">Instancia de color verde oliva.</div><div class="ttdef"><b>Definition:</b> Color.h:99</div></div>
+<div class="ttc" id="aclassunir2d_1_1_color_html_affd004d952c8b64b32e5d89f1c57d29d"><div class="ttname"><a href="classunir2d_1_1_color.html#affd004d952c8b64b32e5d89f1c57d29d">unir2d::Color::Purpura</a></div><div class="ttdeci">static const Color Purpura</div><div class="ttdoc">Instancia de color morado.</div><div class="ttdef"><b>Definition:</b> Color.h:101</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

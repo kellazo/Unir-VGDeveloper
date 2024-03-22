@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['para_0',['para',['../classunir2d_1_1_sonido.html#a45f7a244bd2daae8d89cac49b8604d52',1,'unir2d::Sonido']]],
+  ['paracrono_1',['paraCrono',['../classunir2d_1_1_tiempo.html#a4c18cb4b0510b591cb3ba92c5b9aee3c',1,'unir2d::Tiempo']]],
+  ['ponaltura_2',['ponAltura',['../classunir2d_1_1_rectangulo.html#a423228885159cc539d60a58ae73e3be6',1,'unir2d::Rectangulo']]],
+  ['ponbase_3',['ponBase',['../classunir2d_1_1_rectangulo.html#a4bcf0b79859e4db7d5978398173d733c',1,'unir2d::Rectangulo']]],
+  ['poncadena_4',['ponCadena',['../classunir2d_1_1_texto.html#a101934b6e9437bc730ee9bd8ac843a77',1,'unir2d::Texto::ponCadena(const string &amp;valor)'],['../classunir2d_1_1_texto.html#acda561cc7e2c8ac10dc40235deb5897c',1,'unir2d::Texto::ponCadena(const wstring &amp;valor)']]],
+  ['poncolor_5',['ponColor',['../classunir2d_1_1_circulo.html#a4c1587e6ff6bcde1d50842c1c97f4069',1,'unir2d::Circulo::ponColor()'],['../classunir2d_1_1_rectangulo.html#a3e9cd523be6ee4abeef64bc65e9e7d69',1,'unir2d::Rectangulo::ponColor()'],['../classunir2d_1_1_texto.html#a9db605624acb3ff6ba0feca97e700085',1,'unir2d::Texto::ponColor()']]],
+  ['poncolorlinea_6',['ponColorLinea',['../classunir2d_1_1_trazos.html#a303f7e3e399780572e8231eca67768ee',1,'unir2d::Trazos']]],
+  ['pondiana_7',['ponDiana',['../classunir2d_1_1_actor_base.html#a869e1f908f64672b92e6431ab6bb6ac5',1,'unir2d::ActorBase']]],
+  ['ponejecucion_8',['ponEjecucion',['../classunir2d_1_1_juego_base.html#a68a93b20747c6f8dce68b1c377f6f6ee',1,'unir2d::JuegoBase']]],
+  ['ponindicez_9',['ponIndiceZ',['../classunir2d_1_1_dibujable.html#aac9c7daad6d54c8a5803b3c9af43b4c3',1,'unir2d::Dibujable']]],
+  ['ponorigen_10',['ponOrigen',['../classunir2d_1_1_dibujable.html#aceecbf0b938d2d632c0c9c95cb92459a',1,'unir2d::Dibujable']]],
+  ['ponposicion_11',['ponPosicion',['../classunir2d_1_1_actor_base.html#a7ca32d90c0b3954d06bbb4b1160d2565',1,'unir2d::ActorBase::ponPosicion()'],['../classunir2d_1_1_dibujable.html#a4b08fdac7e04c2192a1d7d1f1bd971f5',1,'unir2d::Dibujable::ponPosicion()']]],
+  ['ponpunto_12',['ponPunto',['../classunir2d_1_1_triangulo_malla.html#a1a7a5d0bd3c04145ccdda0eba93d63ff',1,'unir2d::TrianguloMalla']]],
+  ['ponpuntolinea_13',['ponPuntoLinea',['../classunir2d_1_1_trazos.html#a5e7c89cb07a5f8fd3c21a020c66a89a9',1,'unir2d::Trazos']]],
+  ['ponradio_14',['ponRadio',['../classunir2d_1_1_circulo.html#acf5e0d46b89a8d996d64fa0f6f6aa21f',1,'unir2d::Circulo']]],
+  ['ponrelleno_15',['ponRelleno',['../classunir2d_1_1_circulo.html#a2603a6abfdad546d4b7efe044cc103cd',1,'unir2d::Circulo']]],
+  ['ponrotacion_16',['ponRotacion',['../classunir2d_1_1_actor_base.html#a6d91edbd6b041ff931231c8375058aaa',1,'unir2d::ActorBase::ponRotacion()'],['../classunir2d_1_1_dibujable.html#ae4201c43e9dc317089fd7bd44a3acfb9',1,'unir2d::Dibujable::ponRotacion()']]],
+  ['pontamano_17',['ponTamano',['../classunir2d_1_1_texto.html#a691c3da32b3acf6cf50269fa5f3fe0c9',1,'unir2d::Texto']]],
+  ['pontexel_18',['ponTexel',['../classunir2d_1_1_triangulo_malla.html#a981b575ffb2737fa9fa54024f8e799a3',1,'unir2d::TrianguloMalla']]],
+  ['ponvisible_19',['ponVisible',['../classunir2d_1_1_dibujable.html#af238ef771b1cca6e6bed67864dd2c9f1',1,'unir2d::Dibujable']]],
+  ['ponvolumen_20',['ponVolumen',['../classunir2d_1_1_sonido.html#a0c9f542d33180402e5f63ae274e3b246',1,'unir2d::Sonido']]],
+  ['posactualiza_21',['posactualiza',['../classunir2d_1_1_juego_base.html#a3fe45d68e85bccd8cc58c73f8e59b8fa',1,'unir2d::JuegoBase']]],
+  ['posicion_22',['posicion',['../classunir2d_1_1_actor_base.html#ac085be3ae5e8c73f42419c1833050338',1,'unir2d::ActorBase::posicion()'],['../classunir2d_1_1_dibujable.html#a5f28432f311dbbec4511909006720e49',1,'unir2d::Dibujable::posicion()'],['../classunir2d_1_1_raton.html#ab772170a9effb89edc5cfac8594f8b96',1,'unir2d::Raton::posicion()'],['../classunir2d_1_1_region.html#ad33cafbee70f20d42217a5c9ecab6866',1,'unir2d::Region::posicion()']]],
+  ['preactualiza_23',['preactualiza',['../classunir2d_1_1_juego_base.html#ad3e9b9858429299ec81a948e4a491ee7',1,'unir2d::JuegoBase']]],
+  ['pulsando_24',['pulsando',['../classunir2d_1_1_raton.html#a609be34cbdcce8d6aa956665457330d8',1,'unir2d::Raton::pulsando()'],['../classunir2d_1_1_teclado.html#a84993aafce3825e6cab8fa1858dffce1',1,'unir2d::Teclado::pulsando()']]]
+];

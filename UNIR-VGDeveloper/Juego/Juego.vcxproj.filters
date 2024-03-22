@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos\retratos">
+      <UniqueIdentifier>{c26fe83c-c203-4138-8c5a-61e201b7cb97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos\habilidades">
+      <UniqueIdentifier>{18fa015c-722f-43be-82d1-d18230282ae1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de recursos\activos">
+      <UniqueIdentifier>{3518aeb3-b9cb-4a1a-9d79-5495a7fc4ea8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="principal.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="JuegoMesa.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="juego.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="JuegoMesa.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="habilidades\arco_flecha.png">
+      <Filter>Archivos de recursos\habilidades</Filter>
+    </Image>
+    <Image Include="habilidades\bola_fuego.png">
+      <Filter>Archivos de recursos\habilidades</Filter>
+    </Image>
+    <Image Include="habilidades\cristales.png">
+      <Filter>Archivos de recursos\habilidades</Filter>
+    </Image>
+    <Image Include="habilidades\escudo.png">
+      <Filter>Archivos de recursos\habilidades</Filter>
+    </Image>
+    <Image Include="habilidades\espada.png">
+      <Filter>Archivos de recursos\habilidades</Filter>
+    </Image>
+    <Image Include="habilidades\espada_poderosa.png">
+      <Filter>Archivos de recursos\habilidades</Filter>
+    </Image>
+    <Image Include="habilidades\fondo_5.png">
+      <Filter>Archivos de recursos\habilidades</Filter>
+    </Image>
+    <Image Include="habilidades\vela.png">
+      <Filter>Archivos de recursos\habilidades</Filter>
+    </Image>
+    <Image Include="habilidades\vela_triple.png">
+      <Filter>Archivos de recursos\habilidades</Filter>
+    </Image>
+    <Image Include="retratos\aristocrat_75.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\harja_75.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\Hunter_75.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\male1_75.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\miner1_75.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\patrek_75.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\pirate1_75.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\thief2_75.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="activos\escudo_devils.png">
+      <Filter>Archivos de recursos\activos</Filter>
+    </Image>
+    <Image Include="activos\escudo_tusk.png">
+      <Filter>Archivos de recursos\activos</Filter>
+    </Image>
+    <Image Include="activos\estampas_fondo.png">
+      <Filter>Archivos de recursos\activos</Filter>
+    </Image>
+    <Image Include="retratos\ficha_azul.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+    <Image Include="retratos\ficha_roja.png">
+      <Filter>Archivos de recursos\retratos</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="JuegoMesa.txt">
+      <Filter>Archivos de recursos</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNIR-2D: Referencia de la Clase unir2d::JuegoBase</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">UNIR-2D<span id="projectnumber">&#160;1.2</span>
+   </div>
+   <div id="projectbrief">Motor de juego mínimo para la programación de microjuegos en 2 dimensiones.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>unir2d</b></li><li class="navelem"><a class="el" href="classunir2d_1_1_juego_base.html">JuegoBase</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pro-methods">Métodos protegidos</a> &#124;
+<a href="#pro-static-methods">Métodos protegidos estáticos</a> &#124;
+<a href="classunir2d_1_1_juego_base-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la Clase unir2d::JuegoBase<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Clase base de los microjuegos que funcionana mediante el motor de juego 'UNIR-2D'.  
+ <a href="classunir2d_1_1_juego_base.html#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_juego_base_8h_source.html">JuegoBase.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:aaea29d8872c5dc08d2eb687fc669522a"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classunir2d_1_1_actor_base.html">ActorBase</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#aaea29d8872c5dc08d2eb687fc669522a">actores</a> () const</td></tr>
+<tr class="memdesc:aaea29d8872c5dc08d2eb687fc669522a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la lista de instancias de clases derivadas de <a class="el" href="classunir2d_1_1_actor_base.html" title="Clase base de todas las entidades relevantes del juego, que se denominan actores.">ActorBase</a> mantenida por esta instancia.  <a href="classunir2d_1_1_juego_base.html#aaea29d8872c5dc08d2eb687fc669522a">Más...</a><br /></td></tr>
+<tr class="separator:aaea29d8872c5dc08d2eb687fc669522a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee9724881278f67cafd444c484993f4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#aee9724881278f67cafd444c484993f4f">agregaActor</a> (<a class="el" href="classunir2d_1_1_actor_base.html">ActorBase</a> *actor)</td></tr>
+<tr class="memdesc:aee9724881278f67cafd444c484993f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Agrega una instancia de una clase derivada de <a class="el" href="classunir2d_1_1_actor_base.html" title="Clase base de todas las entidades relevantes del juego, que se denominan actores.">ActorBase</a> a lista mantenida por esta instancia.  <a href="classunir2d_1_1_juego_base.html#aee9724881278f67cafd444c484993f4f">Más...</a><br /></td></tr>
+<tr class="separator:aee9724881278f67cafd444c484993f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aaaaaa5b2e1ab4871688ba7435a600b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#a0aaaaaa5b2e1ab4871688ba7435a600b">extraeActor</a> (<a class="el" href="classunir2d_1_1_actor_base.html">ActorBase</a> *actor)</td></tr>
+<tr class="memdesc:a0aaaaaa5b2e1ab4871688ba7435a600b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estrae el elemento indicado de la lista mantenida por esta instancia.  <a href="classunir2d_1_1_juego_base.html#a0aaaaaa5b2e1ab4871688ba7435a600b">Más...</a><br /></td></tr>
+<tr class="separator:a0aaaaaa5b2e1ab4871688ba7435a600b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f672f9d1b4db9e5807fc36da4683bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#a13f672f9d1b4db9e5807fc36da4683bf">extraeActores</a> ()</td></tr>
+<tr class="memdesc:a13f672f9d1b4db9e5807fc36da4683bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estrae todos los elementos la lista de instancias de <a class="el" href="classunir2d_1_1_actor_base.html" title="Clase base de todas las entidades relevantes del juego, que se denominan actores.">ActorBase</a> mantenida por esta instancia.  <a href="classunir2d_1_1_juego_base.html#a13f672f9d1b4db9e5807fc36da4683bf">Más...</a><br /></td></tr>
+<tr class="separator:a13f672f9d1b4db9e5807fc36da4683bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96623b7e0f378ed5c6b8fdfc156ae334"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_ejecucion_juego_8h.html#a73603571835dd6a6e8f4982a59f65be7">EjecucionJuego</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#a96623b7e0f378ed5c6b8fdfc156ae334">ejecucion</a> ()</td></tr>
+<tr class="memdesc:a96623b7e0f378ed5c6b8fdfc156ae334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el estado de ejecución del juego.  <a href="classunir2d_1_1_juego_base.html#a96623b7e0f378ed5c6b8fdfc156ae334">Más...</a><br /></td></tr>
+<tr class="separator:a96623b7e0f378ed5c6b8fdfc156ae334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a93b20747c6f8dce68b1c377f6f6ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#a68a93b20747c6f8dce68b1c377f6f6ee">ponEjecucion</a> (<a class="el" href="_ejecucion_juego_8h.html#a73603571835dd6a6e8f4982a59f65be7">EjecucionJuego</a> valor)</td></tr>
+<tr class="memdesc:a68a93b20747c6f8dce68b1c377f6f6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece el estado de ejecución del juego.  <a href="classunir2d_1_1_juego_base.html#a68a93b20747c6f8dce68b1c377f6f6ee">Más...</a><br /></td></tr>
+<tr class="separator:a68a93b20747c6f8dce68b1c377f6f6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Métodos protegidos</h2></td></tr>
+<tr class="memitem:a4afa4725e196c011ccb209aad2ac92b2"><td class="memItemLeft" align="right" valign="top"><a id="a4afa4725e196c011ccb209aad2ac92b2" name="a4afa4725e196c011ccb209aad2ac92b2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>JuegoBase</b> ()=default</td></tr>
+<tr class="memdesc:a4afa4725e196c011ccb209aad2ac92b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto. <br /></td></tr>
+<tr class="separator:a4afa4725e196c011ccb209aad2ac92b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1af0b648b8b8ce4a7a4b84b426435e5e"><td class="memItemLeft" align="right" valign="top">virtual const std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#a1af0b648b8b8ce4a7a4b84b426435e5e">tituloVentana</a> () const =0</td></tr>
+<tr class="memdesc:a1af0b648b8b8ce4a7a4b84b426435e5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el título de la ventana de presentación del juego.  <a href="classunir2d_1_1_juego_base.html#a1af0b648b8b8ce4a7a4b84b426435e5e">Más...</a><br /></td></tr>
+<tr class="separator:a1af0b648b8b8ce4a7a4b84b426435e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac87cdc8aa8e7574c48248af9dc7ee471"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#ac87cdc8aa8e7574c48248af9dc7ee471">regionVentana</a> (<a class="el" href="classunir2d_1_1_vector.html">Vector</a> &amp;posicion, <a class="el" href="classunir2d_1_1_vector.html">Vector</a> &amp;tamano) const =0</td></tr>
+<tr class="memdesc:ac87cdc8aa8e7574c48248af9dc7ee471"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la posición y el tamano de la ventana de presentación del juego.  <a href="classunir2d_1_1_juego_base.html#ac87cdc8aa8e7574c48248af9dc7ee471">Más...</a><br /></td></tr>
+<tr class="separator:ac87cdc8aa8e7574c48248af9dc7ee471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f8f7c0fe93be11945003c984234f3d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#a31f8f7c0fe93be11945003c984234f3d">inicia</a> ()</td></tr>
+<tr class="memdesc:a31f8f7c0fe93be11945003c984234f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método llamado por <a class="el" href="classunir2d_1_1_motor.html" title="Ejecuta el juego definido en una instancia de una clase derivada de JuegoBase.">Motor</a> al inicio de la ejecución del juego.  <a href="classunir2d_1_1_juego_base.html#a31f8f7c0fe93be11945003c984234f3d">Más...</a><br /></td></tr>
+<tr class="separator:a31f8f7c0fe93be11945003c984234f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07d39988677f6c01acfc6def389af23"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#aa07d39988677f6c01acfc6def389af23">termina</a> ()</td></tr>
+<tr class="memdesc:aa07d39988677f6c01acfc6def389af23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método llamado por <a class="el" href="classunir2d_1_1_motor.html" title="Ejecuta el juego definido en una instancia de una clase derivada de JuegoBase.">Motor</a> al final de la ejecución del juego.  <a href="classunir2d_1_1_juego_base.html#aa07d39988677f6c01acfc6def389af23">Más...</a><br /></td></tr>
+<tr class="separator:aa07d39988677f6c01acfc6def389af23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e9b9858429299ec81a948e4a491ee7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#ad3e9b9858429299ec81a948e4a491ee7">preactualiza</a> (double tiempo_seg)</td></tr>
+<tr class="memdesc:ad3e9b9858429299ec81a948e4a491ee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método llamado por <a class="el" href="classunir2d_1_1_motor.html" title="Ejecuta el juego definido en una instancia de una clase derivada de JuegoBase.">Motor</a> al inicio de cada ciclo de la ejecución del juego.  <a href="classunir2d_1_1_juego_base.html#ad3e9b9858429299ec81a948e4a491ee7">Más...</a><br /></td></tr>
+<tr class="separator:ad3e9b9858429299ec81a948e4a491ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe45d68e85bccd8cc58c73f8e59b8fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#a3fe45d68e85bccd8cc58c73f8e59b8fa">posactualiza</a> (double tiempo_seg)</td></tr>
+<tr class="memdesc:a3fe45d68e85bccd8cc58c73f8e59b8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método llamado por <a class="el" href="classunir2d_1_1_motor.html" title="Ejecuta el juego definido en una instancia de una clase derivada de JuegoBase.">Motor</a> durante cada ciclo de la ejecución del juego.  <a href="classunir2d_1_1_juego_base.html#a3fe45d68e85bccd8cc58c73f8e59b8fa">Más...</a><br /></td></tr>
+<tr class="separator:a3fe45d68e85bccd8cc58c73f8e59b8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
+Métodos protegidos estáticos</h2></td></tr>
+<tr class="memitem:a5c62f39f7e0cf66cc9c4a98c8e100ffd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classunir2d_1_1_juego_base.html#a5c62f39f7e0cf66cc9c4a98c8e100ffd">validaVacio</a> ()</td></tr>
+<tr class="memdesc:a5c62f39f7e0cf66cc9c4a98c8e100ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba que todas las referencias mantenidas por esta instancia han quedado anuladas.  <a href="classunir2d_1_1_juego_base.html#a5c62f39f7e0cf66cc9c4a98c8e100ffd">Más...</a><br /></td></tr>
+<tr class="separator:a5c62f39f7e0cf66cc9c4a98c8e100ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p >Clase base de los microjuegos que funcionana mediante el motor de juego 'UNIR-2D'. </p>
+<p >Para crear un juego debe implementarse un clase derivada de esta. El juego se ejecuta en una llamada al método <a class="el" href="classunir2d_1_1_motor.html#a9b4538305d6d9c6ecc25f2252751791b" title="Ejecuta el juego indicado.">Motor::ejecuta</a> que toma como parámetro una instancia de dicha clase derivada.</p>
+<p >También deben implementarse una o más clases derivadas de <a class="el" href="classunir2d_1_1_actor_base.html" title="Clase base de todas las entidades relevantes del juego, que se denominan actores.">ActorBase</a>. Las instancias de las clase derivadas de <a class="el" href="classunir2d_1_1_actor_base.html" title="Clase base de todas las entidades relevantes del juego, que se denominan actores.">ActorBase</a> deben incluirse en la lista que es mantenida por esta clase.</p>
+<p >En determinados momentos de la ejecución del juego, la clase <a class="el" href="classunir2d_1_1_motor.html" title="Ejecuta el juego definido en una instancia de una clase derivada de JuegoBase.">Motor</a> realiza llamadas a los métodos <a class="el" href="classunir2d_1_1_juego_base.html#a31f8f7c0fe93be11945003c984234f3d" title="Método llamado por Motor al inicio de la ejecución del juego.">JuegoBase::inicia</a>, <a class="el" href="classunir2d_1_1_juego_base.html#aa07d39988677f6c01acfc6def389af23" title="Método llamado por Motor al final de la ejecución del juego.">JuegoBase::termina</a>, <a class="el" href="classunir2d_1_1_juego_base.html#ad3e9b9858429299ec81a948e4a491ee7" title="Método llamado por Motor al inicio de cada ciclo de la ejecución del juego.">JuegoBase::preactualiza</a> y <a class="el" href="classunir2d_1_1_juego_base.html#a3fe45d68e85bccd8cc58c73f8e59b8fa" title="Método llamado por Motor durante cada ciclo de la ejecución del juego.">JuegoBase::posactualiza</a>. También realiza llamadas a los métodos <a class="el" href="classunir2d_1_1_actor_base.html#a1bd9ff0cbb4f88aada84e8c540f7dd93" title="Método llamado por Motor cuando se agrega la instancia a la lista de actores del juego.">ActorBase::inicia</a>, <a class="el" href="classunir2d_1_1_actor_base.html#aab279be456bebafe0e67e632e34a678e" title="Método llamado por Motor cuando el se extrae la instancia de la lista de actores del juego.">ActorBase::termina</a> y <a class="el" href="classunir2d_1_1_actor_base.html#a64ad8410413c6ba3362eb224ca5e8efa" title="Método llamado por Motor durante cada ciclo de la ejecución del juego.">ActorBase::actualiza</a>. La programación del juego se realizar en las sustituciones (override) de estos métodos que aparecen en las clases derivadas de <a class="el" href="classunir2d_1_1_juego_base.html" title="Clase base de los microjuegos que funcionana mediante el motor de juego &#39;UNIR-2D&#39;.">JuegoBase</a> y <a class="el" href="classunir2d_1_1_actor_base.html" title="Clase base de todas las entidades relevantes del juego, que se denominan actores.">ActorBase</a>.</p>
+<p >Las instancias derivadas de esta clase mantienen un valor de la enumeración EjecucionJuego que indica cual es el estado de ejecución del juego. El método <a class="el" href="classunir2d_1_1_motor.html#a9b4538305d6d9c6ecc25f2252751791b" title="Ejecuta el juego indicado.">Motor::ejecuta</a> establece el estado inicial como <a class="el" href="_ejecucion_juego_8h.html#a73603571835dd6a6e8f4982a59f65be7ab9ae07e3b17eaf48953ca55180c6dbec" title="El juego se está ejecutando. El método Motor::ejecuta continua en ejecución.">EjecucionJuego::activo</a>. A continuación, si el ususario cierra la ventana de presentación del juego, el estado pasa a ser <a class="el" href="_ejecucion_juego_8h.html#a73603571835dd6a6e8f4982a59f65be7a48fb413818288e608f3edf5b605e83b7" title="El juego ha sido cancelado. El método Motor::ejecuta termina su ejecución.">EjecucionJuego::cancelado</a> y la ejecución del juego termina. Mediante programación se puede establecer el estado de ejecución del juego. Tipicamente se hace en los métodos <a class="el" href="classunir2d_1_1_juego_base.html#ad3e9b9858429299ec81a948e4a491ee7" title="Método llamado por Motor al inicio de cada ciclo de la ejecución del juego.">JuegoBase::preactualiza</a>, <a class="el" href="classunir2d_1_1_juego_base.html#a3fe45d68e85bccd8cc58c73f8e59b8fa" title="Método llamado por Motor durante cada ciclo de la ejecución del juego.">JuegoBase::posactualiza</a> o <a class="el" href="classunir2d_1_1_actor_base.html#a64ad8410413c6ba3362eb224ca5e8efa" title="Método llamado por Motor durante cada ciclo de la ejecución del juego.">ActorBase::actualiza</a>. Si el estado pasa a ser <a class="el" href="_ejecucion_juego_8h.html#a73603571835dd6a6e8f4982a59f65be7a48fb413818288e608f3edf5b605e83b7" title="El juego ha sido cancelado. El método Motor::ejecuta termina su ejecución.">EjecucionJuego::cancelado</a> o <a class="el" href="_ejecucion_juego_8h.html#a73603571835dd6a6e8f4982a59f65be7aabd76484fbc4b4be2b622f7bd576fdb4" title="El juego debe ser reiniciado. El método Motor::ejecuta termina su ejecución.">EjecucionJuego::reinicio</a>, la ejecución del juego termina.</p>
+<p >Ejemplo de uso: </p><div class="fragment"><div class="line"><span class="comment">// La clase JuegoAnimacion hereda de JuegoBase de UNIR-2D</span></div>
+<div class="line"><span class="keyword">class </span>JuegoAnimacion : <span class="keyword">public</span> <a class="code hl_function" href="classunir2d_1_1_juego_base.html#a4afa4725e196c011ccb209aad2ac92b2">JuegoBase</a> {</div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <span class="comment">// El juego es el contenedor del actor.</span></div>
+<div class="line">    ActorAnimacion * actor;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Sustituye dos métodos de la clase base para configurar la ventana.</span></div>
+<div class="line">    <span class="keyword">const</span> std::wstring <a class="code hl_function" href="classunir2d_1_1_juego_base.html#a1af0b648b8b8ce4a7a4b84b426435e5e">tituloVentana</a> () <span class="keyword">const override</span>;</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_juego_base.html#ac87cdc8aa8e7574c48248af9dc7ee471">regionVentana</a> (Vector &amp; posicion, Vector &amp; tamano) <span class="keyword">const override</span>;</div>
+<div class="line">    <span class="comment">// El juego funciona sustituyendo dos métodos de la clase base.</span></div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_juego_base.html#a31f8f7c0fe93be11945003c984234f3d">inicia</a> () <span class="keyword">override</span>;</div>
+<div class="line">    <span class="keywordtype">void</span> <a class="code hl_function" href="classunir2d_1_1_juego_base.html#aa07d39988677f6c01acfc6def389af23">termina</a> () <span class="keyword">override</span>;</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">inline</span> <span class="keyword">const</span> std::wstring JuegoAnimacion::tituloVentana ()<span class="keyword"> const </span>{</div>
+<div class="line">    <span class="comment">// Título de la ventana.</span></div>
+<div class="line">    <span class="keywordflow">return</span> L<span class="stringliteral">&quot;UNIR2D :: Prueba de animación&quot;</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">inline</span> <span class="keywordtype">void</span> JuegoAnimacion::regionVentana (Vector &amp; posicion, Vector &amp; tamano)<span class="keyword"> const </span>{</div>
+<div class="line">    posicion = Vector {10, 10};</div>
+<div class="line">    tamano   = Vector {800, 600};</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Sustituye al método de JuegoBase para preparar el juego.</span></div>
+<div class="line"><span class="keyword">inline</span> <span class="keywordtype">void</span> JuegoAnimacion::inicia () {</div>
+<div class="line">    <span class="comment">// Se crea el actor y se pone en la lista para que se renderize automáticamente.</span></div>
+<div class="line">    actor = <span class="keyword">new</span> ActorAnimacion {};</div>
+<div class="line">    <a class="code hl_function" href="classunir2d_1_1_juego_base.html#aee9724881278f67cafd444c484993f4f">agregaActor</a> (actor);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Sustituye al método de JuegoBase para concluir el juego.</span></div>
+<div class="line"><span class="keyword">inline</span> <span class="keywordtype">void</span> JuegoAnimacion::termina () {</div>
+<div class="line">    <span class="comment">// Se quita el actor de la lista y se elimina.</span></div>
+<div class="line">    <a class="code hl_function" href="classunir2d_1_1_juego_base.html#a0aaaaaa5b2e1ab4871688ba7435a600b">extraeActor</a> (actor);</div>
+<div class="line">    <span class="keyword">delete</span> actor;</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassunir2d_1_1_juego_base_html_a0aaaaaa5b2e1ab4871688ba7435a600b"><div class="ttname"><a href="classunir2d_1_1_juego_base.html#a0aaaaaa5b2e1ab4871688ba7435a600b">unir2d::JuegoBase::extraeActor</a></div><div class="ttdeci">void extraeActor(ActorBase *actor)</div><div class="ttdoc">Estrae el elemento indicado de la lista mantenida por esta instancia.</div><div class="ttdef"><b>Definition:</b> JuegoBase.cpp:34</div></div>
+<div class="ttc" id="aclassunir2d_1_1_juego_base_html_a1af0b648b8b8ce4a7a4b84b426435e5e"><div class="ttname"><a href="classunir2d_1_1_juego_base.html#a1af0b648b8b8ce4a7a4b84b426435e5e">unir2d::JuegoBase::tituloVentana</a></div><div class="ttdeci">virtual const std::wstring tituloVentana() const =0</div><div class="ttdoc">Obtiene el título de la ventana de presentación del juego.</div></div>
+<div class="ttc" id="aclassunir2d_1_1_juego_base_html_a31f8f7c0fe93be11945003c984234f3d"><div class="ttname"><a href="classunir2d_1_1_juego_base.html#a31f8f7c0fe93be11945003c984234f3d">unir2d::JuegoBase::inicia</a></div><div class="ttdeci">virtual void inicia()</div><div class="ttdoc">Método llamado por Motor al inicio de la ejecución del juego.</div><div class="ttdef"><b>Definition:</b> JuegoBase.h:174</div></div>
+<div class="ttc" id="aclassunir2d_1_1_juego_base_html_a4afa4725e196c011ccb209aad2ac92b2"><div class="ttname"><a href="classunir2d_1_1_juego_base.html#a4afa4725e196c011ccb209aad2ac92b2">unir2d::JuegoBase::JuegoBase</a></div><div class="ttdeci">JuegoBase()=default</div><div class="ttdoc">Constructor por defecto.</div></div>
+<div class="ttc" id="aclassunir2d_1_1_juego_base_html_aa07d39988677f6c01acfc6def389af23"><div class="ttname"><a href="classunir2d_1_1_juego_base.html#aa07d39988677f6c01acfc6def389af23">unir2d::JuegoBase::termina</a></div><div class="ttdeci">virtual void termina()</div><div class="ttdoc">Método llamado por Motor al final de la ejecución del juego.</div><div class="ttdef"><b>Definition:</b> JuegoBase.h:177</div></div>
+<div class="ttc" id="aclassunir2d_1_1_juego_base_html_ac87cdc8aa8e7574c48248af9dc7ee471"><div class="ttname"><a href="classunir2d_1_1_juego_base.html#ac87cdc8aa8e7574c48248af9dc7ee471">unir2d::JuegoBase::regionVentana</a></div><div class="ttdeci">virtual void regionVentana(Vector &amp;posicion, Vector &amp;tamano) const =0</div><div class="ttdoc">Obtiene la posición y el tamano de la ventana de presentación del juego.</div></div>
+<div class="ttc" id="aclassunir2d_1_1_juego_base_html_aee9724881278f67cafd444c484993f4f"><div class="ttname"><a href="classunir2d_1_1_juego_base.html#aee9724881278f67cafd444c484993f4f">unir2d::JuegoBase::agregaActor</a></div><div class="ttdeci">void agregaActor(ActorBase *actor)</div><div class="ttdoc">Agrega una instancia de una clase derivada de ActorBase a lista mantenida por esta instancia.</div><div class="ttdef"><b>Definition:</b> JuegoBase.cpp:23</div></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a id="aaea29d8872c5dc08d2eb687fc669522a" name="aaea29d8872c5dc08d2eb687fc669522a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea29d8872c5dc08d2eb687fc669522a">&#9670;&nbsp;</a></span>actores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="classunir2d_1_1_actor_base.html">ActorBase</a> * &gt; &amp; unir2d::JuegoBase::actores </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtiene la lista de instancias de clases derivadas de <a class="el" href="classunir2d_1_1_actor_base.html" title="Clase base de todas las entidades relevantes del juego, que se denominan actores.">ActorBase</a> mantenida por esta instancia. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>La lista de instancias de clases derivadas de <a class="el" href="classunir2d_1_1_actor_base.html" title="Clase base de todas las entidades relevantes del juego, que se denominan actores.">ActorBase</a>. </dd></dl>
+
+</div>
+</div>
+<a id="aee9724881278f67cafd444c484993f4f" name="aee9724881278f67cafd444c484993f4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee9724881278f67cafd444c484993f4f">&#9670;&nbsp;</a></span>agregaActor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JuegoBase::agregaActor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classunir2d_1_1_actor_base.html">ActorBase</a> *&#160;</td>
+          <td class="paramname"><em>actor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Agrega una instancia de una clase derivada de <a class="el" href="classunir2d_1_1_actor_base.html" title="Clase base de todas las entidades relevantes del juego, que se denominan actores.">ActorBase</a> a lista mantenida por esta instancia. </p>
+<p >Tras agregar la instancia a la lista se realiza una llamada al método <a class="el" href="classunir2d_1_1_actor_base.html#a1bd9ff0cbb4f88aada84e8c540f7dd93" title="Método llamado por Motor cuando se agrega la instancia a la lista de actores del juego.">ActorBase::inicia</a>.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">actor</td><td>Actor agregado a la lista. <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a96623b7e0f378ed5c6b8fdfc156ae334" name="a96623b7e0f378ed5c6b8fdfc156ae334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96623b7e0f378ed5c6b8fdfc156ae334">&#9670;&nbsp;</a></span>ejecucion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_ejecucion_juego_8h.html#a73603571835dd6a6e8f4982a59f65be7">EjecucionJuego</a> unir2d::JuegoBase::ejecucion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtiene el estado de ejecución del juego. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Estado de ejecución del juego. </dd></dl>
+
+</div>
+</div>
+<a id="a0aaaaaa5b2e1ab4871688ba7435a600b" name="a0aaaaaa5b2e1ab4871688ba7435a600b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aaaaaa5b2e1ab4871688ba7435a600b">&#9670;&nbsp;</a></span>extraeActor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JuegoBase::extraeActor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classunir2d_1_1_actor_base.html">ActorBase</a> *&#160;</td>
+          <td class="paramname"><em>actor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estrae el elemento indicado de la lista mantenida por esta instancia. </p>
+<p >Antes de extraer la instancia a la lista se realiza una llamada al método <a class="el" href="classunir2d_1_1_actor_base.html#aab279be456bebafe0e67e632e34a678e" title="Método llamado por Motor cuando el se extrae la instancia de la lista de actores del juego.">ActorBase::termina</a>. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">actor</td><td>elemento extraido de la lista. <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a13f672f9d1b4db9e5807fc36da4683bf" name="a13f672f9d1b4db9e5807fc36da4683bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13f672f9d1b4db9e5807fc36da4683bf">&#9670;&nbsp;</a></span>extraeActores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JuegoBase::extraeActores </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estrae todos los elementos la lista de instancias de <a class="el" href="classunir2d_1_1_actor_base.html" title="Clase base de todas las entidades relevantes del juego, que se denominan actores.">ActorBase</a> mantenida por esta instancia. </p>
+<p >Antes de extraer los elementos de la lista se realizan llamadas a los métodos <a class="el" href="classunir2d_1_1_actor_base.html#aab279be456bebafe0e67e632e34a678e" title="Método llamado por Motor cuando el se extrae la instancia de la lista de actores del juego.">ActorBase::termina</a> para cada uno de ellos. </p>
+
+</div>
+</div>
+<a id="a31f8f7c0fe93be11945003c984234f3d" name="a31f8f7c0fe93be11945003c984234f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31f8f7c0fe93be11945003c984234f3d">&#9670;&nbsp;</a></span>inicia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unir2d::JuegoBase::inicia </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método llamado por <a class="el" href="classunir2d_1_1_motor.html" title="Ejecuta el juego definido en una instancia de una clase derivada de JuegoBase.">Motor</a> al inicio de la ejecución del juego. </p>
+<p >Durante la ejecución del método <a class="el" href="classunir2d_1_1_motor.html#a9b4538305d6d9c6ecc25f2252751791b" title="Ejecuta el juego indicado.">Motor::ejecuta</a> de la clase <a class="el" href="classunir2d_1_1_motor.html" title="Ejecuta el juego definido en una instancia de una clase derivada de JuegoBase.">Motor</a> se realiza una llamada a este método virtual.</p>
+<p >Por defecto, este método no realiza ninguna acción. Las clases derivadas deben sustituir este método (usando 'override') para realizar las acciones oportunas. </p>
+
+</div>
+</div>
+<a id="a68a93b20747c6f8dce68b1c377f6f6ee" name="a68a93b20747c6f8dce68b1c377f6f6ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68a93b20747c6f8dce68b1c377f6f6ee">&#9670;&nbsp;</a></span>ponEjecucion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unir2d::JuegoBase::ponEjecucion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_ejecucion_juego_8h.html#a73603571835dd6a6e8f4982a59f65be7">EjecucionJuego</a>&#160;</td>
+          <td class="paramname"><em>valor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Establece el estado de ejecución del juego. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valor</td><td>Estado de ejecución del juego. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3fe45d68e85bccd8cc58c73f8e59b8fa" name="a3fe45d68e85bccd8cc58c73f8e59b8fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe45d68e85bccd8cc58c73f8e59b8fa">&#9670;&nbsp;</a></span>posactualiza()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unir2d::JuegoBase::posactualiza </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tiempo_seg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método llamado por <a class="el" href="classunir2d_1_1_motor.html" title="Ejecuta el juego definido en una instancia de una clase derivada de JuegoBase.">Motor</a> durante cada ciclo de la ejecución del juego. </p>
+<p >Durante la ejecución del método <a class="el" href="classunir2d_1_1_motor.html#a9b4538305d6d9c6ecc25f2252751791b" title="Ejecuta el juego indicado.">Motor::ejecuta</a> se realizan llamada a este método virtual en cada ciclo de ejecución del juego. La llamada se produce tras realizar las llamada a los métodos <a class="el" href="classunir2d_1_1_actor_base.html#a64ad8410413c6ba3362eb224ca5e8efa" title="Método llamado por Motor durante cada ciclo de la ejecución del juego.">ActorBase::actualiza</a>.</p>
+<p >Por defecto, este método no realiza ninguna acción. Las clases derivadas deben sustituir este método (usando 'override') para realizar las acciones oportunas. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tiempo_seg</td><td>tiempo en segundos desde el inicio de la ejecución del juego. <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad3e9b9858429299ec81a948e4a491ee7" name="ad3e9b9858429299ec81a948e4a491ee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e9b9858429299ec81a948e4a491ee7">&#9670;&nbsp;</a></span>preactualiza()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unir2d::JuegoBase::preactualiza </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tiempo_seg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método llamado por <a class="el" href="classunir2d_1_1_motor.html" title="Ejecuta el juego definido en una instancia de una clase derivada de JuegoBase.">Motor</a> al inicio de cada ciclo de la ejecución del juego. </p>
+<p >Durante la ejecución del método <a class="el" href="classunir2d_1_1_motor.html#a9b4538305d6d9c6ecc25f2252751791b" title="Ejecuta el juego indicado.">Motor::ejecuta</a> se realizan llamada a este método virtual en cada ciclo de ejecución del juego. La llamada se produce antes de realizar las llamada a los métodos <a class="el" href="classunir2d_1_1_actor_base.html#a64ad8410413c6ba3362eb224ca5e8efa" title="Método llamado por Motor durante cada ciclo de la ejecución del juego.">ActorBase::actualiza</a>.</p>
+<p >Por defecto, este método no realiza ninguna acción. Las clases derivadas deben sustituir este método (usando 'override') para realizar las acciones oportunas. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tiempo_seg</td><td>tiempo en segundos desde el inicio de la ejecución del juego. <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac87cdc8aa8e7574c48248af9dc7ee471" name="ac87cdc8aa8e7574c48248af9dc7ee471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87cdc8aa8e7574c48248af9dc7ee471">&#9670;&nbsp;</a></span>regionVentana()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void unir2d::JuegoBase::regionVentana </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classunir2d_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>posicion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classunir2d_1_1_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>tamano</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtiene la posición y el tamano de la ventana de presentación del juego. </p>
+<p >Es un metodo virtual puro que debe ser reescrito en las clases derivadas. Los dos valores devueltos se usas para establecer la posición y el tamano de la ventana de presentación del juego. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">posicion</td><td>posición de la ventana. </td></tr>
+    <tr><td class="paramname">tamano</td><td>tamano de la ventana. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa07d39988677f6c01acfc6def389af23" name="aa07d39988677f6c01acfc6def389af23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07d39988677f6c01acfc6def389af23">&#9670;&nbsp;</a></span>termina()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unir2d::JuegoBase::termina </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método llamado por <a class="el" href="classunir2d_1_1_motor.html" title="Ejecuta el juego definido en una instancia de una clase derivada de JuegoBase.">Motor</a> al final de la ejecución del juego. </p>
+<p >Durante la ejecución del método <a class="el" href="classunir2d_1_1_motor.html#a9b4538305d6d9c6ecc25f2252751791b" title="Ejecuta el juego indicado.">Motor::ejecuta</a> de la clase <a class="el" href="classunir2d_1_1_motor.html" title="Ejecuta el juego definido en una instancia de una clase derivada de JuegoBase.">Motor</a> se realiza una llamada a este método virtual.</p>
+<p >Por defecto, este método no realiza ninguna acción. Las clases derivadas deben sustituir este método (usando 'override') para realizar las acciones oportunas. </p>
+
+</div>
+</div>
+<a id="a1af0b648b8b8ce4a7a4b84b426435e5e" name="a1af0b648b8b8ce4a7a4b84b426435e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1af0b648b8b8ce4a7a4b84b426435e5e">&#9670;&nbsp;</a></span>tituloVentana()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::wstring unir2d::JuegoBase::tituloVentana </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtiene el título de la ventana de presentación del juego. </p>
+<p >Es un metodo virtual puro que debe ser reescrito en las clases derivadas. El valor devuelto se usa para establecer el título de la ventana de presentación del juego. </p><dl class="section return"><dt>Devuelve</dt><dd>Título de la ventana del juego. </dd></dl>
+
+</div>
+</div>
+<a id="a5c62f39f7e0cf66cc9c4a98c8e100ffd" name="a5c62f39f7e0cf66cc9c4a98c8e100ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c62f39f7e0cf66cc9c4a98c8e100ffd">&#9670;&nbsp;</a></span>validaVacio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JuegoBase::validaVacio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Comprueba que todas las referencias mantenidas por esta instancia han quedado anuladas. </p>
+<p >Se usa para validar que, al final de la ejecución del juego, no quedan instancias dependientes de él. Debe usarse solo para depurar el funcionamiento de esta clase. <br  />
+ </p>
+
+</div>
+</div>
+<hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>
+<li><a class="el" href="_juego_base_8h_source.html">JuegoBase.h</a></li>
+<li>JuegoBase.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

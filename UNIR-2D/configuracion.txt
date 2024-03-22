@@ -1,0 +1,46 @@
+﻿
+
+Configuración del proyecto de Visual Studio
+-------------------------------------------
+
+
+Para compilar esta biblioteca es necesario tener descargado SFML. La organización en el disco puede ser:
+
+    ../
+    |
+    +-- UNIR-2D
+    |
+    +-- SFML-2.5.1
+        |
+        +-- bin
+        |
+        +-- include
+        |
+        +-- lib
+
+
+En la configuración del proyecto debe aparecer:
+
+    General 
+        Directorio de salida :                      $(ProjectDir)$(Platform)\$(Configuration)\
+        Tipo de configuración :                     Biblioteca estática (.lib)
+        Estándar del lenguaje C++ :                 Estándar ISO C++ 20 (/std:c++20)
+    Avanzado
+        Juego de caracteres :                       Usar juego de caracteres Unicode
+    C/C++
+        General
+            Directorios de inclusión adicionales:   ..\SFML-2.5.1\include;%(AdditionalIncludeDirectories)
+        Preprocesador
+            (Debug) :                               SFML_STATIC;_DEBUG;_LIB;%(PreprocessorDefinitions)
+            (Release) :                             SFML_STATIC;NDEBUG;_LIB;%(PreprocessorDefinitions)
+        Encabezados precompilados:
+            Encabezado precompilado:                Usar (/Yu)
+            Archivo de encabezado precompilado :    UNIR-2D.h
+
+
+En la configuración del archivo 'pch.cpp' debe aparecer:
+
+    C/C++
+        Encabezados precompilados:
+            Encabezado precompilado:                Crear (/Yc)
+            Archivo de encabezado precompilado :    UNIR-2D.h
