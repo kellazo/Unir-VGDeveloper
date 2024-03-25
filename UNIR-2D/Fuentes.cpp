@@ -25,7 +25,7 @@ using namespace unir2d;
 
 void Fuentes::carga (const std::string & nombre) {
     std::filesystem::path camino = std::filesystem::current_path ();
-    camino = camino / "fuentes" / (nombre + ".ttf");
+    camino = camino / "..\\Assets\\Art\\Fonts" / (nombre + ".ttf");
 	sf::Font * fuente = new sf::Font {}; 
 	bool bien = fuente->loadFromFile (camino.string ());
 	if (! bien) {
