@@ -9,7 +9,7 @@
 namespace tapete {
 
 
-    string JuegoMesaBase::carpeta_activos_comun  {"../Tapete/"};
+    string JuegoMesaBase::carpeta_activos_comun  {"../Assets/Art/Sprites/Environment/"};
 
 
     JuegoMesaBase::~JuegoMesaBase () {

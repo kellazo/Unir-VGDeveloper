@@ -27,10 +27,10 @@ namespace juego {
     cambian se sitúan en las mismas carpetas.
 
     *******************************************************************************************/
-    string JuegoMesa::carpeta_activos_juego  {"./activos/"};
-    string JuegoMesa::carpeta_retratos_juego {"./retratos/"};
-    string JuegoMesa::carpeta_habilids_juego {"./habilidades/"};
-    string JuegoMesa::carpeta_sonidos_juego  {"./sonidos/"};
+    string JuegoMesa::carpeta_activos_juego  {"../Assets/Art/Sprites/Environment/"};
+    string JuegoMesa::carpeta_retratos_juego {"../Assets/Art/Sprites/Characters/"};
+    string JuegoMesa::carpeta_habilids_juego {"../Assets/Art/Sprites/VFXs/"};
+    string JuegoMesa::carpeta_sonidos_juego  {"../Assets/Audio/"};
     /*******************************************************************************************
     /******************************************************************************************/
 
@@ -718,14 +718,14 @@ namespace juego {
         bolaFuego           ->ponArchivosImagenes (
                 carpeta_habilids_juego + "bola_fuego.png",      carpeta_habilids_juego + "fondo_5.png");
         //
-        ataqueEspadaNormal  ->ponArchivoSonido (carpeta_sonidos_juego + "Magic Missiles.wav");
-        ataqueArco          ->ponArchivoSonido (carpeta_sonidos_juego + "Magic Missiles.wav");
-        ataqueEspadaPoderoso->ponArchivoSonido (carpeta_sonidos_juego + "Magic Missiles.wav");
-        defensaFerrea       ->ponArchivoSonido (carpeta_sonidos_juego + "Magic Missiles.wav");
-        curacionSimple      ->ponArchivoSonido (carpeta_sonidos_juego + "Magic Missiles.wav");
-        curacionGrupo       ->ponArchivoSonido (carpeta_sonidos_juego + "Magic Missiles.wav");
-        proyectilMagico     ->ponArchivoSonido (carpeta_sonidos_juego + "Magic Missiles.wav");
-        bolaFuego           ->ponArchivoSonido (carpeta_sonidos_juego + "Magic Missiles.wav");
+        ataqueEspadaNormal  ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        ataqueArco          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        ataqueEspadaPoderoso->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        defensaFerrea       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        curacionSimple      ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        curacionGrupo       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        proyectilMagico     ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        bolaFuego           ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
         //
         agregaHabilidad (ataqueEspadaNormal);
         agregaHabilidad (ataqueArco);
@@ -1256,14 +1256,17 @@ namespace juego {
         Hunter->ponSitioFicha (Coord {29, 35});
         Thief ->ponSitioFicha (Coord {35, 35});
         //
-        tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "Metal Click.wav", 100);
-        tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SnowWalk.ogg",    100);
-        musica  ()->asignaMusica          (carpeta_sonidos_juego + "Track_1.ogg",     100);
+        tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "SFX/Metal Click.wav", 100);
+        tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SFX/SnowWalk.ogg",    100);
+        musica  ()->asignaMusica          (carpeta_sonidos_juego + "Themes/Track_1.ogg",   100);
         //
-        agregaNombreAlumno (L"Fulano de Tal");
-        agregaNombreAlumno (L"Mengano de Cual");
-        agregaNombreAlumno (L"Zutano de Pascual");
-        indicaCursoAcademico (L"2022 - 2023");
+        agregaNombreAlumno (L"Andrei Danescu");
+        agregaNombreAlumno (L"Luis Ivan Cabrera Rodriguez");
+        agregaNombreAlumno (L"Guillem Muñoz Pueyo");
+        agregaNombreAlumno (L"Juan Luis Casas Nebrera");
+        agregaNombreAlumno (L"Raimon Rodriguez Alles");
+        agregaNombreAlumno (L"Raul Vivar Cano");
+        indicaCursoAcademico (L"2023 - 2024");
         //
         /*******************************************************************************************
         /******************************************************************************************/
