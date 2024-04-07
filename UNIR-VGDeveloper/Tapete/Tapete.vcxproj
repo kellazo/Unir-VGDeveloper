@@ -159,6 +159,7 @@
     <ClInclude Include="EscritorAyuda.h" />
     <ClInclude Include="EstadoJuegoEquipo.h" />
     <ClInclude Include="EstadoJuegoLibreDoble.h" />
+    <ClInclude Include="EstadoJuegoKBM.h" />
     <ClInclude Include="EstadoJuegoPares.h" />
     <ClInclude Include="Excepciones.h" />
     <ClInclude Include="EstadoJuegoComun.h" />
@@ -170,11 +171,13 @@
     <ClInclude Include="ModoJuegoComun.h" />
     <ClInclude Include="ModoJuegoEquipo.h" />
     <ClInclude Include="ModoJuegoLibreDoble.h" />
+    <ClInclude Include="ModoJuegoKBM.h" />
     <ClInclude Include="ModoJuegoPares.h" />
     <ClInclude Include="SistemaAtaque.h" />
     <ClInclude Include="SucesosJuegoComun.h" />
     <ClInclude Include="SucesosJuegoEquipo.h" />
     <ClInclude Include="SucesosJuegoLibreDoble.h" />
+    <ClInclude Include="SucesosJuegoKBM.h" />
     <ClInclude Include="SucesosJuegoPares.h" />
     <ClInclude Include="TipoEstadistica.h" />
     <ClInclude Include="ValidacionJuego.h" />
@@ -193,6 +196,7 @@
     <ClCompile Include="EscritorAyuda.cpp" />
     <ClCompile Include="EstadoJuegoEquipo.cpp" />
     <ClCompile Include="EstadoJuegoLibreDoble.cpp" />
+    <ClCompile Include="EstadoJuegoKBM.cpp" />
     <ClCompile Include="EstadoJuegoPares.cpp" />
     <ClCompile Include="Excepciones.cpp" />
     <ClCompile Include="EstadoJuegoComun.cpp" />
@@ -216,6 +220,7 @@
     <ClCompile Include="ModoJuegoComun.cpp" />
     <ClCompile Include="ModoJuegoEquipo.cpp" />
     <ClCompile Include="ModoJuegoLibreDoble.cpp" />
+    <ClCompile Include="ModoJuegoKBM.cpp" />
     <ClCompile Include="ModoJuegoPares.cpp" />
     <ClCompile Include="RejillaTablero.cpp" />
     <ClCompile Include="PresenciaActuante.cpp" />
@@ -225,6 +230,7 @@
     <ClCompile Include="SucesosJuegoComun.cpp" />
     <ClCompile Include="SucesosJuegoEquipo.cpp" />
     <ClCompile Include="SucesosJuegoLibreDoble.cpp" />
+    <ClCompile Include="SucesosJuegoKBM.cpp" />
     <ClCompile Include="SucesosJuegoPares.cpp" />
     <ClCompile Include="TipoEstadistica.cpp" />
     <ClCompile Include="ValidacionJuego.cpp" />

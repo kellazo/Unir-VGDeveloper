@@ -148,10 +148,11 @@ namespace juego {
             · ModoJuegoPares       SucesosJuegoPares       
             · ModoJuegoEquipo      SucesosJuegoEquipo    
             · ModoJuegoLibreDoble  SucesosJuegoLibreDoble
+            · ModoJuegoKBM         SucesosJuegoKBM         NEW! (Personalizado para Kid, Bikes and Monsters)
 
         *******************************************************************************************/
-        ModoJuegoPares    * modo    = new ModoJuegoPares {this};
-        SucesosJuegoPares * sucesos = new SucesosJuegoPares {this, modo};
+        ModoJuegoKBM    * modo    = new ModoJuegoKBM {this};
+        SucesosJuegoKBM * sucesos = new SucesosJuegoKBM {this, modo};
         /*******************************************************************************************
         /******************************************************************************************/
         //

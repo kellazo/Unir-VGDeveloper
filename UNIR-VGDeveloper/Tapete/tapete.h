@@ -57,5 +57,9 @@ using Color  = unir2d::Color;
 #include "EstadoJuegoLibreDoble.h"
 #include "ModoJuegoLibreDoble.h"
 
+#include "SucesosJuegoKBM.h"
+#include "EstadoJuegoKBM.h"
+#include "ModoJuegoKBM.h"
+
 #include "ValidacionJuego.h"
 #include "JuegoMesaBase.h"
