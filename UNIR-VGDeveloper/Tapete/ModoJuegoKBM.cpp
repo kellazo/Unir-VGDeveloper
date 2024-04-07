@@ -244,30 +244,12 @@ namespace tapete {
         inicio_turno  = false;
         inicio_ronda  = false;
         final_partida = false;
-        if (jugada () > 1) {
-            ModoJuegoBase::suprimeAtacante ();
-            ModoJuegoBase::anulaEleccionPersonajes ();
-            ModoJuegoBase::asignaEquipoActual (opuesto (ladoEquipoActual ()));
-            if (turnosDisponiblesAmbos ()) {
-                ModoJuegoBase::avanzaTurno ();
-                inicio_turno = true;
-            } else {
-                if (rondasDisponibles ()) {
-                    ModoJuegoBase::avanzaRonda ();
-                    inicio_ronda = true;
-                } else {
-                    ModoJuegoBase::asignaEquipoActual (LadoTablero::nulo);            
-                    final_partida = true;
-                }
-            }
+        ModoJuegoBase::reiniciaAtacante ();
+        if (atacante ()->vitalidad () == 0 || atacante ()->puntosAccion () == 0) {
+            ataca_agotado = true;
         } else {
-            ModoJuegoBase::reiniciaAtacante ();
-            if (atacante ()->vitalidad () == 0 || atacante ()->puntosAccion () == 0) {
-                ataca_agotado = true;
-            } else {
-                ModoJuegoBase::avanzaJugada ();
-                inicio_jugada = true;
-            }
+            ModoJuegoBase::avanzaJugada ();
+            inicio_jugada = true;
         }
     }
 
@@ -311,11 +293,6 @@ namespace tapete {
                     {}                                          );
             break;
         case EstadoJuegoComun::inicioJugada:
-            if (jugada () == 1) {
-                juga = "Primera jugada";
-            } else {
-                juga = "Segunda jugada.";
-            }
             juego ()->tablero ()->escribeMonitor (std::vector <string>
                     { juga,
                         "Selecciona el retrato para mover la",
