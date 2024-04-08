@@ -37,14 +37,12 @@ namespace juego {
         la lista de personajes diseñados para el juego.
 
         *******************************************************************************************/
-        ActorPersonaje * Aristo {};
-        ActorPersonaje * Harja {};
-        ActorPersonaje * Hunter {};
-        ActorPersonaje * Thief {};
-        ActorPersonaje * Miner {};
-        ActorPersonaje * Male {};
-        ActorPersonaje * Patrek {};
-        ActorPersonaje * Pirate {};
+        ActorPersonaje * Jason {};
+        ActorPersonaje * Sophie {};
+        ActorPersonaje * Pete {};
+        ActorPersonaje * Dana {};
+        ActorPersonaje * Espectro {};
+        ActorPersonaje * Cadaver {};
         /*******************************************************************************************
         /******************************************************************************************/
  
