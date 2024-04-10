@@ -30,4 +30,9 @@ using namespace tapete;
 #include "EstadoJuegoLibreDoble.h"
 #include "ModoJuegoLibreDoble.h"
 
+
+#include "SucesosJuegoKBM.h"
+#include "EstadoJuegoKBM.h"
+#include "ModoJuegoKBM.h"
+
 #include "JuegoMesa.h"
