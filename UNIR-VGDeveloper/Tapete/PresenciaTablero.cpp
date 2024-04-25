@@ -63,8 +63,11 @@ namespace tapete {
     void PresenciaTablero::preparaBaldosas () {
         textura_fondo  = new unir2d::Textura {};
         baldosas_fondo = new unir2d::Baldosas {};
-        constexpr int filas_estamp = 4;
-        constexpr int colns_estamp = 4;
+
+        //Hemos modificado el valor de estas constantes para poder usar una imagen completa como fondo del tablero
+        constexpr int filas_estamp = 1; // constexpr int filas_estamp = 4;
+        constexpr int colns_estamp = 1; // constexpr int colns_estamp = 4;
+
         textura_fondo->carga (actor_tablero->archivoBaldosas ());
         //textura_fondo->carga (JuegoMesaBase::carpetaActivos () + "estampas_fondo.png");
         baldosas_fondo->asigna (this->textura_fondo);
