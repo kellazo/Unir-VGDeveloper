@@ -324,7 +324,13 @@ namespace tapete {
         presnc.iluminaPuntosAccion (personaje->puntosAccion (), 0);
         presnc.refrescaBarraVida ();
         juego_->tablero ()->rejilla ().marcaCelda (personaje->sitioFicha (), ModoJuegoBase::color_elegido); 
-        juego_->tablero ()->emiteSonidoEstablece ();
+        // INICIO GULLEM //
+        //juego_->tablero ()->emiteSonidoEstablece (); // Original
+        //presnc.personaje().
+        //juego_->tablero()->emiteSonidoPersonaje(personaje);
+        //personaje->emitePersonajeSFX();
+        presnc.personaje()->emitePersonajeSFX();
+        // FIN GUILLEM //
     }
 
 

@@ -53,7 +53,10 @@ namespace tapete {
         unir2d::Imagen *                imagen_barra_vida {};
 
         unir2d::Imagen *                imagen_retrato_actuante {};
-
+        // INICIO GUILLEM //
+        unir2d::Sonido *                sonido_personaje{};
+        // FIN GUILLEM //
+        // 
         //inline static unir2d::Textura * texturas_habilidades {};
         //std::vector <unir2d::Imagen *>  imagenes_habilidades {};
 
@@ -80,6 +83,10 @@ namespace tapete {
         //void preparaHabilidadesActuante (ActorPersonaje * actor_personaje);
 
         void preparaFicha ();
+
+        // INICIO GUILLEM //
+        void preparaSFX ();
+        // FIN GUILLEM //
 
         static void aserta (bool expresion, const string & mensaje);
 

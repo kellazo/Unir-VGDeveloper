@@ -563,6 +563,21 @@ namespace juego {
         Dana     -> ponIniciativa (20);
         Espectro -> ponIniciativa (19);
         Cadaver  -> ponIniciativa (18);
+
+        // INICIO GUILLEM //
+
+        // Hacer como un ponSonidoFXRetrato o algo por el estilo en los personajes individuales si no es una clase claro.
+        //Sophie->ponArchivoSFX(carpeta_sonidos_juego + "Cadaver.wav");
+        //Sophie->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Cadaver.wav", 100);
+        Jason->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Jason.wav", 100);
+        Sophie->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Sophie.wav", 100);
+        Pete->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Pete.wav", 100);
+        Dana->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Dana.wav", 100);
+        Espectro->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Espectro.wav", 100);
+        Cadaver->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Cadaver.wav", 100);
+
+        // FIN GUILLEM //
+        
         //
         agregaPersonaje (Jason);
         agregaPersonaje (Sophie);
@@ -1224,6 +1239,9 @@ namespace juego {
         tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "SFX/Metal Click.wav", 100);
         tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SFX/SnowWalk.ogg",    100);
         musica  ()->asignaMusica          (carpeta_sonidos_juego + "Themes/Track_1.ogg",   100);
+        // INICIO GUILLEM //
+        //Sophie   -> asignaPersonajeSFX    (carpeta_sonidos_juego + "SFX/Cadaver.wav",     100);
+        // FIN GUILLEM //
         //
         agregaNombreAlumno (L"Andrei Danescu");
         agregaNombreAlumno (L"Luis Ivan Cabrera Rodriguez");

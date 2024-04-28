@@ -39,6 +39,18 @@ namespace tapete {
         const string & archivoFicha () const;
         void ponArchivoFicha (const string & valor);
 
+        // INICIO GUILLEM //
+        //const string& archivoSFX() const;
+        //void ponArchivoSFX(const string& valor);
+        
+        const string& archivoPersonajeSFX();
+        int volumenPersonajeSFX();
+        void asignaPersonajeSFX(const string& archivo_establece, int volumen);
+
+        void emitePersonajeSFX();
+
+        // FIN GUILLEM //
+
         // 
         // Los valores de los tipos defensa y de sistemaAtaque de los personajes son dobles, es decir, hay 
         // un valor base y un valor de cambio, siendo el valor que se usa la suma de los dos. 
@@ -115,6 +127,14 @@ namespace tapete {
 
         string archivo_retrato {};
         string archivo_ficha {};
+
+        // INICIO GUILLEM //
+        //string archivo_sfx{};
+        
+        string archivo_personaje_sfx{};
+        int    volumen_personaje_sfx{};
+        
+        // FIN GUILLEM //
 
         struct Multivalor {
             int inicial;
