@@ -33,6 +33,12 @@ namespace tapete {
         //preparaHabilidadesActuante (actor_personaje);
         //
         preparaFicha ();
+
+        // INICIO GUILLEM //
+
+        preparaSFX ();
+
+        // FIN GUILLEM //
     }
 
 
@@ -91,6 +97,11 @@ namespace tapete {
         //
         delete textura_retrato;
         textura_retrato = nullptr;
+
+        // INICIO GUILLEM //
+        delete sonido_personaje;
+        sonido_personaje = nullptr;
+        // FIN GUILLEM //
     }
 
 
@@ -219,14 +230,26 @@ namespace tapete {
     }
 
 
-    void PresenciaPersonaje::preparaRetratoActuante () {
-        imagen_retrato_actuante = new unir2d::Imagen ();
+    void PresenciaPersonaje::preparaRetratoActuante() {
+        imagen_retrato_actuante = new unir2d::Imagen();
         //imagen_retrato_actuante->ponPosicion (panel_lateral.posicion () + Vector {10, 38});
-        imagen_retrato_actuante->asigna (textura_retrato);
-        imagen_retrato_actuante->ponVisible (false);
+        imagen_retrato_actuante->asigna(textura_retrato);
+        imagen_retrato_actuante->ponVisible(false);
         //
-        actor_personaje->agregaDibujo (imagen_retrato_actuante);
+        actor_personaje->agregaDibujo(imagen_retrato_actuante);
     }
+
+    // INICIO GUILLEM //
+    void PresenciaPersonaje::preparaSFX() {
+        sonido_personaje = new unir2d::Sonido();
+        sonido_personaje->carga(actor_personaje->archivo_personaje_sfx);
+        sonido_personaje->ponVolumen(actor_personaje->volumen_personaje_sfx);
+
+        //sonido_establece = new unir2d::Sonido{};
+        //sonido_establece->carga(actor_tablero->archivo_sonido_establece);
+        //sonido_establece->ponVolumen(actor_tablero->volumen_sonido_establece);
+    }
+    // FIN GUILLEM //
 
 
     void PresenciaPersonaje::preparaFicha () {

@@ -19,6 +19,10 @@ namespace tapete {
         this->indice_en_equipo = indice_en_equipo;
         this->nombre_          = nombre;
         this->archivo_retrato  = archivo_retrato;
+
+        // INICIO GUILLEM //
+        //this->archivo_sfx      = archivo_sfx;
+        // FIN GUILLEM //
     }
 
 
@@ -55,6 +59,37 @@ namespace tapete {
     void ActorPersonaje::ponArchivoRetrato (const string & valor) {
         archivo_retrato = valor;
     }
+
+    // INICIO GUILLEM //
+    //const string& ActorPersonaje::archivoSFX() const {
+    //    return archivo_sfx;
+    //}
+
+
+    //void ActorPersonaje::ponArchivoSFX(const string& valor) {
+    //    archivo_sfx = valor;
+    //}
+    
+    const string& ActorPersonaje::archivoPersonajeSFX() {
+        return archivo_personaje_sfx;
+    }
+
+
+    int ActorPersonaje::volumenPersonajeSFX() {
+        return volumen_personaje_sfx;
+    }
+
+
+    void ActorPersonaje::asignaPersonajeSFX(const string& archivo, int volumen) {
+        archivo_personaje_sfx = archivo;
+        volumen_personaje_sfx = volumen;
+    }
+    
+    void ActorPersonaje::emitePersonajeSFX() {
+        presencia_personaje.sonido_personaje->suena();
+        //presencia_tablero.sonido_establece->suena();
+    }
+    // FIN GUILLEM //
 
 
     const string & ActorPersonaje::archivoFicha () const {
