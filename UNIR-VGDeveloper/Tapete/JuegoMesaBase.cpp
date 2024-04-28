@@ -4,13 +4,20 @@
 
 
 #include "tapete.h"
+#include "IntroJuegoImagen.h"
 
 
 namespace tapete {
 
 
     string JuegoMesaBase::carpeta_activos_comun  {"../Assets/Art/Sprites/Environment/"};
-
+    
+    // intro.....
+    Tiempo* crono;
+    unir2d::Sonido* ptr_audio;
+    IntroJuegoImagen* ptr_imagen;
+    bool finIntro = true;
+    //..........
 
     JuegoMesaBase::~JuegoMesaBase () {
         validaVacio ();
@@ -208,6 +215,7 @@ namespace tapete {
 
 
     void JuegoMesaBase::inicia () {
+
         valida_.Construccion ();
         preparaTablero ();
         valida_.Tablero ();
@@ -228,18 +236,27 @@ namespace tapete {
         configuraJuego ();
         valida_.ConfiguraJuego ();
         //
-        // agregar los personajes debe ser lo último; de otra forma, no salen las habilidades
-        agregaActor (tablero_);
-        for (ActorPersonaje * persj : personajes_) {
-            agregaActor (persj);
-        }
-        agregaActor (musica_);
-        //
-        sucesos_->iniciado ();
+        // 
+        // 
+        // XXX importante 1ero carga el fondo
+        ptr_imagen = new IntroJuegoImagen{ "IntroGameBackground.png" };
+        agregaActor(ptr_imagen);
+        crono = new Tiempo{};
+        crono->inicia();
+
+        // pantalla inicio
+        ptr_audio = new unir2d::Sonido{};
+        ptr_audio->abre("..\\Assets\\Audio\\Themes\\IntroJuego.wav");
+        ptr_audio->suena();
+        
     }
 
 
     void JuegoMesaBase::termina () {
+        
+        // clean crono intro
+        delete crono;
+
         //
         sucesos_->terminado ();
         sucesos_ = nullptr;
@@ -291,6 +308,34 @@ namespace tapete {
 
 
     void JuegoMesaBase::posactualiza (double tiempo_seg) {
+
+        //TODO intro juego mejorar
+        if (finIntro && crono->segundos() > 30) {
+            finIntro = false;
+
+            // limpia intro
+            crono->termina();
+            ptr_audio->para();
+            extraeActor(ptr_imagen);
+            delete ptr_imagen;
+            delete ptr_audio;
+   
+            //...continua con juego tras intro
+            // agregar los personajes debe ser lo último; de otra forma, no salen las habilidades
+            agregaActor(tablero_);
+            for (ActorPersonaje* persj : personajes_) {
+                agregaActor(persj);
+            }
+            agregaActor(musica_);
+            //
+            sucesos_->iniciado();
+        }
+        else {
+            // desplaza imagen
+            ptr_imagen->ponPosicion(unir2d::Vector{ 0, ptr_imagen->posicion().y() - 0.5f});
+        }
+
+
         controlTeclado ();
         controlTiempo  ();
     }
