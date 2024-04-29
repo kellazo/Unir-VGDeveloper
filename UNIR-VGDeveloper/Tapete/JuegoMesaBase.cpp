@@ -310,7 +310,7 @@ namespace tapete {
     void JuegoMesaBase::posactualiza (double tiempo_seg) {
 
         //TODO intro juego mejorar
-        if (finIntro && crono->segundos() > 30) {
+        if (finIntro && (crono->segundos() > 30 || unir2d::Teclado::pulsando(unir2d::Tecla::derecha))) {
             finIntro = false;
 
             // limpia intro
@@ -334,7 +334,6 @@ namespace tapete {
             // desplaza imagen
             ptr_imagen->ponPosicion(unir2d::Vector{ 0, ptr_imagen->posicion().y() - 0.5f});
         }
-
 
         controlTeclado ();
         controlTiempo  ();
