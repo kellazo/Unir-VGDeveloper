@@ -1180,7 +1180,14 @@ namespace juego {
 
 
     void JuegoMesa::configuraJuego () {
-        agregaMusica (new ActorMusica {this});
+        
+        // INICIO GUILLEM //
+        agregaMusica (new ActorMusica {this}); //original
+        //ActorMusica * musicote = new ActorMusica{ this };
+       // ActorMusica* musicota = new ActorMusica{ this };
+        //agregaMusica(musicote);
+        //agregaMusicaLoop(musicote);
+        // FIN GUILLEM //
         //
         /*******************************************************************************************
         /*******************************************************************************************
@@ -1257,9 +1264,13 @@ namespace juego {
         //
         tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "SFX/Metal Click.wav", 100);
         tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SFX/SnowWalk.ogg",    100);
-        musica  ()->asignaMusica          (carpeta_sonidos_juego + "Themes/Track_1.ogg",   100);
         // INICIO GUILLEM //
-        //Sophie   -> asignaPersonajeSFX    (carpeta_sonidos_juego + "SFX/Cadaver.wav",     100); // No sirve
+        //musica  ()->asignaMusica          (carpeta_sonidos_juego + "Themes/Track_1.ogg",   100);
+        musica      ()->asignaMusica      (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_intro.wav", 100);
+        musica      ()->asignaMusicaLoop  (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_bucle.wav", 100);
+        //musicaLoop()->asignaMusica(carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_bucle.wav", 100);
+        //musicaLoop  ()->asignaMusicaLoop  (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_bucle.wav", 100);
+        
         // FIN GUILLEM //
         //
         agregaNombreAlumno (L"Andrei Danescu");
@@ -1303,6 +1314,9 @@ namespace juego {
         defensaMagica        = nullptr;
         danoFisico           = nullptr;
         danoMagico           = nullptr;
+        // INICIO GUILLEM //
+        //musicote = nullptr;
+        // FIN GUILLEM //
     }
 
 

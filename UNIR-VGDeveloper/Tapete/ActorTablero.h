@@ -47,22 +47,13 @@ namespace tapete {
         int volumenSonidoEstablece ();
         void asignaSonidoEstablece (const string & archivo_establece, int volumen);
 
-        // INICIO GUILLEM //
-        //const string& archivoSonidoPersonaje ();
-        //int volumenSonidoPersonaje();
-        //void asignaSonidoPersonaje(const string& archivo_establece, int volumen);
-        // FIN GUILLEM //
+ 
 
         const string & archivoSonidoDesplaza ();
         int volumenSonidoDesplaza ();
         void asignaSonidoDesplaza  (const string & archivo_desplaza,  int volumen);
 
         void emiteSonidoEstablece ();
-       
-        // INICIO GUILLEM //
-        //void emiteSonidoPersonaje ();
-        // FIN GUILLEM //
-
         void emiteSonidoDesplaza ();
         void emiteSonidoHabilidad (Habilidad * habilidad);
         //void emiteMusica ();
@@ -108,10 +99,7 @@ namespace tapete {
 
         string archivo_sonido_establece{};
         int    volumen_sonido_establece{};
-        //INICIO GUILLEM //
-       // string archivo_sonido_personaje{};
-       // int    volumen_sonido_personaje{};
-        //FIN GUILLEM //
+
         string archivo_sonido_desplaza {};
         int    volumen_sonido_desplaza {};
 

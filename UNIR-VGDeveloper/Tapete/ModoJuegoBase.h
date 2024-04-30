@@ -52,9 +52,11 @@ namespace tapete {
         void avanzaJugada ();
         void avanzaTurno  ();
         void avanzaRonda  ();
-
+        
         void atenuaMusica ();
-
+        // INICIO GUILLEM //
+        void atenuaMusicaLoop ();
+        // FIN GUILLEM //
         LadoTablero eligeEquipoIniciativa ();
         void asignaEquipoInicial (LadoTablero equipo);
         void asignaEquipoActual  (LadoTablero equipo);

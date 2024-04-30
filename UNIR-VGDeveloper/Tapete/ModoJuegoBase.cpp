@@ -212,6 +212,13 @@ namespace tapete {
         juego_->musica ()->bajaMusica ();
     }
 
+    // INICIO GUILLEM //
+    
+    void ModoJuegoBase::atenuaMusicaLoop () {
+        juego_->musica ()->bajaMusicaLoop ();
+    }
+    
+    // FIN GUILLEM //
 
     //----------------------------------------------------------------------------------------------
 

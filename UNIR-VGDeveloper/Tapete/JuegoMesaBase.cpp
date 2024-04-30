@@ -160,15 +160,26 @@ namespace tapete {
     }
 
 
-    ActorMusica * JuegoMesaBase::musica () {
+    ActorMusica* JuegoMesaBase::musica () {
         return musica_;
     }
 
 
     void JuegoMesaBase::agregaMusica (ActorMusica * valor) {
         musica_ = valor;
+
+    }
+    // INICIO GUILLEM //
+    /*
+    ActorMusica* JuegoMesaBase::musicaLoop () {
+        return musica_loop_;
     }
 
+    
+    void JuegoMesaBase::agregaMusicaLoop (ActorMusica * valor) {
+        musica_loop_ = valor;
+    }*/
+    // FIN GUILLEM //
 
     //const std::vector <TipoCuracion *> & JuegoMesaBase::curaciones () const {
     //    return curaciones_;
@@ -290,6 +301,11 @@ namespace tapete {
         //
         delete musica_;
         musica_ = nullptr;
+        // INICIO GUILLEM //
+        delete musica_loop_;
+        musica_loop_ = nullptr;
+        // FIN GUILLEM //
+
         //
         for (const ActorPersonaje * persj : personajes_) {
             delete persj;
@@ -327,6 +343,9 @@ namespace tapete {
                 agregaActor(persj);
             }
             agregaActor(musica_);
+            // INICIO GUILLEM //
+            //agregaActor(musica_loop_);
+            // FIN GUILLEM //
             //
             sucesos_->iniciado();
         }
