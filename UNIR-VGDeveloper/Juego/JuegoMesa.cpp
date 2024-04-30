@@ -566,15 +566,34 @@ namespace juego {
 
         // INICIO GUILLEM //
 
-        // Hacer como un ponSonidoFXRetrato o algo por el estilo en los personajes individuales si no es una clase claro.
-        //Sophie->ponArchivoSFX(carpeta_sonidos_juego + "Cadaver.wav");
-        //Sophie->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Cadaver.wav", 100);
-        Jason->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Jason.wav", 100);
-        Sophie->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Sophie.wav", 100);
-        Pete->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Pete.wav", 100);
-        Dana->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Dana.wav", 100);
-        Espectro->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Espectro.wav", 100);
-        Cadaver->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Cadaver.wav", 100);
+        // Listado de SFX que se le asigna individualmente a cada personaje
+    
+        //Sophie->ponArchivoSFX(carpeta_sonidos_juego + "Cadaver.wav"); // Prueba
+        //Sophie->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Cadaver.wav", 100); //Prueba
+
+        // Retratos SFX
+        Jason    -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Jason.wav", 100);
+        Sophie   -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Sophie.wav", 100);
+        Pete     -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Pete.wav", 100);
+        Dana     -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Dana.wav", 100);
+        Espectro -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Espectro.wav", 100);
+        Cadaver  -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Cadaver.wav", 100);
+
+        // Seleccion SFX
+        Jason    -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Jason_Seleccion.wav", 100);
+        Sophie   -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Sophie_Seleccion.wav", 100);
+        Pete     -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Pete_Seleccion.wav", 100);
+        Dana     -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Dana_Seleccion.wav", 100);
+        Espectro -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Espectro_Seleccion.wav", 100);
+        Cadaver  -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Cadaver_Seleccion.wav", 100);
+
+        // Desplazamiento SFX
+        Jason    -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Jason_Desplazamiento.wav", 100);
+        Sophie   -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Sophie_Desplazamiento.wav", 100);
+        Pete     -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Pete_Desplazamiento.wav", 100);
+        Dana     -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Dana_Desplazamiento.wav", 100);
+        Espectro -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Espectro_Desplazamiento.wav", 100);
+        Cadaver  -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Cadaver_Desplazamiento.wav", 100);
 
         // FIN GUILLEM //
         
@@ -1240,7 +1259,7 @@ namespace juego {
         tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SFX/SnowWalk.ogg",    100);
         musica  ()->asignaMusica          (carpeta_sonidos_juego + "Themes/Track_1.ogg",   100);
         // INICIO GUILLEM //
-        //Sophie   -> asignaPersonajeSFX    (carpeta_sonidos_juego + "SFX/Cadaver.wav",     100);
+        //Sophie   -> asignaPersonajeSFX    (carpeta_sonidos_juego + "SFX/Cadaver.wav",     100); // No sirve
         // FIN GUILLEM //
         //
         agregaNombreAlumno (L"Andrei Danescu");

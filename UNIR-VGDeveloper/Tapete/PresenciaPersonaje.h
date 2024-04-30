@@ -54,7 +54,9 @@ namespace tapete {
 
         unir2d::Imagen *                imagen_retrato_actuante {};
         // INICIO GUILLEM //
-        unir2d::Sonido *                sonido_personaje{};
+        unir2d::Sonido *                sonido_personaje      {};
+        unir2d::Sonido *                sonido_seleccion      {};
+        unir2d::Sonido *                sonido_desplazamiento {};
         // FIN GUILLEM //
         // 
         //inline static unir2d::Textura * texturas_habilidades {};
@@ -85,7 +87,8 @@ namespace tapete {
         void preparaFicha ();
 
         // INICIO GUILLEM //
-        void preparaSFX ();
+        void preparaSFX (); //cargamos los sonidos en cada puntero
+        void liberaSFXs();  //para liberar los SFXs en el metodo libera()
         // FIN GUILLEM //
 
         static void aserta (bool expresion, const string & mensaje);

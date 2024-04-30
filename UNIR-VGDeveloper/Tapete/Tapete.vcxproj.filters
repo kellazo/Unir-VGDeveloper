@@ -129,6 +129,9 @@
     <ClInclude Include="ValidacionJuego.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="IntroJuegoImagen.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -329,9 +332,6 @@
     <Text Include="ProcesoJuegoLibreDoble.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
-    <Text Include="ProcesoJuegoKBM.txt">
-      <Filter>Archivos de recursos</Filter>
-    </Text>
     <Text Include="ProcesoJuegoPares.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
@@ -341,5 +341,6 @@
     <Text Include="Texto1.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
+    <Text Include="ProcesoJuegoKBM.txt" />
   </ItemGroup>
 </Project>

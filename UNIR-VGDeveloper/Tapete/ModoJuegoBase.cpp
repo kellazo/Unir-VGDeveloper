@@ -326,10 +326,9 @@ namespace tapete {
         juego_->tablero ()->rejilla ().marcaCelda (personaje->sitioFicha (), ModoJuegoBase::color_elegido); 
         // INICIO GULLEM //
         //juego_->tablero ()->emiteSonidoEstablece (); // Original
-        //presnc.personaje().
         //juego_->tablero()->emiteSonidoPersonaje(personaje);
         //personaje->emitePersonajeSFX();
-        presnc.personaje()->emitePersonajeSFX();
+        presnc.personaje ()->emitePersonajeSFX ();
         // FIN GUILLEM //
     }
 
@@ -464,7 +463,11 @@ namespace tapete {
         //
         PresenciaActuante & presnc_ataca = juego_->tablero ()->presencia (atacante_->ladoTablero ());
         presnc_ataca.marcaRetrato ();
-        juego_->tablero ()->emiteSonidoEstablece ();
+        // INICIO GUILLEM //
+        //  juego_->tablero ()->emiteSonidoEstablece (); //original
+        presnc_ataca.personaje ()->emiteSeleccionSFX ();
+        // FIN GUILLEM //
+       
     }
 
 
@@ -636,7 +639,11 @@ namespace tapete {
         aserta (presnc_ataca.visible (), "mueveFichaCamino", "el atacante no es visible");
         presnc_ataca.iluminaPuntosAccion (atacante_->puntosAccion (), 0);
         //
-        juego_->tablero ()->emiteSonidoDesplaza ();
+
+        // INICIO GUILLEM //
+        // juego_->tablero ()->emiteSonidoDesplaza (); // original
+        presnc_ataca.personaje ()->emiteDesplazamientoSFX ();
+        // FIN GUILLEM //
     }
 
 
