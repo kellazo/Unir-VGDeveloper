@@ -18,9 +18,8 @@ namespace tapete {
 
         static constexpr float distanciaCeldas = ladoHexagono * seno60 * 2;
 
-        static constexpr int filas    = 51;
-        static constexpr int columnas = 49;
-
+        static constexpr int filas    = 40;
+        static constexpr int columnas = 45;
 
         static Vector centroHexagono (Coord centro);
         static Vector verticeHexagono (Coord centro, int minuto);
