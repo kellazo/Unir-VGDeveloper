@@ -1265,11 +1265,11 @@ namespace juego {
         tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "SFX/Metal Click.wav", 100);
         tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SFX/SnowWalk.ogg",    100);
         // INICIO GUILLEM //
-        //musica  ()->asignaMusica          (carpeta_sonidos_juego + "Themes/Track_1.ogg",   100);
-        musica      ()->asignaMusica      (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_intro.wav", 100);
-        musica      ()->asignaMusicaLoop  (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_bucle.wav", 100);
-        //musicaLoop()->asignaMusica(carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_bucle.wav", 100);
-        //musicaLoop  ()->asignaMusicaLoop  (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_bucle.wav", 100);
+        //musica     ()->asignaMusica      (carpeta_sonidos_juego + "Themes/Track_1.ogg",   100);
+        musica       ()->asignaMusica      (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_intro.wav", 100);
+        musica       ()->asignaMusicaLoop  (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_bucle.wav", 100);
+        //musicaLoop ()->asignaMusica      (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_bucle.wav", 100);
+        //musicaLoop ()->asignaMusicaLoop  (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_bucle.wav", 100);
         
         // FIN GUILLEM //
         //
