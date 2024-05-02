@@ -18,13 +18,13 @@ namespace tapete {
         static constexpr Vector tamanoTablero           {1710, 1010};
 
         static constexpr Vector tamanoPanelVertcl       { 170, 480};
-        static constexpr Vector tamanoRejilla           {1420, 785};
+        static constexpr Vector tamanoRejilla           {1420, 677};
         static constexpr Vector tamanoPanelAbajo        { 619, 120};
 
         static constexpr float  margenPanelVertcl       {5};
         static constexpr Region regionPanelVertclIzqrd  {Vector {margenPanelVertcl, margenPanelVertcl}, tamanoPanelVertcl};
         static constexpr float  columnaRejilla          {regionPanelVertclIzqrd.x () + regionPanelVertclIzqrd.ancho ()};
-        static constexpr Region regionRejilla           {Vector {columnaRejilla, 100}, tamanoRejilla};
+        static constexpr Region regionRejilla           {Vector {columnaRejilla, 208}, tamanoRejilla};
         static constexpr float  columnaPanelVertclDerch {regionRejilla.x () + regionRejilla.ancho ()};
         static constexpr Region regionPanelVertclDerch  {Vector {columnaPanelVertclDerch, margenPanelVertcl}, tamanoPanelVertcl};
 
