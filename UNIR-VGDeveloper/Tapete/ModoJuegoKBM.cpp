@@ -149,18 +149,23 @@ namespace tapete {
         inicio_turno  = false;
         inicio_ronda  = false;
         final_partida = false;
-        ModoJuegoBase::suprimeAtacante ();
-        ModoJuegoBase::anulaEleccionPersonajes ();
         buscaJugada (inicio_jugada);
-        if (inicio_jugada) {
+        if (inicio_jugada){
             ActorPersonaje * persj = factoresEquipos ().at (indiceFactorEquipos ());
-            ModoJuegoBase::establecePersonajeElegido (persj);
-            ModoJuegoBase::estableceAtacante (persj->ladoTablero ());
+            if (persj->puntosAccion () == 20) {
+                ModoJuegoBase::establecePersonajeElegido (persj);
+                ModoJuegoBase::estableceAtacante (persj->ladoTablero ());
+                inicio_turno = true;
+                ModoJuegoBase::avanzaTurno ();
+   
+            }else{
+                ModoJuegoBase::avanzaJugada ();
+                ModoJuegoBase::reiniciaAtacante ();
+            }
         } else {
             if (ModoJuegoBase::turnosDisponiblesAmbos ()) {
                 ModoJuegoBase::avanzaTurno ();
                 ModoJuegoBase::indexaFactorEquipos (-1);
-                inicio_turno = true;
             } else {
                 if (ModoJuegoBase::rondasDisponibles ()) {
                     ModoJuegoBase::avanzaRonda ();
@@ -179,18 +184,21 @@ namespace tapete {
         while (true) {
             if (indiceFactorEquipos () == -1) {
                 indexaFactorEquipos (0);
-            } else {
+            }
+
+            ActorPersonaje * persj = factoresEquipos ().at (indiceFactorEquipos ());
+
+            if (persj->vitalidad () > 0 && persj->puntosAccion () > 0) {
+                encontrada = true;
+                return;
+            }else{
+                ModoJuegoBase::suprimeAtacante ();
+                ModoJuegoBase::anulaEleccionPersonajes ();       
                 indexaFactorEquipos (indiceFactorEquipos () + 1);
                 if (indiceFactorEquipos () >= factoresEquipos ().size ()) {
                     encontrada = false;
                     return;
                 }
-                ModoJuegoBase::avanzaJugada ();
-            }
-            ActorPersonaje * persj = factoresEquipos ().at (indiceFactorEquipos ());
-            if (persj->vitalidad () > 0 && persj->puntosAccion () > 0) {
-                encontrada = true;
-                return;
             }
         }
     }
