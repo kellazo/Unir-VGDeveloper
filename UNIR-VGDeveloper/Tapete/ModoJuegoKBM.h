@@ -1,6 +1,6 @@
 ﻿// proyecto: Grupal/Tapete
 // arhivo:   ModoJuegoKBM.h
-// versión:  1.1  (7-Abr-2024)
+// versión:  1.1  (9-Ene-2023)
 
 
 #pragma once
@@ -22,16 +22,10 @@ namespace tapete {
 
         void entraPartida ();
 
-        void entraTurnoEleccion ();
-        void eligePersonaje (ActorPersonaje * personaje);
-        void revierteInicioTurno ();
-
         void entraInicioJugada ();
 
         void mueveFicha ();
         void asumeHabilidad ();
-
-        void ignoraPersonajeAgotado ();
 
     private:
 
@@ -39,9 +33,9 @@ namespace tapete {
         EstadoJuegoKBM estado_previo_;
 
 
+        void buscaJugada (bool & encontrada);
         void asume (
                 bool & inicio_jugada, 
-                bool & ataca_agotado, 
                 bool & inicio_turno, 
                 bool & inicio_ronda, 
                 bool & final_partida);
@@ -56,3 +50,4 @@ namespace tapete {
 
 
 }
+
