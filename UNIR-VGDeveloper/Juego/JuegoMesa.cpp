@@ -439,16 +439,34 @@ namespace juego {
         Cadaver  -> ponIniciativa (20);
 
         // INICIO GUILLEM //
+        // Listado de SFX que se le asigna individualmente a cada personaje
+    
+        //Sophie->ponArchivoSFX(carpeta_sonidos_juego + "Cadaver.wav"); // Prueba
+        //Sophie->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Cadaver.wav", 100); //Prueba
 
-        // Hacer como un ponSonidoFXRetrato o algo por el estilo en los personajes individuales si no es una clase claro.
-        //Sophie->ponArchivoSFX(carpeta_sonidos_juego + "Cadaver.wav");
-        //Sophie->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Cadaver.wav", 100);
-        Jason->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Jason.wav", 100);
-        Sophie->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Sophie.wav", 100);
-        // Pete->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Pete.wav", 100);
-        // Dana->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Dana.wav", 100);
-        Espectro->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Espectro.wav", 100);
-        Cadaver->asignaPersonajeSFX(carpeta_sonidos_juego + "SFX/Cadaver.wav", 100);
+        // Retratos SFX
+        Jason    -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Jason.wav", 100);
+        Sophie   -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Sophie.wav", 100);
+//         Pete     -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Pete.wav", 100);
+//         Dana     -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Dana.wav", 100);
+        Espectro -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Espectro.wav", 100);
+        Cadaver  -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Cadaver.wav", 100);
+
+        // Seleccion SFX
+        Jason    -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Jason_Seleccion.wav", 100);
+        Sophie   -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Sophie_Seleccion.wav", 100);
+//         Pete     -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Pete_Seleccion.wav", 100);
+//         Dana     -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Dana_Seleccion.wav", 100);
+        Espectro -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Espectro_Seleccion.wav", 100);
+        Cadaver  -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Cadaver_Seleccion.wav", 100);
+
+        // Desplazamiento SFX
+        Jason    -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Jason_Desplazamiento.wav", 100);
+        Sophie   -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Sophie_Desplazamiento.wav", 100);
+//         Pete     -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Pete_Desplazamiento.wav", 100);
+//         Dana     -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Dana_Desplazamiento.wav", 100);
+        Espectro -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Espectro_Desplazamiento.wav", 100);
+        Cadaver  -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Cadaver_Desplazamiento.wav", 100);
 
         // FIN GUILLEM //
         
@@ -733,13 +751,13 @@ namespace juego {
         bolaRapida          ->ponArchivosImagenes (
                 carpeta_habilids_juego + "arco_flecha.png",          carpeta_habilids_juego + "fondo_5.png");
         //
-        ataqueEspadaNormal  ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        ataqueArco          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        ataqueEspadaPoderoso->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        defensaFerrea       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        curacionSimple      ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        curacionGrupo       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        proyectilMagico     ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        ataqueEspadaNormal  ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
+        ataqueArco          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
+        ataqueEspadaPoderoso->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXVomitoPutrefacto.wav");
+        defensaFerrea       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
+        curacionSimple      ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
+        curacionGrupo       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
+        proyectilMagico     ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         bolaFuego           ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
         homeRun             ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
         minaRepelente       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
@@ -1405,7 +1423,14 @@ namespace juego {
 
 
     void JuegoMesa::configuraJuego () {
-        agregaMusica (new ActorMusica {this});
+        
+        // INICIO GUILLEM //
+        agregaMusica (new ActorMusica {this}); //original
+        //ActorMusica * musicote = new ActorMusica{ this };
+       // ActorMusica* musicota = new ActorMusica{ this };
+        //agregaMusica(musicote);
+        //agregaMusicaLoop(musicote);
+        // FIN GUILLEM //
         //
         /*******************************************************************************************
         /*******************************************************************************************
@@ -1482,9 +1507,13 @@ namespace juego {
         //
         tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "SFX/Metal Click.wav", 100);
         tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SFX/SnowWalk.ogg",    100);
-        musica  ()->asignaMusica          (carpeta_sonidos_juego + "Themes/Track_1.ogg",   100);
         // INICIO GUILLEM //
-        //Sophie   -> asignaPersonajeSFX    (carpeta_sonidos_juego + "SFX/Cadaver.wav",     100);
+        //musica     ()->asignaMusica      (carpeta_sonidos_juego + "Themes/Track_1.ogg",   100);
+        musica       ()->asignaMusica      (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_intro.wav", 100);
+        musica       ()->asignaMusicaLoop  (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_bucle.wav", 100);
+        //musicaLoop ()->asignaMusica      (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_bucle.wav", 100);
+        //musicaLoop ()->asignaMusicaLoop  (carpeta_sonidos_juego + "Themes/tomb_of_the_lost_voices_bucle.wav", 100);
+        
         // FIN GUILLEM //
         //
         agregaNombreAlumno (L"Andrei Danescu");
@@ -1528,6 +1557,9 @@ namespace juego {
         defensaMagica        = nullptr;
         danoFisico           = nullptr;
         danoMagico           = nullptr;
+        // INICIO GUILLEM //
+        //musicote = nullptr;
+        // FIN GUILLEM //
     }
 
 

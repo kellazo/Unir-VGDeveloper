@@ -1,4 +1,4 @@
-﻿// proyecto: Grupal/Tapete
+// proyecto: Grupal/Tapete
 // arhivo:   ModoJuegoKBM.cpp
 // versión:  1.1  (9-Ene-2023)
 
@@ -52,6 +52,9 @@ namespace tapete {
                     // sin elegidos, sin atacante 
             //
             ModoJuegoBase::atenuaMusica ();
+           //INICIO GUILLEM //
+             ModoJuegoBase::atenuaMusicaLoop ();
+           // FIN GUILLEM //
             bool encontrada;
             buscaJugada (encontrada);
             assert (encontrada);
@@ -301,9 +304,3 @@ namespace tapete {
 
 
 }
-
-
-
-
-
-
