@@ -32,7 +32,7 @@ namespace tapete {
         EstadoJuegoKBM estado_;
         EstadoJuegoKBM estado_previo_;
 
-
+        void comprobarFinalPartida (bool & final_partida);
         void buscaJugada (bool & encontrada);
         void asume (
                 bool & inicio_jugada, 

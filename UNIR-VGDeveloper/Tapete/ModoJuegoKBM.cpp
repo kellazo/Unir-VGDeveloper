@@ -149,51 +149,77 @@ namespace tapete {
         inicio_turno  = false;
         inicio_ronda  = false;
         final_partida = false;
-        buscaJugada (inicio_jugada);
-        if (inicio_jugada){
-            ActorPersonaje * persj = factoresEquipos ().at (indiceFactorEquipos ());
-            if (persj->puntosAccion () == 20) {
-                ModoJuegoBase::establecePersonajeElegido (persj);
-                ModoJuegoBase::estableceAtacante (persj->ladoTablero ());
-                inicio_turno = true;
-                ModoJuegoBase::avanzaTurno ();
-   
-            }else{
-                ModoJuegoBase::avanzaJugada ();
-                ModoJuegoBase::reiniciaAtacante ();
-            }
-        } else {
-            if (ModoJuegoBase::turnosDisponiblesAmbos ()) {
-                ModoJuegoBase::avanzaTurno ();
-                ModoJuegoBase::indexaFactorEquipos (-1);
-            } else {
-                if (ModoJuegoBase::rondasDisponibles ()) {
-                    ModoJuegoBase::avanzaRonda ();
-                    ModoJuegoBase::indexaFactorEquipos (-1);
-                    inicio_ronda = true;
-                } else {
-                    ModoJuegoBase::asignaEquipoInicial (LadoTablero::nulo);
-                    final_partida = true;
+
+        comprobarFinalPartida(final_partida);
+
+        if(final_partida){
+            inicio_jugada = false;
+            ModoJuegoBase::suprimeAtacante ();
+            ModoJuegoBase::anulaEleccionPersonajes ();
+            ModoJuegoBase::asignaEquipoInicial (LadoTablero::nulo);
+        }else{
+            buscaJugada (inicio_jugada);
+
+            if (inicio_jugada){
+                ActorPersonaje * persj = factoresEquipos ().at (indiceFactorEquipos ());
+                if (persj->puntosAccion () == 20) {
+                    ModoJuegoBase::establecePersonajeElegido (persj);
+                    ModoJuegoBase::estableceAtacante (persj->ladoTablero ());
+                    inicio_turno = true;
+                    ModoJuegoBase::avanzaTurno ();
+    
+                }else{
+                    ModoJuegoBase::avanzaJugada ();
+                    ModoJuegoBase::reiniciaAtacante ();
                 }
+            } else {
+                ModoJuegoBase::avanzaRonda ();
+                ModoJuegoBase::indexaFactorEquipos (-1);
+                inicio_ronda = true;
             }
         }
     }
 
 
-    void ModoJuegoKBM::buscaJugada (bool & encontrada) {
-        while (true) {
-            if (indiceFactorEquipos () == -1) {
-                indexaFactorEquipos (0);
-            }
+    void ModoJuegoKBM::comprobarFinalPartida (bool & final_partida) {
+        if(ModoJuegoBase::oponente()){
+            ActorPersonaje * persj = ModoJuegoBase::oponente();
+            string nombre(persj->nombre().begin(), persj->nombre().end());
 
+            if(persj->vitalidad () == 0){
+                //CASO 1: Muere un personaje clave
+                if (nombre == "Dana" || nombre == "Jason" || nombre == "Sophie" || nombre == "Pete"){
+                    final_partida = true;
+                    return;
+                }
+
+                //CASO 2: Mueren Espectro y Esqueleto (PROTOTIPO)
+                ActorPersonaje * otroMonstruo = factoresEquipos ().at ((nombre == "Espectro") ? 1 : 0);
+                if(nombre == "Espectro" && otroMonstruo->vitalidad () == 0){
+                    final_partida = true;
+                    return;
+                }
+            }
+        }
+        return;
+    }
+
+
+    void ModoJuegoKBM::buscaJugada (bool & encontrada) {
+        if (indiceFactorEquipos () == -1) {
+            indexaFactorEquipos (0);
+        }
+        while (true) {
             ActorPersonaje * persj = factoresEquipos ().at (indiceFactorEquipos ());
 
             if (persj->vitalidad () > 0 && persj->puntosAccion () > 0) {
                 encontrada = true;
                 return;
             }else{
-                ModoJuegoBase::suprimeAtacante ();
-                ModoJuegoBase::anulaEleccionPersonajes ();       
+                if(ModoJuegoBase::atacante()){
+                    ModoJuegoBase::suprimeAtacante ();
+                    ModoJuegoBase::anulaEleccionPersonajes ();
+                }  
                 indexaFactorEquipos (indiceFactorEquipos () + 1);
                 if (indiceFactorEquipos () >= factoresEquipos ().size ()) {
                     encontrada = false;

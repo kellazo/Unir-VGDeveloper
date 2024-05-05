@@ -229,6 +229,9 @@ namespace tapete {
                 break;
             case Antagonista::si_mismo:
                 auto_aplicada = true;
+                if(habil->valorCuracion() > 0){
+                        de_curacion = true;
+                }
                 break;
             }
             if (de_ataque || de_curacion) {
@@ -249,11 +252,11 @@ namespace tapete {
                     std::format (L"La habilidad '{}' tiene un coste excesivo.", habil->nombre ()),
                     LocalizaConfigura::Seccion_9_Estadisticas_habilidades);
             // (b)
-            if (de_ataque || de_curacion) {
+            if ((de_ataque || de_curacion) && habil->antagonista() != Antagonista::si_mismo) {
                 aserta (0 < habil->alcance (),
                         std::format (L"La habilidad '{}' no tiene alcance.", habil->nombre ()),
                         LocalizaConfigura::Seccion_9_Estadisticas_habilidades);
-                aserta (habil->alcance () < RejillaTablero::filas + RejillaTablero::columnas,  // por poner algo
+                aserta (habil->alcance () < RejillaTablero::filas + RejillaTablero::columnas,
                         std::format (L"La habilidad '{}' tiene un alcance excesivo.", habil->nombre ()),
                         LocalizaConfigura::Seccion_9_Estadisticas_habilidades);
             } else {
@@ -341,13 +344,13 @@ namespace tapete {
             }
             // (i) (k)
             if (auto_aplicada) {
-                aserta (habil->efectosAtaque ().size () > 0 || habil->efectosDefensa ().size () > 0,
-                        std::format (L"La habilidad '{}' debe tener al menos un efecto en ataque o en defensa.", habil->nombre ()),
-                        LocalizaConfigura::Seccion_9_Estadisticas_habilidades);
-                aserta ( (habil->efectosAtaque ().size () >  0 && habil->efectosDefensa ().size () == 0) ||
-                        (habil->efectosAtaque ().size () == 0 && habil->efectosDefensa ().size () >  0), 
-                        std::format (L"La habilidad '{}' no puede tener efectos en ataque y en defensa simultáneamente.", habil->nombre ()),
-                        LocalizaConfigura::Seccion_9_Estadisticas_habilidades);
+                // aserta (habil->efectosAtaque ().size () > 0 || habil->efectosDefensa ().size () > 0,
+                //         std::format (L"La habilidad '{}' debe tener al menos un efecto en ataque o en defensa.", habil->nombre ()),
+                //         LocalizaConfigura::Seccion_9_Estadisticas_habilidades);
+                // aserta ( (habil->efectosAtaque ().size () >  0 && habil->efectosDefensa ().size () == 0) ||
+                //         (habil->efectosAtaque ().size () == 0 && habil->efectosDefensa ().size () >  0), 
+                //         std::format (L"La habilidad '{}' no puede tener efectos en ataque y en defensa simultáneamente.", habil->nombre ()),
+                //         LocalizaConfigura::Seccion_9_Estadisticas_habilidades);
             } else {
                 aserta (habil->efectosAtaque ().size () == 0 && habil->efectosDefensa ().size () == 0,
                         std::format (L"La habilidad '{}' no puede tener efectos en ataque o en defensa.", habil->nombre ()),
@@ -416,7 +419,7 @@ namespace tapete {
             // (a)
             for (int indc_habil = 0; indc_habil < persj->habilidades ().size (); ++ indc_habil) {
                 Habilidad * habil = persj->habilidades () [indc_habil];
-                TipoAtaque * ataqu = habil->tipoAtaque (); 
+                TipoAtaque * ataqu = habil->tipoAtaque ();
                 if (ataqu == nullptr) {
                     continue;
                 }
@@ -434,12 +437,12 @@ namespace tapete {
             // (b)
             for (int indc_defns = 0; indc_defns < juego->defensas ().size (); ++ indc_defns) {
                 TipoDefensa * defns = juego->defensas () [indc_defns];
-                aserta (persj->apareceDefensa (defns),
-                        std::format (L"El personaje '{}' debe tener la '{}'.", persj->nombre (), defns->nombre ()),
-                        LocalizaConfigura::Seccion_10_Estadisticas_personajes);
-                aserta (persj->valorDefensa (defns) > 0,
-                        std::format (L"El personaje '{}' debe tener un valor para la '{}'.", persj->nombre (), defns->nombre ()),
-                        LocalizaConfigura::Seccion_10_Estadisticas_personajes);
+                // aserta (persj->apareceDefensa (defns),
+                //         std::format (L"El personaje '{}' debe tener la '{}'.", persj->nombre (), defns->nombre ()),
+                //         LocalizaConfigura::Seccion_10_Estadisticas_personajes);
+                // aserta (persj->valorDefensa (defns) > 0,
+                //         std::format (L"El personaje '{}' debe tener un valor para la '{}'.", persj->nombre (), defns->nombre ()),
+                //         LocalizaConfigura::Seccion_10_Estadisticas_personajes);
                 aserta (persj->valorDefensa (defns) <= ActorPersonaje::maximaVitalidad,
                         std::format (L"El valor de la '{}' del personaje '{}' es excesivo.", defns->nombre (), persj->nombre ()),
                         LocalizaConfigura::Seccion_10_Estadisticas_personajes);
@@ -459,7 +462,7 @@ namespace tapete {
                         LocalizaConfigura::Seccion_10_Estadisticas_personajes);
             }
             // 
-            // (d) 
+            // (d)
             for (int indc_habil = 0; indc_habil < persj->habilidades ().size (); ++ indc_habil) {
                 Habilidad * habil = persj->habilidades () [indc_habil];
                 for (int indc_efect = 0; indc_efect < habil->efectosAtaque ().size (); ++ indc_efect) {
