@@ -743,13 +743,13 @@ namespace juego {
         bolaFuego           ->ponArchivosImagenes (
                 carpeta_habilids_juego + "bola_fuego.png",      carpeta_habilids_juego + "fondo_5.png");
         //
-        ataqueEspadaNormal  ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        ataqueArco          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        ataqueEspadaPoderoso->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        defensaFerrea       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        curacionSimple      ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        curacionGrupo       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        proyectilMagico     ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        ataqueEspadaNormal  ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
+        ataqueArco          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
+        ataqueEspadaPoderoso->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXVomitoPutrefacto.wav");
+        defensaFerrea       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
+        curacionSimple      ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
+        curacionGrupo       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
+        proyectilMagico     ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         bolaFuego           ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
         //
         agregaHabilidad (ataqueEspadaNormal);
