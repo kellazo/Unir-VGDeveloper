@@ -216,170 +216,44 @@ namespace juego {
 //                                                                                                                11111111111111111111111111111111111111111111
 //                     111111111122222222223333333333444444444455555555556666666666777777777788888888889999999999000000000011111111112222222222333333333344444  
 //           0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",  
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -"};
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",  
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -",
+            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
+            "-     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -"};
 
-
-    static ActorTablero::GraficoMuros grafico_muros_area_central { 
-//                                      1  1  1  1  1  1  1  1  1  1  2  2  2  2  2  2  2  2  2  2  3  3  3  3  3  3  3  3  3  3  4  4  4  4  4  4  4  4  4  4
-//           1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5  6  7  8  9
-//                                                                                                                11111111111111111111111111111111111111111111
-//                     111111111122222222223333333333444444444455555555556666666666777777777788888888889999999999000000000011111111112222222222333333333344444  
-//           0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234
-            "-     -     -     -     -     -     -     -     O     O     O     O     -     O     O     O     O     -     -     -     -     -     -     -     -",  
-            "   -     -     -     -     -     -     -     O     O     O     O     -     -     O     O     O     O     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     O     O     O     O     -     -     -     O     O     O     O     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     O     O     O     O     -     -     -     -     O     O     O     O     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     O     O     O     O     -     -     -     -     -     O     O     O     O     -     -     -     -     -     -",
-            "   -     -     -     -     -     O     O     O     O     -     -     -     -     -     -     O     O     O     O     -     -     -     -     -   ",
-            "-     -     -     -     -     O     O     O     O     -     -     -     -     -     -     -     O     O     O     O     -     -     -     -     -",
-            "   -     -     -     -     O     O     O     O     -     -     -     -     -     -     -     -     O     O     O     O     -     -     -     -   ",
-            "-     -     -     -     O     O     O     O     -     -     -     -     -     -     -     -     -     O     O     O     O     -     -     -     -",
-            "   -     -     -     O     O     O     O     -     -     -     -     -     -     -     -     -     -     O     O     O     O     -     -     -   ",
-            "-     -     -     O     O     O     O     -     -     -     -     -     -     -     -     -     -     -     O     O     O     O     -     -     -",
-            "   -     -     O     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     O     -     -   ",
-            "-     -     O     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     O     -     -",
-            "   -     O     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     O     -   ",
-            "-     O     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     O     -",
-            "   -     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     -   ",
-            "-     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     -",
-            "   -     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     -   ",
-            "-     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     -",
-            "   -     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     -   ",
-            "-     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     -     -",
-            "   -     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     -     -   ",
-            "-     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     -     -     -",
-            "   -     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     -",
-            "   -     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     -   ",
-            "-     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     -",
-            "   -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     -   ",
-            "-     -     -     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     -",
-            "   -     -     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     -   ",
-            "-     -     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     -",
-            "   -     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     -   ",
-            "-     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     -",
-            "   -     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     -   ",
-            "-     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     -",
-            "   -     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     -   ",
-            "-     O     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     O     -",
-            "   -     O     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     O     -   ",
-            "-     -     O     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     O     -     -",
-            "   -     -     O     O     O     O     -     -     -     -     -     -     -     -     -     -     -     -     O     O     O     O     -     -   ",
-            "-     -     -     O     O     O     O     -     -     -     -     -     -     -     -     -     -     -     O     O     O     O     -     -     -",
-            "   -     -     -     O     O     O     O     -     -     -     -     -     -     -     -     -     -     O     O     O     O     -     -     -   ",
-            "-     -     -     -     O     O     O     O     -     -     -     -     -     -     -     -     -     O     O     O     O     -     -     -     -",
-            "   -     -     -     -     O     O     O     O     -     -     -     -     -     -     -     -     O     O     O     O     -     -     -     -   ",
-            "-     -     -     -     -     O     O     O     O     -     -     -     -     -     -     -     O     O     O     O     -     -     -     -     -",
-            "   -     -     -     -     -     O     O     O     O     -     -     -     -     -     -     O     O     O     O     -     -     -     -     -   ",
-            "-     -     -     -     -     -     O     O     O     O     -     -     -     -     -     O     O     O     O     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     O     O     O     O     -     -     -     -     O     O     O     O     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     O     O     O     O     -     -     -     O     O     O     O     -     -     -     -     -     -     -",
-            "   -     -     -     -     -     -     -     O     O     O     O     -     -     O     O     O     O     -     -     -     -     -     -     -   ",
-            "-     -     -     -     -     -     -     -     O     O     O     O     -     O     O     O     O     -     -     -     -     -     -     -     -"};
-
-
-    static ActorTablero::GraficoMuros grafico_muros_pasillos { 
-            "-     O     -     -     -     -     -     O     -     -     -     -     -     -     -     -     O     -     -     -     O     -     -     -     -",
-            "   O     O     -     -     -     -     O     O     -     -     -     -     -     -     -     O     O     -     -     O     O     -     -     -   ",
-            "O     -     O     -     -     -     O     -     O     -     -     -     -     -     -     O     -     O     -     O     -     O     -     -     -",
-            "   -     -     O     -     -     O     -     -     O     -     -     -     -     -     O     -     -     O     -     O     -     O     -     -   ",
-            "O     -     -     O     -     O     -     O     -     O     -     -     -     -     O     -     O     -     O     -     O     -     O     -     -",
-            "   -     -     -     O     O     -     O     O     -     O     -     -     -     O     -     O     O     -     O     -     O     -     O     -   ",
-            "O     -     -     -     O     -     O     -     O     -     O     -     -     O     -     O     -     O     -     O     -     O     -     O     -",
-            "   -     -     -     -     O     O     O     -     O     -     O     -     O     -     O     -     -     O     -     O     -     O     -     O   ",
-            "O     -     -     -     -     -     -     O     -     O     -     O     O     -     O     -     -     -     O     -     O     -     O     -     O",
-            "   -     -     -     -     O     O     -     O     -     O     -     O     -     O     -     -     O     -     O     -     O     -     O     O   ",
-            "O     -     -     -     -     -     -     O     O     -     O     -     -     O     -     -     O     O     -     O     -     O     -     O     -",
-            "   -     -     -     -     O     O     O     -     O     -     O     -     O     -     -     O     -     O     -     O     -     O     -     -   ",
-            "O     -     -     -     -     -     O     -     -     O     -     O     -     O     -     O     -     -     O     -     O     -     O     -     -",
-            "   -     -     -     -     -     O     -     O     -     O     -     O     -     O     O     -     -     -     O     -     O     -     O     -   ",
-            "O     -     -     -     -     -     -     O     O     -     O     -     O     -     O     -     -     -     -     O     -     O     -     O     -",
-            "   -     -     -     -     O     O     -     -     O     -     O     -     O     -     -     -     -     -     -     O     -     O     -     -   ",
-            "O     -     -     -     -     -     -     O     -     O     -     O     -     O     -     -     -     -     -     -     O     -     O     -     -",
-            "   -     -     -     -     O     O     -     O     -     O     -     O     -     O     -     -     -     -     -     -     O     -     O     -   ",
-            "O     -     -     -     O     -     O     -     O     -     O     -     O     -     O     -     -     -     -     -     O     O     -     O     -",
-            "   O     -     -     O     -     O     O     -     O     -     O     -     O     -     -     -     -     -     -     -     -     O     -     -   ",
-            "-     O     -     O     -     O     -     O     -     O     -     O     -     O     -     -     -     -     -     -     O     -     O     O     -",
-            "   -     -     O     -     O     -     -     O     -     O     -     O     -     O     -     -     -     -     -     -     O     -     -     -   ",
-            "-     O     O     -     O     -     -     -     O     -     O     -     O     -     O     -     -     -     -     -     -     O     O     O     -",
-            "   -     O     -     O     -     -     -     -     O     -     O     -     O     -     -     -     -     -     -     -     -     O     -     -   ",
-            "-     -     -     O     -     -     -     -     -     -     -     O     -     O     -     -     -     -     -     -     O     -     O     -     -",
-            "   -     -     O     -     -     -     -     -     -     -     O     O     O     O     -     -     -     -     -     -     O     -     O     -   ",
-            "-     O     O     O     -     -     -     -     -     -     -     -     -     -     O     -     -     -     -     -     -     O     -     O     -",
-            "   -     -     -     -     -     -     -     -     -     -     O     O     O     -     -     -     -     -     -     -     -     O     -     -   ",
-            "-     O     O     O     -     -     -     -     -     -     -     -     -     -     O     -     -     -     -     -     O     O     O     -     -",
-            "   -     -     -     -     -     -     -     -     -     -     O     O     O     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     O     O     O     -     -     -     -     -     -     -     -     -     -     O     -     -     -     -     -     O     O     O     O     -",
-            "   -     -     -     -     -     -     -     -     -     -     O     O     O     -     -     -     -     -     -     -     -     -     -     O   ",
-            "-     O     O     O     -     -     -     -     -     -     -     -     -     -     O     -     -     -     -     -     O     O     O     O     O",
-            "   -     -     O     -     -     -     -     -     -     -     O     O     O     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     O     -     -     -     -     -     -     -     -     -     -     -     -     O     -     -     -     -     -     O     O     O     O     O",
-            "   -     O     -     -     -     -     -     -     -     -     O     O     O     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     O     -     -     -     -     -     -     -     -     -     -     -     O     -     -     -     -     -     O     O     O     O     O",
-            "   -     -     O     -     -     -     -     -     -     -     O     O     O     -     -     -     -     -     -     -     -     -     -     -   ",
-            "-     O     -     O     -     -     -     -     -     -     -     O     -     O     O     -     -     -     -     -     O     O     O     O     O",
-            "   -     O     -     O     -     -     -     -     -     -     O     -     -     O     -     -     -     -     -     -     -     -     -     -   ",
-            "-     -     O     -     O     -     -     -     -     -     O     -     O     -     O     -     -     -     -     -     O     O     O     O     O",
-            "   -     -     O     -     O     -     -     -     -     O     -     O     O     -     O     -     -     -     -     -     -     -     -     -   ",
-            "-     -     -     O     -     O     -     -     -     O     -     O     -     O     -     O     -     -     -     -     O     O     O     O     O",
-            "   -     -     -     O     -     O     -     -     O     -     O     -     -     O     -     O     -     O     -     O     -     O     -     -   ",
-            "-     -     -     -     O     -     O     -     O     -     O     -     O     -     O     -     O     O     O     O     -     -     O     O     O",
-            "   -     -     -     -     O     -     O     O     -     O     -     O     O     -     O     -     O     -     O     -     O     -     -     -   ",
-            "-     -     -     -     -     O     -     O     -     O     -     O     -     O     -     O     -     -     -     -     O     O     -     O     O",
-            "   -     -     -     -     -     O     -     -     -     -     O     -     -     O     -     O     -     O     -     O     -     O     O     -   ",
-            "-     -     -     -     -     -     O     -     O     -     O     -     -     -     O     -     O     O     O     O     -     -     O     O     O",
-            "   -     -     -     -     -     -     O     O     O     O     -     -     -     -     O     O     O     -     O     -     -     -     -     O   ",
-            "-     -     -     -     -     -     -     O     -     O     -     -     -     -     -     O     -     -     -     -     -     -     -     -     -"};
     /*******************************************************************************************
     /******************************************************************************************/
 
@@ -538,34 +412,33 @@ namespace juego {
         //
         Jason    = new ActorPersonaje {this, LadoTablero::Izquierda, 0, L"Jason"};
         Sophie   = new ActorPersonaje {this, LadoTablero::Izquierda, 1, L"Sophie"};
-        Pete     = new ActorPersonaje {this, LadoTablero::Izquierda, 2, L"Pete"};
-        Dana     = new ActorPersonaje {this, LadoTablero::Derecha,   0, L"Dana"};
+        // Pete     = new ActorPersonaje {this, LadoTablero::Izquierda, 2, L"Pete"};
+        // Dana     = new ActorPersonaje {this, LadoTablero::Derecha,   2, L"Dana"};
         Espectro = new ActorPersonaje {this, LadoTablero::Derecha,   1, L"Espectro"};
-        Cadaver  = new ActorPersonaje {this, LadoTablero::Derecha,   2, L"Cadáver"};
+        Cadaver  = new ActorPersonaje {this, LadoTablero::Derecha,   0, L"Cadáver"};
         //
         Jason    -> ponArchivoRetrato (carpeta_retratos_juego + "miner1_75.png");
         Sophie   -> ponArchivoRetrato (carpeta_retratos_juego + "male1_75.png");
-        Pete     -> ponArchivoRetrato (carpeta_retratos_juego + "patrek_75.png");
-        Dana     -> ponArchivoRetrato (carpeta_retratos_juego + "aristocrat_75.png");
+        // Pete     -> ponArchivoRetrato (carpeta_retratos_juego + "patrek_75.png");
+        // Dana     -> ponArchivoRetrato (carpeta_retratos_juego + "aristocrat_75.png");
         Espectro -> ponArchivoRetrato (carpeta_retratos_juego + "harja_75.png");
         Cadaver  -> ponArchivoRetrato (carpeta_retratos_juego + "Hunter_75.png");
         //
         Jason    -> ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
         Sophie   -> ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
-        Pete     -> ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
-        Dana     -> ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
+        // Pete     -> ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
+        // Dana     -> ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
         Espectro -> ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
         Cadaver  -> ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
         //
         Jason    -> ponIniciativa (25);
         Sophie   -> ponIniciativa (24);
-        Pete     -> ponIniciativa (23);
-        Dana     -> ponIniciativa (20);
+        // Pete     -> ponIniciativa (23);
+        // Dana     -> ponIniciativa (18);
         Espectro -> ponIniciativa (19);
-        Cadaver  -> ponIniciativa (18);
+        Cadaver  -> ponIniciativa (20);
 
         // INICIO GUILLEM //
-
         // Listado de SFX que se le asigna individualmente a cada personaje
     
         //Sophie->ponArchivoSFX(carpeta_sonidos_juego + "Cadaver.wav"); // Prueba
@@ -574,24 +447,24 @@ namespace juego {
         // Retratos SFX
         Jason    -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Jason.wav", 100);
         Sophie   -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Sophie.wav", 100);
-        Pete     -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Pete.wav", 100);
-        Dana     -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Dana.wav", 100);
+//         Pete     -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Pete.wav", 100);
+//         Dana     -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Dana.wav", 100);
         Espectro -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Espectro.wav", 100);
         Cadaver  -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Cadaver.wav", 100);
 
         // Seleccion SFX
         Jason    -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Jason_Seleccion.wav", 100);
         Sophie   -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Sophie_Seleccion.wav", 100);
-        Pete     -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Pete_Seleccion.wav", 100);
-        Dana     -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Dana_Seleccion.wav", 100);
+//         Pete     -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Pete_Seleccion.wav", 100);
+//         Dana     -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Dana_Seleccion.wav", 100);
         Espectro -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Espectro_Seleccion.wav", 100);
         Cadaver  -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Cadaver_Seleccion.wav", 100);
 
         // Desplazamiento SFX
         Jason    -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Jason_Desplazamiento.wav", 100);
         Sophie   -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Sophie_Desplazamiento.wav", 100);
-        Pete     -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Pete_Desplazamiento.wav", 100);
-        Dana     -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Dana_Desplazamiento.wav", 100);
+//         Pete     -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Pete_Desplazamiento.wav", 100);
+//         Dana     -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Dana_Desplazamiento.wav", 100);
         Espectro -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Espectro_Desplazamiento.wav", 100);
         Cadaver  -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Cadaver_Desplazamiento.wav", 100);
 
@@ -600,10 +473,10 @@ namespace juego {
         //
         agregaPersonaje (Jason);
         agregaPersonaje (Sophie);
-        agregaPersonaje (Pete);
-        agregaPersonaje (Dana);
-        agregaPersonaje (Espectro);
+        // agregaPersonaje (Pete);
         agregaPersonaje (Cadaver);
+        agregaPersonaje (Espectro);
+        // agregaPersonaje (Dana);
         //
         /*******************************************************************************************
         /******************************************************************************************/
@@ -684,6 +557,7 @@ namespace juego {
 
         *******************************************************************************************/
         //
+        
         ataqueEspadaNormal   = new Habilidad {
                 L"Ataque cuerpo a cuerpo normal", 
                 EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::oponente};
@@ -708,6 +582,67 @@ namespace juego {
         bolaFuego            = new Habilidad {
                 L"Bola de fuego",                 
                 EnfoqueHabilidad::area,      AccesoHabilidad::directo,   Antagonista::oponente};
+        revientaHuesos   = new Habilidad {
+                L"Revienta huesos", 
+                EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::oponente};
+        fogonazo   = new Habilidad {
+                L"Fogonazo", 
+                EnfoqueHabilidad::area,      AccesoHabilidad::indirecto,   Antagonista::oponente};
+        homeRun           = new Habilidad {
+                L"Home Run",     
+                EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::oponente};
+        minaRepelente = new Habilidad {
+                L"Mina Repelente",               
+                EnfoqueHabilidad::area, AccesoHabilidad::directo,   Antagonista::oponente};
+        roboVida        = new Habilidad {
+                L"Robo de Vida",                
+                EnfoqueHabilidad::si_mismo,  AccesoHabilidad::ninguno,   Antagonista::si_mismo};
+        espinasSombras       = new Habilidad {
+                L"Espinas de Sombras",                      
+                EnfoqueHabilidad::area, AccesoHabilidad::directo,   Antagonista::oponente};
+        vomitoPutrefacto        = new Habilidad {
+                L"Vómito Putrefacto",             
+                EnfoqueHabilidad::personaje,      AccesoHabilidad::directo,   Antagonista::oponente};
+        hazLuz      = new Habilidad {
+                L"Haz de Luz",              
+                EnfoqueHabilidad::area, AccesoHabilidad::directo, Antagonista::oponente};
+        bolaFuego            = new Habilidad {
+                L"Bola de fuego",                 
+                EnfoqueHabilidad::area,      AccesoHabilidad::directo,   Antagonista::oponente};
+        sprint   = new Habilidad {
+                L"Sprint", 
+                EnfoqueHabilidad::si_mismo, AccesoHabilidad::ninguno,   Antagonista::si_mismo};
+        proteccionCampana   = new Habilidad {
+                L"Protección de Campaña", 
+                EnfoqueHabilidad::area, AccesoHabilidad::directo,   Antagonista::aliado};
+        fuerzaTumba           = new Habilidad {
+                L"Fuerza de la Tumba",     
+                EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::oponente};
+        pasoSombras = new Habilidad {
+                L"Paso de Sombras",               
+                EnfoqueHabilidad::si_mismo, AccesoHabilidad::ninguno,   Antagonista::si_mismo};
+        mortaja        = new Habilidad {
+                L"Mortaja",                
+                EnfoqueHabilidad::personaje,  AccesoHabilidad::directo,   Antagonista::oponente};
+        bengalaLuminosa       = new Habilidad {
+                L"Bengala Luminosa",                      
+                EnfoqueHabilidad::si_mismo, AccesoHabilidad::ninguno,   Antagonista::si_mismo};
+        botiquin        = new Habilidad {
+                L"Botiquín",             
+                EnfoqueHabilidad::personaje,      AccesoHabilidad::directo,   Antagonista::aliado};
+        somnolencia      = new Habilidad {
+                L"Somnolencia",              
+                EnfoqueHabilidad::si_mismo, AccesoHabilidad::ninguno, Antagonista::si_mismo};
+        toqueHelado            = new Habilidad {
+                L"Toque Helado",                 
+                EnfoqueHabilidad::personaje,      AccesoHabilidad::directo,   Antagonista::oponente};
+        dentellada   = new Habilidad {
+                L"Dentallada", 
+                EnfoqueHabilidad::area, AccesoHabilidad::directo,   Antagonista::oponente};
+        bolaRapida   = new Habilidad {
+                L"Bola Rápida", 
+                EnfoqueHabilidad::personaje, AccesoHabilidad::indirecto,   Antagonista::oponente};
+
         //
         ataqueEspadaNormal  ->ponDescripcion (
                 L"El personaje usa su espada para atacar a un enemigo que se encuentra en una casilla próxima.");
@@ -725,7 +660,46 @@ namespace juego {
                 L"El personaje acumula energía mágica y la lanza contra un enemigo.");
         bolaFuego           ->ponDescripcion (
                 L"El personaje acumula energía mágica y la lanza contra un grupo de enemigos.");
+        revientaHuesos  ->ponDescripcion (
+                L"El personaje abraza con todas sus fuerzas hasta que los huesos del oponente se resquebran.");
+        fogonazo          ->ponDescripcion (
+                L"El personaje acumula energia térmica para lanzar un proyectil térmico ardiente contra un enemigo.");
+        homeRun             ->ponDescripcion (
+                L"El personaje usa la fuerza bruta para canalizar toda la energía cinética en su palo de béisbol y usarlo contra un enemigo.");
+        minaRepelente       ->ponDescripcion (
+                L"El personaje pone una mina cerca de un grupo de enemigos y explota con todas las fuerzas para impactar el mayor daño posible.");
+        roboVida      ->ponDescripcion (
+                L"El personaje usa magia oscura para absorver energía vital de un enemigo que se encuentra en una casilla próxima.");
+        espinasSombras      ->ponDescripcion (
+                L"El personaje usa magia oscura para lanzar un grupo de proyectiles contra un grupo de enemigos.");
+        vomitoPutrefacto     ->ponDescripcion (
+                L"El personaje usa su vómito asqueroso para envenenar y podrir su enemigo cerca de él.");
+        hazLuz           ->ponDescripcion (
+                L"El personaje ciega a un grupo de enemigos cerca para que sus ojos se debiliten y fallen más de lo esperado.");
+        sprint          ->ponDescripcion (
+                L"El personaje usa su cuerpo para canalizar su energía y aumentar su velocidad.");
+        proteccionCampana   ->ponDescripcion (
+                L"El personaje hace uso de medicina avanzada para curar a todos los personajes en un área.");
+        fuerzaTumba       ->ponDescripcion (
+                L"El personaje usa un ataque muy poderoso, jugando con magia oscura perr sacrificando un gran consumo de su energía.");
+        pasoSombras      ->ponDescripcion (
+                L"El personaje hace un llamamiento a la poder de la sombra para aumentar su ataque.");
+        mortaja      ->ponDescripcion (
+                L"El personaje roba de un sepúlcro cercano la mortaja y lo usa para asfixiar a su enemigo.");
+        bengalaLuminosa     ->ponDescripcion (
+                L"El personaje puede ver con claridad y aumenta su defensa hasta su próxima ronda.");
+        botiquin           ->ponDescripcion (
+                L"El personaje hace uso de las herramientas curativas para sanar a un miembro de su equipo.");
+        somnolencia      ->ponDescripcion (
+                L"El personaje usa un somnífero para aumentar su próximo ataque.");
+        toqueHelado     ->ponDescripcion (
+                L"El personaje usa un ataque poderoso que congela y golpea con fuerza a su enemigo.");
+        dentellada           ->ponDescripcion (
+                L"El personaje se arranca varios dientes afilados de su mandíbula y los lanza a un grupo de enemigos cercano.");
+        bolaRapida           ->ponDescripcion (
+                L"El personaje lanza con todas sus fuerzas una bola de béisbol desde la distancia hasta impactar contra un enemigo.");
         //
+
         ataqueEspadaNormal  ->ponArchivosImagenes (
                 carpeta_habilids_juego + "espada.png",          carpeta_habilids_juego + "fondo_5.png");
         ataqueArco          ->ponArchivosImagenes (
@@ -742,6 +716,40 @@ namespace juego {
                 carpeta_habilids_juego + "cristales.png",       carpeta_habilids_juego + "fondo_5.png");
         bolaFuego           ->ponArchivosImagenes (
                 carpeta_habilids_juego + "bola_fuego.png",      carpeta_habilids_juego + "fondo_5.png");
+        homeRun             ->ponArchivosImagenes (
+                carpeta_habilids_juego + "espada_poderosa.png",     carpeta_habilids_juego + "fondo_5.png");
+        minaRepelente       ->ponArchivosImagenes (
+                carpeta_habilids_juego + "bola_fuego.png",      carpeta_habilids_juego + "fondo_5.png");
+        roboVida            ->ponArchivosImagenes (
+                carpeta_habilids_juego + "vela.png",            carpeta_habilids_juego + "fondo_5.png");
+        espinasSombras      ->ponArchivosImagenes (
+                carpeta_habilids_juego + "cristales.png",       carpeta_habilids_juego + "fondo_5.png");
+        vomitoPutrefacto    ->ponArchivosImagenes (
+                carpeta_habilids_juego + "espada.png",          carpeta_habilids_juego + "fondo_5.png");
+        hazLuz              ->ponArchivosImagenes (
+                carpeta_habilids_juego + "escudo.png",          carpeta_habilids_juego + "fondo_5.png");
+        sprint              ->ponArchivosImagenes (
+                carpeta_habilids_juego + "escudo.png",          carpeta_habilids_juego + "fondo_5.png");
+        proteccionCampana   ->ponArchivosImagenes (
+                carpeta_habilids_juego + "vela_triple.png",     carpeta_habilids_juego + "fondo_5.png");
+        fuerzaTumba         ->ponArchivosImagenes (
+                carpeta_habilids_juego + "espada_poderosa.png", carpeta_habilids_juego + "fondo_5.png");
+        pasoSombras         ->ponArchivosImagenes (
+                carpeta_habilids_juego + "escudo.png",          carpeta_habilids_juego + "fondo_5.png");
+        mortaja             ->ponArchivosImagenes (
+                carpeta_habilids_juego + "espada.png",          carpeta_habilids_juego + "fondo_5.png");
+        bengalaLuminosa     ->ponArchivosImagenes (
+                carpeta_habilids_juego + "escudo.png",          carpeta_habilids_juego + "fondo_5.png");
+        botiquin            ->ponArchivosImagenes (
+                carpeta_habilids_juego + "vela.png",            carpeta_habilids_juego + "fondo_5.png");
+        somnolencia         ->ponArchivosImagenes (
+                carpeta_habilids_juego + "escudo.png",          carpeta_habilids_juego + "fondo_5.png");
+        toqueHelado         ->ponArchivosImagenes (
+                carpeta_habilids_juego + "espada_poderosa.png", carpeta_habilids_juego + "fondo_5.png");
+        dentellada          ->ponArchivosImagenes (
+                carpeta_habilids_juego + "espada.png",          carpeta_habilids_juego + "fondo_5.png");
+        bolaRapida          ->ponArchivosImagenes (
+                carpeta_habilids_juego + "arco_flecha.png",          carpeta_habilids_juego + "fondo_5.png");
         //
         ataqueEspadaNormal  ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         ataqueArco          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
@@ -751,15 +759,49 @@ namespace juego {
         curacionGrupo       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         proyectilMagico     ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         bolaFuego           ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        homeRun             ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        minaRepelente       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        roboVida            ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        espinasSombras      ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        vomitoPutrefacto    ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        hazLuz              ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        sprint              ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        proteccionCampana   ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        fuerzaTumba         ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        pasoSombras         ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        mortaja             ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        bengalaLuminosa     ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        botiquin            ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        somnolencia         ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        toqueHelado         ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        dentellada          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        bolaRapida          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
         //
         agregaHabilidad (ataqueEspadaNormal);
         agregaHabilidad (ataqueArco);
         agregaHabilidad (ataqueEspadaPoderoso);
-        agregaHabilidad (defensaFerrea );
+        agregaHabilidad (defensaFerrea);
         agregaHabilidad (curacionSimple);
-        agregaHabilidad (curacionGrupo );
-        agregaHabilidad (proyectilMagico );
-        agregaHabilidad (bolaFuego );
+        agregaHabilidad (curacionGrupo);
+        agregaHabilidad (proyectilMagico);
+        agregaHabilidad (bolaFuego);
+        agregaHabilidad (homeRun);
+        agregaHabilidad (minaRepelente);
+        agregaHabilidad (roboVida);
+        agregaHabilidad (espinasSombras);
+        agregaHabilidad (vomitoPutrefacto);
+        agregaHabilidad (hazLuz);
+        agregaHabilidad (sprint);
+        agregaHabilidad (proteccionCampana);
+        agregaHabilidad (fuerzaTumba);
+        agregaHabilidad (pasoSombras);
+        agregaHabilidad (mortaja);
+        agregaHabilidad (bengalaLuminosa);
+        agregaHabilidad (botiquin);
+        agregaHabilidad (somnolencia);
+        agregaHabilidad (toqueHelado);
+        agregaHabilidad (dentellada);
+        agregaHabilidad (bolaRapida);
         //
         /*******************************************************************************************
         /******************************************************************************************/
@@ -804,23 +846,59 @@ namespace juego {
 
         *******************************************************************************************/
         //
-        ataqueCuerpoACuerpo  = new TipoAtaque  {L"Ataque cuerpo a cuerpo"};
-        ataqueADistancia     = new TipoAtaque  {L"Ataque a distancia"};
-        ataqueMagico         = new TipoAtaque  {L"Ataque mágico"};
-        defensaCuerpoACuerpo = new TipoDefensa {L"Defensa cuerpo a cuerpo"};
-        defensaADistancia    = new TipoDefensa {L"Defensa a distancia"};
-        defensaMagica        = new TipoDefensa {L"Defensa mágica"};
-        danoFisico           = new TipoDano    {L"Daño físico"};
-        danoMagico           = new TipoDano    {L"Daño mágico"};
+        ataqueCuerpoACuerpo   = new TipoAtaque  {L"Ataque cuerpo a cuerpo"};
+        ataqueADistancia      = new TipoAtaque  {L"Ataque a distancia"};
+        ataqueMagico          = new TipoAtaque  {L"Ataque mágico"};
+        energiaTermica        = new TipoAtaque  {L"Ataque de tipo fuego"};
+        ataqueExplosivo       = new TipoAtaque  {L"Ataque explosivo"};
+        magiaOscura           = new TipoAtaque  {L"Ataque con magia oscura"};
+        ataqueAsqueroso       = new TipoAtaque  {L"Ataque asqueroso"};
+        ataqueHielo           = new TipoAtaque  {L"Ataque Hielo"};
+
+        defensaCuerpoACuerpo  = new TipoDefensa {L"Defensa cuerpo a cuerpo"};
+        defensaADistancia     = new TipoDefensa {L"Defensa a distancia"};
+        defensaMagica         = new TipoDefensa {L"Defensa mágica"};
+        defensaEnergiaTermica = new TipoDefensa {L"Defensa energía térmica"};
+        defensaExplosivo      = new TipoDefensa {L"Defensa explosivo"};
+        defensaOscura         = new TipoDefensa {L"Defensa magia oscura"};
+        defensaAsquerosa      = new TipoDefensa {L"Defensa asquerosa"};
+        defensaHielo          = new TipoDefensa {L"Defensa hielo"};
+        
+        danoFisico           = new TipoDano     {L"Daño físico"};
+        danoMagico           = new TipoDano     {L"Daño mágico"};
+        danoTermico          = new TipoDano     {L"Daño térmico"};
+        danoExplosivo        = new TipoDano     {L"Daño explosivo"};
+        danoOscuro           = new TipoDano     {L"Daño Oscuro"};
+        danoAsqueroso        = new TipoDano     {L"Daño asqueroso"};
+        danoHielo            = new TipoDano     {L"Daño hielo"};
+
         //
         agregaAtaque  (ataqueCuerpoACuerpo );
         agregaAtaque  (ataqueADistancia);
         agregaAtaque  (ataqueMagico);
+        agregaAtaque  (energiaTermica);
+        agregaAtaque  (ataqueExplosivo);
+        agregaAtaque  (magiaOscura);
+        agregaAtaque  (ataqueAsqueroso);
+        agregaAtaque  (ataqueHielo);
+
         agregaDefensa (defensaCuerpoACuerpo);
         agregaDefensa (defensaADistancia );
         agregaDefensa (defensaMagica );
+        agregaDefensa (defensaEnergiaTermica);
+        agregaDefensa (defensaExplosivo);
+        agregaDefensa (defensaOscura);
+        agregaDefensa (defensaAsquerosa);
+        agregaDefensa (defensaHielo);
+
         agregaDano    (danoFisico);
         agregaDano    (danoMagico);
+        agregaDano    (danoTermico);
+        agregaDano    (danoExplosivo);
+        agregaDano    (danoOscuro);
+        agregaDano    (danoAsqueroso);
+        agregaDano    (danoHielo);
+
         //
         /*******************************************************************************************
         /******************************************************************************************/
@@ -848,33 +926,29 @@ namespace juego {
 
         *******************************************************************************************/
         //
-        Jason    -> agregaHabilidad (ataqueEspadaNormal);
-        Jason    -> agregaHabilidad (ataqueArco);
-        Jason    -> agregaHabilidad (ataqueEspadaPoderoso);
-        Jason    -> agregaHabilidad (defensaFerrea);
+        Jason    -> agregaHabilidad (homeRun);
+        // Jason    -> agregaHabilidad (sprint);
+        // Jason    -> agregaHabilidad (bolaRapida);
         //
         Sophie   -> agregaHabilidad (ataqueEspadaNormal);
-        Sophie   -> agregaHabilidad (curacionSimple);
-        Sophie   -> agregaHabilidad (curacionGrupo);
-        Sophie   -> agregaHabilidad (proyectilMagico);
+        // Sophie   -> agregaHabilidad (curacionSimple);
+        // Sophie   -> agregaHabilidad (curacionGrupo);
         //
-        Pete     -> agregaHabilidad (ataqueEspadaNormal);
-        Pete     -> agregaHabilidad (proyectilMagico);
-        Pete     -> agregaHabilidad (bolaFuego);
+        // Pete     -> agregaHabilidad (minaRepelente);
+        // Pete     -> agregaHabilidad (proteccionCampana);
+        // Pete     -> agregaHabilidad (botiquin);
         //
-        Dana     -> agregaHabilidad (ataqueEspadaNormal);
-        Dana     -> agregaHabilidad (ataqueArco);
-        Dana     -> agregaHabilidad (ataqueEspadaPoderoso);
-        Dana     -> agregaHabilidad (defensaFerrea);
+        // Dana     -> agregaHabilidad (roboVida);
+        // Dana     -> agregaHabilidad (fuerzaTumba);
+        // Dana     -> agregaHabilidad (somnolencia);
         //
-        Espectro -> agregaHabilidad (ataqueEspadaNormal);
-        Espectro -> agregaHabilidad (curacionSimple);
-        Espectro -> agregaHabilidad (curacionGrupo);
-        Espectro -> agregaHabilidad (proyectilMagico);
+        Espectro -> agregaHabilidad (espinasSombras);
+        // Espectro -> agregaHabilidad (pasoSombras);
+        // Espectro -> agregaHabilidad (toqueHelado);
         //
-        Cadaver  -> agregaHabilidad (ataqueEspadaNormal);
-        Cadaver  -> agregaHabilidad (proyectilMagico);
-        Cadaver  -> agregaHabilidad (bolaFuego);
+        Cadaver  -> agregaHabilidad (vomitoPutrefacto);
+        // Cadaver  -> agregaHabilidad (mortaja);
+        // Cadaver  -> agregaHabilidad (dentellada);
         //
         /*******************************************************************************************
         /******************************************************************************************/
@@ -1006,6 +1080,110 @@ namespace juego {
         bolaFuego->asignaDefensa (defensaMagica);
         bolaFuego->asignaDano    (danoMagico, 50);
         //
+        revientaHuesos->ponCoste (4);
+        revientaHuesos->ponAlcance (1);
+        revientaHuesos->asignaAtaque  (ataqueCuerpoACuerpo);
+        revientaHuesos->asignaDefensa (defensaCuerpoACuerpo);
+        revientaHuesos->asignaDano    (danoFisico, 60);
+        //
+        fogonazo->ponCoste (5);
+        fogonazo->ponAlcance (3);
+        fogonazo->ponRadioAlcance (3);
+        fogonazo->asignaAtaque  (energiaTermica);
+        fogonazo->asignaDefensa (defensaEnergiaTermica);
+        fogonazo->asignaDano    (danoTermico, 60);
+        //
+        homeRun->ponCoste (5);
+        homeRun->ponAlcance (1);
+        homeRun->asignaAtaque  (ataqueCuerpoACuerpo);
+        homeRun->asignaDefensa (defensaCuerpoACuerpo);
+        homeRun->asignaDano    (danoFisico, 60);
+        //
+        minaRepelente->ponCoste (5);
+        minaRepelente->ponAlcance (3);
+        minaRepelente->ponRadioAlcance (3);
+        minaRepelente->asignaAtaque  (ataqueExplosivo);
+        minaRepelente->asignaDefensa (defensaExplosivo);
+        minaRepelente->asignaDano    (danoExplosivo, 60);
+        //
+        roboVida->ponCoste (5);
+        roboVida->asignaCuracion (40);
+        // roboVida->asignaAtaque  (magiaOscura);
+        // roboVida->asignaDefensa (defensaOscura);
+        // roboVida->asignaDano    (danoOscuro, 60);
+        //
+        espinasSombras->ponCoste (5);
+        espinasSombras->ponAlcance (3);
+        espinasSombras->ponRadioAlcance (3);
+        espinasSombras->asignaAtaque  (magiaOscura);
+        espinasSombras->asignaDefensa (defensaOscura);
+        espinasSombras->asignaDano    (danoOscuro, 60);
+        //
+        vomitoPutrefacto->ponCoste (5);
+        vomitoPutrefacto->ponAlcance (1);
+        vomitoPutrefacto->asignaAtaque  (ataqueAsqueroso);
+        vomitoPutrefacto->asignaDefensa (defensaAsquerosa);
+        vomitoPutrefacto->asignaDano    (danoAsqueroso, 60);
+        //
+        hazLuz->ponCoste (5);
+        hazLuz->ponAlcance (3);
+        hazLuz->ponRadioAlcance (3);
+        hazLuz->asignaAtaque  (ataqueADistancia);
+        hazLuz->asignaDefensa (defensaADistancia);
+        hazLuz->asignaDano    (danoFisico, 60);
+        //
+        sprint->ponCoste (5);
+        sprint->agregaEfectoDefensa (defensaOscura, 30);
+        //
+        proteccionCampana->ponCoste (5);
+        proteccionCampana->ponAlcance (1);
+        proteccionCampana->ponRadioAlcance (3);
+        proteccionCampana->asignaCuracion(40);
+        //
+        fuerzaTumba->ponCoste (5);
+        fuerzaTumba->ponAlcance (1);
+        fuerzaTumba->asignaAtaque  (magiaOscura);
+        fuerzaTumba->asignaDefensa (defensaOscura);
+        fuerzaTumba->asignaDano    (danoOscuro, 60);
+        //
+        pasoSombras->ponCoste (5);
+        pasoSombras->agregaEfectoAtaque(magiaOscura, 30);
+        //
+        mortaja->ponCoste (5);
+        mortaja->ponAlcance (1);
+        mortaja->asignaAtaque  (ataqueAsqueroso);
+        mortaja->asignaDefensa (defensaAsquerosa);
+        mortaja->asignaDano    (danoAsqueroso, 60);
+        //
+        bengalaLuminosa->ponCoste (5);
+        bengalaLuminosa->agregaEfectoAtaque(energiaTermica, 30);
+        //
+        botiquin->ponCoste (5);
+        botiquin->ponAlcance (1);
+        botiquin->asignaCuracion(40);
+        //
+        somnolencia->ponCoste (5);
+        somnolencia->agregaEfectoAtaque(magiaOscura, 60);
+        //
+        toqueHelado->ponCoste (5);
+        toqueHelado->ponAlcance (1);
+        toqueHelado->asignaAtaque  (ataqueHielo);
+        toqueHelado->asignaDefensa (defensaHielo);
+        toqueHelado->asignaDano    (danoHielo, 60);
+        //
+        dentellada->ponCoste (5);
+        dentellada->ponAlcance (10);
+        dentellada->ponRadioAlcance (3);
+        dentellada->asignaAtaque  (ataqueADistancia);
+        dentellada->asignaDefensa (defensaADistancia);
+        dentellada->asignaDano    (danoFisico, 60);
+        //
+        bolaRapida->ponCoste (5);
+        bolaRapida->ponAlcance (10);
+        bolaRapida->asignaAtaque  (ataqueADistancia);
+        bolaRapida->asignaDefensa (defensaADistancia);
+        bolaRapida->asignaDano    (danoFisico, 60);
+
         /*******************************************************************************************
         /******************************************************************************************/
     }
@@ -1063,52 +1241,117 @@ namespace juego {
         Jason    -> agregaDefensa    (defensaCuerpoACuerpo, 70);
         Jason    -> agregaDefensa    (defensaADistancia,    70);
         Jason    -> agregaDefensa    (defensaMagica,        20);
+        Jason    -> agregaDefensa    (defensaOscura,        20);
+        Jason    -> agregaDefensa    (defensaEnergiaTermica,20);
+        Jason    -> agregaDefensa    (defensaExplosivo,     20);
+        Jason    -> agregaDefensa    (defensaAsquerosa,     20);
+        Jason    -> agregaDefensa    (defensaHielo,         20);
         Jason    -> agregaReduceDano (danoFisico,           10);
-        Jason    -> agregaReduceDano (danoMagico,            5);
+        Jason    -> agregaReduceDano (danoMagico,           5);
+        Jason    -> agregaReduceDano (danoOscuro,           5);
+        Jason    -> agregaReduceDano (danoTermico,          5);
+        Jason    -> agregaReduceDano (danoExplosivo,        5);
+        Jason    -> agregaReduceDano (danoAsqueroso,        5);
+        Jason    -> agregaReduceDano (danoHielo,            5);
         //
         Sophie   -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
-      //Sophie   -> agregaAtaque     (ataqueADistancia,     50);  No se usa
+        Sophie   -> agregaAtaque     (ataqueADistancia,     50);
         Sophie   -> agregaAtaque     (ataqueMagico,         50);
         Sophie   -> agregaDefensa    (defensaCuerpoACuerpo, 50);
         Sophie   -> agregaDefensa    (defensaADistancia,    50);
         Sophie   -> agregaDefensa    (defensaMagica,        50);
+        Sophie   -> agregaDefensa    (defensaOscura,        50);
+        Sophie   -> agregaDefensa    (defensaEnergiaTermica,50);
+        Sophie   -> agregaDefensa    (defensaExplosivo,     50);
+        Sophie   -> agregaDefensa    (defensaAsquerosa,     50);
+        Sophie   -> agregaDefensa    (defensaHielo,         50);
         Sophie   -> agregaReduceDano (danoFisico,            5);
         Sophie   -> agregaReduceDano (danoMagico,           10);
+        Sophie   -> agregaReduceDano (danoOscuro,           10);
+        Sophie   -> agregaReduceDano (danoTermico,           5);
+        Sophie   -> agregaReduceDano (danoExplosivo,        10);
+        Sophie   -> agregaReduceDano (danoAsqueroso,         5);
+        Sophie   -> agregaReduceDano (danoHielo,             5);
         //                       
-        Pete     -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
-      //Pete     -> agregaAtaque     (ataqueADistancia,     50);  No se usa
-        Pete     -> agregaAtaque     (ataqueMagico,         70);        
-        Pete     -> agregaDefensa    (defensaCuerpoACuerpo, 40);
-        Pete     -> agregaDefensa    (defensaADistancia,    40);
-        Pete     -> agregaDefensa    (defensaMagica,        30);
-        Pete     -> agregaReduceDano (danoFisico,            0);
-        Pete     -> agregaReduceDano (danoMagico,           15);
+        // Pete     -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
+        // Pete     -> agregaAtaque     (ataqueADistancia,     70);
+        // Pete     -> agregaAtaque     (ataqueExplosivo,      70);
+        // Pete     -> agregaAtaque     (ataqueMagico,         70);        
+        // Pete     -> agregaDefensa    (defensaCuerpoACuerpo, 40);
+        // Pete     -> agregaDefensa    (defensaADistancia,    40);
+        // Pete     -> agregaDefensa    (defensaMagica,        30);
+        // Pete     -> agregaDefensa    (defensaOscura,        70);
+        // Pete     -> agregaDefensa    (defensaEnergiaTermica,30);
+        // Pete     -> agregaDefensa    (defensaExplosivo,     30);
+        // Pete     -> agregaDefensa    (defensaAsquerosa,     30);
+        // Pete     -> agregaDefensa    (defensaHielo,         30);
+        // Pete     -> agregaReduceDano (danoFisico,            0);
+        // Pete     -> agregaReduceDano (danoMagico,           15);
+        // Pete     -> agregaReduceDano (danoOscuro,            0);
+        // Pete     -> agregaReduceDano (danoTermico,           0);
+        // Pete     -> agregaReduceDano (danoExplosivo,         0);
+        // Pete     -> agregaReduceDano (danoAsqueroso,         0);
+        // Pete     -> agregaReduceDano (danoHielo,             0);
         //                       
-        Dana     -> agregaAtaque     (ataqueCuerpoACuerpo,  70);
-        Dana     -> agregaAtaque     (ataqueADistancia,     50);        
-        Dana     -> agregaDefensa    (defensaCuerpoACuerpo, 70);
-        Dana     -> agregaDefensa    (defensaADistancia,    70);
-        Dana     -> agregaDefensa    (defensaMagica,        20);
-        Dana     -> agregaReduceDano (danoFisico,           10);
-        Dana     -> agregaReduceDano (danoMagico,            5);
+        // Dana     -> agregaAtaque     (ataqueCuerpoACuerpo,  70);
+        // Dana     -> agregaAtaque     (ataqueADistancia,     50);        
+        // Dana     -> agregaAtaque     (magiaOscura,          40);
+        // Dana     -> agregaDefensa    (defensaCuerpoACuerpo, 70);
+        // Dana     -> agregaDefensa    (defensaADistancia,    70);
+        // Dana     -> agregaDefensa    (defensaMagica,        20);
+        // Dana     -> agregaDefensa    (defensaOscura,        60);
+        // Dana     -> agregaDefensa    (defensaEnergiaTermica,60);
+        // Dana     -> agregaDefensa    (defensaExplosivo,     60);
+        // Dana     -> agregaDefensa    (defensaAsquerosa,     60);
+        // Dana     -> agregaDefensa    (defensaHielo,         60);
+        // Dana     -> agregaReduceDano (danoFisico,           10);
+        // Dana     -> agregaReduceDano (danoMagico,            5);
+        // Dana     -> agregaReduceDano (danoOscuro,            5);
+        // Dana     -> agregaReduceDano (danoTermico,           5);
+        // Dana     -> agregaReduceDano (danoExplosivo,         5);
+        // Dana     -> agregaReduceDano (danoAsqueroso,         5);
+        // Dana     -> agregaReduceDano (danoHielo,             5);
         //                       
         Espectro -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
-      //Espectro -> agregaAtaque     (ataqueADistancia,     50);  No se usa
         Espectro -> agregaAtaque     (ataqueMagico,         50);        
+        Espectro -> agregaAtaque     (magiaOscura,          40);        
+        Espectro -> agregaAtaque     (ataqueHielo,          40);        
         Espectro -> agregaDefensa    (defensaCuerpoACuerpo, 50);
         Espectro -> agregaDefensa    (defensaADistancia,    50);
         Espectro -> agregaDefensa    (defensaMagica,        50);
+        Espectro -> agregaDefensa    (defensaOscura,        30);
+        Espectro -> agregaDefensa    (defensaEnergiaTermica,30);
+        Espectro -> agregaDefensa    (defensaExplosivo,     30);
+        Espectro -> agregaDefensa    (defensaAsquerosa,     30);
+        Espectro -> agregaDefensa    (defensaHielo,         30);
         Espectro -> agregaReduceDano (danoFisico,            5);
         Espectro -> agregaReduceDano (danoMagico,           10);
+        Espectro -> agregaReduceDano (danoOscuro,            5);
+        Espectro -> agregaReduceDano (danoTermico,           5);
+        Espectro -> agregaReduceDano (danoExplosivo,         5);
+        Espectro -> agregaReduceDano (danoAsqueroso,         5);
+        Espectro -> agregaReduceDano (danoHielo,             5);
+
         //                       
         Cadaver  -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
-      //Cadaver  -> agregaAtaque     (ataqueADistancia,     50);  No se usa
-        Cadaver  -> agregaAtaque     (ataqueMagico,         70);        
-        Cadaver  -> agregaDefensa    (defensaCuerpoACuerpo, 40);
-        Cadaver  -> agregaDefensa    (defensaADistancia,    40);
-        Cadaver  -> agregaDefensa    (defensaMagica,        30);
-        Cadaver  -> agregaReduceDano (danoFisico,            0);
-        Cadaver  -> agregaReduceDano (danoMagico,           15);
+        Cadaver  -> agregaAtaque     (ataqueADistancia,     50);
+        Cadaver  -> agregaAtaque     (ataqueMagico,         50);       
+        Cadaver  -> agregaAtaque     (ataqueAsqueroso,      50);     
+        Cadaver  -> agregaDefensa    (defensaCuerpoACuerpo, 50);
+        Cadaver  -> agregaDefensa    (defensaADistancia,    50);
+        Cadaver  -> agregaDefensa    (defensaMagica,        50);
+        Cadaver  -> agregaDefensa    (defensaOscura,        50);
+        Cadaver  -> agregaDefensa    (defensaEnergiaTermica,50);
+        Cadaver  -> agregaDefensa    (defensaExplosivo,     50);
+        Cadaver  -> agregaDefensa    (defensaAsquerosa,     50);
+        Cadaver  -> agregaDefensa    (defensaHielo,         50);
+        Cadaver  -> agregaReduceDano (danoFisico,            5);
+        Cadaver  -> agregaReduceDano (danoMagico,           10);
+        Cadaver  -> agregaReduceDano (danoOscuro,            0);
+        Cadaver  -> agregaReduceDano (danoTermico,           0);
+        Cadaver  -> agregaReduceDano (danoExplosivo,         0);
+        Cadaver  -> agregaReduceDano (danoAsqueroso,         0);
+        Cadaver  -> agregaReduceDano (danoHielo,             0);
         //
         /*******************************************************************************************
         /******************************************************************************************/
@@ -1255,12 +1498,12 @@ namespace juego {
         //
         modo ()->configuraDesplaza (RejillaTablero::distanciaCeldas);
         //
-        Jason    -> ponSitioFicha (Coord {23, 15});
-        Sophie   -> ponSitioFicha (Coord {17, 15});
-        Pete     -> ponSitioFicha (Coord {29, 15});
-        Dana     -> ponSitioFicha (Coord {23, 35});
-        Espectro -> ponSitioFicha (Coord {17, 35});
-        Cadaver  -> ponSitioFicha (Coord {29, 35});
+        Jason    -> ponSitioFicha (Coord {14, 14});
+        Sophie   -> ponSitioFicha (Coord {22, 14});
+        // Pete     -> ponSitioFicha (Coord {29, 15});
+        // Dana     -> ponSitioFicha (Coord {23, 35});
+        Espectro -> ponSitioFicha (Coord {22, 34});
+        Cadaver  -> ponSitioFicha (Coord {14, 34});
         //
         tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "SFX/Metal Click.wav", 100);
         tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SFX/SnowWalk.ogg",    100);
@@ -1292,8 +1535,8 @@ namespace juego {
         //
         Jason    = nullptr;
         Sophie   = nullptr;
-        Pete     = nullptr;
-        Dana     = nullptr;
+        // Pete     = nullptr;
+        // Dana     = nullptr;
         Espectro = nullptr;
         Cadaver  = nullptr;
         //

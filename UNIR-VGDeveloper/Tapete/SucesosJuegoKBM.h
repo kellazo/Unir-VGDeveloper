@@ -1,6 +1,6 @@
 ﻿// proyecto: Grupal/Tapete
 // arhivo:   SucesosJuegoKBM.h
-// versión:  1.1  (7-Ene-2024)
+// versión:  1.1  (9-Ene-2023)
 
 
 #pragma once
@@ -24,10 +24,6 @@ namespace tapete {
 
 
         void iniciado  () override;
-
-        void personajeSeleccionado (ActorPersonaje * personaje) override;
-        void actuanteSeleccionado  (LadoTablero lado) override;
-        void habilidadSeleccionada (LadoTablero lado, int indice_habilidad) override;
 
         void pulsadoEspacio () override;
         void pulsadoEscape  () override;
