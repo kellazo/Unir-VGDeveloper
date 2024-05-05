@@ -13,10 +13,16 @@ namespace tapete {
     string JuegoMesaBase::carpeta_activos_comun  {"../Assets/Art/Sprites/Environment/"};
     
     // intro.....
-    Tiempo* crono;
+    Tiempo* cronoIntroLogo;
+    Tiempo* cronoIntroJuegoTexto;
     unir2d::Sonido* ptr_audio;
-    IntroJuegoImagen* ptr_imagen;
-    bool finIntro = true;
+    IntroJuegoImagen* ptr_introLogo;
+    IntroJuegoImagen* ptr_imagenFondoIntro;
+    IntroJuegoImagen* ptr_imagenTextoIntro;
+    bool reproduciendoIntroLogo = true;
+    bool reproduciendoIntroJuego = false;
+    double duracionIntroLogo = 13;
+    double duracionIntroJuegoTexto = 29;
     //..........
 
     JuegoMesaBase::~JuegoMesaBase () {
@@ -238,16 +244,11 @@ namespace tapete {
         //
         // 
         // 
-        // XXX importante 1ero carga el fondo
-        ptr_imagen = new IntroJuegoImagen{ "IntroGameBackground.png" };
-        agregaActor(ptr_imagen);
-        crono = new Tiempo{};
-        crono->inicia();
-
-        // pantalla inicio
-        ptr_audio = new unir2d::Sonido{};
-        ptr_audio->abre("..\\Assets\\Audio\\Themes\\IntroJuego.wav");
-        ptr_audio->suena();
+        // intro 1ero logo, continua en posactualiza()
+        ptr_introLogo = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/logoIntro001a144.png", 0, 0, 0, 9, 16 };
+        agregaActor(ptr_introLogo);
+        cronoIntroLogo = new Tiempo{};
+        cronoIntroLogo->inicia();
         
     }
 
@@ -255,7 +256,7 @@ namespace tapete {
     void JuegoMesaBase::termina () {
         
         // clean crono intro
-        delete crono;
+        delete cronoIntroLogo;
 
         //
         sucesos_->terminado ();
@@ -309,15 +310,40 @@ namespace tapete {
 
     void JuegoMesaBase::posactualiza (double tiempo_seg) {
 
+        if (reproduciendoIntroLogo && ((cronoIntroLogo->segundos() >= duracionIntroLogo || unir2d::Teclado::pulsando(unir2d::Tecla::derecha)))) {
+            reproduciendoIntroLogo = false;
+            reproduciendoIntroJuego = true;
+            // limpia logo
+            extraeActor(ptr_introLogo);
+            delete ptr_introLogo;
+            cronoIntroLogo->termina();
+
+            // carga intro juego
+            ptr_imagenFondoIntro = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroGameBackground.png" };
+            ptr_imagenTextoIntro = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/TextoIntro.png", 0, 480, 1 };
+            agregaActor(ptr_imagenFondoIntro);
+            agregaActor(ptr_imagenTextoIntro);
+            cronoIntroJuegoTexto = new Tiempo{};
+            cronoIntroJuegoTexto->inicia();
+
+            // reproduce sonido
+            ptr_audio = new unir2d::Sonido{};
+            ptr_audio->abre("..\\Assets\\Audio\\Themes\\IntroKidsBikesAndMonsters.wav");
+            ptr_audio->suena();
+        }
+
+
         //TODO intro juego mejorar
-        if (finIntro && (crono->segundos() > 30 || unir2d::Teclado::pulsando(unir2d::Tecla::derecha))) {
-            finIntro = false;
+        if (reproduciendoIntroJuego && (cronoIntroJuegoTexto->segundos() >= duracionIntroJuegoTexto || (unir2d::Teclado::pulsando(unir2d::Tecla::derecha) && cronoIntroJuegoTexto->segundos() >0.5))) {
+            reproduciendoIntroJuego = false;
 
             // limpia intro
-            crono->termina();
+            cronoIntroJuegoTexto->termina();
             ptr_audio->para();
-            extraeActor(ptr_imagen);
-            delete ptr_imagen;
+            extraeActor(ptr_imagenFondoIntro);
+            extraeActor(ptr_imagenTextoIntro);
+            delete ptr_imagenFondoIntro;
+            delete ptr_imagenTextoIntro;
             delete ptr_audio;
    
             //...continua con juego tras intro
@@ -329,10 +355,6 @@ namespace tapete {
             agregaActor(musica_);
             //
             sucesos_->iniciado();
-        }
-        else {
-            // desplaza imagen
-            ptr_imagen->ponPosicion(unir2d::Vector{ 0, ptr_imagen->posicion().y() - 0.5f});
         }
 
         controlTeclado ();
