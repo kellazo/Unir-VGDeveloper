@@ -165,6 +165,7 @@
     <ClInclude Include="EstadoJuegoComun.h" />
     <ClInclude Include="GradoEfectividad.h" />
     <ClInclude Include="Habilidad.h" />
+    <ClInclude Include="IntroJuegoImagen.h" />
     <ClInclude Include="PresenciaHabilidades.h" />
     <ClInclude Include="ListadoAyuda.h" />
     <ClInclude Include="ModoJuegoBase.h" />
@@ -267,6 +268,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="ProcesoJuegoEquipo.txt" />
+    <Text Include="ProcesoJuegoKBM.txt" />
     <Text Include="ProcesoJuegoLibreDoble.txt" />
     <Text Include="ProcesoJuegoPares.txt" />
     <Text Include="Texto.txt" />

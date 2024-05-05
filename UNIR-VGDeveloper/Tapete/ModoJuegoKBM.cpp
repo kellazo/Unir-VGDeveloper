@@ -47,6 +47,9 @@ namespace tapete {
                             //  sin elegidos, sin atacante
             //
             ModoJuegoBase::atenuaMusica ();
+           //INICIO GUILLEM //
+             ModoJuegoBase::atenuaMusicaLoop ();
+           // FIN GUILLEM //
             estado ().transita (EstadoJuegoKBM::inicioTurnoNoElegido);
             validaAtributos ();
             informaProceso ("entraTurnoEleccion");

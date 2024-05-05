@@ -99,8 +99,7 @@ namespace tapete {
         textura_retrato = nullptr;
 
         // INICIO GUILLEM //
-        delete sonido_personaje;
-        sonido_personaje = nullptr;
+        liberaSFXs();
         // FIN GUILLEM //
     }
 
@@ -241,13 +240,23 @@ namespace tapete {
 
     // INICIO GUILLEM //
     void PresenciaPersonaje::preparaSFX() {
+        //original
+        //sonido_establece = new unir2d::Sonido{};
+        //sonido_establece->carga(actor_tablero->archivo_sonido_establece);
+        //sonido_establece->ponVolumen(actor_tablero->volumen_sonido_establece);
+
         sonido_personaje = new unir2d::Sonido();
         sonido_personaje->carga(actor_personaje->archivo_personaje_sfx);
         sonido_personaje->ponVolumen(actor_personaje->volumen_personaje_sfx);
 
-        //sonido_establece = new unir2d::Sonido{};
-        //sonido_establece->carga(actor_tablero->archivo_sonido_establece);
-        //sonido_establece->ponVolumen(actor_tablero->volumen_sonido_establece);
+        sonido_seleccion = new unir2d::Sonido();
+        sonido_seleccion->carga(actor_personaje->archivo_seleccion_sfx);
+        sonido_seleccion->ponVolumen(actor_personaje->volumen_seleccion_sfx);
+
+        sonido_desplazamiento = new unir2d::Sonido();
+        sonido_desplazamiento->carga(actor_personaje->archivo_desplazamiento_sfx);
+        sonido_desplazamiento->ponVolumen(actor_personaje->volumen_desplazamiento_sfx);
+
     }
     // FIN GUILLEM //
 
@@ -319,6 +328,17 @@ namespace tapete {
         }
         throw std::logic_error (mensaje);
     }
+
+    // INICIO GUILLEM //
+    void PresenciaPersonaje::liberaSFXs() {
+        delete sonido_personaje;
+        sonido_personaje = nullptr;
+        delete sonido_seleccion;
+        sonido_seleccion = nullptr;
+        delete sonido_desplazamiento;
+        sonido_desplazamiento = nullptr;
+    }
+    // FIN GUILLEM //
 
 
 }

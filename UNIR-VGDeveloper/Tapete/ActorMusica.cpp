@@ -34,37 +34,92 @@ namespace tapete {
         volumen_musica = volumen;
     }
 
+    // INICIO GUILLEM //
+     
+    string ActorMusica::archivoMusicaLoop () {
+        return archivo_musica_loop;
+    }
+
+
+    int ActorMusica::volumenMusicaLoop () {
+        return volumen_musica_loop;
+    }
+
+
+    void ActorMusica::asignaMusicaLoop (const string& archivo, int volumen) {
+        archivo_musica_loop = archivo;
+        volumen_musica_loop = volumen;
+    }
+    // FIN GUILLEM //
 
     void ActorMusica::inicia () {
         musica = new unir2d::Sonido {};
         musica->abre       (archivo_musica);
         musica->ponVolumen (volumen_musica);
+        // INICIO GUILLEM //
+        musica_loop = new unir2d::Sonido{};
+        musica_loop->abre       (archivo_musica_loop);
+        musica_loop->ponVolumen (volumen_musica_loop);
+        // FIN GUILLEM //
+
     }
 
 
     void ActorMusica::termina () {
         delete musica;
         musica = nullptr;
+        // INICIO GUILLEM //
+        delete musica_loop;
+        musica_loop = nullptr;
+        // FIN GUILLEM //
     }
 
 
     void ActorMusica::actualiza (double tiempo_seg) {
-        if (! iniciada) {
-            musica->suena ();
-            iniciada = true;
-            return;
-        } 
+        
+        // INICIO GUILLEM //
+        // original
+        /* if (!iniciada) {
+          musica->suena();
+          iniciada = true;
+          return;
+         }
         if (! musica->sonando ()) {
             musica->repite ();
+        }*/
+        
+        if (!iniciada) {
+             musica->suena();
+              iniciada = true;
+             return;
+         }
+        if (! musica->sonando()) {
+            if (!iniciada_loop) {
+                musica_loop->suena();
+                iniciada_loop = true;
+                return;
+            }
+            if (!musica_loop->sonando()) {
+                musica_loop->repite ();
+            }
         }
+        // FIN GUILLEM //
     }
 
 
-    void ActorMusica::bajaMusica () {
-        int volumen = musica->volumen ();
+    void ActorMusica::bajaMusica() {
+        int volumen = musica->volumen();
         volumen = static_cast <int> (volumen * 0.3f);
-        musica->ponVolumen (volumen);
+        musica->ponVolumen(volumen);
     }
+    // INICIO GUILLEM //
+    
+    void ActorMusica::bajaMusicaLoop() {
+        int volumen = musica_loop->volumen();
+        volumen = static_cast <int> (volumen * 0.3f);
+        musica_loop->ponVolumen(volumen);
+    }
+    // FIN GUILLEM //
 
 
 }
