@@ -716,8 +716,10 @@ namespace juego {
                 carpeta_habilids_juego + "cristales.png",       carpeta_habilids_juego + "fondo_5.png");
         bolaFuego           ->ponArchivosImagenes (
                 carpeta_habilids_juego + "bola_fuego.png",      carpeta_habilids_juego + "fondo_5.png");
-        homeRun             ->ponArchivosImagenes (
-                carpeta_habilids_juego + "espada_poderosa.png",     carpeta_habilids_juego + "fondo_5.png");
+        fogonazo            ->ponArchivosImagenes (
+                carpeta_habilids_juego + "espada_poderosa.png", carpeta_habilids_juego + "fondo_5.png");
+        homeRun             ->ponArchivosImagenes(
+                carpeta_habilids_juego + "espada_poderosa.png", carpeta_habilids_juego + "fondo_5.png");
         minaRepelente       ->ponArchivosImagenes (
                 carpeta_habilids_juego + "bola_fuego.png",      carpeta_habilids_juego + "fondo_5.png");
         roboVida            ->ponArchivosImagenes (
@@ -759,23 +761,24 @@ namespace juego {
         curacionGrupo       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         proyectilMagico     ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         bolaFuego           ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        homeRun             ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        minaRepelente       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        roboVida            ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        espinasSombras      ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        vomitoPutrefacto    ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        hazLuz              ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        sprint              ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        proteccionCampana   ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        fuerzaTumba         ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        pasoSombras         ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        mortaja             ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        bengalaLuminosa     ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        botiquin            ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        somnolencia         ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        toqueHelado         ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        dentellada          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
-        bolaRapida          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        homeRun             ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
+        fogonazo            ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXFogonazo.wav");
+        minaRepelente       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXMinaRepelente.wav");
+        roboVida            ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXRoboVida.wav");
+        espinasSombras      ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXEspinasSombras.wav");
+        vomitoPutrefacto    ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXVomitoPutrefacto.wav");
+        hazLuz              ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHazLuz.wav");
+        sprint              ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXSprint.wav");
+        proteccionCampana   ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXProteccionCampana.wav");
+        fuerzaTumba         ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXFuerzaTumba.wav");
+        pasoSombras         ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXPasoSombras.wav");
+        mortaja             ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXMortaja.wav");
+        bengalaLuminosa     ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXBengalaLuminosa.wav");
+        botiquin            ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXBotiquin.wav");
+        somnolencia         ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXSomnolencia.wav");
+        toqueHelado         ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXToqueHelado.wav");
+        dentellada          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXDentellada.wav");
+        bolaRapida          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXBolaRapida.wav");
         //
         agregaHabilidad (ataqueEspadaNormal);
         agregaHabilidad (ataqueArco);
@@ -786,6 +789,7 @@ namespace juego {
         agregaHabilidad (proyectilMagico);
         agregaHabilidad (bolaFuego);
         agregaHabilidad (homeRun);
+        agregaHabilidad (fogonazo);
         agregaHabilidad (minaRepelente);
         agregaHabilidad (roboVida);
         agregaHabilidad (espinasSombras);
@@ -931,8 +935,9 @@ namespace juego {
         // Jason    -> agregaHabilidad (bolaRapida);
         //
         Sophie   -> agregaHabilidad (ataqueEspadaNormal);
-        // Sophie   -> agregaHabilidad (curacionSimple);
-        // Sophie   -> agregaHabilidad (curacionGrupo);
+        // Sophie   -> agregaHabilidad (fogonazo);
+        // Sophie   -> agregaHabilidad (bengalaLuminosa);
+        // Sophie   -> agregaHabilidad (hazLuz);
         //
         // Pete     -> agregaHabilidad (minaRepelente);
         // Pete     -> agregaHabilidad (proteccionCampana);
