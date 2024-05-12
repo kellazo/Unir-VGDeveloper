@@ -14,13 +14,17 @@ namespace tapete {
     
     // intro.....
     Tiempo* cronoIntroLogo;
+    Tiempo* cronoPulsaBoton;
     Tiempo* cronoIntroJuegoTexto;
     unir2d::Sonido* ptr_audio;
     IntroJuegoImagen* ptr_introLogo;
     IntroJuegoImagen* ptr_imagenFondoIntro;
     IntroJuegoImagen* ptr_imagenTextoIntro;
+    IntroJuegoImagen* ptr_introPulsaBotonBackground;
+    IntroJuegoImagen* ptr_introPulsaBotonTexto;
     bool reproduciendoIntroLogo = true;
     bool reproduciendoIntroJuego = false;
+    bool reproducienodIntroPulsaBoton = false;
     double duracionIntroLogo = 16;
     double duracionIntroJuegoTexto = 29;
     unir2d::Tecla teclaSaltoIntro = unir2d::Tecla::escape;
@@ -327,13 +331,33 @@ namespace tapete {
 
     void JuegoMesaBase::posactualiza (double tiempo_seg) {
 
-        if (reproduciendoIntroLogo && ((cronoIntroLogo->segundos() >= duracionIntroLogo || unir2d::Teclado::pulsando(teclaSaltoIntro)))) {
+        if (reproduciendoIntroLogo && ((cronoIntroLogo->segundos() >= duracionIntroLogo
+            || unir2d::Teclado::pulsando(teclaSaltoIntro)))) {
             reproduciendoIntroLogo = false;
-            reproduciendoIntroJuego = true;
+            reproducienodIntroPulsaBoton = true;
             // limpia logo
             extraeActor(ptr_introLogo);
             delete ptr_introLogo;
             cronoIntroLogo->termina();
+            // crea pantalla pulsa botón
+            ptr_introPulsaBotonBackground = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/MenuPulsaBoton_Background.png" };
+            ptr_introPulsaBotonTexto = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/MenuPulsaBoton_Text.png", 400, 500, 0, 1, 8, true };
+            agregaActor(ptr_introPulsaBotonBackground);
+            agregaActor(ptr_introPulsaBotonTexto);
+            cronoPulsaBoton = new Tiempo{};
+            cronoPulsaBoton->inicia();
+        }
+        
+        if (reproducienodIntroPulsaBoton && cronoPulsaBoton->segundos() > 1.5 && unir2d::Teclado::cualquierTecla()) {
+            reproducienodIntroPulsaBoton = false;
+            reproduciendoIntroJuego = true;
+
+            // limpia
+            extraeActor(ptr_introPulsaBotonBackground);
+            extraeActor(ptr_introPulsaBotonTexto);
+            delete ptr_introPulsaBotonBackground;
+            delete ptr_introPulsaBotonTexto;
+            cronoPulsaBoton->termina();
 
             // carga intro juego
             ptr_imagenFondoIntro = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroGameBackground.png" };
@@ -351,7 +375,8 @@ namespace tapete {
 
 
         //TODO intro juego mejorar
-        if (reproduciendoIntroJuego && (cronoIntroJuegoTexto->segundos() >= duracionIntroJuegoTexto || (unir2d::Teclado::pulsando(teclaSaltoIntro) && cronoIntroJuegoTexto->segundos() >0.5))) {
+        if (reproduciendoIntroJuego && (cronoIntroJuegoTexto->segundos() >= duracionIntroJuegoTexto 
+            || (unir2d::Teclado::pulsando(teclaSaltoIntro) && cronoIntroJuegoTexto->segundos() >0.5))) {
             reproduciendoIntroJuego = false;
 
             // limpia intro
