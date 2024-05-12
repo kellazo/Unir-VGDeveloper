@@ -24,6 +24,9 @@ private:
     int numeroDeFotogramas;
     int ultimoFotogramaReproducido = 0;
     bool bucle;
+    bool conSonido;
+    string pathSonido;
+    Sonido* ptr_sonido;
 
 
     // controla si el caballo anda o está parado
@@ -36,13 +39,13 @@ private:
 public:
     // constructor
     IntroJuegoImagen(const string pathArchivo, float posicionInicialX = 0,
-        float posicionInicialY = 0, float velocidadDesplazamientoArriba = 0, int numeroDeFotogramasColumnas = 0, int numeroDeFotogramasFilas = 0, bool bucle = false);
+        float posicionInicialY = 0, float velocidadDesplazamientoArriba = 0, int numeroDeFotogramasColumnas = 0, int numeroDeFotogramasFilas = 0, bool bucle = false, string pathSonido = "");
 
 };
 
 
 inline IntroJuegoImagen::IntroJuegoImagen(const string pathArchivo, float posicionInicialX, 
-    float posicionInicialY, float velocidadDesplazamientoArriba, int numeroDeFotogramasColumnas, int numeroDeFotogramasFilas, bool bucle) {
+    float posicionInicialY, float velocidadDesplazamientoArriba, int numeroDeFotogramasColumnas, int numeroDeFotogramasFilas, bool bucle, string pathSonido) {
     
     this->posicionInicialX = posicionInicialX;
     this->posicionInicialY = posicionInicialY;
@@ -51,6 +54,7 @@ inline IntroJuegoImagen::IntroJuegoImagen(const string pathArchivo, float posici
     this->numeroDeFotogramasFilas = numeroDeFotogramasFilas;
     this->numeroDeFotogramas = numeroDeFotogramasColumnas * numeroDeFotogramasFilas;
     this->bucle = bucle;
+    this->pathSonido = pathSonido;
 
     textura = new Textura{};
     imagen = new Imagen{};
@@ -69,12 +73,25 @@ inline void IntroJuegoImagen::inicia() {
     if(numeroDeFotogramasColumnas > 0 || numeroDeFotogramasFilas > 0)
         imagen->defineEstampas(numeroDeFotogramasFilas, numeroDeFotogramasColumnas);
     ponPosicion(Vector{ posicion_x, posicion_y });
+
+    // comprueba si la imagen ha de ir sincronizada con alguna pista de audio
+    if (pathSonido != "") {
+        conSonido = true;
+        ptr_sonido = new unir2d::Sonido{};
+        ptr_sonido->abre(pathSonido);
+    }
+    else {
+        conSonido = false;
+    }
 }
 
 inline void IntroJuegoImagen::termina() {
     extraeDibujos();
     delete imagen;
     delete textura;
+    if (conSonido) {
+        delete ptr_sonido;
+    }
 }
 
 inline void IntroJuegoImagen::actualiza(double tiempo_seg) {
@@ -82,6 +99,10 @@ inline void IntroJuegoImagen::actualiza(double tiempo_seg) {
     // si se trata de imagen con fotogramas tilesheet, congela el último fotograma hasta que finalize el tiempo
     if (numeroDeFotogramas > 0 && (bucle || (ultimoFotogramaReproducido != numeroDeFotogramas))) {
         int indice = ((int)(tiempo_seg * 10)) % numeroDeFotogramas + 1;
+        // dispara pista de sonido a cada inicio de bucle
+        if (indice == 1 && conSonido) {
+            ptr_sonido->suena();
+        }
         ultimoFotogramaReproducido = indice;
         int puntero = indice;
         int fila = 1;

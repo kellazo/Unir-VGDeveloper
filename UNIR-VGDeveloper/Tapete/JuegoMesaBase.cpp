@@ -21,8 +21,9 @@ namespace tapete {
     IntroJuegoImagen* ptr_imagenTextoIntro;
     bool reproduciendoIntroLogo = true;
     bool reproduciendoIntroJuego = false;
-    double duracionIntroLogo = 13;
+    double duracionIntroLogo = 16;
     double duracionIntroJuegoTexto = 29;
+    unir2d::Tecla teclaSaltoIntro = unir2d::Tecla::escape;
     //..........
 
     JuegoMesaBase::~JuegoMesaBase () {
@@ -256,7 +257,7 @@ namespace tapete {
         // 
         // 
         // intro 1ero logo, continua en posactualiza()
-        ptr_introLogo = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/logoIntro001a144.png", 0, 0, 0, 9, 16 };
+        ptr_introLogo = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/logoIntro001a144.png", 0, -10, 0, 9, 16, false, "../Assets/Audio/Themes/audioIntroLogo.wav"};
         agregaActor(ptr_introLogo);
         cronoIntroLogo = new Tiempo{};
         cronoIntroLogo->inicia();
@@ -326,7 +327,7 @@ namespace tapete {
 
     void JuegoMesaBase::posactualiza (double tiempo_seg) {
 
-        if (reproduciendoIntroLogo && ((cronoIntroLogo->segundos() >= duracionIntroLogo || unir2d::Teclado::pulsando(unir2d::Tecla::derecha)))) {
+        if (reproduciendoIntroLogo && ((cronoIntroLogo->segundos() >= duracionIntroLogo || unir2d::Teclado::pulsando(teclaSaltoIntro)))) {
             reproduciendoIntroLogo = false;
             reproduciendoIntroJuego = true;
             // limpia logo
@@ -350,7 +351,7 @@ namespace tapete {
 
 
         //TODO intro juego mejorar
-        if (reproduciendoIntroJuego && (cronoIntroJuegoTexto->segundos() >= duracionIntroJuegoTexto || (unir2d::Teclado::pulsando(unir2d::Tecla::derecha) && cronoIntroJuegoTexto->segundos() >0.5))) {
+        if (reproduciendoIntroJuego && (cronoIntroJuegoTexto->segundos() >= duracionIntroJuegoTexto || (unir2d::Teclado::pulsando(teclaSaltoIntro) && cronoIntroJuegoTexto->segundos() >0.5))) {
             reproduciendoIntroJuego = false;
 
             // limpia intro
