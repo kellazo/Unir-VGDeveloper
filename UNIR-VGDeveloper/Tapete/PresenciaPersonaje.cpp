@@ -85,6 +85,17 @@ namespace tapete {
         imagen_retrato_lateral = nullptr;
         delete fondo_retrato;
         fondo_retrato = nullptr;
+        
+        // INICIO GUILLEM //
+
+        delete imagen_retrato_muerto;
+        imagen_retrato_muerto = nullptr;
+        delete textura_retrato_muerto;
+        textura_retrato_muerto = nullptr;
+ 
+        // FIN GUILLEM //
+
+
         //
 //        delete texto_nombre;
 //        texto_nombre = nullptr;
@@ -309,6 +320,25 @@ namespace tapete {
         //imagen_retrato_actuante->colorea (Color::Gris);
     }
 
+    // INICIO GUILLEM //
+    void PresenciaPersonaje::RetratoMuerte() {
+       // imagen_retrato_lateral->asigna();
+
+        if (textura_retrato_muerto == nullptr) {
+            textura_retrato_muerto = new unir2d::Textura{};
+            textura_retrato_muerto->carga(JuegoMesaBase::carpetaActivos() + "Hunter_Dead.png");
+        }
+        imagen_retrato_muerto = new unir2d::Imagen{};
+        imagen_retrato_muerto->asigna(textura_retrato_muerto);
+        imagen_retrato_muerto->ponPosicion(imagen_retrato_lateral->posicion());
+        actor_personaje->agregaDibujo(imagen_retrato_muerto);
+
+        
+
+        
+    }
+
+    // FIN GUILLEM //
 
     void PresenciaPersonaje::aclaraRetrato () {
         imagen_retrato_lateral->colorea (Color::Blanco);

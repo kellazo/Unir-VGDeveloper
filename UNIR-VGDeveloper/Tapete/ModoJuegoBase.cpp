@@ -1357,7 +1357,11 @@ namespace tapete {
         for (ActorPersonaje * persj : juego_->personajes ()) {
             persj->presencia ().refrescaBarraVida ();
             if (persj->vitalidad () == 0) {
-                persj->presencia ().oscureceRetrato ();
+                // INICIO GUILLEM //
+                persj->presencia().RetratoMuerte(); // to do
+                //persj->presencia ().oscureceRetrato (); //Original
+
+                // FIN GUILLEM //
             }
         }
         PresenciaActuante & presnc_izqrd = juego_->tablero ()->presencia (LadoTablero::Izquierda);

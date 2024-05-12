@@ -21,6 +21,9 @@ namespace tapete {
         void indicaFicha (const wstring & cadena);
 
         void oscureceRetrato ();
+        // INICIO GUILLEM //
+        void RetratoMuerte();
+        // FIN GUILLEM //
         void aclaraRetrato ();
 
         void refrescaBarraVida ();
@@ -57,6 +60,8 @@ namespace tapete {
         unir2d::Sonido *                sonido_personaje      {};
         unir2d::Sonido *                sonido_seleccion      {};
         unir2d::Sonido *                sonido_desplazamiento {};
+        inline static unir2d::Textura * textura_retrato_muerto{};
+        unir2d::Imagen *                imagen_retrato_muerto {};
         // FIN GUILLEM //
         // 
         //inline static unir2d::Textura * texturas_habilidades {};
