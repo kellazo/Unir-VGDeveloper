@@ -27,18 +27,19 @@ namespace tapete {
         void mueveFicha ();
         void asumeHabilidad ();
 
+        void pasarTurno ();
     private:
 
         EstadoJuegoKBM estado_;
         EstadoJuegoKBM estado_previo_;
-
-        void comprobarFinalPartida (bool & final_partida);
+        
         void buscaJugada (bool & encontrada);
         void asume (
                 bool & inicio_jugada, 
                 bool & inicio_turno, 
                 bool & inicio_ronda, 
-                bool & final_partida);
+                bool & final_partida_victoria,
+                bool & final_partida_derrota);
 
         void escribeEstado () override;
 
@@ -46,6 +47,7 @@ namespace tapete {
         void validaAtributos () override;
 //        void excepciona (const string & metodo, const std::exception & excepcion);
 
+        void comprobarFinalPartida (bool & final_partida_victoria, bool & final_partida_derrota);
     };
 
 

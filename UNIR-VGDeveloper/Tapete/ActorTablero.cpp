@@ -165,7 +165,7 @@ namespace tapete {
         Vector poscn = presencia (lado).panel_retrato.posicion (); 
         poscn -= Vector {0, 24};
         //
-        cuadro_indica.indica (poscn, cadena);
+        cuadro_indica.indica (poscn, cadena, false);
     }
 
 
@@ -176,9 +176,9 @@ namespace tapete {
                 "parámatro 'indice_habilidad' inválido");
         //
         Vector poscn = presencia (lado).paneles_habilidad [indice_habilidad].posicion (); 
-        poscn -= Vector {0, 24};
+        poscn -= Vector {0, 50};
         //
-        cuadro_indica.indica (poscn, cadena);
+        cuadro_indica.indica (poscn, cadena, true);
     }
 
 

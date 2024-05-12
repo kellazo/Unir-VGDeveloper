@@ -48,7 +48,8 @@ namespace tapete {
                     destino == EstadoJuegoKBM::marcacionCaminoFicha          ||
                     destino == EstadoJuegoKBM::inicioTurno                   ||
                     destino == EstadoJuegoKBM::inicioRonda                   ||
-                    destino == EstadoJuegoKBM::finalPartida                  ||
+                    destino == EstadoJuegoKBM::finalPartidaVictoria          ||
+                    destino == EstadoJuegoKBM::finalPartidaDerrota           ||
                     destino == EstadoJuegoKBM::mostrandoAyuda                ||
                     destino == EstadoJuegoKBM::terminal                        );
             break;                                                              
@@ -57,7 +58,8 @@ namespace tapete {
                     destino == EstadoJuegoKBM::inicioJugada                  ||
                     destino == EstadoJuegoKBM::inicioTurno                   ||
                     destino == EstadoJuegoKBM::inicioRonda                   ||
-                    destino == EstadoJuegoKBM::finalPartida                  ||
+                    destino == EstadoJuegoKBM::finalPartidaVictoria          ||
+                    destino == EstadoJuegoKBM::finalPartidaDerrota           ||
                     destino == EstadoJuegoKBM::mostrandoAyuda                ||
                     destino == EstadoJuegoKBM::terminal                        );
             break;                                                              
@@ -66,7 +68,8 @@ namespace tapete {
                     destino == EstadoJuegoKBM::inicioJugada                  ||
                     destino == EstadoJuegoKBM::inicioTurno                   ||
                     destino == EstadoJuegoKBM::inicioRonda                   ||
-                    destino == EstadoJuegoKBM::finalPartida                  ||
+                    destino == EstadoJuegoKBM::finalPartidaVictoria          ||
+                    destino == EstadoJuegoKBM::finalPartidaDerrota           ||
                     destino == EstadoJuegoKBM::mostrandoAyuda                ||
                     destino == EstadoJuegoKBM::terminal                        );
             break;                                                              
@@ -75,7 +78,8 @@ namespace tapete {
                     destino == EstadoJuegoKBM::inicioJugada                  ||
                     destino == EstadoJuegoKBM::inicioTurno                   ||
                     destino == EstadoJuegoKBM::inicioRonda                   ||
-                    destino == EstadoJuegoKBM::finalPartida                  ||
+                    destino == EstadoJuegoKBM::finalPartidaVictoria          ||
+                    destino == EstadoJuegoKBM::finalPartidaDerrota           ||
                     destino == EstadoJuegoKBM::mostrandoAyuda                ||
                     destino == EstadoJuegoKBM::terminal                        );
             break;

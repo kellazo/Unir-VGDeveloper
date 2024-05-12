@@ -386,6 +386,8 @@ namespace tapete {
             sucesos_->pulsadoEspacio ();
         } else if (unir2d::Teclado::pulsando (unir2d::Tecla::escape)) {
             sucesos_->pulsadoEscape ();
+        } else if (unir2d::Teclado::pulsando (unir2d::Tecla::entrar)) {
+            sucesos_->pulsadoEnter();
         } else if (unir2d::Teclado::pulsando (unir2d::Tecla::arriba)) {
             sucesos_->pulsadoArriba ();
         } else if (unir2d::Teclado::pulsando (unir2d::Tecla::abajo)) {

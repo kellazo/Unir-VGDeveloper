@@ -318,8 +318,8 @@ namespace juego {
         respetar las medidas indicadas previamente.
 
         *******************************************************************************************/
-        tablero ()->equipa (LadoTablero::Izquierda, L"Devils", carpeta_activos_juego + "escudo_devils.png");
-        tablero ()->equipa (LadoTablero::Derecha,   L"Tusk",   carpeta_activos_juego + "escudo_tusk.png");
+        // tablero ()->equipa (LadoTablero::Izquierda, L"Devils", carpeta_activos_juego + "escudo_devils.png");
+        // tablero ()->equipa (LadoTablero::Derecha,   L"Tusk",   carpeta_activos_juego + "escudo_tusk.png");
         /*******************************************************************************************
         /******************************************************************************************/
         //
@@ -412,29 +412,29 @@ namespace juego {
         //
         Jason    = new ActorPersonaje {this, LadoTablero::Izquierda, 0, L"Jason"};
         Sophie   = new ActorPersonaje {this, LadoTablero::Izquierda, 1, L"Sophie"};
-        // Pete     = new ActorPersonaje {this, LadoTablero::Izquierda, 2, L"Pete"};
-        // Dana     = new ActorPersonaje {this, LadoTablero::Derecha,   2, L"Dana"};
-        Espectro = new ActorPersonaje {this, LadoTablero::Derecha,   1, L"Espectro"};
+        Pete     = new ActorPersonaje {this, LadoTablero::Izquierda, 2, L"Pete"};
         Cadaver  = new ActorPersonaje {this, LadoTablero::Derecha,   0, L"Cadáver"};
+        Espectro = new ActorPersonaje {this, LadoTablero::Derecha,   1, L"Espectro"};
+        Dana     = new ActorPersonaje {this, LadoTablero::Derecha,   2, L"Dana"};
         //
         Jason    -> ponArchivoRetrato (carpeta_retratos_juego + "miner1_75.png");
         Sophie   -> ponArchivoRetrato (carpeta_retratos_juego + "male1_75.png");
-        // Pete     -> ponArchivoRetrato (carpeta_retratos_juego + "patrek_75.png");
-        // Dana     -> ponArchivoRetrato (carpeta_retratos_juego + "aristocrat_75.png");
+        Pete     -> ponArchivoRetrato (carpeta_retratos_juego + "patrek_75.png");
+        Dana     -> ponArchivoRetrato (carpeta_retratos_juego + "aristocrat_75.png");
         Espectro -> ponArchivoRetrato (carpeta_retratos_juego + "harja_75.png");
         Cadaver  -> ponArchivoRetrato (carpeta_retratos_juego + "Hunter_75.png");
         //
         Jason    -> ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
         Sophie   -> ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
-        // Pete     -> ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
-        // Dana     -> ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
+        Pete     -> ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
+        Dana     -> ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
         Espectro -> ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
         Cadaver  -> ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
         //
         Jason    -> ponIniciativa (25);
         Sophie   -> ponIniciativa (24);
-        // Pete     -> ponIniciativa (23);
-        // Dana     -> ponIniciativa (18);
+        Pete     -> ponIniciativa (23);
+        Dana     -> ponIniciativa (18);
         Espectro -> ponIniciativa (19);
         Cadaver  -> ponIniciativa (20);
 
@@ -447,24 +447,24 @@ namespace juego {
         // Retratos SFX
         Jason    -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Jason.wav", 100);
         Sophie   -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Sophie.wav", 100);
-//         Pete     -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Pete.wav", 100);
-//         Dana     -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Dana.wav", 100);
+        Pete     -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Pete.wav", 100);
+        Dana     -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Dana.wav", 100);
         Espectro -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Espectro.wav", 100);
         Cadaver  -> asignaPersonajeSFX  (carpeta_sonidos_juego + "SFX/Cadaver.wav", 100);
 
         // Seleccion SFX
         Jason    -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Jason_Seleccion.wav", 100);
         Sophie   -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Sophie_Seleccion.wav", 100);
-//         Pete     -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Pete_Seleccion.wav", 100);
-//         Dana     -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Dana_Seleccion.wav", 100);
+        Pete     -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Pete_Seleccion.wav", 100);
+        Dana     -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Dana_Seleccion.wav", 100);
         Espectro -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Espectro_Seleccion.wav", 100);
         Cadaver  -> asignaSeleccionSFX  (carpeta_sonidos_juego + "SFX/Cadaver_Seleccion.wav", 100);
 
         // Desplazamiento SFX
         Jason    -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Jason_Desplazamiento.wav", 100);
         Sophie   -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Sophie_Desplazamiento.wav", 100);
-//         Pete     -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Pete_Desplazamiento.wav", 100);
-//         Dana     -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Dana_Desplazamiento.wav", 100);
+        Pete     -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Pete_Desplazamiento.wav", 100);
+        Dana     -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Dana_Desplazamiento.wav", 100);
         Espectro -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Espectro_Desplazamiento.wav", 100);
         Cadaver  -> asignaDesplazamientoSFX (carpeta_sonidos_juego + "SFX/Cadaver_Desplazamiento.wav", 100);
 
@@ -473,10 +473,10 @@ namespace juego {
         //
         agregaPersonaje (Jason);
         agregaPersonaje (Sophie);
-        // agregaPersonaje (Pete);
+        agregaPersonaje (Pete);
         agregaPersonaje (Cadaver);
         agregaPersonaje (Espectro);
-        // agregaPersonaje (Dana);
+        agregaPersonaje (Dana);
         //
         /*******************************************************************************************
         /******************************************************************************************/
@@ -934,12 +934,12 @@ namespace juego {
         // Sophie   -> agregaHabilidad (curacionSimple);
         // Sophie   -> agregaHabilidad (curacionGrupo);
         //
-        // Pete     -> agregaHabilidad (minaRepelente);
+        Pete     -> agregaHabilidad (minaRepelente);
         // Pete     -> agregaHabilidad (proteccionCampana);
         // Pete     -> agregaHabilidad (botiquin);
         //
         // Dana     -> agregaHabilidad (roboVida);
-        // Dana     -> agregaHabilidad (fuerzaTumba);
+        Dana     -> agregaHabilidad (fuerzaTumba);
         // Dana     -> agregaHabilidad (somnolencia);
         //
         Espectro -> agregaHabilidad (espinasSombras);
@@ -1273,44 +1273,44 @@ namespace juego {
         Sophie   -> agregaReduceDano (danoAsqueroso,         5);
         Sophie   -> agregaReduceDano (danoHielo,             5);
         //                       
-        // Pete     -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
-        // Pete     -> agregaAtaque     (ataqueADistancia,     70);
-        // Pete     -> agregaAtaque     (ataqueExplosivo,      70);
-        // Pete     -> agregaAtaque     (ataqueMagico,         70);        
-        // Pete     -> agregaDefensa    (defensaCuerpoACuerpo, 40);
-        // Pete     -> agregaDefensa    (defensaADistancia,    40);
-        // Pete     -> agregaDefensa    (defensaMagica,        30);
-        // Pete     -> agregaDefensa    (defensaOscura,        70);
-        // Pete     -> agregaDefensa    (defensaEnergiaTermica,30);
-        // Pete     -> agregaDefensa    (defensaExplosivo,     30);
-        // Pete     -> agregaDefensa    (defensaAsquerosa,     30);
-        // Pete     -> agregaDefensa    (defensaHielo,         30);
-        // Pete     -> agregaReduceDano (danoFisico,            0);
-        // Pete     -> agregaReduceDano (danoMagico,           15);
-        // Pete     -> agregaReduceDano (danoOscuro,            0);
-        // Pete     -> agregaReduceDano (danoTermico,           0);
-        // Pete     -> agregaReduceDano (danoExplosivo,         0);
-        // Pete     -> agregaReduceDano (danoAsqueroso,         0);
-        // Pete     -> agregaReduceDano (danoHielo,             0);
+        Pete     -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
+        Pete     -> agregaAtaque     (ataqueADistancia,     70);
+        Pete     -> agregaAtaque     (ataqueExplosivo,      70);
+        Pete     -> agregaAtaque     (ataqueMagico,         70);        
+        Pete     -> agregaDefensa    (defensaCuerpoACuerpo, 40);
+        Pete     -> agregaDefensa    (defensaADistancia,    40);
+        Pete     -> agregaDefensa    (defensaMagica,        30);
+        Pete     -> agregaDefensa    (defensaOscura,        70);
+        Pete     -> agregaDefensa    (defensaEnergiaTermica,30);
+        Pete     -> agregaDefensa    (defensaExplosivo,     30);
+        Pete     -> agregaDefensa    (defensaAsquerosa,     30);
+        Pete     -> agregaDefensa    (defensaHielo,         30);
+        Pete     -> agregaReduceDano (danoFisico,            0);
+        Pete     -> agregaReduceDano (danoMagico,           15);
+        Pete     -> agregaReduceDano (danoOscuro,            0);
+        Pete     -> agregaReduceDano (danoTermico,           0);
+        Pete     -> agregaReduceDano (danoExplosivo,         0);
+        Pete     -> agregaReduceDano (danoAsqueroso,         0);
+        Pete     -> agregaReduceDano (danoHielo,             0);
         //                       
-        // Dana     -> agregaAtaque     (ataqueCuerpoACuerpo,  70);
-        // Dana     -> agregaAtaque     (ataqueADistancia,     50);        
-        // Dana     -> agregaAtaque     (magiaOscura,          40);
-        // Dana     -> agregaDefensa    (defensaCuerpoACuerpo, 70);
-        // Dana     -> agregaDefensa    (defensaADistancia,    70);
-        // Dana     -> agregaDefensa    (defensaMagica,        20);
-        // Dana     -> agregaDefensa    (defensaOscura,        60);
-        // Dana     -> agregaDefensa    (defensaEnergiaTermica,60);
-        // Dana     -> agregaDefensa    (defensaExplosivo,     60);
-        // Dana     -> agregaDefensa    (defensaAsquerosa,     60);
-        // Dana     -> agregaDefensa    (defensaHielo,         60);
-        // Dana     -> agregaReduceDano (danoFisico,           10);
-        // Dana     -> agregaReduceDano (danoMagico,            5);
-        // Dana     -> agregaReduceDano (danoOscuro,            5);
-        // Dana     -> agregaReduceDano (danoTermico,           5);
-        // Dana     -> agregaReduceDano (danoExplosivo,         5);
-        // Dana     -> agregaReduceDano (danoAsqueroso,         5);
-        // Dana     -> agregaReduceDano (danoHielo,             5);
+        Dana     -> agregaAtaque     (ataqueCuerpoACuerpo,  70);
+        Dana     -> agregaAtaque     (ataqueADistancia,     50);        
+        Dana     -> agregaAtaque     (magiaOscura,          40);
+        Dana     -> agregaDefensa    (defensaCuerpoACuerpo, 70);
+        Dana     -> agregaDefensa    (defensaADistancia,    70);
+        Dana     -> agregaDefensa    (defensaMagica,        20);
+        Dana     -> agregaDefensa    (defensaOscura,        60);
+        Dana     -> agregaDefensa    (defensaEnergiaTermica,60);
+        Dana     -> agregaDefensa    (defensaExplosivo,     60);
+        Dana     -> agregaDefensa    (defensaAsquerosa,     60);
+        Dana     -> agregaDefensa    (defensaHielo,         60);
+        Dana     -> agregaReduceDano (danoFisico,           10);
+        Dana     -> agregaReduceDano (danoMagico,            5);
+        Dana     -> agregaReduceDano (danoOscuro,            5);
+        Dana     -> agregaReduceDano (danoTermico,           5);
+        Dana     -> agregaReduceDano (danoExplosivo,         5);
+        Dana     -> agregaReduceDano (danoAsqueroso,         5);
+        Dana     -> agregaReduceDano (danoHielo,             5);
         //                       
         Espectro -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
         Espectro -> agregaAtaque     (ataqueMagico,         50);        
@@ -1498,12 +1498,12 @@ namespace juego {
         //
         modo ()->configuraDesplaza (RejillaTablero::distanciaCeldas);
         //
-        Jason    -> ponSitioFicha (Coord {14, 14});
-        Sophie   -> ponSitioFicha (Coord {22, 14});
-        // Pete     -> ponSitioFicha (Coord {29, 15});
-        // Dana     -> ponSitioFicha (Coord {23, 35});
-        Espectro -> ponSitioFicha (Coord {22, 34});
-        Cadaver  -> ponSitioFicha (Coord {14, 34});
+        Jason    -> ponSitioFicha (Coord {10, 14});
+        Sophie   -> ponSitioFicha (Coord {18, 14});
+        Pete     -> ponSitioFicha (Coord {26, 14});
+        Dana     -> ponSitioFicha (Coord {26, 34});
+        Espectro -> ponSitioFicha (Coord {18, 34});
+        Cadaver  -> ponSitioFicha (Coord {10, 34});
         //
         tablero ()->asignaSonidoEstablece (carpeta_sonidos_juego + "SFX/Metal Click.wav", 100);
         tablero ()->asignaSonidoDesplaza  (carpeta_sonidos_juego + "SFX/SnowWalk.ogg",    100);
@@ -1535,8 +1535,8 @@ namespace juego {
         //
         Jason    = nullptr;
         Sophie   = nullptr;
-        // Pete     = nullptr;
-        // Dana     = nullptr;
+        Pete     = nullptr;
+        Dana     = nullptr;
         Espectro = nullptr;
         Cadaver  = nullptr;
         //

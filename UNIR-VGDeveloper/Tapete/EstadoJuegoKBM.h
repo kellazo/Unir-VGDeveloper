@@ -12,9 +12,9 @@ namespace tapete {
     class EstadoJuegoKBM : public EstadoJuegoComun {
     public:
 
-        static constexpr int inicioRonda = finalPartida + 1;
+        static constexpr int inicioRonda = finalPartidaDerrota + 1;
 
-        static constexpr int inicioTurno = finalPartida + 2;
+        static constexpr int inicioTurno = finalPartidaDerrota + 2;
         
 
         EstadoJuegoKBM (int codigo);

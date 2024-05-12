@@ -47,6 +47,18 @@ namespace tapete {
         unir2d::Teclado::consume (unir2d::Tecla::espacio);
     }
 
+    void SucesosJuegoKBM::pulsadoEnter () {
+        switch (modo ()->estado ()) {
+            case EstadoJuegoKBM::inicioJugada:
+            case EstadoJuegoKBM::preparacionDesplazamiento:
+            case EstadoJuegoKBM::preparacionHabilidadOponente:
+            case EstadoJuegoKBM::preparacionHabilidadArea:
+                modo ()->pasarTurno();
+                break;
+        }
+        
+        unir2d::Teclado::consume (unir2d::Tecla::entrar);
+    }
 
     void SucesosJuegoKBM::pulsadoEscape () {
         SucesosJuegoComun::pulsadoEscape ();

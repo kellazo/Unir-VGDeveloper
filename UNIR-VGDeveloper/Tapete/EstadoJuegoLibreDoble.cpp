@@ -56,7 +56,6 @@ namespace tapete {
                     destino == EstadoJuegoLibreDoble::agotadosPuntosAccion      ||
                     destino == EstadoJuegoLibreDoble::inicioTurnoNoElegido      ||
                     destino == EstadoJuegoLibreDoble::inicioRonda               ||
-                    destino == EstadoJuegoLibreDoble::finalPartida              ||
                     destino == EstadoJuegoLibreDoble::mostrandoAyuda            ||
                     destino == EstadoJuegoLibreDoble::terminal                    );
             break;
@@ -66,7 +65,6 @@ namespace tapete {
                     destino == EstadoJuegoLibreDoble::agotadosPuntosAccion      ||
                     destino == EstadoJuegoLibreDoble::inicioTurnoNoElegido      ||
                     destino == EstadoJuegoLibreDoble::inicioRonda               ||
-                    destino == EstadoJuegoLibreDoble::finalPartida              ||
                     destino == EstadoJuegoLibreDoble::mostrandoAyuda            ||
                     destino == EstadoJuegoLibreDoble::terminal                    );
             break;
@@ -76,7 +74,6 @@ namespace tapete {
                     destino == EstadoJuegoLibreDoble::agotadosPuntosAccion      ||
                     destino == EstadoJuegoLibreDoble::inicioTurnoNoElegido      ||
                     destino == EstadoJuegoLibreDoble::inicioRonda               ||
-                    destino == EstadoJuegoLibreDoble::finalPartida              ||
                     destino == EstadoJuegoLibreDoble::mostrandoAyuda            ||
                     destino == EstadoJuegoLibreDoble::terminal                    );
             break;
@@ -86,7 +83,6 @@ namespace tapete {
                     destino == EstadoJuegoLibreDoble::agotadosPuntosAccion      ||
                     destino == EstadoJuegoLibreDoble::inicioTurnoNoElegido      ||
                     destino == EstadoJuegoLibreDoble::inicioRonda               ||
-                    destino == EstadoJuegoLibreDoble::finalPartida              ||
                     destino == EstadoJuegoLibreDoble::mostrandoAyuda            ||
                     destino == EstadoJuegoLibreDoble::terminal                    );
             break;
@@ -94,7 +90,6 @@ namespace tapete {
             aserta (destino,
                     destino == EstadoJuegoLibreDoble::inicioTurnoNoElegido      ||
                     destino == EstadoJuegoLibreDoble::inicioRonda               ||
-                    destino == EstadoJuegoLibreDoble::finalPartida              ||
                     destino == EstadoJuegoLibreDoble::mostrandoAyuda            ||
                     destino == EstadoJuegoLibreDoble::terminal                    );    
             break;
