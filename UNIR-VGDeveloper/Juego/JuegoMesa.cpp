@@ -417,19 +417,19 @@ namespace juego {
         Espectro = new ActorPersonaje {this, LadoTablero::Derecha,   1, L"Espectro"};
         Dana     = new ActorPersonaje {this, LadoTablero::Derecha,   2, L"Dana"};
         //
-        Jason    -> ponArchivoRetrato (carpeta_retratos_juego + "miner1_75.png");
-        Sophie   -> ponArchivoRetrato (carpeta_retratos_juego + "male1_75.png");
-        Pete     -> ponArchivoRetrato (carpeta_retratos_juego + "patrek_75.png");
-        Dana     -> ponArchivoRetrato (carpeta_retratos_juego + "aristocrat_75.png");
-        Espectro -> ponArchivoRetrato (carpeta_retratos_juego + "harja_75.png");
-        Cadaver  -> ponArchivoRetrato (carpeta_retratos_juego + "Hunter_75.png");
+        Jason    -> ponArchivoRetrato (carpeta_retratos_juego + "Jason/JasonPortrait_75.png");
+        Sophie   -> ponArchivoRetrato (carpeta_retratos_juego + "Sophie/SophiePortrait_75.png");
+        Pete     -> ponArchivoRetrato (carpeta_retratos_juego + "Pete/PetePortrait_75.png");
+        Dana     -> ponArchivoRetrato (carpeta_retratos_juego + "Dana/DanaPortrait_75.png");
+        Espectro -> ponArchivoRetrato (carpeta_retratos_juego + "Espectro/GhostPortrait_75.png");
+        Cadaver  -> ponArchivoRetrato (carpeta_retratos_juego + "Cadaver/ZombiePortrait_75.png");
         //
-        Jason    -> ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
-        Sophie   -> ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
-        Pete     -> ponArchivoFicha (carpeta_retratos_juego + "ficha_roja.png");
-        Dana     -> ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
-        Espectro -> ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
-        Cadaver  -> ponArchivoFicha (carpeta_retratos_juego + "ficha_azul.png");
+        Jason    -> ponArchivoFicha (carpeta_retratos_juego + "Jason/FichaJason.png");
+        Sophie   -> ponArchivoFicha (carpeta_retratos_juego + "Sophie/FichaSophie.png");
+        Pete     -> ponArchivoFicha (carpeta_retratos_juego + "Pete/FichaPete.png");
+        Dana     -> ponArchivoFicha (carpeta_retratos_juego + "Dana/FichaDana.png");
+        Espectro -> ponArchivoFicha (carpeta_retratos_juego + "Espectro/FichaFantasma.png");
+        Cadaver  -> ponArchivoFicha (carpeta_retratos_juego + "Cadaver/FichaCadaver.png");
         //
         Jason    -> ponIniciativa (25);
         Sophie   -> ponIniciativa (24);
