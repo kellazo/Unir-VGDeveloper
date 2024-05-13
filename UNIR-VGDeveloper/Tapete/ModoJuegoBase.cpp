@@ -1185,7 +1185,7 @@ namespace tapete {
             tipo = L"simple";
             break;
         }
-        wstring cadena = std::format (L"{} ({})", habil->nombre (), tipo);
+        wstring cadena = std::format (L"{}.\nTipo: {}\nCoste: {}\nAlcance: {}", habil->nombre (), tipo, habil->coste (), habil->alcance ());
         juego_->tablero ()->indicaHabilidad (lado_tablero, indice_habilidad, cadena);
     }
 

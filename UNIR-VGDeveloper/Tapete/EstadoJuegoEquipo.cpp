@@ -48,7 +48,8 @@ namespace tapete {
                     destino == EstadoJuegoEquipo::marcacionCaminoFicha          ||
                     destino == EstadoJuegoEquipo::inicioTurno                   ||
                     destino == EstadoJuegoEquipo::inicioRonda                   ||
-                    destino == EstadoJuegoEquipo::finalPartida                  ||
+                    destino == EstadoJuegoEquipo::finalPartidaVictoria          ||
+                    destino == EstadoJuegoEquipo::finalPartidaDerrota           ||
                     destino == EstadoJuegoEquipo::mostrandoAyuda                ||
                     destino == EstadoJuegoEquipo::terminal                        );
             break;                                                              
@@ -57,7 +58,8 @@ namespace tapete {
                     destino == EstadoJuegoEquipo::inicioJugada                  ||
                     destino == EstadoJuegoEquipo::inicioTurno                   ||
                     destino == EstadoJuegoEquipo::inicioRonda                   ||
-                    destino == EstadoJuegoEquipo::finalPartida                  ||
+                    destino == EstadoJuegoEquipo::finalPartidaVictoria          ||
+                    destino == EstadoJuegoEquipo::finalPartidaDerrota           ||
                     destino == EstadoJuegoEquipo::mostrandoAyuda                ||
                     destino == EstadoJuegoEquipo::terminal                        );
             break;                                                              
@@ -66,7 +68,8 @@ namespace tapete {
                     destino == EstadoJuegoEquipo::inicioJugada                  ||
                     destino == EstadoJuegoEquipo::inicioTurno                   ||
                     destino == EstadoJuegoEquipo::inicioRonda                   ||
-                    destino == EstadoJuegoEquipo::finalPartida                  ||
+                    destino == EstadoJuegoEquipo::finalPartidaVictoria          ||
+                    destino == EstadoJuegoEquipo::finalPartidaDerrota           ||
                     destino == EstadoJuegoEquipo::mostrandoAyuda                ||
                     destino == EstadoJuegoEquipo::terminal                        );
             break;                                                              
@@ -75,7 +78,8 @@ namespace tapete {
                     destino == EstadoJuegoEquipo::inicioJugada                  ||
                     destino == EstadoJuegoEquipo::inicioTurno                   ||
                     destino == EstadoJuegoEquipo::inicioRonda                   ||
-                    destino == EstadoJuegoEquipo::finalPartida                  ||
+                    destino == EstadoJuegoEquipo::finalPartidaVictoria          ||
+                    destino == EstadoJuegoEquipo::finalPartidaDerrota           ||
                     destino == EstadoJuegoEquipo::mostrandoAyuda                ||
                     destino == EstadoJuegoEquipo::terminal                        );
             break;

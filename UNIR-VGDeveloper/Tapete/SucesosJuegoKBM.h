@@ -27,6 +27,7 @@ namespace tapete {
 
         void pulsadoEspacio () override;
         void pulsadoEscape  () override;
+        void pulsadoEnter  () override;
 
     };
 

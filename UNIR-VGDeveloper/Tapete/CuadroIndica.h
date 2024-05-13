@@ -18,7 +18,7 @@ namespace tapete {
         void prepara ();
         void libera ();
 
-        void indica (Vector poscn, const wstring & cadena);
+        void indica (Vector poscn, const wstring & cadena, bool esHabilidad);
         void desindica ();
 
     private:

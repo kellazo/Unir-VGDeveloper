@@ -12,14 +12,14 @@ namespace tapete {
     class EstadoJuegoPares : public EstadoJuegoComun {
     public:
 
-        static constexpr int inicioRonda             = finalPartida + 1;
+        static constexpr int inicioRonda             = finalPartidaDerrota + 1;
 
-        static constexpr int inicioTurnoNoElegidos   = finalPartida + 2;
-        static constexpr int inicioTurnoElegidoUno   = finalPartida + 3;
-        static constexpr int inicioTurnoConfirmacion = finalPartida + 4;
+        static constexpr int inicioTurnoNoElegidos   = finalPartidaDerrota + 2;
+        static constexpr int inicioTurnoElegidoUno   = finalPartidaDerrota + 3;
+        static constexpr int inicioTurnoConfirmacion = finalPartidaDerrota + 4;
 
-        static constexpr int agotadosPuntosAccion    = finalPartida + 5;
-        static constexpr int finalTurno              = finalPartida + 6;
+        static constexpr int agotadosPuntosAccion    = finalPartidaDerrota + 5;
+        static constexpr int finalTurno              = finalPartidaDerrota + 6;
         
 
         EstadoJuegoPares (int codigo);

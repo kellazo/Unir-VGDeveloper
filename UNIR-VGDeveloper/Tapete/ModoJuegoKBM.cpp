@@ -44,6 +44,7 @@ namespace tapete {
 
 
     void ModoJuegoKBM::entraInicioJugada () {
+std::cout << "entraInicioJugada" << std::endl;
         try {
             validaEstado ({ 
                     EstadoJuegoKBM::inicioRonda,
@@ -56,7 +57,9 @@ namespace tapete {
              ModoJuegoBase::atenuaMusicaLoop ();
            // FIN GUILLEM //
             bool encontrada;
+std::cout << "entraInicioJugada 2" << std::endl;
             buscaJugada (encontrada);
+std::cout << "entraInicioJugada 3" << std::endl;
             assert (encontrada);
             ActorPersonaje * persj = factoresEquipos ().at (indiceFactorEquipos ());
             ModoJuegoBase::establecePersonajeElegido (persj);
@@ -73,6 +76,7 @@ namespace tapete {
 
 
     void ModoJuegoKBM::mueveFicha () {
+        std::cout << "mueveFicha" << std::endl;
         try {
             validaEstado ({ EstadoJuegoComun::marcacionCaminoFicha });
                             //  elegidos ambos, con atacante (no agotado), modo acción desplaza   
@@ -85,8 +89,9 @@ namespace tapete {
             bool inicio_jugada;
             bool inicio_turno ;
             bool inicio_ronda ;
-            bool final_partida;
-            asume (inicio_jugada, inicio_turno, inicio_ronda, final_partida);
+            bool final_partida_victoria;
+            bool final_partida_derrota;
+            asume (inicio_jugada, inicio_turno, inicio_ronda, final_partida_victoria, final_partida_derrota);
             //
             if (inicio_jugada) {
                 estado ().transita (EstadoJuegoComun::inicioJugada);
@@ -94,8 +99,10 @@ namespace tapete {
                 estado ().transita (EstadoJuegoKBM::inicioTurno);
             } else if (inicio_ronda) {
                 estado ().transita (EstadoJuegoKBM::inicioRonda);
-            } else if (final_partida) {
-                estado ().transita (EstadoJuegoComun::finalPartida);
+            } else if (final_partida_victoria) {
+                estado ().transita (EstadoJuegoComun::finalPartidaVictoria);
+            } else if (final_partida_derrota) {
+                estado ().transita (EstadoJuegoComun::finalPartidaDerrota);
             }
             validaAtributos ();
             informaProceso ("mueveFicha");
@@ -107,6 +114,7 @@ namespace tapete {
 
 
     void ModoJuegoKBM::asumeHabilidad () {
+        std::cout << "asumeHabilidad" << std::endl;
         try {
             validaEstado ({ 
                     EstadoJuegoComun::habilidadSimpleResultado,
@@ -123,8 +131,9 @@ namespace tapete {
             bool inicio_jugada;
             bool inicio_turno ;
             bool inicio_ronda ;
-            bool final_partida;
-            asume (inicio_jugada, inicio_turno, inicio_ronda, final_partida);
+            bool final_partida_victoria;
+            bool final_partida_derrota;
+            asume (inicio_jugada, inicio_turno, inicio_ronda, final_partida_victoria, final_partida_derrota);
             //
             if (inicio_jugada) {
                 estado ().transita (EstadoJuegoComun::inicioJugada);
@@ -132,8 +141,10 @@ namespace tapete {
                 estado ().transita (EstadoJuegoKBM::inicioTurno);
             } else if (inicio_ronda) {
                 estado ().transita (EstadoJuegoKBM::inicioRonda);
-            } else if (final_partida) {
-                estado ().transita (EstadoJuegoComun::finalPartida);
+            } else if (final_partida_victoria) {
+                estado ().transita (EstadoJuegoComun::finalPartidaVictoria);
+            } else if (final_partida_derrota) {
+                estado ().transita (EstadoJuegoComun::finalPartidaDerrota);
             }
             validaAtributos ();
             informaProceso ("asumeHabilidad");
@@ -148,14 +159,16 @@ namespace tapete {
             bool & inicio_jugada, 
             bool & inicio_turno, 
             bool & inicio_ronda, 
-            bool & final_partida) {
+            bool & final_partida_victoria,
+            bool & final_partida_derrota) {
         inicio_turno  = false;
         inicio_ronda  = false;
-        final_partida = false;
+        final_partida_victoria = false;
+        final_partida_derrota = false;
 
-        comprobarFinalPartida(final_partida);
+        comprobarFinalPartida(final_partida_victoria, final_partida_derrota);
 
-        if(final_partida){
+        if(final_partida_victoria || final_partida_derrota){
             inicio_jugada = false;
             ModoJuegoBase::suprimeAtacante ();
             ModoJuegoBase::anulaEleccionPersonajes ();
@@ -170,7 +183,6 @@ namespace tapete {
                     ModoJuegoBase::estableceAtacante (persj->ladoTablero ());
                     inicio_turno = true;
                     ModoJuegoBase::avanzaTurno ();
-    
                 }else{
                     ModoJuegoBase::avanzaJugada ();
                     ModoJuegoBase::reiniciaAtacante ();
@@ -184,26 +196,63 @@ namespace tapete {
     }
 
 
-    void ModoJuegoKBM::comprobarFinalPartida (bool & final_partida) {
+    void ModoJuegoKBM::comprobarFinalPartida (bool & final_partida_victoria, bool & final_partida_derrota) {
         if(ModoJuegoBase::oponente()){
             ActorPersonaje * persj = ModoJuegoBase::oponente();
             string nombre(persj->nombre().begin(), persj->nombre().end());
 
             if(persj->vitalidad () == 0){
-                //CASO 1: Muere un personaje clave
-                if (nombre == "Dana" || nombre == "Jason" || nombre == "Sophie" || nombre == "Pete"){
-                    final_partida = true;
+                if (nombre == "Dana"){
+                    final_partida_victoria = true;
                     return;
-                }
-
-                //CASO 2: Mueren Espectro y Esqueleto (PROTOTIPO)
-                ActorPersonaje * otroMonstruo = factoresEquipos ().at ((nombre == "Espectro") ? 1 : 0);
-                if(nombre == "Espectro" && otroMonstruo->vitalidad () == 0){
-                    final_partida = true;
+                }else if(nombre == "Jason" || nombre == "Sophie" || nombre == "Pete"){
+                    final_partida_derrota = true;
                     return;
                 }
             }
         }
+        return;
+    }
+
+
+    void ModoJuegoKBM::pasarTurno () {
+        bool fin_ronda = true;
+
+        ActorPersonaje * persjActual = factoresEquipos ().at (indiceFactorEquipos ());
+        persjActual->ponPuntosAccion(0);
+        persjActual->presencia ().oscureceRetrato ();
+
+        ModoJuegoBase::suprimeAtacante ();
+        ModoJuegoBase::anulaEleccionPersonajes ();
+
+        if(indiceFactorEquipos () < factoresEquipos ().size () - 1){
+            while(indiceFactorEquipos () < factoresEquipos ().size () - 1){
+                indexaFactorEquipos (indiceFactorEquipos () + 1);
+                
+                ActorPersonaje * persjSiguiente = factoresEquipos ().at (indiceFactorEquipos ());
+
+                if (persjSiguiente->vitalidad () > 0 && persjSiguiente->puntosAccion () > 0) {
+                    ModoJuegoBase::establecePersonajeElegido (persjSiguiente);
+                    ModoJuegoBase::estableceAtacante (persjSiguiente->ladoTablero ());
+                    ModoJuegoBase::avanzaTurno ();
+                
+                    estado ().transita (EstadoJuegoKBM::inicioJugada);
+                    fin_ronda = false;
+                    break;
+                }   
+            }
+        }
+
+        if(fin_ronda){
+            ModoJuegoBase::avanzaRonda ();
+            ModoJuegoBase::indexaFactorEquipos (-1);
+
+            estado ().transita (EstadoJuegoKBM::inicioRonda);
+            
+        }
+
+        escribeEstado ();
+        
         return;
     }
 
@@ -298,7 +347,8 @@ namespace tapete {
         //                                                                                                                                                                                                                 
         //                                                                                                                                                                                                                  
         case EstadoJuegoKBM    ::mostrandoAyuda               : valida ( ignora   , ignora   , ignora   , ignora   , ignora , ignora  , ignora    , ignora , ignora    , ignora   , ignora    , ignora   ); break;
-        case EstadoJuegoKBM    ::finalPartida                 : valida ( NULO     , NULO     , NINGUNO  , NULO     , ignora , ignora  , ignora    , CERO   , NULO      , ignora   , NULO      , VACIO    ); break;
+        case EstadoJuegoKBM    ::finalPartidaVictoria         : valida ( NULO     , NULO     , NINGUNO  , NULO     , ignora , ignora  , ignora    , CERO   , NULO      , ignora   , NULO      , VACIO    ); break;
+        case EstadoJuegoKBM    ::finalPartidaDerrota          : valida ( NULO     , NULO     , NINGUNO  , NULO     , ignora , ignora  , ignora    , CERO   , NULO      , ignora   , NULO      , VACIO    ); break;
         }
     }
 

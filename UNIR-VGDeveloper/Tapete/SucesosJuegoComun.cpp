@@ -328,6 +328,11 @@ namespace tapete {
     }
 
 
+    void SucesosJuegoComun::pulsadoEnter () {
+        //std::cout << "SucesosJuegoComun::pulsadoEnter" << std::endl;
+    }
+
+
     void SucesosJuegoComun::pulsadoArriba () {
         if (modo ()->estado () == EstadoJuegoComun::mostrandoAyuda) {
             modo ()->subeAyuda ();

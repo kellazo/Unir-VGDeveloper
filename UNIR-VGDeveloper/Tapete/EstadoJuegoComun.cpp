@@ -52,7 +52,10 @@ namespace tapete {
                     destino == EstadoJuegoComun::preparacionHabilidadOponente   ||
                     destino == EstadoJuegoComun::preparacionHabilidadArea       ||
                     destino == EstadoJuegoComun::mostrandoAyuda                 ||
-                    destino == EstadoJuegoComun::terminal                         );
+                    destino == EstadoJuegoComun::terminal                       ||
+                    destino == EstadoJuegoKBM::inicioJugada                     ||
+                    destino == EstadoJuegoKBM::inicioTurno                      ||
+                    destino == EstadoJuegoKBM::inicioRonda                       );
             break;
         case EstadoJuegoComun::preparacionDesplazamiento:
             aserta (destino,
@@ -63,6 +66,8 @@ namespace tapete {
                     destino == EstadoJuegoComun::preparacionHabilidadOponente   ||
                     destino == EstadoJuegoComun::preparacionHabilidadArea       ||
                     destino == EstadoJuegoComun::mostrandoAyuda                 ||
+                    destino == EstadoJuegoKBM::inicioJugada                     ||
+                    destino == EstadoJuegoKBM::inicioRonda                      ||
                     destino == EstadoJuegoComun::terminal                         );
             break;
         case EstadoJuegoComun::habilidadSimpleInvalida:
@@ -89,6 +94,8 @@ namespace tapete {
                     destino == EstadoJuegoComun::oponenteHabilidadInvalido      ||
                     destino == EstadoJuegoComun::oponenteHabilidadConfirmacion  ||
                     destino == EstadoJuegoComun::preparacionHabilidadArea       ||
+                    destino == EstadoJuegoKBM::inicioJugada                     ||
+                    destino == EstadoJuegoKBM::inicioRonda                      ||
                     destino == EstadoJuegoComun::mostrandoAyuda                 ||
                     destino == EstadoJuegoComun::terminal                         );
             break;
@@ -124,6 +131,8 @@ namespace tapete {
                     destino == EstadoJuegoComun::preparacionHabilidadArea       ||
                     destino == EstadoJuegoComun::areaHabilidadInvalida          ||
                     destino == EstadoJuegoComun::areaHabilidadConfirmacion      ||
+                    destino == EstadoJuegoKBM::inicioJugada                     ||
+                    destino == EstadoJuegoKBM::inicioRonda                      ||
                     destino == EstadoJuegoComun::mostrandoAyuda                 ||
                     destino == EstadoJuegoComun::terminal                         );
             break;
@@ -158,7 +167,12 @@ namespace tapete {
                     //destino == EstadoJuegoComun::areaHabilidadResultado         ||
                     //destino == EstadoJuegoComun::terminal                         );
             break;
-        case EstadoJuegoComun::finalPartida:
+        case EstadoJuegoComun::finalPartidaVictoria:
+            aserta (destino,
+                    destino == EstadoJuegoComun::mostrandoAyuda                 ||
+                    destino == EstadoJuegoComun::terminal                         );    
+            break;
+        case EstadoJuegoComun::finalPartidaDerrota:
             aserta (destino,
                     destino == EstadoJuegoComun::mostrandoAyuda                 ||
                     destino == EstadoJuegoComun::terminal                         );    
@@ -216,7 +230,9 @@ namespace tapete {
             return "areaHabilidadResultado";
         case EstadoJuegoComun::mostrandoAyuda:
             return "mostrandoAyuda";
-        case EstadoJuegoComun::finalPartida:   
+        case EstadoJuegoComun::finalPartidaVictoria:   
+            return "finalPartida";
+        case EstadoJuegoComun::finalPartidaDerrota:   
             return "finalPartida";
         default:
             assert (false);

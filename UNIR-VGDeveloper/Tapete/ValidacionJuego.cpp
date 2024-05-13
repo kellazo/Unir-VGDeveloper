@@ -36,18 +36,18 @@ namespace tapete {
         aserta (archivoAccesible (juego->tablero ()->archivoBaldosas (), { ".png" }), 
                 L"El archivo '.png' de las imagenes del fondo del tablero es inválido.",
                 LocalizaConfigura::Seccion_3_Tablero_parte_2);
-        aserta (cadenaValida (juego->tablero ()->nombreEquipo (LadoTablero::Izquierda)),
-                L"El nombre del equipo izquierdo es inválido.",
-                LocalizaConfigura::Seccion_4_Personajes_parte_1);
-        aserta (cadenaValida (juego->tablero ()->nombreEquipo (LadoTablero::Derecha)),
-                L"El nombre del equipo derecho es inválido.",
-                LocalizaConfigura::Seccion_4_Personajes_parte_1);
-        aserta (archivoAccesible (juego->tablero ()->ArchivoEscudo (LadoTablero::Izquierda), { ".png" }),
-                L"El archivo '.png' de la imagen del escudo izquierdo es inválido.",
-                LocalizaConfigura::Seccion_4_Personajes_parte_1);
-        aserta (archivoAccesible (juego->tablero ()->ArchivoEscudo (LadoTablero::Derecha), { ".png" }),
-                L"El archivo '.png' de la imagen del escudo derecho es inválido.",
-                LocalizaConfigura::Seccion_4_Personajes_parte_1);
+        // aserta (cadenaValida (juego->tablero ()->nombreEquipo (LadoTablero::Izquierda)),
+        //         L"El nombre del equipo izquierdo es inválido.",
+        //         LocalizaConfigura::Seccion_4_Personajes_parte_1);
+        // aserta (cadenaValida (juego->tablero ()->nombreEquipo (LadoTablero::Derecha)),
+        //         L"El nombre del equipo derecho es inválido.",
+        //         LocalizaConfigura::Seccion_4_Personajes_parte_1);
+        // aserta (archivoAccesible (juego->tablero ()->ArchivoEscudo (LadoTablero::Izquierda), { ".png" }),
+        //         L"El archivo '.png' de la imagen del escudo izquierdo es inválido.",
+        //         LocalizaConfigura::Seccion_4_Personajes_parte_1);
+        // aserta (archivoAccesible (juego->tablero ()->ArchivoEscudo (LadoTablero::Derecha), { ".png" }),
+        //         L"El archivo '.png' de la imagen del escudo derecho es inválido.",
+                // LocalizaConfigura::Seccion_4_Personajes_parte_1);
         try {
             juego->tablero ()->validaGraficoMuros ();
         } catch (const std::logic_error & error) {

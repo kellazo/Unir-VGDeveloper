@@ -39,8 +39,8 @@ namespace juego {
         *******************************************************************************************/
         ActorPersonaje * Jason {};
         ActorPersonaje * Sophie {};
-        // ActorPersonaje * Pete {};
-        // ActorPersonaje * Dana {};
+        ActorPersonaje * Pete {};
+        ActorPersonaje * Dana {};
         ActorPersonaje * Espectro {};
         ActorPersonaje * Cadaver {};
         /*******************************************************************************************

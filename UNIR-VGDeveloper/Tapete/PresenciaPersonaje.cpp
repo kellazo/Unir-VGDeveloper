@@ -124,7 +124,7 @@ namespace tapete {
             x = PresenciaTablero::regionPanelVertclDerch.posicion ().x () + 8;
         }
         float y = PresenciaTablero::regionPanelVertclIzqrd.posicion ().y () + 
-                  indice_grupo * 135.0f + 68;
+                  indice_grupo * 135.0f + 10;
         panel_lateral = Region {x, y, 92, 128};
     }
 
@@ -310,7 +310,7 @@ namespace tapete {
         poscn += PresenciaTablero::regionRejilla.posicion ();
         poscn -= PresenciaPersonaje::deslizaFicha;
         poscn -= Vector {0, 24};
-        actor_personaje->juego_->tablero ()->indicador ().indica (poscn, cadena);
+        actor_personaje->juego_->tablero ()->indicador ().indica (poscn, cadena, false);
     }
 
 
