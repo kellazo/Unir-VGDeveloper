@@ -677,7 +677,7 @@ namespace juego {
         hazLuz           ->ponDescripcion (
                 L"El personaje quema los ojos a un grupo de enemigos cerca para que se debiliten y fallen más de lo esperado.");
         sprint          ->ponDescripcion (
-                L"El personaje usa su cuerpo para canalizar su energía física y aumentar sus defensas para evadir ataques.");
+                L"El personaje usa su cuerpo para canalizar su energía física y aumentar su velocidad de ataque.");
         proteccionCampana   ->ponDescripcion (
                 L"El personaje hace uso de medicina avanzada para curar a todos los personajes en un área.");
         fuerzaTumba       ->ponDescripcion (
@@ -1097,22 +1097,22 @@ namespace juego {
         revientaHuesos->asignaDefensa (defensaCuerpoACuerpo);
         revientaHuesos->asignaDano    (danoFisico, 60);*/
         //
-        fogonazo->ponCoste (5);
+        fogonazo->ponCoste (4);
         fogonazo->ponAlcance (10);
-        fogonazo->ponRadioAlcance (7);
+        fogonazo->ponRadioAlcance (2);
         fogonazo->asignaAtaque  (energiaTermica);
         fogonazo->asignaDefensa (defensaEnergiaTermica);
-        fogonazo->asignaDano    (danoTermico, 10);
+        fogonazo->asignaDano    (danoTermico, 13);
         //
         homeRun->ponCoste (5);
         homeRun->ponAlcance (15);
         homeRun->asignaAtaque  (fuerzaBruta);
         homeRun->asignaDefensa (defensaBruta);
-        homeRun->asignaDano    (danoBruto, 15);
+        homeRun->asignaDano    (danoBruto, 19);
         //
         minaRepelente->ponCoste (6);
-        minaRepelente->ponAlcance (15);
-        minaRepelente->ponRadioAlcance (4);
+        minaRepelente->ponAlcance (3);
+        minaRepelente->ponRadioAlcance (3);
         minaRepelente->asignaAtaque  (ataqueExplosivo);
         minaRepelente->asignaDefensa (defensaExplosivo);
         minaRepelente->asignaDano    (danoExplosivo, 25);
@@ -1127,10 +1127,10 @@ namespace juego {
         //
         espinasSombras->ponCoste (7);
         espinasSombras->ponAlcance (15);
-        espinasSombras->ponRadioAlcance (5);
+        espinasSombras->ponRadioAlcance (2);
         espinasSombras->asignaAtaque  (magiaOscura);
         espinasSombras->asignaDefensa (defensaOscura);
-        espinasSombras->asignaDano    (danoOscuro, 30);
+        espinasSombras->asignaDano    (danoOscuro, 24);
         //
         vomitoPutrefacto->ponCoste (7);
         vomitoPutrefacto->ponAlcance (1);
@@ -1143,7 +1143,7 @@ namespace juego {
         hazLuz->ponRadioAlcance (3);
         hazLuz->asignaAtaque  (energiaTermica);
         hazLuz->asignaDefensa (defensaEnergiaTermica);
-        hazLuz->asignaDano    (danoTermico, 5);
+        hazLuz->asignaDano    (danoTermico, 15);
         //
         sprint->ponCoste (3);
         sprint->agregaEfectoAtaque (fuerzaBruta, 8);
@@ -1151,17 +1151,17 @@ namespace juego {
         //
         proteccionCampana->ponCoste (5);
         proteccionCampana->ponAlcance (1);
-        proteccionCampana->ponRadioAlcance (5);
+        proteccionCampana->ponRadioAlcance (4);
         proteccionCampana->asignaCuracion(25);
         //
-        fuerzaTumba->ponCoste (8);
+        fuerzaTumba->ponCoste (12);
         fuerzaTumba->ponAlcance (1);
         fuerzaTumba->asignaAtaque  (magiaOscura);
         fuerzaTumba->asignaDefensa (defensaOscura);
-        fuerzaTumba->asignaDano    (danoOscuro, 35);
+        fuerzaTumba->asignaDano    (danoOscuro, 28);
         //
         pasoSombras->ponCoste (3);
-        pasoSombras->agregaEfectoAtaque(magiaOscura, 10);
+        pasoSombras->agregaEfectoAtaque(magiaOscura, 9);
         //
         mortaja->ponCoste (6);
         mortaja->ponAlcance (1);
@@ -1170,15 +1170,15 @@ namespace juego {
         mortaja->asignaDano    (danoAsqueroso, 15);
         //
         bengalaLuminosa->ponCoste (3);
-        bengalaLuminosa->agregaEfectoAtaque(energiaTermica, 10);
+        bengalaLuminosa->agregaEfectoAtaque(energiaTermica, 11);
         //
         botiquin->ponCoste (5);
         botiquin->ponAlcance (1);
-        botiquin->asignaCuracion(12);
+        botiquin->asignaCuracion(23);
         //
         somnolencia->ponCoste (3);
-        somnolencia->agregaEfectoDefensa(defensaHielo, 10);
-        somnolencia->agregaEfectoDefensa(defensaAsquerosa, 10);
+        somnolencia->agregaEfectoDefensa(defensaBruta, 4);
+        somnolencia->agregaEfectoDefensa(defensaExplosivo, 10);
         //
         toqueHelado->ponCoste (7);
         toqueHelado->ponAlcance (1);
@@ -1187,14 +1187,14 @@ namespace juego {
         toqueHelado->asignaDano    (danoHielo, 23);
         //
         dentellada->ponCoste (6);
-        dentellada->ponAlcance (5);
+        dentellada->ponAlcance (4);
         dentellada->ponRadioAlcance (3);
         dentellada->asignaAtaque  (ataqueAsqueroso);
         dentellada->asignaDefensa (defensaAsquerosa);
         dentellada->asignaDano    (danoAsqueroso, 20);
         //
         bolaRapida->ponCoste (5);
-        bolaRapida->ponAlcance (6);
+        bolaRapida->ponAlcance (8);
         bolaRapida->asignaAtaque  (fuerzaBruta);
         bolaRapida->asignaDefensa (defensaBruta);
         bolaRapida->asignaDano    (danoBruto, 15);
@@ -1268,7 +1268,7 @@ namespace juego {
         Jason    -> agregaReduceDano (danoOscuro,           5);
         Jason    -> agregaReduceDano (danoTermico,          5);
         Jason    -> agregaReduceDano (danoExplosivo,        5);
-        Jason    -> agregaReduceDano (danoAsqueroso,        10);
+        Jason    -> agregaReduceDano (danoAsqueroso,        4);
         Jason    -> agregaReduceDano (danoHielo,            5);
         Jason    -> agregaReduceDano (danoBruto,            5);
         //
@@ -1318,7 +1318,7 @@ namespace juego {
         //                       
         //Dana     -> agregaAtaque     (ataqueCuerpoACuerpo,  70);
         //Dana     -> agregaAtaque     (ataqueADistancia,     50);        
-        Dana     -> agregaAtaque     (magiaOscura,          70);
+        Dana     -> agregaAtaque     (magiaOscura,          65);
         //Dana     -> agregaDefensa    (defensaCuerpoACuerpo, 70);
         //Dana     -> agregaDefensa    (defensaADistancia,    70);
         //Dana     -> agregaDefensa    (defensaMagica,        20);
@@ -1327,7 +1327,7 @@ namespace juego {
         Dana     -> agregaDefensa    (defensaExplosivo,     20);
         Dana     -> agregaDefensa    (defensaAsquerosa,     60);
         Dana     -> agregaDefensa    (defensaHielo,         60);
-        Dana     -> agregaDefensa    (defensaBruta,         60);
+        Dana     -> agregaDefensa    (defensaBruta,         40);
         //Dana     -> agregaReduceDano (danoFisico,           10);
         //Dana     -> agregaReduceDano (danoMagico,            5);
         Dana     -> agregaReduceDano (danoOscuro,            5);
@@ -1335,7 +1335,7 @@ namespace juego {
         Dana     -> agregaReduceDano (danoExplosivo,         5);
         Dana     -> agregaReduceDano (danoAsqueroso,         15);
         Dana     -> agregaReduceDano (danoHielo,             5);
-        Dana     -> agregaReduceDano (danoBruto,             5);
+        Dana     -> agregaReduceDano (danoBruto,             2);
         //                       
         //Espectro -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
         //Espectro -> agregaAtaque     (ataqueMagico,         50);        
@@ -1349,7 +1349,7 @@ namespace juego {
         Espectro -> agregaDefensa    (defensaExplosivo,     50);
         Espectro -> agregaDefensa    (defensaAsquerosa,     30);
         Espectro -> agregaDefensa    (defensaHielo,         30);
-        Espectro -> agregaDefensa    (defensaBruta,         30);
+        Espectro -> agregaDefensa    (defensaBruta,         35);
         //Espectro -> agregaReduceDano (danoFisico,            5);
         //Espectro -> agregaReduceDano (danoMagico,           10);
         Espectro -> agregaReduceDano (danoOscuro,            5);
@@ -1357,13 +1357,13 @@ namespace juego {
         Espectro -> agregaReduceDano (danoExplosivo,         10);
         Espectro -> agregaReduceDano (danoAsqueroso,         5);
         Espectro -> agregaReduceDano (danoHielo,             5);
-        Espectro -> agregaReduceDano (danoBruto,             5);
+        Espectro -> agregaReduceDano (danoBruto,             2);
 
         //                       
         //Cadaver  -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
         //Cadaver  -> agregaAtaque     (ataqueADistancia,     50);
         //Cadaver  -> agregaAtaque     (ataqueMagico,         50);       
-        Cadaver  -> agregaAtaque     (ataqueAsqueroso,      50);     
+        Cadaver  -> agregaAtaque     (ataqueAsqueroso,      59);     
         //Cadaver  -> agregaDefensa    (defensaCuerpoACuerpo, 50);
         //Cadaver  -> agregaDefensa    (defensaADistancia,    50);
         //Cadaver  -> agregaDefensa    (defensaMagica,        50);
@@ -1372,7 +1372,7 @@ namespace juego {
         Cadaver  -> agregaDefensa    (defensaExplosivo,     50);
         Cadaver  -> agregaDefensa    (defensaAsquerosa,     50);
         Cadaver  -> agregaDefensa    (defensaHielo,         50);
-        Cadaver  -> agregaDefensa    (defensaBruta,         50);
+        Cadaver  -> agregaDefensa    (defensaBruta,         40);
         //Cadaver  -> agregaReduceDano (danoFisico,            5);
         //Cadaver  -> agregaReduceDano (danoMagico,           10);
         Cadaver  -> agregaReduceDano (danoOscuro,            0);
@@ -1380,7 +1380,7 @@ namespace juego {
         Cadaver  -> agregaReduceDano (danoExplosivo,         10);
         Cadaver  -> agregaReduceDano (danoAsqueroso,         5);
         Cadaver  -> agregaReduceDano (danoHielo,             0);
-        Cadaver  -> agregaReduceDano (danoBruto,             0);
+        Cadaver  -> agregaReduceDano (danoBruto,             2);
         //
         /*******************************************************************************************
         /******************************************************************************************/
