@@ -1146,7 +1146,7 @@ namespace juego {
         hazLuz->asignaDano    (danoTermico, 5);
         //
         sprint->ponCoste (3);
-        sprint->agregaEfectoAtaque (energiaTermica, 8);
+        sprint->agregaEfectoAtaque (fuerzaBruta, 8);
         //sprint->agregaEfectoAtaque (ataqueExplosivo, 8);
         //
         proteccionCampana->ponCoste (5);
