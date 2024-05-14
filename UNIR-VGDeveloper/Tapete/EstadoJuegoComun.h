@@ -38,7 +38,8 @@ namespace tapete {
         
         static constexpr int mostrandoAyuda                 = 18;
 
-        static constexpr int finalPartida                   = 19;
+        static constexpr int finalPartidaVictoria           = 19;
+        static constexpr int finalPartidaDerrota            = 20;
 
 
         explicit EstadoJuegoComun ();

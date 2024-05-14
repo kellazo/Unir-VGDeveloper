@@ -24,6 +24,14 @@ namespace tapete {
 
         void bajaMusica ();
 
+        // INICIO GUILLEM //
+        string archivoMusicaLoop();
+        int    volumenMusicaLoop ();
+        void asignaMusicaLoop (const string& archivo_musica, int volumen);
+
+        void bajaMusicaLoop ();
+        // FIN GUILLEM //
+
     protected:
 
         void inicia () override;
@@ -40,7 +48,15 @@ namespace tapete {
 
         unir2d::Sonido * musica {};
 
+        // INICIO GUILLEM //
+        string archivo_musica_loop{};
+        int    volumen_musica_loop {};
+        unir2d::Sonido * musica_loop {};
+        bool iniciada_loop {};
+        // FIN GUILLEM //
+
         bool iniciada {};
+
 
     };
 

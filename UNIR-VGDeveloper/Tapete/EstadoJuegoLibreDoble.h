@@ -12,12 +12,12 @@ namespace tapete {
     class EstadoJuegoLibreDoble : public EstadoJuegoComun {
     public:
 
-        static constexpr int inicioRonda             = finalPartida + 1;
+        static constexpr int inicioRonda             = finalPartidaDerrota + 1;
 
-        static constexpr int inicioTurnoNoElegido    = finalPartida + 2;
-        static constexpr int inicioTurnoConfirmacion = finalPartida + 3;
+        static constexpr int inicioTurnoNoElegido    = finalPartidaDerrota + 2;
+        static constexpr int inicioTurnoConfirmacion = finalPartidaDerrota + 3;
 
-        static constexpr int agotadosPuntosAccion    = finalPartida + 4;
+        static constexpr int agotadosPuntosAccion    = finalPartidaDerrota + 4;
         
 
         EstadoJuegoLibreDoble (int codigo);

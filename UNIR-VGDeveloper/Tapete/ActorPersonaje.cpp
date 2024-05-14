@@ -19,6 +19,7 @@ namespace tapete {
         this->indice_en_equipo = indice_en_equipo;
         this->nombre_          = nombre;
         this->archivo_retrato  = archivo_retrato;
+
     }
 
 
@@ -55,6 +56,66 @@ namespace tapete {
     void ActorPersonaje::ponArchivoRetrato (const string & valor) {
         archivo_retrato = valor;
     }
+
+    // INICIO GUILLEM //  
+    const string& ActorPersonaje::archivoPersonajeSFX() {
+        return archivo_personaje_sfx;
+    }
+
+
+    int ActorPersonaje::volumenPersonajeSFX() {
+        return volumen_personaje_sfx;
+    }
+
+
+    void ActorPersonaje::asignaPersonajeSFX(const string& archivo, int volumen) {
+        archivo_personaje_sfx = archivo;
+        volumen_personaje_sfx = volumen;
+    }
+
+    void ActorPersonaje::emitePersonajeSFX() {
+        presencia_personaje.sonido_personaje->suena();
+        //presencia_tablero.sonido_establece->suena();
+    }
+    const string& ActorPersonaje::archivoSeleccionSFX() {
+        return archivo_seleccion_sfx;
+    }
+
+
+    int ActorPersonaje::volumenSeleccionSFX() {
+        return volumen_seleccion_sfx;
+    }
+
+
+    void ActorPersonaje::asignaSeleccionSFX(const string& archivo, int volumen) {
+        archivo_seleccion_sfx = archivo;
+        volumen_seleccion_sfx = volumen;
+    }
+
+    void ActorPersonaje::emiteSeleccionSFX() {
+        presencia_personaje.sonido_seleccion->suena();
+       
+    }
+    const string& ActorPersonaje::archivoDesplazamientoSFX() {
+        return archivo_desplazamiento_sfx;
+    }
+
+
+    int ActorPersonaje::volumenDesplazamientoSFX() {
+        return volumen_desplazamiento_sfx;
+    }
+
+
+    void ActorPersonaje::asignaDesplazamientoSFX(const string& archivo, int volumen) {
+        archivo_desplazamiento_sfx = archivo;
+        volumen_desplazamiento_sfx = volumen;
+    }
+
+    void ActorPersonaje::emiteDesplazamientoSFX() {
+        presencia_personaje.sonido_desplazamiento->suena();
+        
+    }
+    // FIN GUILLEM //
 
 
     const string & ActorPersonaje::archivoFicha () const {

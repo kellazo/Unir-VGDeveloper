@@ -46,6 +46,9 @@ namespace tapete {
         const string & archivoSonidoEstablece ();
         int volumenSonidoEstablece ();
         void asignaSonidoEstablece (const string & archivo_establece, int volumen);
+
+ 
+
         const string & archivoSonidoDesplaza ();
         int volumenSonidoDesplaza ();
         void asignaSonidoDesplaza  (const string & archivo_desplaza,  int volumen);
@@ -94,8 +97,9 @@ namespace tapete {
         VistaCaminoCeldas    vista_camino_celdas      {this};
         ListadoAyuda         listado_ayuda            {this};
 
-        string archivo_sonido_establece {};
-        int    volumen_sonido_establece {};
+        string archivo_sonido_establece{};
+        int    volumen_sonido_establece{};
+
         string archivo_sonido_desplaza {};
         int    volumen_sonido_desplaza {};
 

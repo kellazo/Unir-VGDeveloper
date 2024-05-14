@@ -22,6 +22,7 @@ using namespace unir2d;
 
 
 void Teclado::configura (Rendidor * rendidor) {
+    window = rendidor->window;
     winHandle = rendidor->window->getSystemHandle ();
 }
 
@@ -70,3 +71,12 @@ void Teclado::consume (Tecla tecla) {
     s_consumida [indice] = true;
 }
 
+bool Teclado::cualquierTecla() {
+    sf::Event event;
+    while (window->waitEvent(event))
+    {
+        if (event.type == sf::Event::KeyPressed)
+            return true;
+    }
+
+}

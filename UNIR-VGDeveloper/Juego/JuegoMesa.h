@@ -37,14 +37,12 @@ namespace juego {
         la lista de personajes diseñados para el juego.
 
         *******************************************************************************************/
-        ActorPersonaje * Aristo {};
-        ActorPersonaje * Harja {};
-        ActorPersonaje * Hunter {};
-        ActorPersonaje * Thief {};
-        ActorPersonaje * Miner {};
-        ActorPersonaje * Male {};
-        ActorPersonaje * Patrek {};
-        ActorPersonaje * Pirate {};
+        ActorPersonaje * Jason {};
+        ActorPersonaje * Sophie {};
+        ActorPersonaje * Pete {};
+        ActorPersonaje * Dana {};
+        ActorPersonaje * Espectro {};
+        ActorPersonaje * Cadaver {};
         /*******************************************************************************************
         /******************************************************************************************/
  
@@ -78,6 +76,25 @@ namespace juego {
         Habilidad * curacionGrupo {};
         Habilidad * proyectilMagico {};
         Habilidad * bolaFuego {};
+        Habilidad * revientaHuesos {}; 
+        Habilidad * fogonazo {};
+        Habilidad * homeRun {};
+        Habilidad * minaRepelente {};
+        Habilidad * roboVida {};
+        Habilidad * espinasSombras {};
+        Habilidad * vomitoPutrefacto {};
+        Habilidad * hazLuz {};
+        Habilidad * sprint {}; 
+        Habilidad * proteccionCampana {};
+        Habilidad * fuerzaTumba {};
+        Habilidad * pasoSombras {};
+        Habilidad * mortaja {};
+        Habilidad * bengalaLuminosa {};
+        Habilidad * botiquin {};
+        Habilidad * somnolencia {};
+        Habilidad * toqueHelado {};
+        Habilidad * dentellada {};
+        Habilidad * bolaRapida {};
         /*******************************************************************************************
         /******************************************************************************************/
 
@@ -108,11 +125,29 @@ namespace juego {
         TipoAtaque *  ataqueCuerpoACuerpo {};
         TipoAtaque *  ataqueADistancia {};
         TipoAtaque *  ataqueMagico {};
+        TipoAtaque *  energiaTermica {};
+        TipoAtaque *  ataqueExplosivo {};
+        TipoAtaque *  magiaOscura {};
+        TipoAtaque *  ataqueAsqueroso {};
+        TipoAtaque *  ataqueHielo {};
+
         TipoDefensa * defensaCuerpoACuerpo {};
         TipoDefensa * defensaADistancia {};
         TipoDefensa * defensaMagica {};
+        TipoDefensa * defensaEnergiaTermica {};
+        TipoDefensa * defensaExplosivo {};
+        TipoDefensa * defensaOscura {};
+        TipoDefensa * defensaAsquerosa {};
+        TipoDefensa * defensaHielo {};
+
         TipoDano *    danoFisico {};
         TipoDano *    danoMagico {};
+        TipoDano *    danoTermico {};
+        TipoDano *    danoExplosivo {};
+        TipoDano *    danoOscuro {};
+        TipoDano *    danoAsqueroso {};
+        TipoDano *    danoHielo {};
+
         /*******************************************************************************************
         /******************************************************************************************/
 
@@ -145,6 +180,9 @@ namespace juego {
         /*******************************************************************************************
         /******************************************************************************************/
 
+        // INICIO GUILLEM //
+        //ActorMusica * musicote{};
+        // FIN GUILLEM //
     private:
 
         static string carpeta_activos_juego;

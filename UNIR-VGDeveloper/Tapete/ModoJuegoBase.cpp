@@ -212,6 +212,13 @@ namespace tapete {
         juego_->musica ()->bajaMusica ();
     }
 
+    // INICIO GUILLEM //
+    
+    void ModoJuegoBase::atenuaMusicaLoop () {
+        juego_->musica ()->bajaMusicaLoop ();
+    }
+    
+    // FIN GUILLEM //
 
     //----------------------------------------------------------------------------------------------
 
@@ -324,7 +331,12 @@ namespace tapete {
         presnc.iluminaPuntosAccion (personaje->puntosAccion (), 0);
         presnc.refrescaBarraVida ();
         juego_->tablero ()->rejilla ().marcaCelda (personaje->sitioFicha (), ModoJuegoBase::color_elegido); 
-        juego_->tablero ()->emiteSonidoEstablece ();
+        // INICIO GULLEM //
+        //juego_->tablero ()->emiteSonidoEstablece (); // Original
+        //juego_->tablero()->emiteSonidoPersonaje(personaje);
+        //personaje->emitePersonajeSFX();
+        presnc.personaje ()->emitePersonajeSFX ();
+        // FIN GUILLEM //
     }
 
 
@@ -458,7 +470,11 @@ namespace tapete {
         //
         PresenciaActuante & presnc_ataca = juego_->tablero ()->presencia (atacante_->ladoTablero ());
         presnc_ataca.marcaRetrato ();
-        juego_->tablero ()->emiteSonidoEstablece ();
+        // INICIO GUILLEM //
+        //  juego_->tablero ()->emiteSonidoEstablece (); //original
+        presnc_ataca.personaje ()->emiteSeleccionSFX ();
+        // FIN GUILLEM //
+       
     }
 
 
@@ -630,7 +646,11 @@ namespace tapete {
         aserta (presnc_ataca.visible (), "mueveFichaCamino", "el atacante no es visible");
         presnc_ataca.iluminaPuntosAccion (atacante_->puntosAccion (), 0);
         //
-        juego_->tablero ()->emiteSonidoDesplaza ();
+
+        // INICIO GUILLEM //
+        // juego_->tablero ()->emiteSonidoDesplaza (); // original
+        presnc_ataca.personaje ()->emiteDesplazamientoSFX ();
+        // FIN GUILLEM //
     }
 
 
@@ -1165,7 +1185,7 @@ namespace tapete {
             tipo = L"simple";
             break;
         }
-        wstring cadena = std::format (L"{} ({})", habil->nombre (), tipo);
+        wstring cadena = std::format (L"{}.\nTipo: {}\nCoste: {}\nAlcance: {}", habil->nombre (), tipo, habil->coste (), habil->alcance ());
         juego_->tablero ()->indicaHabilidad (lado_tablero, indice_habilidad, cadena);
     }
 
@@ -1337,7 +1357,11 @@ namespace tapete {
         for (ActorPersonaje * persj : juego_->personajes ()) {
             persj->presencia ().refrescaBarraVida ();
             if (persj->vitalidad () == 0) {
-                persj->presencia ().oscureceRetrato ();
+                // INICIO GUILLEM //
+                persj->presencia().RetratoMuerte(); // to do
+                //persj->presencia ().oscureceRetrato (); //Original
+
+                // FIN GUILLEM //
             }
         }
         PresenciaActuante & presnc_izqrd = juego_->tablero ()->presencia (LadoTablero::Izquierda);

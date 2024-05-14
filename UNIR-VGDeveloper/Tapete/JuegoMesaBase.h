@@ -24,6 +24,9 @@ namespace tapete {
         const std::vector <TipoDano *>       & danos () const;
 
         ActorMusica * musica ();
+        // INICIO GUILLEM //
+        //ActorMusica * musicaLoop ();
+        // FIN GUILLEM //
 
         const std::vector <wstring> & nombresAlumnos () const;
         const wstring & cursoAcademico () const; 
@@ -49,6 +52,9 @@ namespace tapete {
 //        void agregaCuracion    (TipoCuracion * elemento);
         void agregaEfectividad (GradoEfectividad * elemento);
         void agregaMusica      (ActorMusica * valor);
+        // INICIO GUILLEM //
+        //void agregaMusicaLoop  (ActorMusica * valor);
+        // FIN GUILLEM //
 
         void configura (SucesosJuegoComun * sucesos, ModoJuegoBase * modo);
 
@@ -83,6 +89,9 @@ namespace tapete {
         std::vector <TipoDano *>       danos_ {};
 //        std::vector <TipoCuracion *>   curaciones_ {};
         ActorMusica *                  musica_ {};
+        // INICIO GUILLEM //
+        ActorMusica *                  musica_loop_ {};
+        // FIN GUILLEM //
 
         std::vector <wstring> nombres_alumnos_ {};
         wstring               curso_academico_ {};

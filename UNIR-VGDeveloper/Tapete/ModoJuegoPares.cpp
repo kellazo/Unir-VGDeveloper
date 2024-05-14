@@ -267,7 +267,7 @@ namespace tapete {
             }
             //
             if (final_partida) {
-                estado ().transita (EstadoJuegoPares::finalPartida);
+                estado ().transita (EstadoJuegoPares::finalPartidaVictoria);
             } else {
                 if (final_ronda) {
                     estado ().transita (EstadoJuegoPares::inicioRonda);
@@ -394,7 +394,7 @@ namespace tapete {
         case EstadoJuegoPares     ::agotadosPuntosAccion         : valida ( NULO     , NULO     , AMBOS    , ASIGNADO , ignora , ignora  , NULO      , CERO   , NULO      , ignora   , NULO      , VACIO    ); break;
         case EstadoJuegoPares     ::finalTurno                   : valida ( NULO     , NULO     , AMBOS    , ASIGNADO , ignora , ignora  , NULO      , CERO   , NULO      , ignora   , NULO      , VACIO    ); break;
         case EstadoJuegoPares     ::mostrandoAyuda               : valida ( ignora   , ignora   , ignora   , ignora   , ignora , ignora  , ignora    , ignora , ignora    , ignora   , ignora    , ignora   ); break;
-        case EstadoJuegoPares     ::finalPartida                 : valida ( NULO     , NULO     , NINGUNO  , NULO     , ignora , ignora  , ignora    , CERO   , NULO      , ignora   , NULO      , VACIO    ); break;
+        case EstadoJuegoPares     ::finalPartidaVictoria         : valida ( NULO     , NULO     , NINGUNO  , NULO     , ignora , ignora  , ignora    , CERO   , NULO      , ignora   , NULO      , VACIO    ); break;
         }
     }
 

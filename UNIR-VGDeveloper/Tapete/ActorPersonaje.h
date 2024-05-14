@@ -39,6 +39,30 @@ namespace tapete {
         const string & archivoFicha () const;
         void ponArchivoFicha (const string & valor);
 
+        // INICIO GUILLEM //  Listado de asignacion y emision de cada tipo SFX por personaje
+        //const string& archivoSFX() const;
+        //void ponArchivoSFX(const string& valor);
+        
+        // Retrato SFX
+        const string& archivoPersonajeSFX(); // ruta archivo SFX
+        int volumenPersonajeSFX(); //Controla el volumen SFX
+        void asignaPersonajeSFX(const string& archivo_establece, int volumen); // Setter del volumen y el archivo SFX a las variables privadas
+        void emitePersonajeSFX(); // Ejecuta el sonido asignado al personaje en presenciapersonaje
+
+        // Selección SFX
+        const string& archivoSeleccionSFX();
+        int volumenSeleccionSFX(); 
+        void asignaSeleccionSFX(const string& archivo_establece, int volumen); 
+        void emiteSeleccionSFX(); 
+
+        // Desplazamiento SFX
+        const string& archivoDesplazamientoSFX(); 
+        int volumenDesplazamientoSFX(); 
+        void asignaDesplazamientoSFX(const string& archivo_establece, int volumen); 
+        void emiteDesplazamientoSFX();
+        
+        // FIN GUILLEM //
+
         // 
         // Los valores de los tipos defensa y de sistemaAtaque de los personajes son dobles, es decir, hay 
         // un valor base y un valor de cambio, siendo el valor que se usa la suma de los dos. 
@@ -115,6 +139,20 @@ namespace tapete {
 
         string archivo_retrato {};
         string archivo_ficha {};
+
+        // INICIO GUILLEM //
+          
+        // Listado variables que controlan el volumen y ruta del archivo de cada uno de los SFX
+        // Retrato SFX
+        string archivo_personaje_sfx{};
+        int    volumen_personaje_sfx{};
+        // Selección SFX
+        string archivo_seleccion_sfx{};
+        int    volumen_seleccion_sfx{};
+        // Desplazamiento SFX
+        string archivo_desplazamiento_sfx{};
+        int    volumen_desplazamiento_sfx{};
+        // FIN GUILLEM //
 
         struct Multivalor {
             int inicial;

@@ -169,7 +169,8 @@ namespace tapete {
         //------------------------------------------------------------
         trazos_rejilla = new unir2d::Trazos {};
         trazos_rejilla->ponPosicion (PresenciaTablero::regionRejilla.posicion ());
-        Color color {0x80, 0xC0, 0x80};
+        //Color color {0x80, 0xC0, 0x80};
+        Color color {0x6E, 0xDA, 0xDA};
         bool fila_par = true;
         for (int fila = 0; fila <= filas + 2; ++ fila) {
             bool coln_par = true;

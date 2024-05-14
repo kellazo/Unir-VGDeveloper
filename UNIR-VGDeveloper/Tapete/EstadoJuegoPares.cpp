@@ -98,7 +98,6 @@ namespace tapete {
             aserta (destino,
                     destino == EstadoJuegoPares::inicioTurnoNoElegidos          ||
                     destino == EstadoJuegoPares::inicioRonda                    ||
-                    destino == EstadoJuegoPares::finalPartida                   ||
                     destino == EstadoJuegoPares::mostrandoAyuda                 ||
                     destino == EstadoJuegoPares::terminal                         );    
             break;

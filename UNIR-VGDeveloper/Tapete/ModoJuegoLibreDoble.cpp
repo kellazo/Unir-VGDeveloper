@@ -140,7 +140,7 @@ namespace tapete {
             } else if (inicio_ronda) {
                 estado ().transita (EstadoJuegoLibreDoble::inicioRonda);
             } else if (final_partida) {
-                estado ().transita (EstadoJuegoComun::finalPartida);
+                estado ().transita (EstadoJuegoComun::finalPartidaVictoria);
             } 
             validaAtributos ();
             informaProceso ("mueveFicha");
@@ -181,7 +181,7 @@ namespace tapete {
             } else if (inicio_ronda) {
                 estado ().transita (EstadoJuegoLibreDoble::inicioRonda);
             } else if (final_partida) {
-                estado ().transita (EstadoJuegoComun::finalPartida);
+                estado ().transita (EstadoJuegoComun::finalPartidaVictoria);
             } 
             validaAtributos ();
             informaProceso ("asumeHabilidad");
@@ -222,7 +222,7 @@ namespace tapete {
             } else if (inicio_ronda) {
                 estado ().transita (EstadoJuegoLibreDoble::inicioRonda);
             } else if (final_partida) {
-                estado ().transita (EstadoJuegoComun::finalPartida);
+                estado ().transita (EstadoJuegoComun::finalPartidaVictoria);
             } 
             validaAtributos ();
             informaProceso ("ignoraPersonajeAgotado");
@@ -371,7 +371,7 @@ namespace tapete {
         case EstadoJuegoLibreDoble::agotadosPuntosAccion         : valida ( NULO     , ASIGNADO , UNO      , ASIGNADO , ignora , ignora  , NULO      , CERO   , NULO      , ignora   , NULO      , VACIO    ); break;
         //                                                                                                                                                                                                                  
         case EstadoJuegoLibreDoble::mostrandoAyuda               : valida ( ignora   , ignora   , ignora   , ignora   , ignora , ignora  , ignora    , ignora , ignora    , ignora   , ignora    , ignora   ); break;
-        case EstadoJuegoLibreDoble::finalPartida                 : valida ( NULO     , NULO     , NINGUNO  , NULO     , ignora , ignora  , ignora    , CERO   , NULO      , ignora   , NULO      , VACIO    ); break;
+        case EstadoJuegoLibreDoble::finalPartidaVictoria         : valida ( NULO     , NULO     , NINGUNO  , NULO     , ignora , ignora  , ignora    , CERO   , NULO      , ignora   , NULO      , VACIO    ); break;
         }
     }
 

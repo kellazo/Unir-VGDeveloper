@@ -48,9 +48,13 @@ namespace unir2d {
 		/// @param tecla Tecla que se marca. 
 		static void consume (Tecla tecla);
 
+		static bool cualquierTecla();
+
 	private:
 
 		inline static sf::WindowHandle winHandle;
+
+		inline static sf::RenderWindow* window; //raimon
 
 		static const int totalTeclas = static_cast <int> (Tecla::escape) + 1;
 		inline static std::array <bool, totalTeclas> s_pulsada   { false };

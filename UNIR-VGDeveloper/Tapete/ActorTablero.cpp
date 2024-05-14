@@ -165,7 +165,7 @@ namespace tapete {
         Vector poscn = presencia (lado).panel_retrato.posicion (); 
         poscn -= Vector {0, 24};
         //
-        cuadro_indica.indica (poscn, cadena);
+        cuadro_indica.indica (poscn, cadena, false);
     }
 
 
@@ -176,9 +176,9 @@ namespace tapete {
                 "parámatro 'indice_habilidad' inválido");
         //
         Vector poscn = presencia (lado).paneles_habilidad [indice_habilidad].posicion (); 
-        poscn -= Vector {0, 24};
+        poscn -= Vector {0, 50};
         //
-        cuadro_indica.indica (poscn, cadena);
+        cuadro_indica.indica (poscn, cadena, true);
     }
 
 
@@ -202,6 +202,23 @@ namespace tapete {
         volumen_sonido_establece = volumen;
     }
 
+    // INICIO GULLEM //
+    /*const string& ActorTablero::archivoSonidoPersonaje() {
+        return archivo_sonido_personaje;
+    }
+
+
+    int ActorTablero::volumenSonidoPersonaje() {
+        return volumen_sonido_personaje;
+    }
+
+
+    void ActorTablero::asignaSonidoPersonaje(const string& archivo, int volumen) {
+        archivo_sonido_personaje = archivo;
+        volumen_sonido_personaje = volumen;
+    }*/
+    // FIN GUILLEM //
+
 
     const string & ActorTablero::archivoSonidoDesplaza () {
         return archivo_sonido_desplaza;
@@ -223,6 +240,11 @@ namespace tapete {
         presencia_tablero.sonido_establece->suena ();
     }
 
+    // INICIO GULLEM //
+    //void ActorTablero::emiteSonidoPersonaje() {
+    //    presencia_tablero.sonido_establece->suena ();
+    //}
+    // FIN GUILLEM //
 
     void ActorTablero::emiteSonidoDesplaza () {
         presencia_tablero.sonido_desplaza->suena ();

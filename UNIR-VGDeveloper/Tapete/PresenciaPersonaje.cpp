@@ -33,6 +33,12 @@ namespace tapete {
         //preparaHabilidadesActuante (actor_personaje);
         //
         preparaFicha ();
+
+        // INICIO GUILLEM //
+
+        preparaSFX ();
+
+        // FIN GUILLEM //
     }
 
 
@@ -79,6 +85,17 @@ namespace tapete {
         imagen_retrato_lateral = nullptr;
         delete fondo_retrato;
         fondo_retrato = nullptr;
+        
+        // INICIO GUILLEM //
+
+        delete imagen_retrato_muerto;
+        imagen_retrato_muerto = nullptr;
+        delete textura_retrato_muerto;
+        textura_retrato_muerto = nullptr;
+ 
+        // FIN GUILLEM //
+
+
         //
 //        delete texto_nombre;
 //        texto_nombre = nullptr;
@@ -91,6 +108,10 @@ namespace tapete {
         //
         delete textura_retrato;
         textura_retrato = nullptr;
+
+        // INICIO GUILLEM //
+        liberaSFXs();
+        // FIN GUILLEM //
     }
 
 
@@ -103,7 +124,7 @@ namespace tapete {
             x = PresenciaTablero::regionPanelVertclDerch.posicion ().x () + 8;
         }
         float y = PresenciaTablero::regionPanelVertclIzqrd.posicion ().y () + 
-                  indice_grupo * 135.0f + 68;
+                  indice_grupo * 135.0f + 10;
         panel_lateral = Region {x, y, 92, 128};
     }
 
@@ -219,14 +240,36 @@ namespace tapete {
     }
 
 
-    void PresenciaPersonaje::preparaRetratoActuante () {
-        imagen_retrato_actuante = new unir2d::Imagen ();
+    void PresenciaPersonaje::preparaRetratoActuante() {
+        imagen_retrato_actuante = new unir2d::Imagen();
         //imagen_retrato_actuante->ponPosicion (panel_lateral.posicion () + Vector {10, 38});
-        imagen_retrato_actuante->asigna (textura_retrato);
-        imagen_retrato_actuante->ponVisible (false);
+        imagen_retrato_actuante->asigna(textura_retrato);
+        imagen_retrato_actuante->ponVisible(false);
         //
-        actor_personaje->agregaDibujo (imagen_retrato_actuante);
+        actor_personaje->agregaDibujo(imagen_retrato_actuante);
     }
+
+    // INICIO GUILLEM //
+    void PresenciaPersonaje::preparaSFX() {
+        //original
+        //sonido_establece = new unir2d::Sonido{};
+        //sonido_establece->carga(actor_tablero->archivo_sonido_establece);
+        //sonido_establece->ponVolumen(actor_tablero->volumen_sonido_establece);
+
+        sonido_personaje = new unir2d::Sonido();
+        sonido_personaje->carga(actor_personaje->archivo_personaje_sfx);
+        sonido_personaje->ponVolumen(actor_personaje->volumen_personaje_sfx);
+
+        sonido_seleccion = new unir2d::Sonido();
+        sonido_seleccion->carga(actor_personaje->archivo_seleccion_sfx);
+        sonido_seleccion->ponVolumen(actor_personaje->volumen_seleccion_sfx);
+
+        sonido_desplazamiento = new unir2d::Sonido();
+        sonido_desplazamiento->carga(actor_personaje->archivo_desplazamiento_sfx);
+        sonido_desplazamiento->ponVolumen(actor_personaje->volumen_desplazamiento_sfx);
+
+    }
+    // FIN GUILLEM //
 
 
     void PresenciaPersonaje::preparaFicha () {
@@ -267,7 +310,7 @@ namespace tapete {
         poscn += PresenciaTablero::regionRejilla.posicion ();
         poscn -= PresenciaPersonaje::deslizaFicha;
         poscn -= Vector {0, 24};
-        actor_personaje->juego_->tablero ()->indicador ().indica (poscn, cadena);
+        actor_personaje->juego_->tablero ()->indicador ().indica (poscn, cadena, false);
     }
 
 
@@ -277,6 +320,25 @@ namespace tapete {
         //imagen_retrato_actuante->colorea (Color::Gris);
     }
 
+    // INICIO GUILLEM //
+    void PresenciaPersonaje::RetratoMuerte() {
+       // imagen_retrato_lateral->asigna();
+
+        if (textura_retrato_muerto == nullptr) {
+            textura_retrato_muerto = new unir2d::Textura{};
+            textura_retrato_muerto->carga(JuegoMesaBase::carpetaActivos() + "Hunter_Dead.png");
+        }
+        imagen_retrato_muerto = new unir2d::Imagen{};
+        imagen_retrato_muerto->asigna(textura_retrato_muerto);
+        imagen_retrato_muerto->ponPosicion(imagen_retrato_lateral->posicion());
+        actor_personaje->agregaDibujo(imagen_retrato_muerto);
+
+        
+
+        
+    }
+
+    // FIN GUILLEM //
 
     void PresenciaPersonaje::aclaraRetrato () {
         imagen_retrato_lateral->colorea (Color::Blanco);
@@ -296,6 +358,17 @@ namespace tapete {
         }
         throw std::logic_error (mensaje);
     }
+
+    // INICIO GUILLEM //
+    void PresenciaPersonaje::liberaSFXs() {
+        delete sonido_personaje;
+        sonido_personaje = nullptr;
+        delete sonido_seleccion;
+        sonido_seleccion = nullptr;
+        delete sonido_desplazamiento;
+        sonido_desplazamiento = nullptr;
+    }
+    // FIN GUILLEM //
 
 
 }

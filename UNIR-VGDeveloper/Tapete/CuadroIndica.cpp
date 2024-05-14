@@ -48,24 +48,34 @@ namespace tapete {
     }
 
 
-    void CuadroIndica::indica (Vector poscn, const wstring & cadena) {
+    void CuadroIndica::indica (Vector poscn, const wstring & cadena, bool esHabilidad) {
         //
         texto_indica->ponTamano (12);
         texto_indica->ponColor (Color::Negro);
         texto_indica->ponCadena (cadena);
         float anchr = texto_indica->anchura ();
+        float inf;
+        float sup =  0.0f;
+        float der =  0.0f;
+        float izq;
         //
         rectangl_indica->ponPosicion (poscn);
-        rectangl_indica->ponBase (anchr + 8);
-        rectangl_indica->ponAltura (20);
         rectangl_indica->ponColor (colorIndica);
+        //
+        if(esHabilidad){
+            rectangl_indica->ponAltura (65);
+            rectangl_indica->ponBase (anchr + 15);
+            inf = 65.0f;
+            izq = anchr + 15;
+        }else{
+            rectangl_indica->ponAltura (20);
+            rectangl_indica->ponBase (anchr + 8);
+            inf = 20.0f;
+            izq = anchr + 8;
+        }
         //
         trazos_indica->ponPosicion (poscn);
         trazos_indica->borraLineas ();
-        float sup =  0.0f;
-        float inf = 20.0f;
-        float der =  0.0f;
-        float izq = anchr + 8;
         Vector sup_izq {izq, sup};
         Vector sup_der {der, sup};
         Vector inf_izq {izq, inf};
