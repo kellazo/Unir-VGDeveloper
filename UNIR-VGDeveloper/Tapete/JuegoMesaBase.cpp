@@ -348,7 +348,7 @@ namespace tapete {
             cronoPulsaBoton->inicia();
         }
         
-        if (reproducienodIntroPulsaBoton && cronoPulsaBoton->segundos() > 1.5 && unir2d::Teclado::cualquierTecla()) {
+        if (reproducienodIntroPulsaBoton && cronoPulsaBoton->segundos() > 0.5 && unir2d::Teclado::pulsando(Tecla::entrar)) {
             reproducienodIntroPulsaBoton = false;
             reproduciendoIntroJuego = true;
 
