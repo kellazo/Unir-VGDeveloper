@@ -44,7 +44,7 @@ namespace tapete {
 
 
     void ModoJuegoKBM::entraInicioJugada () {
-std::cout << "entraInicioJugada" << std::endl;
+        std::cout << "entraInicioJugada" << std::endl;
         try {
             validaEstado ({ 
                     EstadoJuegoKBM::inicioRonda,
@@ -52,14 +52,18 @@ std::cout << "entraInicioJugada" << std::endl;
                     EstadoJuegoKBM::inicioTurno    });
                     // sin elegidos, sin atacante 
             //
+            //INICIO GUILLEM //
+
             ModoJuegoBase::atenuaMusica ();
-           //INICIO GUILLEM //
-             ModoJuegoBase::atenuaMusicaLoop ();
+           
+            ModoJuegoBase::atenuaMusicaLoop ();
+            
+
            // FIN GUILLEM //
             bool encontrada;
-std::cout << "entraInicioJugada 2" << std::endl;
+            std::cout << "entraInicioJugada 2" << std::endl;
             buscaJugada (encontrada);
-std::cout << "entraInicioJugada 3" << std::endl;
+            std::cout << "entraInicioJugada 3" << std::endl;
             assert (encontrada);
             ActorPersonaje * persj = factoresEquipos ().at (indiceFactorEquipos ());
             ModoJuegoBase::establecePersonajeElegido (persj);
