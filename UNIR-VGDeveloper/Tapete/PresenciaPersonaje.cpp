@@ -90,7 +90,7 @@ namespace tapete {
 
         delete imagen_retrato_muerto;
         imagen_retrato_muerto = nullptr;
-        if (textura_retrato_muerto->cuentaUsos() == 0) {
+        if (textura_retrato_muerto != nullptr && textura_retrato_muerto->cuentaUsos() == 0) {
             delete textura_retrato_muerto;
             textura_retrato_muerto = nullptr;
         }
@@ -328,6 +328,9 @@ namespace tapete {
         if (textura_retrato_muerto == nullptr) {
             textura_retrato_muerto = new unir2d::Textura{};
             textura_retrato_muerto->carga(JuegoMesaBase::carpetaActivos() + "Hunter_Dead.png");
+        }
+        if (imagen_retrato_muerto != nullptr) {
+            return;
         }
         imagen_retrato_muerto = new unir2d::Imagen{};
         imagen_retrato_muerto->asigna(textura_retrato_muerto);
