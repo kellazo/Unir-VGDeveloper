@@ -119,6 +119,17 @@ namespace tapete {
         volumen = static_cast <int> (volumen * 0.3f);
         musica_loop->ponVolumen(volumen);
     }
+
+    void ActorMusica::subeMusica() {
+        int volumenA = musica->volumen();
+        int volumenB = musica_loop->volumen();
+        volumenA = static_cast <int> (volumenA * 1.3f + 2);
+        volumenB = static_cast <int> (volumenB * 1.3f + 2);
+        
+        musica->ponVolumen(volumenA);
+        musica_loop->ponVolumen(volumenB);
+
+    }
     // FIN GUILLEM //
 
 
