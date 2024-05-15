@@ -15,7 +15,6 @@ namespace tapete {
         listado.borra ();
         //
 
-
         // para que esto funcione hay que guardar este archivo con codificación:
         //      Europeo occidental (Windows) - Página de códigos 1252
         // o bien con codificación

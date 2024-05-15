@@ -27,6 +27,7 @@ namespace tapete {
         // INICIO GUILLEM //
         string archivoMusicaLoop();
         int    volumenMusicaLoop ();
+        void   subeMusica();
         void asignaMusicaLoop (const string& archivo_musica, int volumen);
 
         void bajaMusicaLoop ();

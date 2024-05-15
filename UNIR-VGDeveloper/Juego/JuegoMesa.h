@@ -130,6 +130,7 @@ namespace juego {
         TipoAtaque *  magiaOscura {};
         TipoAtaque *  ataqueAsqueroso {};
         TipoAtaque *  ataqueHielo {};
+        TipoAtaque *  fuerzaBruta {};
 
         TipoDefensa * defensaCuerpoACuerpo {};
         TipoDefensa * defensaADistancia {};
@@ -139,6 +140,7 @@ namespace juego {
         TipoDefensa * defensaOscura {};
         TipoDefensa * defensaAsquerosa {};
         TipoDefensa * defensaHielo {};
+        TipoDefensa * defensaBruta{};
 
         TipoDano *    danoFisico {};
         TipoDano *    danoMagico {};
@@ -147,6 +149,7 @@ namespace juego {
         TipoDano *    danoOscuro {};
         TipoDano *    danoAsqueroso {};
         TipoDano *    danoHielo {};
+        TipoDano *    danoBruto {};
 
         /*******************************************************************************************
         /******************************************************************************************/

@@ -558,7 +558,7 @@ namespace juego {
         *******************************************************************************************/
         //
         
-        ataqueEspadaNormal   = new Habilidad {
+       /* ataqueEspadaNormal = new Habilidad{
                 L"Ataque cuerpo a cuerpo normal", 
                 EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::oponente};
         ataqueArco           = new Habilidad {
@@ -584,7 +584,7 @@ namespace juego {
                 EnfoqueHabilidad::area,      AccesoHabilidad::directo,   Antagonista::oponente};
         revientaHuesos   = new Habilidad {
                 L"Revienta huesos", 
-                EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::oponente};
+                EnfoqueHabilidad::personaje, AccesoHabilidad::directo,   Antagonista::oponente};*/
         fogonazo   = new Habilidad {
                 L"Fogonazo", 
                 EnfoqueHabilidad::area,      AccesoHabilidad::indirecto,   Antagonista::oponente};
@@ -606,9 +606,9 @@ namespace juego {
         hazLuz      = new Habilidad {
                 L"Haz de Luz",              
                 EnfoqueHabilidad::area, AccesoHabilidad::directo, Antagonista::oponente};
-        bolaFuego            = new Habilidad {
+        /*bolaFuego = new Habilidad{
                 L"Bola de fuego",                 
-                EnfoqueHabilidad::area,      AccesoHabilidad::directo,   Antagonista::oponente};
+                EnfoqueHabilidad::area,      AccesoHabilidad::directo,   Antagonista::oponente};*/
         sprint   = new Habilidad {
                 L"Sprint", 
                 EnfoqueHabilidad::si_mismo, AccesoHabilidad::ninguno,   Antagonista::si_mismo};
@@ -644,7 +644,7 @@ namespace juego {
                 EnfoqueHabilidad::personaje, AccesoHabilidad::indirecto,   Antagonista::oponente};
 
         //
-        ataqueEspadaNormal  ->ponDescripcion (
+        /*ataqueEspadaNormal->ponDescripcion(
                 L"El personaje usa su espada para atacar a un enemigo que se encuentra en una casilla próxima.");
         ataqueArco          ->ponDescripcion (
                 L"El personaje usa su arco para atacar a un enemigo que se encuentra en una casilla próxima.");
@@ -661,37 +661,37 @@ namespace juego {
         bolaFuego           ->ponDescripcion (
                 L"El personaje acumula energía mágica y la lanza contra un grupo de enemigos.");
         revientaHuesos  ->ponDescripcion (
-                L"El personaje abraza con todas sus fuerzas hasta que los huesos del oponente se resquebran.");
+                L"El personaje abraza con todas sus fuerzas hasta que los huesos del oponente se resquebran.");*/
         fogonazo          ->ponDescripcion (
-                L"El personaje acumula energia térmica para lanzar un proyectil térmico ardiente contra un enemigo.");
+                L"El personaje acumula energia térmica para lanzar un proyectil ardiente contra un enemigo.");
         homeRun             ->ponDescripcion (
                 L"El personaje usa la fuerza bruta para canalizar toda la energía cinética en su palo de béisbol y usarlo contra un enemigo.");
         minaRepelente       ->ponDescripcion (
-                L"El personaje pone una mina cerca de un grupo de enemigos y explota con todas las fuerzas para impactar el mayor daño posible.");
+                L"El personaje pone una mina cerca de un grupo de enemigos y explota con todas las fuerzas para causar el mayor daño posible.");
         roboVida      ->ponDescripcion (
-                L"El personaje usa magia oscura para absorver energía vital de un enemigo que se encuentra en una casilla próxima.");
+                L"***PRUEBAS:El personaje usa magia oscura para absorver energía vital de un enemigo que se encuentra en una casilla próxima.****");
         espinasSombras      ->ponDescripcion (
-                L"El personaje usa magia oscura para lanzar un grupo de proyectiles contra un grupo de enemigos.");
+                L"El personaje usa magia oscura para lanzar una batería de proyectiles contra un grupo de enemigos.");
         vomitoPutrefacto     ->ponDescripcion (
-                L"El personaje usa su vómito asqueroso para envenenar y podrir su enemigo cerca de él.");
+                L"El personaje usa su vómito asqueroso para envenenar y podrir a su enemigo cercano.");
         hazLuz           ->ponDescripcion (
-                L"El personaje ciega a un grupo de enemigos cerca para que sus ojos se debiliten y fallen más de lo esperado.");
+                L"El personaje quema los ojos a un grupo de enemigos cerca para que se debiliten y fallen más de lo esperado.");
         sprint          ->ponDescripcion (
-                L"El personaje usa su cuerpo para canalizar su energía y aumentar su velocidad.");
+                L"El personaje usa su cuerpo para canalizar su energía física y aumentar su velocidad de ataque.");
         proteccionCampana   ->ponDescripcion (
                 L"El personaje hace uso de medicina avanzada para curar a todos los personajes en un área.");
         fuerzaTumba       ->ponDescripcion (
-                L"El personaje usa un ataque muy poderoso, jugando con magia oscura perr sacrificando un gran consumo de su energía.");
+                L"El personaje usa un ataque muy poderoso, jugando con magia oscura pero sacrificando un gran consumo de energía.");
         pasoSombras      ->ponDescripcion (
-                L"El personaje hace un llamamiento a la poder de la sombra para aumentar su ataque.");
+                L"El personaje hace un llamamiento al poder de la sombra para aumentar su ataque durante un turno.");
         mortaja      ->ponDescripcion (
                 L"El personaje roba de un sepúlcro cercano la mortaja y lo usa para asfixiar a su enemigo.");
         bengalaLuminosa     ->ponDescripcion (
-                L"El personaje puede ver con claridad y aumenta su defensa hasta su próxima ronda.");
+                L"El personaje puede ver con claridad y al estar seguro de si mísmo aumenta sus ataques.");
         botiquin           ->ponDescripcion (
                 L"El personaje hace uso de las herramientas curativas para sanar a un miembro de su equipo.");
         somnolencia      ->ponDescripcion (
-                L"El personaje usa un somnífero para aumentar su próximo ataque.");
+                L"El personaje usa un somnífero a si mismo para aumentar sus defensas brutas.");
         toqueHelado     ->ponDescripcion (
                 L"El personaje usa un ataque poderoso que congela y golpea con fuerza a su enemigo.");
         dentellada           ->ponDescripcion (
@@ -700,7 +700,7 @@ namespace juego {
                 L"El personaje lanza con todas sus fuerzas una bola de béisbol desde la distancia hasta impactar contra un enemigo.");
         //
 
-        ataqueEspadaNormal  ->ponArchivosImagenes (
+        /*ataqueEspadaNormal->ponArchivosImagenes(
                 carpeta_habilids_juego + "espada.png",          carpeta_habilids_juego + "fondo_5.png");
         ataqueArco          ->ponArchivosImagenes (
                 carpeta_habilids_juego + "arco_flecha.png",     carpeta_habilids_juego + "fondo_5.png");
@@ -715,7 +715,7 @@ namespace juego {
         proyectilMagico     ->ponArchivosImagenes (
                 carpeta_habilids_juego + "cristales.png",       carpeta_habilids_juego + "fondo_5.png");
         bolaFuego           ->ponArchivosImagenes (
-                carpeta_habilids_juego + "bola_fuego.png",      carpeta_habilids_juego + "fondo_5.png");
+                carpeta_habilids_juego + "bola_fuego.png",      carpeta_habilids_juego + "fondo_5.png");*/
         fogonazo            ->ponArchivosImagenes (
                 carpeta_habilids_juego + "espada_poderosa.png", carpeta_habilids_juego + "fondo_5.png");
         homeRun             ->ponArchivosImagenes(
@@ -753,14 +753,14 @@ namespace juego {
         bolaRapida          ->ponArchivosImagenes (
                 carpeta_habilids_juego + "arco_flecha.png",          carpeta_habilids_juego + "fondo_5.png");
         //
-        ataqueEspadaNormal  ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
+        /*ataqueEspadaNormal->ponArchivoSonido(carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         ataqueArco          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         ataqueEspadaPoderoso->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXVomitoPutrefacto.wav");
         defensaFerrea       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         curacionSimple      ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         curacionGrupo       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         proyectilMagico     ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
-        bolaFuego           ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");
+        bolaFuego           ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/Magic Missiles.wav");*/
         homeRun             ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXHomeRun.wav");
         fogonazo            ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXFogonazo.wav");
         minaRepelente       ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXMinaRepelente.wav");
@@ -780,14 +780,14 @@ namespace juego {
         dentellada          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXDentellada.wav");
         bolaRapida          ->ponArchivoSonido (carpeta_sonidos_juego + "SFX/SFXBolaRapida.wav");
         //
-        agregaHabilidad (ataqueEspadaNormal);
+       /* agregaHabilidad(ataqueEspadaNormal);
         agregaHabilidad (ataqueArco);
         agregaHabilidad (ataqueEspadaPoderoso);
         agregaHabilidad (defensaFerrea);
         agregaHabilidad (curacionSimple);
         agregaHabilidad (curacionGrupo);
         agregaHabilidad (proyectilMagico);
-        agregaHabilidad (bolaFuego);
+        agregaHabilidad (bolaFuego);*/
         agregaHabilidad (homeRun);
         agregaHabilidad (fogonazo);
         agregaHabilidad (minaRepelente);
@@ -850,58 +850,64 @@ namespace juego {
 
         *******************************************************************************************/
         //
-        ataqueCuerpoACuerpo   = new TipoAtaque  {L"Ataque cuerpo a cuerpo"};
+        /*ataqueCuerpoACuerpo = new TipoAtaque{L"Ataque cuerpo a cuerpo"};
         ataqueADistancia      = new TipoAtaque  {L"Ataque a distancia"};
-        ataqueMagico          = new TipoAtaque  {L"Ataque mágico"};
+        ataqueMagico          = new TipoAtaque  {L"Ataque mágico"};*/
         energiaTermica        = new TipoAtaque  {L"Ataque de tipo fuego"};
         ataqueExplosivo       = new TipoAtaque  {L"Ataque explosivo"};
         magiaOscura           = new TipoAtaque  {L"Ataque con magia oscura"};
         ataqueAsqueroso       = new TipoAtaque  {L"Ataque asqueroso"};
         ataqueHielo           = new TipoAtaque  {L"Ataque Hielo"};
+        fuerzaBruta           = new TipoAtaque  {L"Ataque bruto"};
 
-        defensaCuerpoACuerpo  = new TipoDefensa {L"Defensa cuerpo a cuerpo"};
+       /* defensaCuerpoACuerpo = new TipoDefensa{L"Defensa cuerpo a cuerpo"};
         defensaADistancia     = new TipoDefensa {L"Defensa a distancia"};
-        defensaMagica         = new TipoDefensa {L"Defensa mágica"};
+        defensaMagica         = new TipoDefensa {L"Defensa mágica"};*/
         defensaEnergiaTermica = new TipoDefensa {L"Defensa energía térmica"};
-        defensaExplosivo      = new TipoDefensa {L"Defensa explosivo"};
+        defensaExplosivo      = new TipoDefensa {L"Defensa explosiva"};
         defensaOscura         = new TipoDefensa {L"Defensa magia oscura"};
         defensaAsquerosa      = new TipoDefensa {L"Defensa asquerosa"};
         defensaHielo          = new TipoDefensa {L"Defensa hielo"};
+        defensaBruta          = new TipoDefensa {L"Defensa bruta"};
         
-        danoFisico           = new TipoDano     {L"Daño físico"};
-        danoMagico           = new TipoDano     {L"Daño mágico"};
+        /*danoFisico = new TipoDano{L"Daño físico"};
+        danoMagico           = new TipoDano     {L"Daño mágico"};*/
         danoTermico          = new TipoDano     {L"Daño térmico"};
         danoExplosivo        = new TipoDano     {L"Daño explosivo"};
         danoOscuro           = new TipoDano     {L"Daño Oscuro"};
         danoAsqueroso        = new TipoDano     {L"Daño asqueroso"};
         danoHielo            = new TipoDano     {L"Daño hielo"};
+        danoBruto            = new TipoDano     {L"Daño bruto"};
 
         //
-        agregaAtaque  (ataqueCuerpoACuerpo );
+       /* agregaAtaque(ataqueCuerpoACuerpo);
         agregaAtaque  (ataqueADistancia);
-        agregaAtaque  (ataqueMagico);
+        agregaAtaque  (ataqueMagico);*/
         agregaAtaque  (energiaTermica);
         agregaAtaque  (ataqueExplosivo);
         agregaAtaque  (magiaOscura);
         agregaAtaque  (ataqueAsqueroso);
         agregaAtaque  (ataqueHielo);
+        agregaAtaque  (fuerzaBruta);
 
-        agregaDefensa (defensaCuerpoACuerpo);
+        /*agregaDefensa(defensaCuerpoACuerpo);
         agregaDefensa (defensaADistancia );
-        agregaDefensa (defensaMagica );
+        agregaDefensa (defensaMagica );*/
         agregaDefensa (defensaEnergiaTermica);
         agregaDefensa (defensaExplosivo);
         agregaDefensa (defensaOscura);
         agregaDefensa (defensaAsquerosa);
         agregaDefensa (defensaHielo);
+        agregaDefensa (defensaBruta);
 
-        agregaDano    (danoFisico);
-        agregaDano    (danoMagico);
+        /*agregaDano(danoFisico);
+        agregaDano    (danoMagico);*/
         agregaDano    (danoTermico);
         agregaDano    (danoExplosivo);
         agregaDano    (danoOscuro);
         agregaDano    (danoAsqueroso);
         agregaDano    (danoHielo);
+        agregaDano    (danoBruto);
 
         //
         /*******************************************************************************************
@@ -931,29 +937,29 @@ namespace juego {
         *******************************************************************************************/
         //
         Jason    -> agregaHabilidad (homeRun);
-        // Jason    -> agregaHabilidad (sprint);
-        // Jason    -> agregaHabilidad (bolaRapida);
+        Jason    -> agregaHabilidad (sprint);
+        Jason    -> agregaHabilidad (bolaRapida);
         //
-        Sophie   -> agregaHabilidad (ataqueEspadaNormal);
-        // Sophie   -> agregaHabilidad (fogonazo);
-        // Sophie   -> agregaHabilidad (bengalaLuminosa);
-        // Sophie   -> agregaHabilidad (hazLuz);
+        //Sophie   -> agregaHabilidad (ataqueEspadaNormal);
+        Sophie   -> agregaHabilidad (fogonazo);
+        Sophie   -> agregaHabilidad (bengalaLuminosa);
+        Sophie   -> agregaHabilidad (hazLuz);
         //
         Pete     -> agregaHabilidad (minaRepelente);
-        // Pete     -> agregaHabilidad (proteccionCampana);
-        // Pete     -> agregaHabilidad (botiquin);
+        Pete     -> agregaHabilidad (proteccionCampana);
+        Pete     -> agregaHabilidad (botiquin);
         //
-        // Dana     -> agregaHabilidad (roboVida);
+        Dana     -> agregaHabilidad (roboVida);
         Dana     -> agregaHabilidad (fuerzaTumba);
-        // Dana     -> agregaHabilidad (somnolencia);
+        Dana     -> agregaHabilidad (somnolencia);
         //
         Espectro -> agregaHabilidad (espinasSombras);
-        // Espectro -> agregaHabilidad (pasoSombras);
-        // Espectro -> agregaHabilidad (toqueHelado);
+        Espectro -> agregaHabilidad (pasoSombras);
+        Espectro -> agregaHabilidad (toqueHelado);
         //
         Cadaver  -> agregaHabilidad (vomitoPutrefacto);
-        // Cadaver  -> agregaHabilidad (mortaja);
-        // Cadaver  -> agregaHabilidad (dentellada);
+        Cadaver  -> agregaHabilidad (mortaja);
+        Cadaver  -> agregaHabilidad (dentellada);
         //
         /*******************************************************************************************
         /******************************************************************************************/
@@ -1041,7 +1047,7 @@ namespace juego {
 
         *******************************************************************************************/
         //
-        ataqueEspadaNormal->ponCoste (3);                                       
+        /*ataqueEspadaNormal->ponCoste(3);
         ataqueEspadaNormal->ponAlcance (1);
         ataqueEspadaNormal->asignaAtaque  (ataqueCuerpoACuerpo); 
         ataqueEspadaNormal->asignaDefensa (defensaCuerpoACuerpo); 
@@ -1089,105 +1095,109 @@ namespace juego {
         revientaHuesos->ponAlcance (1);
         revientaHuesos->asignaAtaque  (ataqueCuerpoACuerpo);
         revientaHuesos->asignaDefensa (defensaCuerpoACuerpo);
-        revientaHuesos->asignaDano    (danoFisico, 60);
+        revientaHuesos->asignaDano    (danoFisico, 60);*/
         //
-        fogonazo->ponCoste (5);
-        fogonazo->ponAlcance (3);
-        fogonazo->ponRadioAlcance (3);
+        fogonazo->ponCoste (4);
+        fogonazo->ponAlcance (10);
+        fogonazo->ponRadioAlcance (2);
         fogonazo->asignaAtaque  (energiaTermica);
         fogonazo->asignaDefensa (defensaEnergiaTermica);
-        fogonazo->asignaDano    (danoTermico, 60);
+        fogonazo->asignaDano    (danoTermico, 13);
         //
         homeRun->ponCoste (5);
-        homeRun->ponAlcance (1);
-        homeRun->asignaAtaque  (ataqueCuerpoACuerpo);
-        homeRun->asignaDefensa (defensaCuerpoACuerpo);
-        homeRun->asignaDano    (danoFisico, 60);
+        homeRun->ponAlcance (15);
+        homeRun->asignaAtaque  (fuerzaBruta);
+        homeRun->asignaDefensa (defensaBruta);
+        homeRun->asignaDano    (danoBruto, 19);
         //
-        minaRepelente->ponCoste (5);
+        minaRepelente->ponCoste (6);
         minaRepelente->ponAlcance (3);
         minaRepelente->ponRadioAlcance (3);
         minaRepelente->asignaAtaque  (ataqueExplosivo);
         minaRepelente->asignaDefensa (defensaExplosivo);
-        minaRepelente->asignaDano    (danoExplosivo, 60);
+        minaRepelente->asignaDano    (danoExplosivo, 25);
         //
-        roboVida->ponCoste (5);
-        roboVida->asignaCuracion (40);
+        roboVida->ponCoste (3);
+        roboVida->agregaEfectoDefensa(defensaEnergiaTermica, 8);
+        roboVida->agregaEfectoDefensa(defensaExplosivo, 8);
+        //roboVida->asignaCuracion (40);
         // roboVida->asignaAtaque  (magiaOscura);
         // roboVida->asignaDefensa (defensaOscura);
         // roboVida->asignaDano    (danoOscuro, 60);
         //
-        espinasSombras->ponCoste (5);
-        espinasSombras->ponAlcance (3);
-        espinasSombras->ponRadioAlcance (3);
+        espinasSombras->ponCoste (7);
+        espinasSombras->ponAlcance (15);
+        espinasSombras->ponRadioAlcance (2);
         espinasSombras->asignaAtaque  (magiaOscura);
         espinasSombras->asignaDefensa (defensaOscura);
-        espinasSombras->asignaDano    (danoOscuro, 60);
+        espinasSombras->asignaDano    (danoOscuro, 24);
         //
-        vomitoPutrefacto->ponCoste (5);
+        vomitoPutrefacto->ponCoste (7);
         vomitoPutrefacto->ponAlcance (1);
         vomitoPutrefacto->asignaAtaque  (ataqueAsqueroso);
         vomitoPutrefacto->asignaDefensa (defensaAsquerosa);
-        vomitoPutrefacto->asignaDano    (danoAsqueroso, 60);
+        vomitoPutrefacto->asignaDano    (danoAsqueroso, 15);
         //
-        hazLuz->ponCoste (5);
-        hazLuz->ponAlcance (3);
+        hazLuz->ponCoste (3);
+        hazLuz->ponAlcance (1);
         hazLuz->ponRadioAlcance (3);
-        hazLuz->asignaAtaque  (ataqueADistancia);
-        hazLuz->asignaDefensa (defensaADistancia);
-        hazLuz->asignaDano    (danoFisico, 60);
+        hazLuz->asignaAtaque  (energiaTermica);
+        hazLuz->asignaDefensa (defensaEnergiaTermica);
+        hazLuz->asignaDano    (danoTermico, 15);
         //
-        sprint->ponCoste (5);
-        sprint->agregaEfectoDefensa (defensaOscura, 30);
+        sprint->ponCoste (3);
+        sprint->agregaEfectoAtaque (fuerzaBruta, 8);
+        //sprint->agregaEfectoAtaque (ataqueExplosivo, 8);
         //
         proteccionCampana->ponCoste (5);
         proteccionCampana->ponAlcance (1);
-        proteccionCampana->ponRadioAlcance (3);
-        proteccionCampana->asignaCuracion(40);
+        proteccionCampana->ponRadioAlcance (4);
+        proteccionCampana->asignaCuracion(25);
         //
-        fuerzaTumba->ponCoste (5);
+        fuerzaTumba->ponCoste (12);
         fuerzaTumba->ponAlcance (1);
         fuerzaTumba->asignaAtaque  (magiaOscura);
         fuerzaTumba->asignaDefensa (defensaOscura);
-        fuerzaTumba->asignaDano    (danoOscuro, 60);
+        fuerzaTumba->asignaDano    (danoOscuro, 28);
         //
-        pasoSombras->ponCoste (5);
-        pasoSombras->agregaEfectoAtaque(magiaOscura, 30);
+        pasoSombras->ponCoste (3);
+        pasoSombras->agregaEfectoAtaque(magiaOscura, 9);
         //
-        mortaja->ponCoste (5);
+        mortaja->ponCoste (6);
         mortaja->ponAlcance (1);
         mortaja->asignaAtaque  (ataqueAsqueroso);
         mortaja->asignaDefensa (defensaAsquerosa);
-        mortaja->asignaDano    (danoAsqueroso, 60);
+        mortaja->asignaDano    (danoAsqueroso, 15);
         //
-        bengalaLuminosa->ponCoste (5);
-        bengalaLuminosa->agregaEfectoAtaque(energiaTermica, 30);
+        bengalaLuminosa->ponCoste (3);
+        bengalaLuminosa->agregaEfectoAtaque(energiaTermica, 11);
         //
         botiquin->ponCoste (5);
         botiquin->ponAlcance (1);
-        botiquin->asignaCuracion(40);
+        botiquin->asignaCuracion(23);
         //
-        somnolencia->ponCoste (5);
-        somnolencia->agregaEfectoAtaque(magiaOscura, 60);
+        somnolencia->ponCoste (3);
+        somnolencia->agregaEfectoDefensa(defensaBruta, 4);
+        somnolencia->agregaEfectoDefensa(defensaExplosivo, 10);
         //
-        toqueHelado->ponCoste (5);
+        toqueHelado->ponCoste (7);
         toqueHelado->ponAlcance (1);
         toqueHelado->asignaAtaque  (ataqueHielo);
         toqueHelado->asignaDefensa (defensaHielo);
-        toqueHelado->asignaDano    (danoHielo, 60);
+        toqueHelado->asignaDano    (danoHielo, 23);
         //
-        dentellada->ponCoste (5);
-        dentellada->ponAlcance (10);
+        dentellada->ponCoste (6);
+        dentellada->ponAlcance (4);
         dentellada->ponRadioAlcance (3);
-        dentellada->asignaAtaque  (ataqueADistancia);
-        dentellada->asignaDefensa (defensaADistancia);
-        dentellada->asignaDano    (danoFisico, 60);
+        dentellada->asignaAtaque  (ataqueAsqueroso);
+        dentellada->asignaDefensa (defensaAsquerosa);
+        dentellada->asignaDano    (danoAsqueroso, 20);
         //
         bolaRapida->ponCoste (5);
-        bolaRapida->ponAlcance (10);
-        bolaRapida->asignaAtaque  (ataqueADistancia);
-        bolaRapida->asignaDefensa (defensaADistancia);
-        bolaRapida->asignaDano    (danoFisico, 60);
+        bolaRapida->ponAlcance (8);
+        bolaRapida->asignaAtaque  (fuerzaBruta);
+        bolaRapida->asignaDefensa (defensaBruta);
+        bolaRapida->asignaDano    (danoBruto, 15);
 
         /*******************************************************************************************
         /******************************************************************************************/
@@ -1241,122 +1251,136 @@ namespace juego {
 
         *******************************************************************************************/
         //
-        Jason    -> agregaAtaque     (ataqueCuerpoACuerpo,  70);
+        /*Jason->agregaAtaque(ataqueCuerpoACuerpo, 70);
         Jason    -> agregaAtaque     (ataqueADistancia,     50);
         Jason    -> agregaDefensa    (defensaCuerpoACuerpo, 70);
         Jason    -> agregaDefensa    (defensaADistancia,    70);
-        Jason    -> agregaDefensa    (defensaMagica,        20);
-        Jason    -> agregaDefensa    (defensaOscura,        20);
-        Jason    -> agregaDefensa    (defensaEnergiaTermica,20);
+        Jason    -> agregaDefensa    (defensaMagica,        20);*/
+        Jason    -> agregaAtaque     (fuerzaBruta,          70);
+        Jason    -> agregaDefensa    (defensaOscura,        60);
+        Jason    -> agregaDefensa    (defensaEnergiaTermica,70);
         Jason    -> agregaDefensa    (defensaExplosivo,     20);
         Jason    -> agregaDefensa    (defensaAsquerosa,     20);
         Jason    -> agregaDefensa    (defensaHielo,         20);
-        Jason    -> agregaReduceDano (danoFisico,           10);
-        Jason    -> agregaReduceDano (danoMagico,           5);
+        Jason    -> agregaDefensa    (defensaBruta,         20);
+        //Jason    -> agregaReduceDano (danoFisico,           10);
+        //Jason    -> agregaReduceDano (danoMagico,           5);
         Jason    -> agregaReduceDano (danoOscuro,           5);
         Jason    -> agregaReduceDano (danoTermico,          5);
         Jason    -> agregaReduceDano (danoExplosivo,        5);
-        Jason    -> agregaReduceDano (danoAsqueroso,        5);
+        Jason    -> agregaReduceDano (danoAsqueroso,        4);
         Jason    -> agregaReduceDano (danoHielo,            5);
+        Jason    -> agregaReduceDano (danoBruto,            5);
         //
-        Sophie   -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
-        Sophie   -> agregaAtaque     (ataqueADistancia,     50);
-        Sophie   -> agregaAtaque     (ataqueMagico,         50);
-        Sophie   -> agregaDefensa    (defensaCuerpoACuerpo, 50);
-        Sophie   -> agregaDefensa    (defensaADistancia,    50);
-        Sophie   -> agregaDefensa    (defensaMagica,        50);
+        //Sophie   -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
+        //Sophie   -> agregaAtaque     (ataqueADistancia,     50);
+        //Sophie   -> agregaAtaque     (ataqueMagico,         50);
+        //Sophie   -> agregaDefensa    (defensaCuerpoACuerpo, 50);
+        //Sophie   -> agregaDefensa    (defensaADistancia,    50);
+        //Sophie   -> agregaDefensa    (defensaMagica,        50);
+        Sophie   -> agregaAtaque     (energiaTermica,       50);
         Sophie   -> agregaDefensa    (defensaOscura,        50);
         Sophie   -> agregaDefensa    (defensaEnergiaTermica,50);
         Sophie   -> agregaDefensa    (defensaExplosivo,     50);
         Sophie   -> agregaDefensa    (defensaAsquerosa,     50);
         Sophie   -> agregaDefensa    (defensaHielo,         50);
-        Sophie   -> agregaReduceDano (danoFisico,            5);
-        Sophie   -> agregaReduceDano (danoMagico,           10);
+        Sophie   -> agregaDefensa    (defensaBruta,         20);
+        //Sophie   -> agregaReduceDano (danoFisico,            5);
+        //Sophie   -> agregaReduceDano (danoMagico,           10);
         Sophie   -> agregaReduceDano (danoOscuro,           10);
         Sophie   -> agregaReduceDano (danoTermico,           5);
         Sophie   -> agregaReduceDano (danoExplosivo,        10);
         Sophie   -> agregaReduceDano (danoAsqueroso,         5);
         Sophie   -> agregaReduceDano (danoHielo,             5);
+        Sophie   -> agregaReduceDano (danoBruto,             5);
         //                       
-        Pete     -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
-        Pete     -> agregaAtaque     (ataqueADistancia,     70);
-        Pete     -> agregaAtaque     (ataqueExplosivo,      70);
-        Pete     -> agregaAtaque     (ataqueMagico,         70);        
-        Pete     -> agregaDefensa    (defensaCuerpoACuerpo, 40);
-        Pete     -> agregaDefensa    (defensaADistancia,    40);
-        Pete     -> agregaDefensa    (defensaMagica,        30);
-        Pete     -> agregaDefensa    (defensaOscura,        70);
-        Pete     -> agregaDefensa    (defensaEnergiaTermica,30);
+        //Pete     -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
+        //Pete     -> agregaAtaque     (ataqueADistancia,     70);
+        Pete     -> agregaAtaque     (ataqueExplosivo,      50);
+        //Pete     -> agregaAtaque     (ataqueMagico,         70);        
+        //Pete     -> agregaDefensa    (defensaCuerpoACuerpo, 40);
+        //Pete     -> agregaDefensa    (defensaADistancia,    40);
+        //Pete     -> agregaDefensa    (defensaMagica,        30);
+        Pete     -> agregaDefensa    (defensaOscura,        40);
+        Pete     -> agregaDefensa    (defensaEnergiaTermica,40);
         Pete     -> agregaDefensa    (defensaExplosivo,     30);
-        Pete     -> agregaDefensa    (defensaAsquerosa,     30);
+        Pete     -> agregaDefensa    (defensaAsquerosa,     70);
         Pete     -> agregaDefensa    (defensaHielo,         30);
-        Pete     -> agregaReduceDano (danoFisico,            0);
-        Pete     -> agregaReduceDano (danoMagico,           15);
+        Pete     -> agregaDefensa    (defensaBruta,         30);
+        //Pete     -> agregaReduceDano (danoFisico,            0);
+        //Pete     -> agregaReduceDano (danoMagico,           15);
         Pete     -> agregaReduceDano (danoOscuro,            0);
         Pete     -> agregaReduceDano (danoTermico,           0);
-        Pete     -> agregaReduceDano (danoExplosivo,         0);
-        Pete     -> agregaReduceDano (danoAsqueroso,         0);
+        Pete     -> agregaReduceDano (danoExplosivo,         15);
+        Pete     -> agregaReduceDano (danoAsqueroso,         15);
         Pete     -> agregaReduceDano (danoHielo,             0);
+        Pete     -> agregaReduceDano (danoBruto,             0);
         //                       
-        Dana     -> agregaAtaque     (ataqueCuerpoACuerpo,  70);
-        Dana     -> agregaAtaque     (ataqueADistancia,     50);        
-        Dana     -> agregaAtaque     (magiaOscura,          40);
-        Dana     -> agregaDefensa    (defensaCuerpoACuerpo, 70);
-        Dana     -> agregaDefensa    (defensaADistancia,    70);
-        Dana     -> agregaDefensa    (defensaMagica,        20);
-        Dana     -> agregaDefensa    (defensaOscura,        60);
-        Dana     -> agregaDefensa    (defensaEnergiaTermica,60);
-        Dana     -> agregaDefensa    (defensaExplosivo,     60);
+        //Dana     -> agregaAtaque     (ataqueCuerpoACuerpo,  70);
+        //Dana     -> agregaAtaque     (ataqueADistancia,     50);        
+        Dana     -> agregaAtaque     (magiaOscura,          65);
+        //Dana     -> agregaDefensa    (defensaCuerpoACuerpo, 70);
+        //Dana     -> agregaDefensa    (defensaADistancia,    70);
+        //Dana     -> agregaDefensa    (defensaMagica,        20);
+        Dana     -> agregaDefensa    (defensaOscura,        70);
+        Dana     -> agregaDefensa    (defensaEnergiaTermica,45);
+        Dana     -> agregaDefensa    (defensaExplosivo,     20);
         Dana     -> agregaDefensa    (defensaAsquerosa,     60);
         Dana     -> agregaDefensa    (defensaHielo,         60);
-        Dana     -> agregaReduceDano (danoFisico,           10);
-        Dana     -> agregaReduceDano (danoMagico,            5);
+        Dana     -> agregaDefensa    (defensaBruta,         40);
+        //Dana     -> agregaReduceDano (danoFisico,           10);
+        //Dana     -> agregaReduceDano (danoMagico,            5);
         Dana     -> agregaReduceDano (danoOscuro,            5);
         Dana     -> agregaReduceDano (danoTermico,           5);
         Dana     -> agregaReduceDano (danoExplosivo,         5);
-        Dana     -> agregaReduceDano (danoAsqueroso,         5);
+        Dana     -> agregaReduceDano (danoAsqueroso,         15);
         Dana     -> agregaReduceDano (danoHielo,             5);
+        Dana     -> agregaReduceDano (danoBruto,             2);
         //                       
-        Espectro -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
-        Espectro -> agregaAtaque     (ataqueMagico,         50);        
-        Espectro -> agregaAtaque     (magiaOscura,          40);        
-        Espectro -> agregaAtaque     (ataqueHielo,          40);        
-        Espectro -> agregaDefensa    (defensaCuerpoACuerpo, 50);
-        Espectro -> agregaDefensa    (defensaADistancia,    50);
-        Espectro -> agregaDefensa    (defensaMagica,        50);
-        Espectro -> agregaDefensa    (defensaOscura,        30);
-        Espectro -> agregaDefensa    (defensaEnergiaTermica,30);
-        Espectro -> agregaDefensa    (defensaExplosivo,     30);
+        //Espectro -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
+        //Espectro -> agregaAtaque     (ataqueMagico,         50);        
+        Espectro -> agregaAtaque     (magiaOscura,          50);        
+        Espectro -> agregaAtaque     (ataqueHielo,          50);        
+        //Espectro -> agregaDefensa    (defensaCuerpoACuerpo, 50);
+        //Espectro -> agregaDefensa    (defensaADistancia,    50);
+        //Espectro -> agregaDefensa    (defensaMagica,        50);
+        Espectro -> agregaDefensa    (defensaOscura,        50);
+        Espectro -> agregaDefensa    (defensaEnergiaTermica,50);
+        Espectro -> agregaDefensa    (defensaExplosivo,     50);
         Espectro -> agregaDefensa    (defensaAsquerosa,     30);
         Espectro -> agregaDefensa    (defensaHielo,         30);
-        Espectro -> agregaReduceDano (danoFisico,            5);
-        Espectro -> agregaReduceDano (danoMagico,           10);
+        Espectro -> agregaDefensa    (defensaBruta,         35);
+        //Espectro -> agregaReduceDano (danoFisico,            5);
+        //Espectro -> agregaReduceDano (danoMagico,           10);
         Espectro -> agregaReduceDano (danoOscuro,            5);
         Espectro -> agregaReduceDano (danoTermico,           5);
-        Espectro -> agregaReduceDano (danoExplosivo,         5);
+        Espectro -> agregaReduceDano (danoExplosivo,         10);
         Espectro -> agregaReduceDano (danoAsqueroso,         5);
         Espectro -> agregaReduceDano (danoHielo,             5);
+        Espectro -> agregaReduceDano (danoBruto,             2);
 
         //                       
-        Cadaver  -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
-        Cadaver  -> agregaAtaque     (ataqueADistancia,     50);
-        Cadaver  -> agregaAtaque     (ataqueMagico,         50);       
-        Cadaver  -> agregaAtaque     (ataqueAsqueroso,      50);     
-        Cadaver  -> agregaDefensa    (defensaCuerpoACuerpo, 50);
-        Cadaver  -> agregaDefensa    (defensaADistancia,    50);
-        Cadaver  -> agregaDefensa    (defensaMagica,        50);
-        Cadaver  -> agregaDefensa    (defensaOscura,        50);
+        //Cadaver  -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
+        //Cadaver  -> agregaAtaque     (ataqueADistancia,     50);
+        //Cadaver  -> agregaAtaque     (ataqueMagico,         50);       
+        Cadaver  -> agregaAtaque     (ataqueAsqueroso,      59);     
+        //Cadaver  -> agregaDefensa    (defensaCuerpoACuerpo, 50);
+        //Cadaver  -> agregaDefensa    (defensaADistancia,    50);
+        //Cadaver  -> agregaDefensa    (defensaMagica,        50);
+        Cadaver  -> agregaDefensa    (defensaOscura,        60);
         Cadaver  -> agregaDefensa    (defensaEnergiaTermica,50);
         Cadaver  -> agregaDefensa    (defensaExplosivo,     50);
         Cadaver  -> agregaDefensa    (defensaAsquerosa,     50);
         Cadaver  -> agregaDefensa    (defensaHielo,         50);
-        Cadaver  -> agregaReduceDano (danoFisico,            5);
-        Cadaver  -> agregaReduceDano (danoMagico,           10);
+        Cadaver  -> agregaDefensa    (defensaBruta,         40);
+        //Cadaver  -> agregaReduceDano (danoFisico,            5);
+        //Cadaver  -> agregaReduceDano (danoMagico,           10);
         Cadaver  -> agregaReduceDano (danoOscuro,            0);
         Cadaver  -> agregaReduceDano (danoTermico,           0);
-        Cadaver  -> agregaReduceDano (danoExplosivo,         0);
-        Cadaver  -> agregaReduceDano (danoAsqueroso,         0);
+        Cadaver  -> agregaReduceDano (danoExplosivo,         10);
+        Cadaver  -> agregaReduceDano (danoAsqueroso,         5);
         Cadaver  -> agregaReduceDano (danoHielo,             0);
+        Cadaver  -> agregaReduceDano (danoBruto,             2);
         //
         /*******************************************************************************************
         /******************************************************************************************/

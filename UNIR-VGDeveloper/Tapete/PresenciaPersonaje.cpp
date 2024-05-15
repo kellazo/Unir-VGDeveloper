@@ -90,9 +90,10 @@ namespace tapete {
 
         delete imagen_retrato_muerto;
         imagen_retrato_muerto = nullptr;
-        delete textura_retrato_muerto;
-        textura_retrato_muerto = nullptr;
- 
+        if (textura_retrato_muerto->cuentaUsos() == 0) {
+            delete textura_retrato_muerto;
+            textura_retrato_muerto = nullptr;
+        }
         // FIN GUILLEM //
 
 
