@@ -1195,7 +1195,7 @@ namespace tapete {
                       L"",
                       L"Acciones:",
                       L"- Continuar (pulsa tecla 'Space')",
-                      L"- Ver resultado (click en el icono" 
+                      L"- Ver resultado (click en el icono",
                       L"de '?')"},
                     { habilidadAccion ()->nombre () }     );
             break;
@@ -1270,7 +1270,7 @@ namespace tapete {
                       L"",
                       L"Acciones:",
                       L"- Continuar (pulsa tecla 'Space')",
-                      L"- Ver resultado (click en el icono" 
+                      L"- Ver resultado (click en el icono",
                       L"de '?')"},
                     { habilidadAccion ()->nombre () }     );
             break;
@@ -1309,7 +1309,7 @@ namespace tapete {
                       L"",
                       L"Acciones:",
                       L"- Continuar (pulsa tecla 'Space')",
-                      L"- Ver resultado (click en el icono" 
+                      L"- Ver resultado (click en el icono",
                       L"de '?')"},
                     { habilidadAccion ()->nombre () }     );
             break;
