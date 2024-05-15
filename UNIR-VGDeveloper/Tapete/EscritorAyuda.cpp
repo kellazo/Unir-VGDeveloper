@@ -1,6 +1,6 @@
-// proyecto: Grupal/Tapete   
+Ôªø// proyecto: Grupal/Tapete   
 // arhivo:   ModoJuegoBase.cpp
-// versiÛn:  1.1  (9-Ene-2023)
+// versi√≥n:  1.1  (9-Ene-2023)
 
 
 #include "tapete.h"
@@ -16,17 +16,17 @@ namespace tapete {
         //
 
 
-        // para que esto funcione hay que guardar este archivo con codificaciÛn:
-        //      Europeo occidental (Windows) - P·gina de cÛdigos 1252
-        // o bien con codificaciÛn
-        //      Unicode (UTF-8 con signatura) - P·gina de cÛdigos 65001
+        // para que esto funcione hay que guardar este archivo con codificaci√≥n:
+        //      Europeo occidental (Windows) - P√°gina de c√≥digos 1252
+        // o bien con codificaci√≥n
+        //      Unicode (UTF-8 con signatura) - P√°gina de c√≥digos 65001
         
-        //std::wstring ws {L"—Ò «Á @ Ä \200 \u20ac # ~ % & ø? °! ·ÈÌÛ˙¡…Õ”⁄" };
+        //std::wstring ws {L"√ë√± √á√ß @ ‚Ç¨ \200 \u20ac # ~ % & ¬ø? ¬°! √°√©√≠√≥√∫√Å√â√ç√ì√ö" };
         //std::wcout << "5) " << ws << std::endl;
 
 
-        //const char * s = "—Ò «Á @ Ä # ~ % & ø? °! ·ÈÌÛ˙¡…Õ”⁄";
-        //listado.escribe (L"—Ò «Á @ Ä # ~ % & ø? °! ·ÈÌÛ˙¡…Õ”⁄");
+        //const char * s = "√ë√± √á√ß @ ‚Ç¨ # ~ % & ¬ø? ¬°! √°√©√≠√≥√∫√Å√â√ç√ì√ö";
+        //listado.escribe (L"√ë√± √á√ß @ ‚Ç¨ # ~ % & ¬ø? ¬°! √°√©√≠√≥√∫√Å√â√ç√ì√ö");
 
 
 
@@ -45,7 +45,7 @@ namespace tapete {
         listado.escribe (L"    ----------");
         listado.saltaLinea ();
         listado.escribe (L"      Proyecto Grupal I.");
-        listado.escribe (L"      Grado en DiseÒo y Desarrollo de Videojuegos.");
+        listado.escribe (L"      Grado en Dise√±o y Desarrollo de Videojuegos.");
         listado.escribe (L"      UNIR - Universidad Internacional de La Rioja.");
         listado.saltaLinea ();
         listado.saltaLinea ();
@@ -58,7 +58,7 @@ namespace tapete {
             numero ++;
         }
         listado.saltaLinea ();
-        listado.escribe (std::format (L"    Curso acadÈmico: {}", juego.cursoAcademico ()));
+        listado.escribe (std::format (L"    Curso acad√©mico: {}", juego.cursoAcademico ()));
         while (listado.linea () < 44) {
             listado.saltaLinea ();
         }
@@ -66,10 +66,10 @@ namespace tapete {
         listado.saltaLinea ();
         listado.escribe (L"    Copyright (C) 2022 UNIR-Universidad Internacional de La Rioja."); 
         listado.escribe (L"    Todos los derechos reservados."); 
-        listado.escribe (L"    El sofware se entrega solo para uso educativo, sin ninguna garantÌa de"); 
-        listado.escribe (L"    adecuaciÛn para ning˙n proposito particular.");
+        listado.escribe (L"    El sofware se entrega solo para uso educativo, sin ninguna garant√≠a de"); 
+        listado.escribe (L"    adecuaci√≥n para ning√∫n proposito particular.");
         listado.saltaLinea ();
-        listado.escribe (L"    Bibliotecas de cÛdigo usadas:"); 
+        listado.escribe (L"    Bibliotecas de c√≥digo usadas:"); 
         listado.escribe (L"        1) SFML - Simple and Fast Multimedia Library.");  
         listado.escribe (L"           Licencia: https://www.sfml-dev.org/license.php");  
         listado.saltaLinea ();
@@ -93,10 +93,10 @@ namespace tapete {
         listado.saltaLinea ();
         listado.escribe (std::format (L"    - Iniciativa: {}", personaje->iniciativa ()));
         listado.escribe (std::format (L"    - Vitalidad: {}", personaje->vitalidad ()));
-        listado.escribe (std::format (L"    - Puntos acciÛn: {}", personaje->puntosAccion ()));
+        listado.escribe (std::format (L"    - Puntos acci√≥n: {}", personaje->puntosAccion ()));
         listado.saltaLinea ();
         listado.saltaLinea ();
-        listado.escribe (L"    EstadÌsticas");
+        listado.escribe (L"    Estad√≠sticas");
         listado.escribe (L"    ------------");
         for (TipoAtaque * tipo_ataque : juego.ataques ()) {
             if (personaje->apareceAtaque (tipo_ataque)) {
@@ -112,7 +112,7 @@ namespace tapete {
         }
         for (TipoDano * tipo_dano : juego.danos ()) {
             if (personaje->apareceReduceDano (tipo_dano)) {
-                listado.escribe (std::format (L"    ReducciÛn {:20}  {:-3}", 
+                listado.escribe (std::format (L"    Reducci√≥n {:20}  {:-3}", 
                                     tipo_dano->nombre (), personaje->valorReduceDano (tipo_dano)));
             }
         }
@@ -143,15 +143,15 @@ namespace tapete {
         listado.enNegrita ();
         switch (sistema.habilidad ()->antagonista ()) {
         case Antagonista::oponente:
-            listado.escribe (L"                             C·lculo del Ataque");
+            listado.escribe (L"                             C√°lculo del Ataque");
             listado.escribe (L"                             ==================");
             break;
         case Antagonista::aliado:
-            listado.escribe (L"                           C·lculo de la CuraciÛn");
+            listado.escribe (L"                           C√°lculo de la Curaci√≥n");
             listado.escribe (L"                           ======================");
             break;
         case Antagonista::si_mismo:
-            listado.escribe (L"                             C·lculo del Efecto");
+            listado.escribe (L"                             C√°lculo del Efecto");
             listado.escribe (L"                             ==================");
             break;
         }
@@ -206,10 +206,10 @@ namespace tapete {
         case EnfoqueHabilidad::area:
             switch (habilidad->tipoAcceso ()) {
             case AccesoHabilidad::directo:
-                tipo = L"·rea directa";
+                tipo = L"√°rea directa";
                 break;
             case AccesoHabilidad::indirecto:
-                tipo = L"·rea indirecta";
+                tipo = L"√°rea indirecta";
                 break;
             }
             break;
@@ -231,7 +231,7 @@ namespace tapete {
                                 habilidad->tipoDano ()->nombre (), habilidad->valorDano ()));
             break;
         case Antagonista::aliado:
-            listado.escribe (std::format (L"      - CuraciÛn: {}", habilidad->valorCuracion ()));
+            listado.escribe (std::format (L"      - Curaci√≥n: {}", habilidad->valorCuracion ()));
             break;
         case Antagonista::si_mismo:
             for (const std::pair <TipoAtaque *, int> & efect : habilidad->efectosAtaque ()) {
@@ -246,11 +246,11 @@ namespace tapete {
             if (habilidad->radioAlcance () == 0) {
                 listado.escribe (std::format (L"      - Alcance (casillas): {}", habilidad->alcance ()));       
             } else {
-                listado.escribe (std::format (L"      - Alcance (casillas): {}  radio ·rea: {}", 
+                listado.escribe (std::format (L"      - Alcance (casillas): {}  radio √°rea: {}", 
                                     habilidad->alcance (), habilidad->radioAlcance ()));       
             }
         }
-        listado.escribe (std::format (L"      - Coste (puntos acciÛn): {}", habilidad->coste ()));       
+        listado.escribe (std::format (L"      - Coste (puntos acci√≥n): {}", habilidad->coste ()));       
     }
 
 
@@ -259,35 +259,35 @@ namespace tapete {
             const SistemaAtaque                 & sistema, 
             const SistemaAtaque::AtaqueOponente & registro) {
         listado.saltaLinea ();
-        listado.escribe (std::format (L"    ∑ {} con valor de {} puntos.", 
+        listado.escribe (std::format (L"    ¬∑ {} con valor de {} puntos.", 
                             registro.tipo_ataque->nombre (), registro.valor_ataque));
-        listado.escribe (std::format (L"    ∑ Contra '{}', provisto de:", 
+        listado.escribe (std::format (L"    ¬∑ Contra '{}', provisto de:", 
                             registro.oponente->nombre ()));  
         listado.escribe (std::format (L"          {} con valor de {} puntos.", 
                             registro.tipo_defensa->nombre (), registro.valor_defensa));
         listado.saltaLinea ();
-        listado.escribe (std::format (L"    ∑ Ventaja del ataque:  {}  (valor ataque - valor defensa)", 
+        listado.escribe (std::format (L"    ¬∑ Ventaja del ataque:  {}  (valor ataque - valor defensa)", 
                             registro.ventaja));
-        listado.escribe (std::format (L"    ∑ Valor aleatorio obtenido:  {} puntos", 
+        listado.escribe (std::format (L"    ¬∑ Valor aleatorio obtenido:  {} puntos", 
                             registro.aleatorio_100));
-        listado.escribe (std::format (L"    ∑ Valor final ataque:  {}  (ventaja + valor aleatorio)", 
+        listado.escribe (std::format (L"    ¬∑ Valor final ataque:  {}  (ventaja + valor aleatorio)", 
                             registro.valor_final_ataque));
-        listado.escribe (std::format (L"    ∑ Efectividad: {}, {}% del daÒo", 
+        listado.escribe (std::format (L"    ¬∑ Efectividad: {}, {}% del da√±o", 
                             registro.efectividad->nombre (), registro.porciento_dano));
         listado.saltaLinea ();
-        listado.escribe (std::format (L"    ∑ {} (de la habilidad) con valor de {} puntos", 
+        listado.escribe (std::format (L"    ¬∑ {} (de la habilidad) con valor de {} puntos", 
                             registro.tipo_dano->nombre (), registro.valor_dano));
-        listado.escribe (std::format (L"    ∑ Valor ajustado del daÒo:  {}  (al {}%)", 
+        listado.escribe (std::format (L"    ¬∑ Valor ajustado del da√±o:  {}  (al {}%)", 
                             registro.valor_ajustado_dano, registro.porciento_dano));
-        listado.escribe (std::format (L"    ∑ ReducciÛn de daÒo de '{}':  {}", 
+        listado.escribe (std::format (L"    ¬∑ Reducci√≥n de da√±o de '{}':  {}", 
                             registro.oponente->nombre (), registro.valor_reduce_dano));
-        listado.escribe (std::format (L"    ∑ Valor final del daÒo:  {}  (valor ajustado - valor reducciÛn)", 
+        listado.escribe (std::format (L"    ¬∑ Valor final del da√±o:  {}  (valor ajustado - valor reducci√≥n)", 
                             registro.valor_final_dano));
         listado.saltaLinea ();
-        listado.escribe (std::format (L"    ∑ Vitalidad original de '{}':  {} puntos", 
+        listado.escribe (std::format (L"    ¬∑ Vitalidad original de '{}':  {} puntos", 
                             registro.oponente->nombre (), 
                             registro.vitalidad_origen));
-        listado.escribe (std::format (L"    ∑ Vitalidad resultante:  {}  (vitalidad - daÒo)", 
+        listado.escribe (std::format (L"    ¬∑ Vitalidad resultante:  {}  (vitalidad - da√±o)", 
                             registro.vitalidad_final));
         listado.saltaLinea ();
     }
@@ -298,14 +298,14 @@ namespace tapete {
             const SistemaAtaque                   & sistema, 
             const SistemaAtaque::CuracionOponente & registro) {
         listado.saltaLinea ();
-        listado.escribe (std::format (L"    ∑ Valor de {} puntos.", 
+        listado.escribe (std::format (L"    ¬∑ Valor de {} puntos.", 
                             registro.valor_curacion));
-        listado.escribe (std::format (L"    ∑ A favor de '{}'.", 
+        listado.escribe (std::format (L"    ¬∑ A favor de '{}'.", 
                             registro.oponente->nombre ()));  
         listado.saltaLinea ();
-        listado.escribe (std::format (L"    ∑ Vitalidad original de '{}':  {} puntos", 
+        listado.escribe (std::format (L"    ¬∑ Vitalidad original de '{}':  {} puntos", 
                             registro.oponente->nombre (), registro.vitalidad_origen));
-        listado.escribe (std::format (L"    ∑ Vitalidad resultante:  {}  (vitalidad + valor)", 
+        listado.escribe (std::format (L"    ¬∑ Vitalidad resultante:  {}  (vitalidad + valor)", 
                             registro.vitalidad_final));
         listado.saltaLinea ();
     }
@@ -317,24 +317,24 @@ namespace tapete {
             const SistemaAtaque::CambioEfecto & registro) {
         listado.saltaLinea ();
         if (registro.tipo_ataque != nullptr) {
-            listado.escribe (std::format (L"    ∑ Cambio en el {}.", 
+            listado.escribe (std::format (L"    ¬∑ Cambio en el {}.", 
                                 registro.tipo_ataque->nombre ()));
-            listado.escribe (std::format (L"    ∑ Valor del cambio:  {:-3} puntos.", 
+            listado.escribe (std::format (L"    ¬∑ Valor del cambio:  {:-3} puntos.", 
                                 registro.valor_cambio_ataque));
-            listado.escribe (std::format (L"    ∑ Valor original:    {:-3} puntos", 
+            listado.escribe (std::format (L"    ¬∑ Valor original:    {:-3} puntos", 
                                 registro.valor_origen_ataque));
-            listado.escribe (std::format (L"    ∑ Valor resultante:  {:-3} puntos", 
+            listado.escribe (std::format (L"    ¬∑ Valor resultante:  {:-3} puntos", 
                                 registro.valor_final_ataque));
 
         }
         if (registro.tipo_defensa != nullptr) {
-            listado.escribe (std::format (L"    ∑ Cambio en la {}.", 
+            listado.escribe (std::format (L"    ¬∑ Cambio en la {}.", 
                                 registro.tipo_defensa->nombre ()));
-            listado.escribe (std::format (L"    ∑ Valor del cambio:  {:-3} puntos.", 
+            listado.escribe (std::format (L"    ¬∑ Valor del cambio:  {:-3} puntos.", 
                                 registro.valor_cambio_defensa));
-            listado.escribe (std::format (L"    ∑ Valor original:    {:-3} puntos", 
+            listado.escribe (std::format (L"    ¬∑ Valor original:    {:-3} puntos", 
                                 registro.valor_origen_defensa));
-            listado.escribe (std::format (L"    ∑ Valor resultante:  {:-3} puntos", 
+            listado.escribe (std::format (L"    ¬∑ Valor resultante:  {:-3} puntos", 
                                 registro.valor_final_defensa));
 
         }
