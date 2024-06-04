@@ -92,7 +92,7 @@ namespace tapete {
             } else if (inicio_ronda) {
                 estado ().transita (EstadoJuegoEquipo::inicioRonda);
             } else if (final_partida) {
-                estado ().transita (EstadoJuegoComun::finalPartida);
+                estado ().transita (EstadoJuegoComun::finalPartidaVictoria);
             }
             validaAtributos ();
             informaProceso ("mueveFicha");
@@ -130,7 +130,7 @@ namespace tapete {
             } else if (inicio_ronda) {
                 estado ().transita (EstadoJuegoEquipo::inicioRonda);
             } else if (final_partida) {
-                estado ().transita (EstadoJuegoComun::finalPartida);
+                estado ().transita (EstadoJuegoComun::finalPartidaVictoria);
             }
             validaAtributos ();
             informaProceso ("asumeHabilidad");
@@ -261,7 +261,7 @@ namespace tapete {
         //                                                                                                                                                                                                                 
         //                                                                                                                                                                                                                  
         case EstadoJuegoEquipo    ::mostrandoAyuda               : valida ( ignora   , ignora   , ignora   , ignora   , ignora , ignora  , ignora    , ignora , ignora    , ignora   , ignora    , ignora   ); break;
-        case EstadoJuegoEquipo    ::finalPartida                 : valida ( NULO     , NULO     , NINGUNO  , NULO     , ignora , ignora  , ignora    , CERO   , NULO      , ignora   , NULO      , VACIO    ); break;
+        case EstadoJuegoEquipo    ::finalPartidaVictoria         : valida ( NULO     , NULO     , NINGUNO  , NULO     , ignora , ignora  , ignora    , CERO   , NULO      , ignora   , NULO      , VACIO    ); break;
         }
     }
 

@@ -1,4 +1,4 @@
-// proyecto: Grupal/Tapete   
+﻿// proyecto: Grupal/Tapete   
 // arhivo:   ModoJuegoBase.cpp
 // versión:  1.1  (9-Ene-2023)
 
@@ -14,7 +14,6 @@ namespace tapete {
         ListadoAyuda & listado = juego.tablero ()->listadoAyuda ();
         listado.borra ();
         //
-
 
         // para que esto funcione hay que guardar este archivo con codificación:
         //      Europeo occidental (Windows) - Página de códigos 1252
@@ -86,10 +85,10 @@ namespace tapete {
         listado.enNegrita ();
         listado.escribe (std::format (L"    {}", personaje->nombre ()));    
         listado.enClaro ();
-        listado.escribe (
-                std::format (L"    personaje {} del equipo '{}'", 
-                personaje->indiceEnEquipo () + 1, 
-                juego.tablero ()->nombreEquipo (personaje->ladoTablero ())));
+        // listado.escribe (
+        //         std::format (L"    personaje {} del equipo '{}'", 
+        //         personaje->indiceEnEquipo () + 1, 
+        //         juego.tablero ()->nombreEquipo (personaje->ladoTablero ())));
         listado.saltaLinea ();
         listado.escribe (std::format (L"    - Iniciativa: {}", personaje->iniciativa ()));
         listado.escribe (std::format (L"    - Vitalidad: {}", personaje->vitalidad ()));

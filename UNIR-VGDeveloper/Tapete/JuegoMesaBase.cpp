@@ -4,13 +4,31 @@
 
 
 #include "tapete.h"
+#include "IntroJuegoImagen.h"
 
 
 namespace tapete {
 
 
     string JuegoMesaBase::carpeta_activos_comun  {"../Assets/Art/Sprites/Environment/"};
-
+    
+    // intro.....
+    Tiempo* cronoIntroLogo;
+    Tiempo* cronoPulsaBoton;
+    Tiempo* cronoIntroJuegoTexto;
+    unir2d::Sonido* ptr_audio;
+    IntroJuegoImagen* ptr_introLogo;
+    IntroJuegoImagen* ptr_imagenFondoIntro;
+    IntroJuegoImagen* ptr_imagenTextoIntro;
+    IntroJuegoImagen* ptr_introPulsaBotonBackground;
+    IntroJuegoImagen* ptr_introPulsaBotonTexto;
+    bool reproduciendoIntroLogo = true;
+    bool reproduciendoIntroJuego = false;
+    bool reproducienodIntroPulsaBoton = false;
+    double duracionIntroLogo = 16;
+    double duracionIntroJuegoTexto = 29;
+    unir2d::Tecla teclaSaltoIntro = unir2d::Tecla::escape;
+    //..........
 
     JuegoMesaBase::~JuegoMesaBase () {
         validaVacio ();
@@ -153,15 +171,26 @@ namespace tapete {
     }
 
 
-    ActorMusica * JuegoMesaBase::musica () {
+    ActorMusica* JuegoMesaBase::musica () {
         return musica_;
     }
 
 
     void JuegoMesaBase::agregaMusica (ActorMusica * valor) {
         musica_ = valor;
+
+    }
+    // INICIO GUILLEM //
+    /*
+    ActorMusica* JuegoMesaBase::musicaLoop () {
+        return musica_loop_;
     }
 
+    
+    void JuegoMesaBase::agregaMusicaLoop (ActorMusica * valor) {
+        musica_loop_ = valor;
+    }*/
+    // FIN GUILLEM //
 
     //const std::vector <TipoCuracion *> & JuegoMesaBase::curaciones () const {
     //    return curaciones_;
@@ -208,6 +237,7 @@ namespace tapete {
 
 
     void JuegoMesaBase::inicia () {
+
         valida_.Construccion ();
         preparaTablero ();
         valida_.Tablero ();
@@ -228,18 +258,22 @@ namespace tapete {
         configuraJuego ();
         valida_.ConfiguraJuego ();
         //
-        // agregar los personajes debe ser lo último; de otra forma, no salen las habilidades
-        agregaActor (tablero_);
-        for (ActorPersonaje * persj : personajes_) {
-            agregaActor (persj);
-        }
-        agregaActor (musica_);
-        //
-        sucesos_->iniciado ();
+        // 
+        // 
+        // intro 1ero logo, continua en posactualiza()
+        ptr_introLogo = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/logoIntro001a144.png", 0, -10, 0, 9, 16, false, "../Assets/Audio/Themes/audioIntroLogo.wav"};
+        agregaActor(ptr_introLogo);
+        cronoIntroLogo = new Tiempo{};
+        cronoIntroLogo->inicia();
+        
     }
 
 
     void JuegoMesaBase::termina () {
+        
+        // clean crono intro
+        delete cronoIntroLogo;
+
         //
         sucesos_->terminado ();
         sucesos_ = nullptr;
@@ -273,6 +307,11 @@ namespace tapete {
         //
         delete musica_;
         musica_ = nullptr;
+        // INICIO GUILLEM //
+        delete musica_loop_;
+        musica_loop_ = nullptr;
+        // FIN GUILLEM //
+
         //
         for (const ActorPersonaje * persj : personajes_) {
             delete persj;
@@ -291,6 +330,78 @@ namespace tapete {
 
 
     void JuegoMesaBase::posactualiza (double tiempo_seg) {
+
+        if (reproduciendoIntroLogo && ((cronoIntroLogo->segundos() >= duracionIntroLogo
+            || unir2d::Teclado::pulsando(teclaSaltoIntro)))) {
+            reproduciendoIntroLogo = false;
+            reproducienodIntroPulsaBoton = true;
+            // limpia logo
+            extraeActor(ptr_introLogo);
+            delete ptr_introLogo;
+            cronoIntroLogo->termina();
+            // crea pantalla pulsa botón
+            ptr_introPulsaBotonBackground = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/MenuPulsaBoton_Background.png" };
+            ptr_introPulsaBotonTexto = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/MenuPulsaBoton_Text.png", 400, 500, 0, 1, 8, true };
+            agregaActor(ptr_introPulsaBotonBackground);
+            agregaActor(ptr_introPulsaBotonTexto);
+            cronoPulsaBoton = new Tiempo{};
+            cronoPulsaBoton->inicia();
+        }
+        
+        if (reproducienodIntroPulsaBoton && cronoPulsaBoton->segundos() > 0.5 && unir2d::Teclado::pulsando(Tecla::entrar)) {
+            reproducienodIntroPulsaBoton = false;
+            reproduciendoIntroJuego = true;
+
+            // limpia
+            extraeActor(ptr_introPulsaBotonBackground);
+            extraeActor(ptr_introPulsaBotonTexto);
+            delete ptr_introPulsaBotonBackground;
+            delete ptr_introPulsaBotonTexto;
+            cronoPulsaBoton->termina();
+
+            // carga intro juego
+            ptr_imagenFondoIntro = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroGameBackground.png" };
+            ptr_imagenTextoIntro = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/TextoIntro.png", 0, 480, 1 };
+            agregaActor(ptr_imagenFondoIntro);
+            agregaActor(ptr_imagenTextoIntro);
+            cronoIntroJuegoTexto = new Tiempo{};
+            cronoIntroJuegoTexto->inicia();
+
+            // reproduce sonido
+            ptr_audio = new unir2d::Sonido{};
+            ptr_audio->abre("..\\Assets\\Audio\\Themes\\IntroKidsBikesAndMonsters.wav");
+            ptr_audio->suena();
+        }
+
+
+        //TODO intro juego mejorar
+        if (reproduciendoIntroJuego && (cronoIntroJuegoTexto->segundos() >= duracionIntroJuegoTexto 
+            || (unir2d::Teclado::pulsando(teclaSaltoIntro) && cronoIntroJuegoTexto->segundos() >0.5))) {
+            reproduciendoIntroJuego = false;
+
+            // limpia intro
+            cronoIntroJuegoTexto->termina();
+            ptr_audio->para();
+            extraeActor(ptr_imagenFondoIntro);
+            extraeActor(ptr_imagenTextoIntro);
+            delete ptr_imagenFondoIntro;
+            delete ptr_imagenTextoIntro;
+            delete ptr_audio;
+   
+            //...continua con juego tras intro
+            // agregar los personajes debe ser lo último; de otra forma, no salen las habilidades
+            agregaActor(tablero_);
+            for (ActorPersonaje* persj : personajes_) {
+                agregaActor(persj);
+            }
+            agregaActor(musica_);
+            // INICIO GUILLEM //
+            //agregaActor(musica_loop_);
+            // FIN GUILLEM //
+            //
+            sucesos_->iniciado();
+        }
+
         controlTeclado ();
         controlTiempo  ();
     }
@@ -301,6 +412,8 @@ namespace tapete {
             sucesos_->pulsadoEspacio ();
         } else if (unir2d::Teclado::pulsando (unir2d::Tecla::escape)) {
             sucesos_->pulsadoEscape ();
+        } else if (unir2d::Teclado::pulsando (unir2d::Tecla::entrar)) {
+            sucesos_->pulsadoEnter();
         } else if (unir2d::Teclado::pulsando (unir2d::Tecla::arriba)) {
             sucesos_->pulsadoArriba ();
         } else if (unir2d::Teclado::pulsando (unir2d::Tecla::abajo)) {

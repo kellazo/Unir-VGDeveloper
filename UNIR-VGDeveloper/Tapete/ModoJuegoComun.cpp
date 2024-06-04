@@ -1145,21 +1145,30 @@ namespace tapete {
             break;
         case EstadoJuegoComun::inicioJugada:
             juego ()->tablero ()->escribeMonitor (std::vector <string>
-                    { "Selecciona el retrato para mover la",
-                        "ficha o selecciona una habilidad."   },
+                    { "Acciones:",
+                      "- Moverse (click en ficha o retrato)",
+                      "- Habilidad (click en habilidad)",
+                      "- Pasar turno (pulsa tecla 'Enter')"  },
                     {}                                        );
             break;
         case EstadoJuegoComun::preparacionDesplazamiento:
             juego ()->tablero ()->escribeMonitor (std::vector <string>
-                    { "Marca el camino comenzando en la",
-                      "ficha del personaje."             },
+                    { "Selecciona la ficha del personaje",
+                      "para marcar el camino.",
+                      "",
+                      "Otras acciones: ",
+                      "- Habilidad (click en habilidad)",
+                      "- Pasar turno (pulsa tecla 'Enter')"  },
                     {}                                     );
             break;
         case EstadoJuegoComun::marcacionCaminoFicha:
             juego ()->tablero ()->escribeMonitor (std::vector <string>
-                    { "Marca las etapas del camino. Despues",
-                      "pulsa 'espacio' para mover la ficha",
-                      "o 'Esc' para cancelar."               },
+                    { "Selecciona la casilla a la que ",
+                      "quieres moverte.",
+                      "",
+                      "Acciones:",
+                      "- Confirmar (pulsa tecla 'Space')",
+                      "- Cancelar (pulsa tecla 'Esc')"},
                     {}                                         );
             break;
         case EstadoJuegoComun::habilidadSimpleInvalida:
@@ -1169,8 +1178,9 @@ namespace tapete {
             break;
         case EstadoJuegoComun::habilidadSimpleConfirmacion:
             juego ()->tablero ()->escribeMonitor (std::vector <wstring>
-                    { L"Pulsa 'espacio' para usar la",
-                      L"habilidad, 'Esc' para cancelar."},
+                    { L"Acciones:",
+                      L"- Usar (pulsa tecla 'Space')",
+                      L"- Cancelar (pulsa tecla 'Esc')"},
                     { habilidadAccion ()->nombre () }     );
             break;
         //case EstadoJuegoComun::habilidadSimpleCalculando:
@@ -1182,18 +1192,29 @@ namespace tapete {
         case EstadoJuegoComun::habilidadSimpleResultado:
             juego ()->tablero ()->escribeMonitor (std::vector <wstring>
                     { L"Habilidad usada.",
-                      L"Pulsa 'espacio'.",
-                      L"O pulsa en 'interrogación'."},
+                      L"",
+                      L"Acciones:",
+                      L"- Continuar (pulsa tecla 'Space')",
+                      L"- Ver resultado (click en el icono",
+                      L"de '?')"},
                     { habilidadAccion ()->nombre () }     );
             break;
         case EstadoJuegoComun::preparacionHabilidadOponente:
             if (habilidadAccion ()->antagonista () == Antagonista::aliado) {
                 juego ()->tablero ()->escribeMonitor (std::vector <wstring>
-                        { L"Selecciona un aliado." },
+                        { L"Selecciona un aliado." ,
+                          L"",
+                          L"Otras acciones: ",
+                          L"- Moverse (click en retrato)",
+                          L"- Pasar turno (pulsa tecla 'Enter')"  },
                         { habilidadAccion ()->nombre () });
             } else {
                 juego ()->tablero ()->escribeMonitor (std::vector <wstring>
-                        { L"Selecciona un oponente." },
+                        { L"Selecciona un oponente." ,
+                          L"",
+                          L"Otras acciones: ",
+                          L"- Moverse (click en retrato)",
+                          L"- Pasar turno (pulsa tecla 'Enter')"  },
                         { habilidadAccion ()->nombre () });
             }
             break;
@@ -1219,16 +1240,18 @@ namespace tapete {
         case EstadoJuegoComun::oponenteHabilidadConfirmacion:
             if (habilidadAccion ()->antagonista () == Antagonista::aliado) {
                 juego ()->tablero ()->escribeMonitor (std::vector <wstring>
-                        { L"Pulsa 'espacio' para usar la",
-                          L"habilidad, 'Esc' para cancelar." },
+                        { L"Acciones:",
+                          L"- Usar (pulsa tecla 'Space')",
+                          L"- Cancelar (pulsa tecla 'Esc')"},
                         { std::format (L"{} a favor de {}", 
                                     atacante ()->nombre (), 
                                     oponente ()->nombre ()),
                           habilidadAccion ()->nombre ()      });
             } else {
                 juego ()->tablero ()->escribeMonitor (std::vector <wstring>
-                        { L"Pulsa 'espacio' para usar la",
-                          L"habilidad, 'Esc' para cancelar." },
+                        { L"Acciones:",
+                          L"- Usar (pulsa tecla 'Space')",
+                          L"- Cancelar (pulsa tecla 'Esc')"},
                         { std::format (L"{} contra {}", 
                                     atacante ()->nombre (), 
                                     oponente ()->nombre ()),
@@ -1244,13 +1267,21 @@ namespace tapete {
         case EstadoJuegoComun::oponenteHabilidadResultado:
             juego ()->tablero ()->escribeMonitor (std::vector <wstring>
                     { L"Habilidad usada.",
-                      L"Pulsa 'espacio'."},
+                      L"",
+                      L"Acciones:",
+                      L"- Continuar (pulsa tecla 'Space')",
+                      L"- Ver resultado (click en el icono",
+                      L"de '?')"},
                     { habilidadAccion ()->nombre () }     );
             break;
         case EstadoJuegoComun::preparacionHabilidadArea:
             juego ()->tablero ()->escribeMonitor (std::vector <wstring>
-                    { L"Selecciona una celda para usar la",
-                      L"habilidad sobre un área."          },
+                    { L"Haz doble click sobre una celda para ",
+                      L"usar la habilidad sobre un área.",
+                      L"",
+                      L"Otras acciones: ",
+                      L"- Moverse (click en retrato)",
+                      L"- Pasar turno (pulsa tecla 'Enter')"},
                     { habilidadAccion ()->nombre () }        );
             break;
         case EstadoJuegoComun::areaHabilidadInvalida:
@@ -1261,8 +1292,9 @@ namespace tapete {
             break;
         case EstadoJuegoComun::areaHabilidadConfirmacion:
             juego ()->tablero ()->escribeMonitor (std::vector <wstring>
-                    { L"Pulsa 'espacio' para usar la",
-                      L"habilidad, 'Esc' para cancelar." },
+                    { L"Acciones:",
+                      L"- Usar (pulsa tecla 'Space')",
+                      L"- Cancelar (pulsa tecla 'Esc')"},
                     { habilidadAccion ()->nombre () });
             break;
         case EstadoJuegoComun::areaHabilidadCalculando:
@@ -1274,20 +1306,39 @@ namespace tapete {
         case EstadoJuegoComun::areaHabilidadResultado:
             juego ()->tablero ()->escribeMonitor (std::vector <wstring>
                     { L"Habilidad usada.",
-                      L"Pulsa 'espacio'."},
+                      L"",
+                      L"Acciones:",
+                      L"- Continuar (pulsa tecla 'Space')",
+                      L"- Ver resultado (click en el icono",
+                      L"de '?')"},
                     { habilidadAccion ()->nombre () }     );
             break;
         case EstadoJuegoComun::mostrandoAyuda:
             juego ()->tablero ()->escribeMonitor (std::vector <wstring>
-                    { L"Pulsa la interrogación para cerrar ",
+                    { L"Pulsa el icono de '?' para cerrar ",
                       L"la ayuda."},
                     {  }     );
             break;
-        case EstadoJuegoComun::finalPartida:
+        case EstadoJuegoComun::finalPartidaVictoria:
             juego ()->tablero ()->escribeMonitor (std::vector <wstring>
-                    { L"Agotados todos los rondas de juego",
-                      L"La partida ha terminado."            },
+                    { L"Los ecos del grito de la bruja se ",
+                      L"apagan mientras que su carne pútrida",
+                      L"se deshilacha y cae al suelo llena de",
+                      L"gusanos. Los tres jóvenes se miran ",
+                      L"con ojos llorosos y se abrazan con  ",
+                      L"alivio. La pesadilla ha terminado y ",
+                      L"vivirán para ver el amanecer."},
                     {}                                         );
+            break;
+        case EstadoJuegoComun::finalPartidaDerrota:
+            juego()->tablero()->escribeMonitor(std::vector <wstring>
+                    { L"Jason, Sophie y Pete se funden en un",
+                      L"sólo hilo de dolor al rojo vivo a ",
+                      L"medida que Dana devora sus almas. ",
+                      L"Ahora vivirán en las entrañas de la",
+                      L"bruja para siempre... en una agonía",
+                      L"sin fin."},
+                {});
             break;
         default:
             assert (false);

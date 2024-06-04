@@ -46,6 +46,7 @@ namespace tapete {
 
         virtual void pulsadoEspacio ();
         virtual void pulsadoEscape  ();
+        virtual void pulsadoEnter  ();
         virtual void pulsadoArriba  ();
         virtual void pulsadoAbajo   ();
 

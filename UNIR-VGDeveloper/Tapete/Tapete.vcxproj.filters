@@ -87,6 +87,9 @@
     <ClInclude Include="EstadoJuegoLibreDoble.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="EstadoJuegoKBM.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
     <ClInclude Include="EstadoJuegoPares.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -96,6 +99,9 @@
     <ClInclude Include="ModoJuegoLibreDoble.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="ModoJuegoKBM.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
     <ClInclude Include="ModoJuegoPares.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -103,6 +109,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="SucesosJuegoLibreDoble.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="SucesosJuegoKBM.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="SucesosJuegoPares.h">
@@ -118,6 +127,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="ValidacionJuego.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="IntroJuegoImagen.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -191,6 +203,9 @@
     <ClCompile Include="EstadoJuegoLibreDoble.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="EstadoJuegoKBM.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
     <ClCompile Include="EstadoJuegoPares.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -200,6 +215,9 @@
     <ClCompile Include="ModoJuegoLibreDoble.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="ModoJuegoKBM.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
     <ClCompile Include="ModoJuegoPares.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -207,6 +225,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="SucesosJuegoLibreDoble.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="SucesosJuegoKBM.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="SucesosJuegoPares.cpp">
@@ -320,5 +341,6 @@
     <Text Include="Texto1.txt">
       <Filter>Archivos de recursos</Filter>
     </Text>
+    <Text Include="ProcesoJuegoKBM.txt" />
   </ItemGroup>
 </Project>
