@@ -943,9 +943,9 @@ namespace juego {
         //Sophie   -> agregaHabilidad (ataqueEspadaNormal);
         Sophie   -> agregaHabilidad (fogonazo);
         Sophie   -> agregaHabilidad (bengalaLuminosa);
-        Sophie   -> agregaHabilidad (hazLuz);
+        Sophie   -> agregaHabilidad (minaRepelente);
         //
-        Pete     -> agregaHabilidad (minaRepelente);
+        Pete     -> agregaHabilidad (hazLuz);
         Pete     -> agregaHabilidad (proteccionCampana);
         Pete     -> agregaHabilidad (botiquin);
         //
@@ -1279,6 +1279,7 @@ namespace juego {
         //Sophie   -> agregaDefensa    (defensaADistancia,    50);
         //Sophie   -> agregaDefensa    (defensaMagica,        50);
         Sophie   -> agregaAtaque     (energiaTermica,       50);
+        Sophie  ->  agregaAtaque     (ataqueExplosivo,       58);
         Sophie   -> agregaDefensa    (defensaOscura,        50);
         Sophie   -> agregaDefensa    (defensaEnergiaTermica,50);
         Sophie   -> agregaDefensa    (defensaExplosivo,     50);
@@ -1296,7 +1297,7 @@ namespace juego {
         //                       
         //Pete     -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
         //Pete     -> agregaAtaque     (ataqueADistancia,     70);
-        Pete     -> agregaAtaque     (ataqueExplosivo,      50);
+        Pete     -> agregaAtaque     (energiaTermica,       50);
         //Pete     -> agregaAtaque     (ataqueMagico,         70);        
         //Pete     -> agregaDefensa    (defensaCuerpoACuerpo, 40);
         //Pete     -> agregaDefensa    (defensaADistancia,    40);
