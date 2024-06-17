@@ -270,8 +270,20 @@ namespace tapete {
         if (registro.valor_dano < 0 || ActorPersonaje::maximaVitalidad < registro.valor_dano) {
             throw std::logic_error {"Sistema de ataque mal configurado, aplicando ataque: valor de reducción de daño inválido"};
         }
-        registro.valor_final_dano = registro.valor_ajustado_dano - registro.valor_reduce_dano;
-        //
+
+        // INICIO GUILLEM //
+        
+        // original registro.valor_final_dano = registro.valor_ajustado_dano - registro.valor_reduce_dano;
+
+        if (registro.valor_ajustado_dano < registro.valor_reduce_dano) {
+            
+            registro.valor_final_dano = 0;
+        }
+        else {
+            registro.valor_final_dano = registro.valor_ajustado_dano - registro.valor_reduce_dano;
+        }
+        // FIN GUILLEM
+
         registro.vitalidad_origen = oponente->vitalidad ();
         registro.vitalidad_final  = oponente->vitalidad ();
         if (registro.vitalidad_final > 0) {
