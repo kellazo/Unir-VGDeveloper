@@ -21,11 +21,11 @@ namespace tapete {
         static constexpr Vector tamanoRejilla           {1420, 677};
         static constexpr Vector tamanoPanelAbajo        { 619, 120};
 
-        static constexpr float  margenPanelVertcl       {5};
-        static constexpr Region regionPanelVertclIzqrd  {Vector {margenPanelVertcl, margenPanelVertcl}, tamanoPanelVertcl};
+        static constexpr float  margenPanelVertcl       {15};
+        static constexpr Region regionPanelVertclIzqrd  {Vector {150, margenPanelVertcl}, tamanoPanelVertcl};
         static constexpr float  columnaRejilla          {regionPanelVertclIzqrd.x () + regionPanelVertclIzqrd.ancho ()};
-        static constexpr Region regionRejilla           {Vector {columnaRejilla, 208}, tamanoRejilla};
-        static constexpr float  columnaPanelVertclDerch {regionRejilla.x () + regionRejilla.ancho ()};
+        static constexpr Region regionRejilla           {Vector {170, 208}, tamanoRejilla};
+        static constexpr float  columnaPanelVertclDerch {1080};
         static constexpr Region regionPanelVertclDerch  {Vector {columnaPanelVertclDerch, margenPanelVertcl}, tamanoPanelVertcl};
 
         static constexpr float  margenBandaAbajo        {1};
@@ -36,7 +36,7 @@ namespace tapete {
         static constexpr Vector tamanoMonitor           {282, tamanoBandaAbajo.y ()};
         static constexpr Vector tamanoAyuda             { 90, tamanoBandaAbajo.y ()};
 
-        static constexpr Region regionBandaAbajo        {Vector {regionPanelVertclIzqrd.x (), filaBandaAbajo}, tamanoBandaAbajo};
+        static constexpr Region regionBandaAbajo        {Vector {10, filaBandaAbajo}, tamanoBandaAbajo};
         static constexpr Region regionDisplay           {regionBandaAbajo.posicion (), tamanoDisplay};
         static constexpr float  columnaPanelAbajoIzqrd  {regionDisplay.x () + regionDisplay.ancho ()};
         static constexpr Region regionPanelAbajoIzqrd   {Vector {columnaPanelAbajoIzqrd, regionBandaAbajo.y ()}, tamanoPanelAbajo};

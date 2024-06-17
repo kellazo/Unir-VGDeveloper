@@ -118,14 +118,13 @@ namespace tapete {
 
     void PresenciaPersonaje::preparaPanel (LadoTablero lado_tablero, int indice_grupo) {
         aserta (lado_tablero != LadoTablero::nulo, "parámatro 'lado_tablero' inválido");
-        float x = 0;
+        float y = PresenciaTablero::regionPanelVertclIzqrd.posicion ().y () + 10;
+        float x = indice_grupo * 110 + 20;
         if (lado_tablero == LadoTablero::Izquierda) {
-            x = PresenciaTablero::regionPanelVertclIzqrd.posicion ().x () + 8;
+            x += PresenciaTablero::regionPanelVertclIzqrd.posicion ().x ();
         } else if (lado_tablero == LadoTablero::Derecha) {
-            x = PresenciaTablero::regionPanelVertclDerch.posicion ().x () + 8;
+             x += PresenciaTablero::regionPanelVertclDerch.posicion ().x () + 130;
         }
-        float y = PresenciaTablero::regionPanelVertclIzqrd.posicion ().y () + 
-                  indice_grupo * 135.0f + 10;
         panel_lateral = Region {x, y, 92, 128};
     }
 

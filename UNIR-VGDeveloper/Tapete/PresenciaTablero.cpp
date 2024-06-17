@@ -8,7 +8,6 @@
 
 namespace tapete {
 
-
     PresenciaTablero::PresenciaTablero (ActorTablero * actor_tablero) {
         this->actor_tablero = actor_tablero;
     }
@@ -37,10 +36,10 @@ namespace tapete {
         actor_tablero->agregaDibujo (imagen_panel_vertcl_derch);
         actor_tablero->agregaDibujo (imagen_panel_abajo_izqrd);
         actor_tablero->agregaDibujo (imagen_panel_abajo_derch);
-        // actor_tablero->agregaDibujo (imagen_bandera_izqrd);
-        // actor_tablero->agregaDibujo (imagen_escudo_izqrd);
-        // actor_tablero->agregaDibujo (imagen_bandera_derch);
-        // actor_tablero->agregaDibujo (imagen_escudo_derch);
+        actor_tablero->agregaDibujo (imagen_bandera_izqrd);
+        //actor_tablero->agregaDibujo (imagen_escudo_izqrd);
+        actor_tablero->agregaDibujo (imagen_bandera_derch);
+        //actor_tablero->agregaDibujo (imagen_escudo_derch);
         //
         actor_tablero->agregaDibujo (imagen_fondo_monitor);
         for (int indc = 0; indc < lineas_texto_monitor; ++ indc) {
@@ -340,24 +339,25 @@ namespace tapete {
         imagen_panel_abajo_derch->asigna (textura_panel_abajo);
         imagen_panel_abajo_derch->ponPosicion (regionPanelAbajoDerch.posicion ());
         //
-        // textura_bandera_izqrd = new unir2d::Textura ();
-        // textura_bandera_izqrd->carga (JuegoMesaBase::carpetaActivos () + "bandera_izquierda.png");
-        // imagen_bandera_izqrd = new unir2d::Imagen ();
-        // imagen_bandera_izqrd->asigna (textura_bandera_izqrd);
-        // imagen_bandera_izqrd->ponPosicion (regionPanelVertclIzqrd.posicion () + Vector {10, 10});
-        // //
+        textura_bandera_izqrd = new unir2d::Textura ();
+        textura_bandera_izqrd->carga (JuegoMesaBase::carpetaActivos () + "bandera_izquierda.png");
+        imagen_bandera_izqrd = new unir2d::Imagen ();
+        imagen_bandera_izqrd->asigna (textura_bandera_izqrd);
+        imagen_bandera_izqrd->ponPosicion (regionPanelVertclIzqrd.posicion () + Vector {360, 55});
+        //
         // textura_escudo_izqrd = new unir2d::Textura ();
         // textura_escudo_izqrd->carga (actor_tablero->archivo_escudo_izqrd);
         // imagen_escudo_izqrd = new unir2d::Imagen ();
         // imagen_escudo_izqrd->asigna (textura_escudo_izqrd);
         // imagen_escudo_izqrd->ponPosicion (regionPanelVertclIzqrd.posicion () + Vector {10 + 25, 10 + 5});
-        // //
-        // textura_bandera_derch = new unir2d::Textura ();
-        // textura_bandera_derch->carga (JuegoMesaBase::carpetaActivos () + "bandera_derecha.png");
-        // imagen_bandera_derch = new unir2d::Imagen ();
-        // imagen_bandera_derch->asigna (textura_bandera_derch);
-        // imagen_bandera_derch->ponPosicion (regionPanelVertclDerch.posicion () + Vector {10, 10});
-        // //
+        //
+        textura_bandera_derch = new unir2d::Textura ();
+        textura_bandera_derch->carga (JuegoMesaBase::carpetaActivos () + "bandera_derecha.png");
+        imagen_bandera_derch = new unir2d::Imagen ();
+        imagen_bandera_derch->asigna (textura_bandera_derch);
+        imagen_bandera_derch->ponPosicion (regionPanelVertclDerch.posicion () + Vector {30, 55});
+        
+        //
         // textura_escudo_derch = new unir2d::Textura ();
         // textura_escudo_derch->carga (actor_tablero->archivo_escudo_derch);
         // imagen_escudo_derch = new unir2d::Imagen ();
@@ -375,14 +375,14 @@ namespace tapete {
         // imagen_escudo_izqrd = nullptr;
         // delete textura_escudo_izqrd;        
         // textura_escudo_izqrd = nullptr;
-        // delete imagen_bandera_derch;        
-        // imagen_bandera_derch = nullptr;
-        // delete textura_bandera_derch;       
-        // textura_bandera_derch = nullptr;
-        // delete imagen_bandera_izqrd;        
-        // imagen_bandera_izqrd = nullptr;
-        // delete textura_bandera_izqrd;       
-        // textura_bandera_izqrd = nullptr;
+        delete imagen_bandera_derch;
+        imagen_bandera_derch = nullptr;
+        delete textura_bandera_derch;       
+        textura_bandera_derch = nullptr;
+        delete imagen_bandera_izqrd;        
+        imagen_bandera_izqrd = nullptr;
+        delete textura_bandera_izqrd;
+        textura_bandera_izqrd = nullptr;
         delete imagen_panel_abajo_izqrd;          
         imagen_panel_abajo_izqrd = nullptr;
         delete imagen_panel_abajo_derch;          
@@ -522,6 +522,4 @@ namespace tapete {
         delete sonido_desplaza;
         sonido_desplaza = nullptr;
     }
-
-
 }
