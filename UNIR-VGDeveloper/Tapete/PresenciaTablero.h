@@ -22,7 +22,7 @@ namespace tapete {
         static constexpr Vector tamanoPanelAbajo        { 619, 120};
 
         static constexpr float  margenPanelVertcl       {15};
-        static constexpr Region regionPanelVertclIzqrd  {Vector {80, margenPanelVertcl}, tamanoPanelVertcl};
+        static constexpr Region regionPanelVertclIzqrd  {Vector {150, margenPanelVertcl}, tamanoPanelVertcl};
         static constexpr float  columnaRejilla          {regionPanelVertclIzqrd.x () + regionPanelVertclIzqrd.ancho ()};
         static constexpr Region regionRejilla           {Vector {170, 208}, tamanoRejilla};
         static constexpr float  columnaPanelVertclDerch {1080};
