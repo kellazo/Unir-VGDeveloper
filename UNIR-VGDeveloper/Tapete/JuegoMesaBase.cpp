@@ -16,21 +16,24 @@ namespace tapete {
     Tiempo* cronoIntroLogo;
     Tiempo* cronoPulsaBoton;
     Tiempo* cronoIntroJuegoTexto;
-    Tiempo* cronoIntroDialogos;
+    Tiempo* cronoIntroDialogoSophie;
+    Tiempo* cronoIntroDialogoDana;
     unir2d::Sonido* ptr_audio;
     IntroJuegoImagen* ptr_introLogo;
     IntroJuegoImagen* ptr_imagenFondoIntro;
     IntroJuegoImagen* ptr_imagenTextoIntro;
     IntroJuegoImagen* ptr_introPulsaBotonBackground;
     IntroJuegoImagen* ptr_introPulsaBotonTexto;
-    IntroJuegoImagen* ptr_introDialogos;
+    IntroJuegoImagen* ptr_introDialogosFondo;
+    IntroJuegoImagen* ptr_introDialogosSophie;
+    IntroJuegoImagen* ptr_introDialogosDana;
     bool reproduciendoIntroLogo = true;
     bool reproduciendoIntroJuego = false;
     bool reproducienodIntroPulsaBoton = false;
-    bool reproduciendoIntroDialogos = false;
+    bool reproduciendoIntroDialogosSophie = false;
+    bool reproduciendoIntroDialgosDana = false;
     double duracionIntroLogo = 16;
     double duracionIntroJuegoTexto = 29;
-    double duracionIntroDialogos = 11;
     unir2d::Tecla teclaSaltoIntro = unir2d::Tecla::escape;
     //..........
 
@@ -265,6 +268,7 @@ namespace tapete {
         // 
         // 
         // intro 1ero logo, continua en posactualiza()
+        //carga rápida **** ptr_introLogo = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroGameBackground.png" };
         ptr_introLogo = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/logoIntro001a144.png", 0, -10, 0, 9, 16, false, "../Assets/Audio/Themes/audioIntroLogo.wav"};
         agregaActor(ptr_introLogo);
         cronoIntroLogo = new Tiempo{};
@@ -379,11 +383,11 @@ namespace tapete {
         }
 
 
-        // inicia diálogos
+        // inicia diálogos (Sophie)
         if (reproduciendoIntroJuego && (cronoIntroJuegoTexto->segundos() >= duracionIntroJuegoTexto
             || (unir2d::Teclado::pulsando(teclaSaltoIntro) && cronoIntroJuegoTexto->segundos() > 0.5))) {
             reproduciendoIntroJuego = false;
-            reproduciendoIntroDialogos = true;
+            reproduciendoIntroDialogosSophie = true;
 
             // limpia intro
             cronoIntroJuegoTexto->termina();
@@ -395,21 +399,44 @@ namespace tapete {
             delete ptr_audio;
 
             // carga diálogos
-            ptr_introDialogos = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroDialogos.png" };
-            agregaActor(ptr_introDialogos);
-            cronoIntroDialogos = new Tiempo;
-            cronoIntroDialogos->inicia();
+            ptr_introDialogosFondo = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroDialogosFondo.png" };
+            ptr_introDialogosSophie = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroDialogSophie.png", 110, 150 };
+            agregaActor(ptr_introDialogosFondo);
+            agregaActor(ptr_introDialogosSophie);
+            agregaActor(musica_);
+            cronoIntroDialogoSophie = new Tiempo{};
+            cronoIntroDialogoSophie->inicia();
+        }
+
+        // Intro diálogo Dana
+        if (reproduciendoIntroDialogosSophie && unir2d::Teclado::pulsando(unir2d::Tecla::espacio) 
+            && cronoIntroDialogoSophie->segundos() > 0.5) {
+            reproduciendoIntroDialogosSophie = false;
+            reproduciendoIntroDialgosDana = true;
+
+            // limpia diálogo Sophie
+            cronoIntroDialogoSophie->termina();
+            extraeActor(ptr_introDialogosSophie);
+            delete ptr_introDialogosSophie;
+
+            // carga diálogo Dana
+            cronoIntroDialogoDana = new Tiempo{};
+            cronoIntroDialogoDana->inicia();
+            ptr_introDialogosDana = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroDialogDana.png", 1120, 150 };
+            agregaActor(ptr_introDialogosDana);
         }
 
         // inicia juego
-        if(reproduciendoIntroDialogos && (cronoIntroDialogos->segundos() >= duracionIntroDialogos 
-            || (unir2d::Teclado::pulsando(teclaSaltoIntro) && cronoIntroDialogos->segundos() > 0.5))){
-            reproduciendoIntroDialogos = false;
+        if(reproduciendoIntroDialgosDana && unir2d::Teclado::pulsando(unir2d::Tecla::espacio) 
+            && cronoIntroDialogoDana->segundos() > 0.5){
+            reproduciendoIntroDialgosDana = false;
 
             // limpia dialogos
-            cronoIntroDialogos->termina();
-            extraeActor(ptr_introDialogos);
-            delete ptr_introDialogos;
+            cronoIntroDialogoDana->termina();
+            extraeActor(ptr_introDialogosDana);
+            extraeActor(ptr_introDialogosFondo);
+            delete ptr_introDialogosDana;
+            delete ptr_introDialogosFondo;
 
             //...continua con juego tras intro
             // agregar los personajes debe ser lo último; de otra forma, no salen las habilidades
@@ -417,7 +444,7 @@ namespace tapete {
             for (ActorPersonaje* persj : personajes_) {
                 agregaActor(persj);
             }
-            agregaActor(musica_);
+            //agregaActor(musica_);
             // INICIO GUILLEM //
             //agregaActor(musica_loop_);
             // FIN GUILLEM //
