@@ -1102,17 +1102,17 @@ namespace juego {
         fogonazo->ponRadioAlcance (2);
         fogonazo->asignaAtaque  (energiaTermica);
         fogonazo->asignaDefensa (defensaEnergiaTermica);
-        fogonazo->asignaDano    (danoTermico, 13);
+        fogonazo->asignaDano    (danoTermico, 19);
         //
         homeRun->ponCoste (5);
         homeRun->ponAlcance (15);
         homeRun->asignaAtaque  (fuerzaBruta);
         homeRun->asignaDefensa (defensaBruta);
-        homeRun->asignaDano    (danoBruto, 19);
+        homeRun->asignaDano    (danoBruto, 22);
         //
         minaRepelente->ponCoste (6);
         minaRepelente->ponAlcance (3);
-        minaRepelente->ponRadioAlcance (3);
+        minaRepelente->ponRadioAlcance (2);
         minaRepelente->asignaAtaque  (ataqueExplosivo);
         minaRepelente->asignaDefensa (defensaExplosivo);
         minaRepelente->asignaDano    (danoExplosivo, 25);
@@ -1125,8 +1125,8 @@ namespace juego {
         // roboVida->asignaDefensa (defensaOscura);
         // roboVida->asignaDano    (danoOscuro, 60);
         //
-        espinasSombras->ponCoste (7);
-        espinasSombras->ponAlcance (15);
+        espinasSombras->ponCoste (10);
+        espinasSombras->ponAlcance (12);
         espinasSombras->ponRadioAlcance (2);
         espinasSombras->asignaAtaque  (magiaOscura);
         espinasSombras->asignaDefensa (defensaOscura);
@@ -1139,11 +1139,11 @@ namespace juego {
         vomitoPutrefacto->asignaDano    (danoAsqueroso, 15);
         //
         hazLuz->ponCoste (3);
-        hazLuz->ponAlcance (1);
-        hazLuz->ponRadioAlcance (3);
+        hazLuz->ponAlcance (2);
+        hazLuz->ponRadioAlcance (2);
         hazLuz->asignaAtaque  (energiaTermica);
         hazLuz->asignaDefensa (defensaEnergiaTermica);
-        hazLuz->asignaDano    (danoTermico, 15);
+        hazLuz->asignaDano    (danoTermico, 18);
         //
         sprint->ponCoste (3);
         sprint->agregaEfectoAtaque (fuerzaBruta, 8);
@@ -1158,7 +1158,7 @@ namespace juego {
         fuerzaTumba->ponAlcance (1);
         fuerzaTumba->asignaAtaque  (magiaOscura);
         fuerzaTumba->asignaDefensa (defensaOscura);
-        fuerzaTumba->asignaDano    (danoOscuro, 28);
+        fuerzaTumba->asignaDano    (danoOscuro, 25);
         //
         pasoSombras->ponCoste (3);
         pasoSombras->agregaEfectoAtaque(magiaOscura, 9);
@@ -1191,7 +1191,7 @@ namespace juego {
         dentellada->ponRadioAlcance (3);
         dentellada->asignaAtaque  (ataqueAsqueroso);
         dentellada->asignaDefensa (defensaAsquerosa);
-        dentellada->asignaDano    (danoAsqueroso, 20);
+        dentellada->asignaDano    (danoAsqueroso, 17);
         //
         bolaRapida->ponCoste (5);
         bolaRapida->ponAlcance (8);
@@ -1278,22 +1278,22 @@ namespace juego {
         //Sophie   -> agregaDefensa    (defensaCuerpoACuerpo, 50);
         //Sophie   -> agregaDefensa    (defensaADistancia,    50);
         //Sophie   -> agregaDefensa    (defensaMagica,        50);
-        Sophie   -> agregaAtaque     (energiaTermica,       50);
+        Sophie   -> agregaAtaque     (energiaTermica,       61);
         Sophie  ->  agregaAtaque     (ataqueExplosivo,       58);
         Sophie   -> agregaDefensa    (defensaOscura,        50);
         Sophie   -> agregaDefensa    (defensaEnergiaTermica,50);
         Sophie   -> agregaDefensa    (defensaExplosivo,     50);
         Sophie   -> agregaDefensa    (defensaAsquerosa,     50);
-        Sophie   -> agregaDefensa    (defensaHielo,         50);
+        Sophie   -> agregaDefensa    (defensaHielo,         65);
         Sophie   -> agregaDefensa    (defensaBruta,         20);
         //Sophie   -> agregaReduceDano (danoFisico,            5);
         //Sophie   -> agregaReduceDano (danoMagico,           10);
         Sophie   -> agregaReduceDano (danoOscuro,           10);
         Sophie   -> agregaReduceDano (danoTermico,           5);
         Sophie   -> agregaReduceDano (danoExplosivo,        10);
-        Sophie   -> agregaReduceDano (danoAsqueroso,         5);
-        Sophie   -> agregaReduceDano (danoHielo,             5);
-        Sophie   -> agregaReduceDano (danoBruto,             5);
+        Sophie   -> agregaReduceDano (danoAsqueroso,         13);
+        Sophie   -> agregaReduceDano (danoHielo,             13);
+        Sophie   -> agregaReduceDano (danoBruto,             13);
         //                       
         //Pete     -> agregaAtaque     (ataqueCuerpoACuerpo,  50);
         //Pete     -> agregaAtaque     (ataqueADistancia,     70);
@@ -1378,7 +1378,7 @@ namespace juego {
         //Cadaver  -> agregaReduceDano (danoMagico,           10);
         Cadaver  -> agregaReduceDano (danoOscuro,            0);
         Cadaver  -> agregaReduceDano (danoTermico,           0);
-        Cadaver  -> agregaReduceDano (danoExplosivo,         10);
+        Cadaver  -> agregaReduceDano (danoExplosivo,         8);
         Cadaver  -> agregaReduceDano (danoAsqueroso,         5);
         Cadaver  -> agregaReduceDano (danoHielo,             0);
         Cadaver  -> agregaReduceDano (danoBruto,             2);
