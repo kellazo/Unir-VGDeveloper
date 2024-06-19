@@ -400,7 +400,7 @@ namespace tapete {
 
             // carga diálogos
             ptr_introDialogosFondo = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroDialogosFondo.png" };
-            ptr_introDialogosSophie = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroDialogSophie.png", 180, 150 };
+            ptr_introDialogosSophie = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroDialogSophie.png", 110, 150 };
             agregaActor(ptr_introDialogosFondo);
             agregaActor(ptr_introDialogosSophie);
             agregaActor(musica_);
@@ -422,7 +422,7 @@ namespace tapete {
             // carga diálogo Dana
             cronoIntroDialogoDana = new Tiempo{};
             cronoIntroDialogoDana->inicia();
-            ptr_introDialogosDana = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroDialogDana.png", 1015, 150 };
+            ptr_introDialogosDana = new IntroJuegoImagen{ "../Assets/Art/Sprites/Environment/IntroDialogDana.png", 1120, 150 };
             agregaActor(ptr_introDialogosDana);
         }
 
